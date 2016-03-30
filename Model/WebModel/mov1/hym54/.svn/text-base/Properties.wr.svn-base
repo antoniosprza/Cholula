@@ -1,0 +1,71 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym54" gr:x="4235" gr:y="160" name="Factibilidad de agua y drenaje - Usuario - 2.1 Subsanar observaciones" bpm:moduleType="activity" bpm:uuids="IH8UEEGG_60K.ICHX9WEF_3OSW4" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym54#icu53" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym54#icu53#oln174" name="OKLink" automaticCoupling="true" to="mov1#hym54#page66"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym54#pu176" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym54#pu177" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym54#pu178" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym54#apu106" name="Set Parameters" gr:x="560" gr:y="-242">
+      <ActivityParameter id="mov1#hym54#apu106#ap2523" name="Predial.OID" bpm:uuid="IJWLCWG7_Q2ISDH"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2526" name="Control.OID" bpm:uuid="IJWLCWG7_7Y1Y5I"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2530" name="Validaciones.OID" bpm:uuid="IJWLCWG7_586MHG"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2533" name="Caracteristicas del predio.OID" bpm:uuid="IJWLCWG7_Q2ZDKL"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2535" name="Caracteristicas del predio.Tipo de zona     " bpm:uuid="IJWLCWG7_Q2ZDKL/IH8UGS22_480"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2537" name="Caracteristicas del predio.Tipo de toma o descarga     " bpm:uuid="IJWLCWG7_Q2ZDKL/IH8UGVBN_292"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2539" name="Datos del solicitante.OID" bpm:uuid="IJWLCWG7_CZ1524"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2541" name="Datos del solicitante.Tipo de interesado    " bpm:uuid="IJWLCWG7_CZ1524/IH8L8H4V_5Z6"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2543" name="Datos del solicitante.Primer apellido" bpm:uuid="IJWLCWG7_CZ1524/IH8L8H9B_7DP"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2545" name="Datos del solicitante.Segundo apellido" bpm:uuid="IJWLCWG7_CZ1524/IH8L8HEF_YU"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2547" name="Datos del solicitante.Nombres(s)" bpm:uuid="IJWLCWG7_CZ1524/IH8L8HJ3_4ZC"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2549" name="Datos del solicitante.RFC" bpm:uuid="IJWLCWG7_CZ1524/IH8L8HNZ_PT"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2551" name="Datos del solicitante.Tel&#233;fono particular" bpm:uuid="IJWLCWG7_CZ1524/IH8L8HSM_D1"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2553" name="Datos del solicitante.Tel&#233;fono celular" bpm:uuid="IJWLCWG7_CZ1524/IH8L8HZJ_4UA"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2555" name="Datos del solicitante.Correo electr&#243;nico" bpm:uuid="IJWLCWG7_CZ1524/IH8L8I9R_5RB"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2557" name="Datos del propietario.OID" bpm:uuid="IJWLCWG7_OXM08J"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2559" name="Datos del propietario.Primer apellido" bpm:uuid="IJWLCWG7_OXM08J/IH8LBLG1_2V2"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2561" name="Datos del propietario.Segundo apellido" bpm:uuid="IJWLCWG7_OXM08J/IH8LBLL5_6Q8"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2563" name="Datos del propietario.Nombres(s)" bpm:uuid="IJWLCWG7_OXM08J/IH8LBLQQ_55H"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2565" name="Datos del propietario.RFC" bpm:uuid="IJWLCWG7_OXM08J/IH8LBLW1_47V"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2567" name="Domicilio del predio.OID" bpm:uuid="IJWLCWG7_USMK2N"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2569" name="Domicilio del predio.Numero interior" bpm:uuid="IJWLCWG7_USMK2N/IH8RXPL7_70D"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2571" name="Domicilio del predio.Letra" bpm:uuid="IJWLCWG7_USMK2N/IH8RXS75_AC"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2573" name="Domicilio del predio.Codigo Postal" bpm:uuid="IJWLCWG7_USMK2N/IH8RXZLU_4XL"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2575" name="Domicilio del predio.Colonia" bpm:uuid="IJWLCWG7_USMK2N/IH8RXWQ1_2TH"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2577" name="Domicilio del predio.Numero exterior" bpm:uuid="IJWLCWG7_USMK2N/IH8RXMHL_64F"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2579" name="Domicilio del predio.Lote" bpm:uuid="IJWLCWG7_USMK2N/IH8RY1X6_1TP"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2581" name="Domicilio del predio.Calle (exterior)" bpm:uuid="IJWLCWG7_USMK2N/IH8RXJNP_5JI"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2583" name="Domicilio del predio.Clave catastral" bpm:uuid="IJWLCWG7_USMK2N/IH8RXF2R_1PR"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2585" name="Domicilio del predio.Junta auxiliar" bpm:uuid="IJWLCWG7_USMK2N/IH8RY6TH_6PX"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2587" name="Domicilio del predio.Manzana" bpm:uuid="IJWLCWG7_USMK2N/IH8RY469_5EE"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2589" name="Domicilio del predio.Fraccionamiento" bpm:uuid="IJWLCWG7_USMK2N/IH8RXUH4_6OM"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2591" name="Datos generales del servicio.OID" bpm:uuid="IJWLCWG7_79IRGQ"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2593" name="Datos generales del servicio.Superficie total" bpm:uuid="IJWLCWG7_79IRGQ/IH8UM7N6_1XM"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2595" name="Datos generales del servicio.Superficie construida" bpm:uuid="IJWLCWG7_79IRGQ/IH8UM9TF_7DH"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2597" name="Datos generales del servicio.Cuenta con red de agua potable " bpm:uuid="IJWLCWG7_79IRGQ/IH8UMBWG_3AZ"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2599" name="Datos generales del servicio.Distancia en metros (agua)" bpm:uuid="IJWLCWG7_79IRGQ/IH8UMDQJ_2IH"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2601" name="Datos generales del servicio.Cuenta con red de drenaje " bpm:uuid="IJWLCWG7_79IRGQ/IH8UMFMQ_3NX"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2603" name="Datos generales del servicio.Distancia en metros (drenaje)" bpm:uuid="IJWLCWG7_79IRGQ/IH8UMHR5_6YT"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2605" name="Requisitos.OID" bpm:uuid="IJWLCWG7_9K8E4F"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2607" name="Requisitos.Carta poder (en caso de no ser el propietario)" bpm:uuid="IJWLCWG7_9K8E4F/IH8UPD9X_7N9"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2609" name="Requisitos.Tipo identificacion oficial   " bpm:uuid="IJWLCWG7_9K8E4F/IH8LDZH0_1KE"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2611" name="Requisitos.Identificacion oficial" bpm:uuid="IJWLCWG7_9K8E4F/IH8LDZLQ_3R7"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2613" name="Expediente electronico.OID" bpm:uuid="IJWLCWG7_9G0J22"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2615" name="Expediente electronico.Fotografia exterior 2" bpm:uuid="IJWLCWG7_9G0J22/IH8SOP3E_5JX"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2617" name="Expediente electronico.Fotografia exterior 1" bpm:uuid="IJWLCWG7_9G0J22/IH8SOLOP_7DI"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2619" name="Expediente electronico.Plano de proyecto" bpm:uuid="IJWLCWG7_9G0J22/IH8URSNA_63C"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2621" name="Expediente electronico.Fotografia interior 2" bpm:uuid="IJWLCWG7_9G0J22/IH8SO3S7_1AB"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2623" name="Expediente electronico.Constancia de alineamiento y numero oficial" bpm:uuid="IJWLCWG7_9G0J22/IH8NIS5R_3BX"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2625" name="Expediente electronico.Fotografia interior 1" bpm:uuid="IJWLCWG7_9G0J22/IH8SNTMD_6YM"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2627" name="Medidas y colindancias.OID" bpm:uuid="IJWLCWG7_BZUCDD"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2629" name="Medidas y colindancias.Orientaci&#243;n       " bpm:uuid="IJWLCWG7_BZUCDD/IH8LZ9C0_236"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2631" name="Medidas y colindancias.Medida" bpm:uuid="IJWLCWG7_BZUCDD/IH8LZDRS_6XV"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2633" name="Medidas y colindancias.Colindancia" bpm:uuid="IJWLCWG7_BZUCDD/IH8LZDWO_7C1"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2635" name="Superficie.OID" bpm:uuid="IJWLCWG7_8CCNPW"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2637" name="Superficie.Superficie de terreno" bpm:uuid="IJWLCWG7_8CCNPW/IH8QUPAG_7DQ"/>
+      <ActivityParameter id="mov1#hym54#apu106#ap2639" name="Superficie.Superficie a ocupar" bpm:uuid="IJWLCWG7_8CCNPW/IH8QV0D3_3YK"/>
+      <OKLink id="mov1#hym54#apu106#oln175" name="OKLink" automaticCoupling="false" to="mov1#hym54#pu176" codeRef="mov1#hym54#page66#enu362#ln875"/>
+      <OKLink id="mov1#hym54#apu106#oln176" name="OKLink" automaticCoupling="false" to="mov1#hym54#pu177" codeRef="mov1#hym54#page66#enu362#ln876"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

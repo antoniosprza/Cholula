@@ -1,0 +1,31 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym92" gr:x="7160" gr:y="390" name="Alineamiento y uso de suelo espec&#237;fico - Jefatura de uso de suelo - 4. Asignar  condicionantes y cuantificar monto a pagar y notificar &#225;rboles a donar" bpm:moduleType="activity" bpm:uuids="IH8T9YT7_4NM.ICHVCDNW_CPNBF" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym92#icu91" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym92#icu91#oln288" name="OKLink" automaticCoupling="true" to="mov1#hym92#page104"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym92#pu290" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym92#pu291" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym92#pu292" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym92#apu182" name="Set Parameters" gr:x="560" gr:y="-2">
+      <ActivityParameter id="mov1#hym92#apu182#ap4310" name="Predial.OID" bpm:uuid="IJX88GE1_C8I8LV"/>
+      <ActivityParameter id="mov1#hym92#apu182#ap4313" name="Control.OID" bpm:uuid="IJX88GE1_HGQXT9"/>
+      <ActivityParameter id="mov1#hym92#apu182#ap4317" name="Datos del establecimiento.OID" bpm:uuid="IJX88GE2_V2WZAO"/>
+      <ActivityParameter id="mov1#hym92#apu182#ap4324" name="Datos del solicitante.OID" bpm:uuid="IJX88GE1_A2RSXS"/>
+      <ActivityParameter id="mov1#hym92#apu182#ap4334" name="Datos del propietario.OID" bpm:uuid="IJX88GE1_9CEYRA"/>
+      <ActivityParameter id="mov1#hym92#apu182#ap4340" name="Domicilio del predio.OID" bpm:uuid="IJX88GE1_BS560A"/>
+      <ActivityParameter id="mov1#hym92#apu182#ap4349" name="Expediente electronico.OID" bpm:uuid="IJX88GE1_2WX63O"/>
+      <ActivityParameter id="mov1#hym92#apu182#ap4360" name="Coeficientes.OID" bpm:uuid="IJX88GE2_QM0G2O"/>
+      <ActivityParameter id="mov1#hym92#apu182#ap4362" name="Coeficientes.Programa " bpm:uuid="IJX88GE2_QM0G2O/IH8M7SUH_5RL"/>
+      <ActivityParameter id="mov1#hym92#apu182#ap4364" name="Coeficientes.Zona (tipo)" bpm:uuid="IJX88GE2_QM0G2O/IH8M7T0Q_32Q"/>
+      <ActivityParameter id="mov1#hym92#apu182#ap4366" name="Coeficientes.Vigencia de uso de suelo" bpm:uuid="IJX88GE2_QM0G2O/IH8M7UQY_3EO"/>
+      <ActivityParameter id="mov1#hym92#apu182#ap4368" name="Coeficientes.Comptabilidad" bpm:uuid="IJX88GE2_QM0G2O/IH8M7TOY_1YO"/>
+      <ActivityParameter id="mov1#hym92#apu182#ap4370" name="Condicionantes.OID" bpm:uuid="IJX88GE2_CMR55D"/>
+      <ActivityParameter id="mov1#hym92#apu182#ap4372" name="Condicionantes.Condicionantes" bpm:uuid="IJX88GE2_CMR55D/IH8TYHPD_OY"/>
+      <ActivityParameter id="mov1#hym92#apu182#ap4374" name="Pago.OID" bpm:uuid="IJX88GE1_7WDWWV"/>
+      <ActivityParameter id="mov1#hym92#apu182#ap4376" name="Pago.Donaci&#243;n de &#225;rboles" bpm:uuid="IJX88GE1_7WDWWV/IH8MNKCD_50Y"/>
+      <ActivityParameter id="mov1#hym92#apu182#ap4378" name="Pago.Monto a pagar" bpm:uuid="IJX88GE1_7WDWWV/IH8MNOOU_N2"/>
+      <OKLink id="mov1#hym92#apu182#oln289" name="OKLink" automaticCoupling="false" to="mov1#hym92#pu290" codeRef="mov1#hym92#page104#enu633#ln1489"/>
+      <OKLink id="mov1#hym92#apu182#oln290" name="OKLink" automaticCoupling="false" to="mov1#hym92#pu291" codeRef="mov1#hym92#page104#enu633#ln1490"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

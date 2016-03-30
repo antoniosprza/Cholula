@@ -1,0 +1,23 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym52" gr:x="3435" gr:y="425" name="Dictamen de Protecci&#243;n Civil - Director - 6. Autorizar dictamen y cuantificar monto a pagar" bpm:moduleType="activity" bpm:uuids="IH8X4BCI_7AT.IB2RVO4K_3C85X" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym52#icu51" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym52#icu51#oln168" name="OKLink" automaticCoupling="true" to="mov1#hym52#page64"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym52#pu170" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym52#pu171" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym52#pu172" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym52#apu102" name="Set Parameters" gr:x="560" gr:y="46">
+      <ActivityParameter id="mov1#hym52#apu102#ap2345" name="Predial.OID" bpm:uuid="IJWL2XQM_V46ZD6"/>
+      <ActivityParameter id="mov1#hym52#apu102#ap2348" name="Control.OID" bpm:uuid="IJWL2XQL_J0GEHD"/>
+      <ActivityParameter id="mov1#hym52#apu102#ap2352" name="Datos del solicitante.OID" bpm:uuid="IJWL2XQM_Y8SD9S"/>
+      <ActivityParameter id="mov1#hym52#apu102#ap2362" name="Domicilio del predio.OID" bpm:uuid="IJWL2XQL_SZ2PV2"/>
+      <ActivityParameter id="mov1#hym52#apu102#ap2371" name="Director responsable de obra.OID" bpm:uuid="IJWL2XQM_CV3RFH"/>
+      <ActivityParameter id="mov1#hym52#apu102#ap2382" name="Datos de la construccion.OID" bpm:uuid="IJWL2XQM_1T86K7"/>
+      <ActivityParameter id="mov1#hym52#apu102#ap2397" name="Expediente electronico.OID" bpm:uuid="IJWL2XQL_D6EK8S"/>
+      <ActivityParameter id="mov1#hym52#apu102#ap2401" name="Pago.OID" bpm:uuid="IJWL2XQL_6NE3SW"/>
+      <ActivityParameter id="mov1#hym52#apu102#ap2403" name="Pago.Monto a pagar" bpm:uuid="IJWL2XQL_6NE3SW/IH8MNOOU_N2"/>
+      <OKLink id="mov1#hym52#apu102#oln169" name="OKLink" automaticCoupling="false" to="mov1#hym52#pu170" codeRef="mov1#hym52#page64#enu339#ln823"/>
+      <OKLink id="mov1#hym52#apu102#oln170" name="OKLink" automaticCoupling="false" to="mov1#hym52#pu171" codeRef="mov1#hym52#page64#enu339#ln824"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

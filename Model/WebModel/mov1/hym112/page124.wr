@@ -1,0 +1,510 @@
+<Page xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym112#page124" name="2. Analizar expediente" gr:x="10" gr:y="-5">
+  <ContentUnits>
+    <ActivityParametersUnit id="mov1#hym112#page124#apu223" name="Get Parameters" gr:x="0" gr:y="0">
+      <Link id="mov1#hym112#page124#apu223#ln1727" name="Properties" type="transport" automaticCoupling="false" to="mov1#hym112#page124#enu738">
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1727#par5300" name="Predial.OID" source="mov1#hym112#page124#apu223#ap4961" target="mov1#hym112#page124#enu738#fld2993_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1727#par5301" name="Predial.Cuenta predial" source="mov1#hym112#page124#apu223#ap4963" target="mov1#hym112#page124#enu738#fld2994_slot"/>
+      </Link>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap4961" name="Predial.OID" bpm:uuid="IJXG7WP6_NSVXYD"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap4963" name="Predial.Cuenta predial" bpm:uuid="IJXG7WP6_NSVXYD/IH8L34LF_7LX"/>
+      <Link id="mov1#hym112#page124#apu223#ln1729" name="Properties" type="transport" automaticCoupling="false" to="mov1#hym112#page124#enu739">
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1729#par5303" name="Control.OID" source="mov1#hym112#page124#apu223#ap4964" target="mov1#hym112#page124#enu739#fld2995_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1729#par5304" name="Control.Folio de ingreso" source="mov1#hym112#page124#apu223#ap4966" target="mov1#hym112#page124#enu739#fld2996_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1729#par5305" name="Control.Folio de control" source="mov1#hym112#page124#apu223#ap4967" target="mov1#hym112#page124#enu739#fld2997_slot"/>
+      </Link>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap4964" name="Control.OID" bpm:uuid="IJXG7WP6_57UCWL"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap4966" name="Control.Folio de ingreso" bpm:uuid="IJXG7WP6_57UCWL/IH8KZUZV_14D"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap4967" name="Control.Folio de control" bpm:uuid="IJXG7WP6_57UCWL/IH8L0CS5_XQ"/>
+      <Link id="mov1#hym112#page124#apu223#ln1731" name="Properties" type="transport" automaticCoupling="false" to="mov1#hym112#page124#enu740">
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1731#par5307" name="Datos del solicitante.OID" source="mov1#hym112#page124#apu223#ap4968" target="mov1#hym112#page124#enu740#fld2998_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1731#par5308" name="Tipo de interesado    [values]" source="mov1#hym112#page124#apu223#ap4970_values" target="mov1#hym112#page124#enu740#sfld252#slot252"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1731#par5309" name="Tipo de interesado    " source="mov1#hym112#page124#apu223#ap4970" target="mov1#hym112#page124#enu740#sfld252_presel"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1731#par5310" name="Datos del solicitante.Primer apellido" source="mov1#hym112#page124#apu223#ap4971" target="mov1#hym112#page124#enu740#fld2999_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1731#par5311" name="Datos del solicitante.Segundo apellido" source="mov1#hym112#page124#apu223#ap4972" target="mov1#hym112#page124#enu740#fld3000_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1731#par5312" name="Datos del solicitante.Nombres(s)" source="mov1#hym112#page124#apu223#ap4973" target="mov1#hym112#page124#enu740#fld3001_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1731#par5313" name="Datos del solicitante.RFC" source="mov1#hym112#page124#apu223#ap4974" target="mov1#hym112#page124#enu740#fld3002_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1731#par5314" name="Datos del solicitante.Tel&#233;fono particular" source="mov1#hym112#page124#apu223#ap4975" target="mov1#hym112#page124#enu740#fld3003_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1731#par5315" name="Datos del solicitante.Tel&#233;fono celular" source="mov1#hym112#page124#apu223#ap4976" target="mov1#hym112#page124#enu740#fld3004_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1731#par5316" name="Datos del solicitante.Correo electr&#243;nico" source="mov1#hym112#page124#apu223#ap4977" target="mov1#hym112#page124#enu740#fld3005_slot"/>
+      </Link>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap4968" name="Datos del solicitante.OID" bpm:uuid="IJXG7WP6_IZFCMY"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap4970" name="Datos del solicitante.Tipo de interesado    " bpm:uuid="IJXG7WP6_IZFCMY/IH8L8H4V_5Z6"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap4971" name="Datos del solicitante.Primer apellido" bpm:uuid="IJXG7WP6_IZFCMY/IH8L8H9B_7DP"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap4972" name="Datos del solicitante.Segundo apellido" bpm:uuid="IJXG7WP6_IZFCMY/IH8L8HEF_YU"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap4973" name="Datos del solicitante.Nombres(s)" bpm:uuid="IJXG7WP6_IZFCMY/IH8L8HJ3_4ZC"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap4974" name="Datos del solicitante.RFC" bpm:uuid="IJXG7WP6_IZFCMY/IH8L8HNZ_PT"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap4975" name="Datos del solicitante.Tel&#233;fono particular" bpm:uuid="IJXG7WP6_IZFCMY/IH8L8HSM_D1"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap4976" name="Datos del solicitante.Tel&#233;fono celular" bpm:uuid="IJXG7WP6_IZFCMY/IH8L8HZJ_4UA"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap4977" name="Datos del solicitante.Correo electr&#243;nico" bpm:uuid="IJXG7WP6_IZFCMY/IH8L8I9R_5RB"/>
+      <Link id="mov1#hym112#page124#apu223#ln1733" name="Properties" type="transport" automaticCoupling="false" to="mov1#hym112#page124#enu741">
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1733#par5318" name="Director responsable de obra.OID" source="mov1#hym112#page124#apu223#ap4978" target="mov1#hym112#page124#enu741#fld3006_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1733#par5319" name="Director responsable de obra.Registro municipal" source="mov1#hym112#page124#apu223#ap4980" target="mov1#hym112#page124#enu741#fld3007_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1733#par5320" name="Director responsable de obra.Titulo DROM" source="mov1#hym112#page124#apu223#ap4981" target="mov1#hym112#page124#enu741#fld3008_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1733#par5321" name="Director responsable de obra.Numero de cedula" source="mov1#hym112#page124#apu223#ap4982" target="mov1#hym112#page124#enu741#fld3009_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1733#par5322" name="Director responsable de obra.Primer apellido" source="mov1#hym112#page124#apu223#ap4983" target="mov1#hym112#page124#enu741#fld3010_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1733#par5323" name="Director responsable de obra.Segundo apellido" source="mov1#hym112#page124#apu223#ap4984" target="mov1#hym112#page124#enu741#fld3011_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1733#par5324" name="Director responsable de obra.Nombres(s)" source="mov1#hym112#page124#apu223#ap4985" target="mov1#hym112#page124#enu741#fld3012_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1733#par5325" name="Director responsable de obra.Telefono particular" source="mov1#hym112#page124#apu223#ap4986" target="mov1#hym112#page124#enu741#fld3013_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1733#par5326" name="Director responsable de obra.Tel&#233;fono celular" source="mov1#hym112#page124#apu223#ap4987" target="mov1#hym112#page124#enu741#fld3014_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1733#par5327" name="Director responsable de obra.Correo electr&#243;nico" source="mov1#hym112#page124#apu223#ap4988" target="mov1#hym112#page124#enu741#fld3015_slot"/>
+      </Link>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap4978" name="Director responsable de obra.OID" bpm:uuid="IJXG7WP6_TWEMP9"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap4980" name="Director responsable de obra.Registro municipal" bpm:uuid="IJXG7WP6_TWEMP9/IH8L42QB_7HP"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap4981" name="Director responsable de obra.Titulo DROM" bpm:uuid="IJXG7WP6_TWEMP9/IH8L42VG_4ZG"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap4982" name="Director responsable de obra.Numero de cedula" bpm:uuid="IJXG7WP6_TWEMP9/IH8L432B_4M3"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap4983" name="Director responsable de obra.Primer apellido" bpm:uuid="IJXG7WP6_TWEMP9/IH8L437H_273"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap4984" name="Director responsable de obra.Segundo apellido" bpm:uuid="IJXG7WP6_TWEMP9/IH8L43CB_1JJ"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap4985" name="Director responsable de obra.Nombres(s)" bpm:uuid="IJXG7WP6_TWEMP9/IH8L43IZ_9G"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap4986" name="Director responsable de obra.Telefono particular" bpm:uuid="IJXG7WP6_TWEMP9/IH8L43YR_2F6"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap4987" name="Director responsable de obra.Tel&#233;fono celular" bpm:uuid="IJXG7WP6_TWEMP9/IH8L4451_7EE"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap4988" name="Director responsable de obra.Correo electr&#243;nico" bpm:uuid="IJXG7WP6_TWEMP9/IH8L44XG_2VQ"/>
+      <Link id="mov1#hym112#page124#apu223#ln1735" name="Properties" type="transport" automaticCoupling="false" to="mov1#hym112#page124#meu30">
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1735#par5329" name="Corresponsable(s).OID" source="mov1#hym112#page124#apu223#ap4989" target="mov1#hym112#page124#meu30#fld3016_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1735#par5330" name="Tipo      [values]" source="mov1#hym112#page124#apu223#ap4991_values" target="mov1#hym112#page124#meu30#sfld253#slot253"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1735#par5331" name="Tipo      " source="mov1#hym112#page124#apu223#ap4991" target="mov1#hym112#page124#meu30#sfld253_presel"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1735#par5332" name="Corresponsable(s).Numero de cedula" source="mov1#hym112#page124#apu223#ap4992" target="mov1#hym112#page124#meu30#fld3017_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1735#par5333" name="Corresponsable(s).Registro municipal" source="mov1#hym112#page124#apu223#ap4993" target="mov1#hym112#page124#meu30#fld3018_slot"/>
+      </Link>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap4989" name="Corresponsable(s).OID" bpm:uuid="IJXG7WP6_G2N2S2"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap4991" name="Corresponsable(s).Tipo      " bpm:uuid="IJXG7WP6_G2N2S2/IH8R9RGS_6E6"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap4992" name="Corresponsable(s).Numero de cedula" bpm:uuid="IJXG7WP6_G2N2S2/IH8R9RM0_3CM"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap4993" name="Corresponsable(s).Registro municipal" bpm:uuid="IJXG7WP6_G2N2S2/IH8R9RQ6_VH"/>
+      <Link id="mov1#hym112#page124#apu223#ln1737" name="Properties" type="transport" automaticCoupling="false" to="mov1#hym112#page124#enu742">
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1737#par5335" name="Domicilio del predio.OID" source="mov1#hym112#page124#apu223#ap4994" target="mov1#hym112#page124#enu742#fld3019_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1737#par5336" name="Colonia[values]" source="mov1#hym112#page124#apu223#ap4996_values" target="mov1#hym112#page124#enu742#sfld254#slot254"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1737#par5337" name="Colonia" source="mov1#hym112#page124#apu223#ap4996" target="mov1#hym112#page124#enu742#sfld254_presel"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1737#par5338" name="Domicilio del predio.Numero exterior" source="mov1#hym112#page124#apu223#ap4997" target="mov1#hym112#page124#enu742#fld3020_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1737#par5339" name="Domicilio del predio.Numero interior" source="mov1#hym112#page124#apu223#ap4998" target="mov1#hym112#page124#enu742#fld3021_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1737#par5340" name="Domicilio del predio.Fraccionamiento" source="mov1#hym112#page124#apu223#ap4999" target="mov1#hym112#page124#enu742#fld3022_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1737#par5341" name="Domicilio del predio.Calle (exterior)" source="mov1#hym112#page124#apu223#ap5000" target="mov1#hym112#page124#enu742#fld3023_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1737#par5342" name="Domicilio del predio.Clave catastral" source="mov1#hym112#page124#apu223#ap5001" target="mov1#hym112#page124#enu742#fld3024_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1737#par5343" name="Domicilio del predio.Letra" source="mov1#hym112#page124#apu223#ap5002" target="mov1#hym112#page124#enu742#fld3025_slot"/>
+      </Link>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap4994" name="Domicilio del predio.OID" bpm:uuid="IJXG7WP6_7LKHLB"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap4996" name="Domicilio del predio.Colonia" bpm:uuid="IJXG7WP6_7LKHLB/IH8RXWQ1_2TH"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap4997" name="Domicilio del predio.Numero exterior" bpm:uuid="IJXG7WP6_7LKHLB/IH8RXMHL_64F"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap4998" name="Domicilio del predio.Numero interior" bpm:uuid="IJXG7WP6_7LKHLB/IH8RXPL7_70D"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap4999" name="Domicilio del predio.Fraccionamiento" bpm:uuid="IJXG7WP6_7LKHLB/IH8RXUH4_6OM"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap5000" name="Domicilio del predio.Calle (exterior)" bpm:uuid="IJXG7WP6_7LKHLB/IH8RXJNP_5JI"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap5001" name="Domicilio del predio.Clave catastral" bpm:uuid="IJXG7WP6_7LKHLB/IH8RXF2R_1PR"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap5002" name="Domicilio del predio.Letra" bpm:uuid="IJXG7WP6_7LKHLB/IH8RXS75_AC"/>
+      <Link id="mov1#hym112#page124#apu223#ln1739" name="Properties" type="transport" automaticCoupling="false" to="mov1#hym112#page124#enu743">
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1739#par5345" name="Requisitos.OID" source="mov1#hym112#page124#apu223#ap5003" target="mov1#hym112#page124#enu743#fld3026_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1739#par5346" name="Requisitos.Identificacion oficial" source="mov1#hym112#page124#apu223#ap5005" target="mov1#hym112#page124#enu743#fld3027_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1739#par5347" name="Tipo identificacion oficial   [values]" source="mov1#hym112#page124#apu223#ap5006_values" target="mov1#hym112#page124#enu743#sfld255#slot255"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1739#par5348" name="Tipo identificacion oficial   " source="mov1#hym112#page124#apu223#ap5006" target="mov1#hym112#page124#enu743#sfld255_presel"/>
+      </Link>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap5003" name="Requisitos.OID" bpm:uuid="IJXG7WP6_O54IU8"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap5005" name="Requisitos.Identificacion oficial" bpm:uuid="IJXG7WP6_O54IU8/IH8LDZLQ_3R7"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap5006" name="Requisitos.Tipo identificacion oficial   " bpm:uuid="IJXG7WP6_O54IU8/IH8LDZH0_1KE"/>
+      <Link id="mov1#hym112#page124#apu223#ln1741" name="Properties" type="transport" automaticCoupling="false" to="mov1#hym112#page124#enu744">
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1741#par5350" name="Expediente electronico.OID" source="mov1#hym112#page124#apu223#ap5007" target="mov1#hym112#page124#enu744#fld3028_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1741#par5351" name="Expediente electronico.Informe preventivo de impacto ambiental o Dictamen de informe ecologico preventivo" source="mov1#hym112#page124#apu223#ap5009" target="mov1#hym112#page124#enu744#fld3029_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1741#par5352" name="Expediente electronico.Licencia de construccion y recibo de pago" source="mov1#hym112#page124#apu223#ap5010" target="mov1#hym112#page124#enu744#fld3030_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1741#par5353" name="Expediente electronico.Licencia de uso de suelo" source="mov1#hym112#page124#apu223#ap5011" target="mov1#hym112#page124#enu744#fld3031_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1741#par5354" name="Expediente electronico.Contratacion de los servicios de agua y drenaje" source="mov1#hym112#page124#apu223#ap5012" target="mov1#hym112#page124#enu744#fld3032_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1741#par5355" name="Expediente electronico.Disposicion final de residuos de construccion" source="mov1#hym112#page124#apu223#ap5013" target="mov1#hym112#page124#enu744#fld3033_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1741#par5356" name="Expediente electronico.Proyecto arquitectonico autorizado" source="mov1#hym112#page124#apu223#ap5014" target="mov1#hym112#page124#enu744#fld3034_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1741#par5357" name="Expediente electronico.Aviso de terminaci&#243;n de obra ante la SDRSOT" source="mov1#hym112#page124#apu223#ap5015" target="mov1#hym112#page124#enu744#fld3035_slot"/>
+      </Link>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap5007" name="Expediente electronico.OID" bpm:uuid="IJXG7WP6_92N7A0"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap5009" name="Expediente electronico.Informe preventivo de impacto ambiental o Dictamen de informe ecologico preventivo" bpm:uuid="IJXG7WP6_92N7A0/IH8RJKOK_PN"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap5010" name="Expediente electronico.Licencia de construccion y recibo de pago" bpm:uuid="IJXG7WP6_92N7A0/IH8RHLUT_2EF"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap5011" name="Expediente electronico.Licencia de uso de suelo" bpm:uuid="IJXG7WP6_92N7A0/IH8RJEBT_3QF"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap5012" name="Expediente electronico.Contratacion de los servicios de agua y drenaje" bpm:uuid="IJXG7WP6_92N7A0/IH8RK0NO_5YF"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap5013" name="Expediente electronico.Disposicion final de residuos de construccion" bpm:uuid="IJXG7WP6_92N7A0/IH8RKT80_6CX"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap5014" name="Expediente electronico.Proyecto arquitectonico autorizado" bpm:uuid="IJXG7WP6_92N7A0/IH8RKLFE_1TF"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap5015" name="Expediente electronico.Aviso de terminaci&#243;n de obra ante la SDRSOT" bpm:uuid="IJXG7WP6_92N7A0/IH8RJV7R_NE"/>
+      <Link id="mov1#hym112#page124#apu223#ln1743" name="Properties" type="transport" automaticCoupling="false" to="mov1#hym112#page124#meu31">
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1743#par5359" name="Condicionantes y documentos adicionales.OID" source="mov1#hym112#page124#apu223#ap5016" target="mov1#hym112#page124#meu31#fld3036_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1743#par5360" name="Condicionantes y documentos adicionales.Documento" source="mov1#hym112#page124#apu223#ap5018" target="mov1#hym112#page124#meu31#fld3037_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1743#par5361" name="Condicionantes y documentos adicionales.Archivo anexo" source="mov1#hym112#page124#apu223#ap5019" target="mov1#hym112#page124#meu31#fld3038_slot"/>
+      </Link>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap5016" name="Condicionantes y documentos adicionales.OID" bpm:uuid="IJXG7WP6_R8OTKH"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap5018" name="Condicionantes y documentos adicionales.Documento" bpm:uuid="IJXG7WP6_R8OTKH/IH8RM5BO_35V"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap5019" name="Condicionantes y documentos adicionales.Archivo anexo" bpm:uuid="IJXG7WP6_R8OTKH/IH8RMA3Z_3E1"/>
+      <Link id="mov1#hym112#page124#apu223#ln1745" name="Properties" type="transport" automaticCoupling="false" to="mov1#hym112#page124#enu745">
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1745#par5363" name="Validaciones.OID" source="mov1#hym112#page124#apu223#ap5020" target="mov1#hym112#page124#enu745#fld3039_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1745#par5365" name="Validaciones.Observaciones" source="mov1#hym112#page124#apu223#ap5022" target="mov1#hym112#page124#enu745#fld3040_slot"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1745#par5367" name="&#191;Esta completa la informacion? [values]" source="mov1#hym112#page124#apu223#ap5024_values" target="mov1#hym112#page124#enu745#sfld256#slot256"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1745#par5368" name="&#191;Esta completa la informacion? " source="mov1#hym112#page124#apu223#ap5024" target="mov1#hym112#page124#enu745#sfld256_presel"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1745#par112c" name="&#191;Esta completa la informacion? [values]" source="mov1#hym112#page124#apu223#ap96c_values" target="mov1#hym112#page124#enu745#sfld11c#slot11c"/>
+        <LinkParameter id="mov1#hym112#page124#apu223#ln1745#par113c" name="&#191;Esta completa la informacion? " source="mov1#hym112#page124#apu223#ap96c" target="mov1#hym112#page124#enu745#sfld11c_presel"/>
+      </Link>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap5020" name="Validaciones.OID" bpm:uuid="IJXG7WP6_1AO8MB"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap5022" name="Validaciones.Observaciones" bpm:uuid="IJXG7WP6_1AO8MB/IH8LLT4Q_5TC"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap5024" name="Validaciones.&#191;Esta completa la documentacion? " bpm:uuid="IH8R3ULM_4ER.IJXG7WP6_1AO8MB/IH8UY1Q3_7IZ"/>
+      <ActivityParameter id="mov1#hym112#page124#apu223#ap96c" name="Validaciones.&#191;Esta completa la informacion? " bpm:uuid="IJXG7WP6_1AO8MB/IH8LL99N_341"/>
+    </ActivityParametersUnit>
+    <EntryUnit id="mov1#hym112#page124#enu738" name="Predial" bpm:uuid="IJXG7WP6_NSVXYD" gr:x="265" gr:y="80">
+      <Link id="mov1#hym112#page124#enu738#ln1728" name="Parameters" type="transport" automaticCoupling="false" to="mov1#hym112#apu222" validate="true">
+        <LinkParameter id="mov1#hym112#page124#enu738#ln1728#par5299" name="Predial.OID" source="mov1#hym112#page124#enu738#fld2993" target="mov1#hym112#apu222#ap4962"/>
+      </Link>
+      <Field id="mov1#hym112#page124#enu738#fld2993" name="OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJXG7WP6_NSVXYD"/>
+      <Field id="mov1#hym112#page124#enu738#fld2994" name="Cuenta predial" type="string" preloaded="true" modifiable="false" bpm:uuid="IJXG7WP6_NSVXYD/IH8L34LF_7LX"/>
+    </EntryUnit>
+    <EntryUnit id="mov1#hym112#page124#enu739" name="Control" bpm:uuid="IJXG7WP6_57UCWL" gr:x="265" gr:y="160">
+      <Link id="mov1#hym112#page124#enu739#ln1730" name="Parameters" type="transport" automaticCoupling="false" to="mov1#hym112#apu222" validate="true">
+        <LinkParameter id="mov1#hym112#page124#enu739#ln1730#par5302" name="Control.OID" source="mov1#hym112#page124#enu739#fld2995" target="mov1#hym112#apu222#ap4965"/>
+      </Link>
+      <Field id="mov1#hym112#page124#enu739#fld2995" name="OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJXG7WP6_57UCWL"/>
+      <Field id="mov1#hym112#page124#enu739#fld2996" name="Folio de ingreso" type="string" preloaded="true" modifiable="false" bpm:uuid="IJXG7WP6_57UCWL/IH8KZUZV_14D"/>
+      <Field id="mov1#hym112#page124#enu739#fld2997" name="Folio de control" type="string" preloaded="true" modifiable="false" bpm:uuid="IJXG7WP6_57UCWL/IH8L0CS5_XQ"/>
+    </EntryUnit>
+    <EntryUnit id="mov1#hym112#page124#enu740" name="Datos del solicitante" bpm:uuid="IJXG7WP6_IZFCMY" gr:x="265" gr:y="240">
+      <Link id="mov1#hym112#page124#enu740#ln1732" name="Parameters" type="transport" automaticCoupling="false" to="mov1#hym112#apu222" validate="true">
+        <LinkParameter id="mov1#hym112#page124#enu740#ln1732#par5306" name="Datos del solicitante.OID" source="mov1#hym112#page124#enu740#fld2998" target="mov1#hym112#apu222#ap4969"/>
+      </Link>
+      <Field id="mov1#hym112#page124#enu740#fld2998" name="OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJXG7WP6_IZFCMY"/>
+      <SelectionField id="mov1#hym112#page124#enu740#sfld252" name="Tipo de interesado    " type="string" bpm:uuid="IJXG7WP6_IZFCMY/IH8L8H4V_5Z6">
+        <Slot id="mov1#hym112#page124#enu740#sfld252#slot252" name="values" label="true" output="true"/>
+      </SelectionField>
+      <Field id="mov1#hym112#page124#enu740#fld2999" name="Primer apellido" type="string" preloaded="true" modifiable="false" bpm:uuid="IJXG7WP6_IZFCMY/IH8L8H9B_7DP"/>
+      <Field id="mov1#hym112#page124#enu740#fld3000" name="Segundo apellido" type="string" preloaded="true" modifiable="false" bpm:uuid="IJXG7WP6_IZFCMY/IH8L8HEF_YU"/>
+      <Field id="mov1#hym112#page124#enu740#fld3001" name="Nombres(s)" type="string" preloaded="true" modifiable="false" bpm:uuid="IJXG7WP6_IZFCMY/IH8L8HJ3_4ZC"/>
+      <Field id="mov1#hym112#page124#enu740#fld3002" name="RFC" type="string" preloaded="true" modifiable="false" bpm:uuid="IJXG7WP6_IZFCMY/IH8L8HNZ_PT"/>
+      <Field id="mov1#hym112#page124#enu740#fld3003" name="Tel&#233;fono particular" type="string" preloaded="true" modifiable="false" bpm:uuid="IJXG7WP6_IZFCMY/IH8L8HSM_D1"/>
+      <Field id="mov1#hym112#page124#enu740#fld3004" name="Tel&#233;fono celular" type="string" preloaded="true" modifiable="false" bpm:uuid="IJXG7WP6_IZFCMY/IH8L8HZJ_4UA"/>
+      <Field id="mov1#hym112#page124#enu740#fld3005" name="Correo electr&#243;nico" type="string" preloaded="true" modifiable="false" bpm:uuid="IJXG7WP6_IZFCMY/IH8L8I9R_5RB"/>
+    </EntryUnit>
+    <EntryUnit id="mov1#hym112#page124#enu741" name="Director responsable de obra" bpm:uuid="IJXG7WP6_TWEMP9" gr:x="265" gr:y="320">
+      <Link id="mov1#hym112#page124#enu741#ln1734" name="Parameters" type="transport" automaticCoupling="false" to="mov1#hym112#apu222" validate="true">
+        <LinkParameter id="mov1#hym112#page124#enu741#ln1734#par5317" name="Director responsable de obra.OID" source="mov1#hym112#page124#enu741#fld3006" target="mov1#hym112#apu222#ap4979"/>
+      </Link>
+      <Field id="mov1#hym112#page124#enu741#fld3006" name="OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJXG7WP6_TWEMP9"/>
+      <Field id="mov1#hym112#page124#enu741#fld3007" name="Registro municipal" type="string" preloaded="true" modifiable="false" bpm:uuid="IJXG7WP6_TWEMP9/IH8L42QB_7HP"/>
+      <Field id="mov1#hym112#page124#enu741#fld3008" name="Titulo DROM" type="string" preloaded="true" modifiable="false" bpm:uuid="IJXG7WP6_TWEMP9/IH8L42VG_4ZG"/>
+      <Field id="mov1#hym112#page124#enu741#fld3009" name="Numero de cedula" type="string" preloaded="true" modifiable="false" bpm:uuid="IJXG7WP6_TWEMP9/IH8L432B_4M3"/>
+      <Field id="mov1#hym112#page124#enu741#fld3010" name="Primer apellido" type="string" preloaded="true" modifiable="false" bpm:uuid="IJXG7WP6_TWEMP9/IH8L437H_273"/>
+      <Field id="mov1#hym112#page124#enu741#fld3011" name="Segundo apellido" type="string" preloaded="true" modifiable="false" bpm:uuid="IJXG7WP6_TWEMP9/IH8L43CB_1JJ"/>
+      <Field id="mov1#hym112#page124#enu741#fld3012" name="Nombres(s)" type="string" preloaded="true" modifiable="false" bpm:uuid="IJXG7WP6_TWEMP9/IH8L43IZ_9G"/>
+      <Field id="mov1#hym112#page124#enu741#fld3013" name="Telefono particular" type="string" preloaded="true" modifiable="false" bpm:uuid="IJXG7WP6_TWEMP9/IH8L43YR_2F6"/>
+      <Field id="mov1#hym112#page124#enu741#fld3014" name="Tel&#233;fono celular" type="string" preloaded="true" modifiable="false" bpm:uuid="IJXG7WP6_TWEMP9/IH8L4451_7EE"/>
+      <Field id="mov1#hym112#page124#enu741#fld3015" name="Correo electr&#243;nico" type="string" preloaded="true" modifiable="false" bpm:uuid="IJXG7WP6_TWEMP9/IH8L44XG_2VQ"/>
+    </EntryUnit>
+    <MultiEntryUnit id="mov1#hym112#page124#meu30" name="Corresponsable(s)" bpm:uuid="IJXG7WP6_G2N2S2" gr:x="265" gr:y="400" minLength="1">
+      <Link id="mov1#hym112#page124#meu30#ln1736" name="Parameters" type="transport" automaticCoupling="false" to="mov1#hym112#apu222" validate="true">
+        <LinkParameter id="mov1#hym112#page124#meu30#ln1736#par5328" name="Corresponsable(s).OID" source="mov1#hym112#page124#meu30#fld3016" target="mov1#hym112#apu222#ap4990"/>
+      </Link>
+      <Field id="mov1#hym112#page124#meu30#fld3016" name="OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJXG7WP6_G2N2S2"/>
+      <SelectionField id="mov1#hym112#page124#meu30#sfld253" name="Tipo      " type="string" bpm:uuid="IJXG7WP6_G2N2S2/IH8R9RGS_6E6">
+        <Slot id="mov1#hym112#page124#meu30#sfld253#slot253" name="values" label="true" output="true"/>
+      </SelectionField>
+      <Field id="mov1#hym112#page124#meu30#fld3017" name="Numero de cedula" type="string" preloaded="true" modifiable="false" bpm:uuid="IJXG7WP6_G2N2S2/IH8R9RM0_3CM"/>
+      <Field id="mov1#hym112#page124#meu30#fld3018" name="Registro municipal" type="string" preloaded="true" modifiable="false" bpm:uuid="IJXG7WP6_G2N2S2/IH8R9RQ6_VH"/>
+    </MultiEntryUnit>
+    <EntryUnit id="mov1#hym112#page124#enu742" name="Domicilio del predio" bpm:uuid="IJXG7WP6_7LKHLB" gr:x="265" gr:y="480">
+      <Link id="mov1#hym112#page124#enu742#ln1738" name="Parameters" type="transport" automaticCoupling="false" to="mov1#hym112#apu222" validate="true">
+        <LinkParameter id="mov1#hym112#page124#enu742#ln1738#par5334" name="Domicilio del predio.OID" source="mov1#hym112#page124#enu742#fld3019" target="mov1#hym112#apu222#ap4995"/>
+      </Link>
+      <Field id="mov1#hym112#page124#enu742#fld3019" name="OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJXG7WP6_7LKHLB"/>
+      <SelectionField id="mov1#hym112#page124#enu742#sfld254" name="Colonia" type="string" bpm:uuid="IJXG7WP6_7LKHLB/IH8RXWQ1_2TH">
+        <Slot id="mov1#hym112#page124#enu742#sfld254#slot254" name="values" label="true" output="true"/>
+      </SelectionField>
+      <Field id="mov1#hym112#page124#enu742#fld3020" name="Numero exterior" type="string" preloaded="true" modifiable="false" bpm:uuid="IJXG7WP6_7LKHLB/IH8RXMHL_64F"/>
+      <Field id="mov1#hym112#page124#enu742#fld3021" name="Numero interior" type="string" preloaded="true" modifiable="false" bpm:uuid="IJXG7WP6_7LKHLB/IH8RXPL7_70D"/>
+      <Field id="mov1#hym112#page124#enu742#fld3022" name="Fraccionamiento" type="string" preloaded="true" modifiable="false" bpm:uuid="IJXG7WP6_7LKHLB/IH8RXUH4_6OM"/>
+      <Field id="mov1#hym112#page124#enu742#fld3023" name="Calle (exterior)" type="string" preloaded="true" modifiable="false" bpm:uuid="IJXG7WP6_7LKHLB/IH8RXJNP_5JI"/>
+      <Field id="mov1#hym112#page124#enu742#fld3024" name="Clave catastral" type="string" preloaded="true" modifiable="false" bpm:uuid="IJXG7WP6_7LKHLB/IH8RXF2R_1PR"/>
+      <Field id="mov1#hym112#page124#enu742#fld3025" name="Letra" type="string" preloaded="true" modifiable="false" bpm:uuid="IJXG7WP6_7LKHLB/IH8RXS75_AC"/>
+    </EntryUnit>
+    <EntryUnit id="mov1#hym112#page124#enu743" name="Requisitos" bpm:uuid="IJXG7WP6_O54IU8" gr:x="265" gr:y="560">
+      <Link id="mov1#hym112#page124#enu743#ln1740" name="Parameters" type="transport" automaticCoupling="false" to="mov1#hym112#apu222" validate="true">
+        <LinkParameter id="mov1#hym112#page124#enu743#ln1740#par5344" name="Requisitos.OID" source="mov1#hym112#page124#enu743#fld3026" target="mov1#hym112#apu222#ap5004"/>
+      </Link>
+      <Field id="mov1#hym112#page124#enu743#fld3026" name="OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJXG7WP6_O54IU8"/>
+      <Field id="mov1#hym112#page124#enu743#fld3027" name="Identificacion oficial" type="blob" preloaded="true" modifiable="false" bpm:uuid="IJXG7WP6_O54IU8/IH8LDZLQ_3R7"/>
+      <SelectionField id="mov1#hym112#page124#enu743#sfld255" name="Tipo identificacion oficial   " type="string" bpm:uuid="IJXG7WP6_O54IU8/IH8LDZH0_1KE">
+        <Slot id="mov1#hym112#page124#enu743#sfld255#slot255" name="values" label="true" output="true"/>
+      </SelectionField>
+    </EntryUnit>
+    <EntryUnit id="mov1#hym112#page124#enu744" name="Expediente electronico" bpm:uuid="IJXG7WP6_92N7A0" gr:x="265" gr:y="640">
+      <Link id="mov1#hym112#page124#enu744#ln1742" name="Parameters" type="transport" automaticCoupling="false" to="mov1#hym112#apu222" validate="true">
+        <LinkParameter id="mov1#hym112#page124#enu744#ln1742#par5349" name="Expediente electronico.OID" source="mov1#hym112#page124#enu744#fld3028" target="mov1#hym112#apu222#ap5008"/>
+      </Link>
+      <Field id="mov1#hym112#page124#enu744#fld3028" name="OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJXG7WP6_92N7A0"/>
+      <Field id="mov1#hym112#page124#enu744#fld3029" name="Informe preventivo de impacto ambiental o Dictamen de informe ecologico preventivo" type="blob" preloaded="true" modifiable="false" bpm:uuid="IJXG7WP6_92N7A0/IH8RJKOK_PN"/>
+      <Field id="mov1#hym112#page124#enu744#fld3030" name="Licencia de construccion y recibo de pago" type="blob" preloaded="true" modifiable="false" bpm:uuid="IJXG7WP6_92N7A0/IH8RHLUT_2EF"/>
+      <Field id="mov1#hym112#page124#enu744#fld3031" name="Licencia de uso de suelo" type="blob" preloaded="true" modifiable="false" bpm:uuid="IJXG7WP6_92N7A0/IH8RJEBT_3QF"/>
+      <Field id="mov1#hym112#page124#enu744#fld3032" name="Contratacion de los servicios de agua y drenaje" type="blob" preloaded="true" modifiable="false" bpm:uuid="IJXG7WP6_92N7A0/IH8RK0NO_5YF"/>
+      <Field id="mov1#hym112#page124#enu744#fld3033" name="Disposicion final de residuos de construccion" type="blob" preloaded="true" modifiable="false" bpm:uuid="IJXG7WP6_92N7A0/IH8RKT80_6CX"/>
+      <Field id="mov1#hym112#page124#enu744#fld3034" name="Proyecto arquitectonico autorizado" type="blob" preloaded="true" modifiable="false" bpm:uuid="IJXG7WP6_92N7A0/IH8RKLFE_1TF"/>
+      <Field id="mov1#hym112#page124#enu744#fld3035" name="Aviso de terminaci&#243;n de obra ante la SDRSOT" type="blob" preloaded="true" modifiable="false" bpm:uuid="IJXG7WP6_92N7A0/IH8RJV7R_NE"/>
+    </EntryUnit>
+    <MultiEntryUnit id="mov1#hym112#page124#meu31" name="Condicionantes y documentos adicionales" bpm:uuid="IJXG7WP6_R8OTKH" gr:x="265" gr:y="720" minLength="1">
+      <Link id="mov1#hym112#page124#meu31#ln1744" name="Parameters" type="transport" automaticCoupling="false" to="mov1#hym112#apu222" validate="true">
+        <LinkParameter id="mov1#hym112#page124#meu31#ln1744#par5358" name="Condicionantes y documentos adicionales.OID" source="mov1#hym112#page124#meu31#fld3036" target="mov1#hym112#apu222#ap5017"/>
+      </Link>
+      <Field id="mov1#hym112#page124#meu31#fld3036" name="OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJXG7WP6_R8OTKH"/>
+      <Field id="mov1#hym112#page124#meu31#fld3037" name="Documento" type="blob" preloaded="true" modifiable="false" bpm:uuid="IJXG7WP6_R8OTKH/IH8RM5BO_35V"/>
+      <Field id="mov1#hym112#page124#meu31#fld3038" name="Archivo anexo" type="blob" preloaded="true" modifiable="false" bpm:uuid="IJXG7WP6_R8OTKH/IH8RMA3Z_3E1"/>
+    </MultiEntryUnit>
+    <EntryUnit id="mov1#hym112#page124#enu745" name="Validaciones" bpm:uuid="IJXG7WP6_1AO8MB" gr:x="220" gr:y="800">
+      <Link id="mov1#hym112#page124#enu745#ln1746" name="Parameters" type="transport" automaticCoupling="false" to="mov1#hym112#apu222" validate="true">
+        <LinkParameter id="mov1#hym112#page124#enu745#ln1746#par5362" name="Validaciones.OID" source="mov1#hym112#page124#enu745#fld3039" target="mov1#hym112#apu222#ap5021"/>
+        <LinkParameter id="mov1#hym112#page124#enu745#ln1746#par5364" name="Validaciones.Observaciones" source="mov1#hym112#page124#enu745#fld3040" target="mov1#hym112#apu222#ap5023"/>
+        <LinkParameter id="mov1#hym112#page124#enu745#ln1746#par5366" name="Validaciones.&#191;Esta completa la informacion? " source="mov1#hym112#page124#enu745#sfld256" target="mov1#hym112#apu222#ap5025"/>
+        <LinkParameter id="mov1#hym112#page124#enu745#ln1746#par114c" name="&#191;Esta completa la informacion? " source="mov1#hym112#page124#enu745#sfld11c" target="mov1#hym112#apu222#ap95c"/>
+      </Link>
+      <Field id="mov1#hym112#page124#enu745#fld3039" name="OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJXG7WP6_1AO8MB"/>
+      <Field id="mov1#hym112#page124#enu745#fld3040" name="Observaciones" type="text" preloaded="true" modifiable="true" bpm:uuid="IJXG7WP6_1AO8MB/IH8LLT4Q_5TC"/>
+      <SelectionField id="mov1#hym112#page124#enu745#sfld256" name="&#191;Esta completa la documentacion? " type="string" bpm:uuid="IH8R3ULM_4ER.IJXG7WP6_1AO8MB/IH8UY1Q3_7IZ">
+        <Slot id="mov1#hym112#page124#enu745#sfld256#slot256" name="values" label="true" output="true"/>
+        <VRules>
+          <MandatoryValidationRule id="mov1#hym112#page124#enu745#sfld256#mnd684" name="required"/>
+        </VRules>
+      </SelectionField>
+      <SelectionField id="mov1#hym112#page124#enu745#sfld11c" name="&#191;Esta completa la informacion? " type="string" bpm:uuid="IJXG7WP6_1AO8MB/IH8LL99N_341">
+        <Slot id="mov1#hym112#page124#enu745#sfld11c#slot11c" name="values" label="true" output="true"/>
+        <VRules>
+          <MandatoryValidationRule id="mov1#hym112#page124#enu745#sfld11c#mnd18c" name="required"/>
+        </VRules>
+      </SelectionField>
+    </EntryUnit>
+    <EntryUnit id="mov1#hym112#page124#enu746" name="Buttons" gr:x="260" gr:y="880">
+      <Link id="mov1#hym112#page124#enu746#ln1747" name="Finish" type="normal" validate="true" automaticCoupling="false" to="mov1#hym112#apu222"/>
+      <Link id="mov1#hym112#page124#enu746#ln1748" name="Save and Work Later" type="normal" validate="false" automaticCoupling="false" to="mov1#hym112#apu222" gr:bendpoints="164,-32,-64,96"/>
+      <Link id="mov1#hym112#page124#enu746#ln1749" name="Cancel" type="normal" validate="false" automaticCoupling="false" to="mov1#hym112#pu352"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12" label="Predial" layout:cellLayout="Print Frame">
+        <layout:Unit unitId="mov1#hym112#page124#enu738">
+          <layout:Field field="mov1#hym112#page124#enu738#fld2994" layout:fieldLayout="WRDefault/FieldValue"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell label="Control" layout:cellLayout="Print Frame" colspan="12">
+        <layout:Unit unitId="mov1#hym112#page124#enu739">
+          <layout:Field field="mov1#hym112#page124#enu739#fld2996" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym112#page124#enu739#fld2997" layout:fieldLayout="WRDefault/FieldValue"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell label="Datos del solicitante" layout:cellLayout="Print Frame" colspan="12">
+        <layout:Unit unitId="mov1#hym112#page124#enu740">
+          <layout:Field field="mov1#hym112#page124#enu740#fld2999" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym112#page124#enu740#fld3000" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym112#page124#enu740#fld3001" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym112#page124#enu740#fld3002" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym112#page124#enu740#fld3003" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym112#page124#enu740#fld3004" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym112#page124#enu740#fld3005" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym112#page124#enu740#sfld252" layout:fieldLayout="WRDefault/FieldValue"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell label="Director responsable de obra" layout:cellLayout="Print Frame" colspan="12">
+        <layout:Unit unitId="mov1#hym112#page124#enu741">
+          <layout:Field field="mov1#hym112#page124#enu741#fld3007" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym112#page124#enu741#fld3008" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym112#page124#enu741#fld3009" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym112#page124#enu741#fld3010" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym112#page124#enu741#fld3011" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym112#page124#enu741#fld3012" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym112#page124#enu741#fld3013" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym112#page124#enu741#fld3014" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym112#page124#enu741#fld3015" layout:fieldLayout="WRDefault/FieldValue"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell label="Corresponsable(s)" layout:cellLayout="Print Frame" colspan="12">
+        <layout:Unit unitId="mov1#hym112#page124#meu30" layout:unitLayout="WRDefault/Dynamic">
+          <layout:Field field="mov1#hym112#page124#meu30#sfld253" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym112#page124#meu30#fld3017" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym112#page124#meu30#fld3018" layout:fieldLayout="WRDefault/FieldValue"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell label="Domicilio del predio" layout:cellLayout="Print Frame" colspan="12">
+        <layout:Unit unitId="mov1#hym112#page124#enu742" manualFieldOrder="mov1#hym112#page124#enu742#fld3024 mov1#hym112#page124#enu742#fld3023 mov1#hym112#page124#enu742#fld3020 mov1#hym112#page124#enu742#fld3021 mov1#hym112#page124#enu742#fld3025 mov1#hym112#page124#enu742#fld3022 mov1#hym112#page124#enu742#sfld254" manualFields="true">
+          <layout:Field field="mov1#hym112#page124#enu742#sfld254" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym112#page124#enu742#fld3020" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym112#page124#enu742#fld3021" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym112#page124#enu742#fld3022" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym112#page124#enu742#fld3023" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym112#page124#enu742#fld3024" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym112#page124#enu742#fld3025" layout:fieldLayout="WRDefault/FieldValue"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell label="Requisitos" layout:cellLayout="Print Frame" colspan="12">
+        <layout:Unit unitId="mov1#hym112#page124#enu743">
+          <layout:Field field="mov1#hym112#page124#enu743#fld3027" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym112#page124#enu743#sfld255" layout:fieldLayout="WRDefault/FieldValue"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell label="Expediente electronico" layout:cellLayout="Print Frame" colspan="12">
+        <layout:Unit unitId="mov1#hym112#page124#enu744" manualFieldOrder="mov1#hym112#page124#enu744#fld3030 mov1#hym112#page124#enu744#fld3031 mov1#hym112#page124#enu744#fld3029 mov1#hym112#page124#enu744#fld3035 mov1#hym112#page124#enu744#fld3032 mov1#hym112#page124#enu744#fld3034 mov1#hym112#page124#enu744#fld3033" manualFields="true">
+          <layout:Field field="mov1#hym112#page124#enu744#fld3029" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym112#page124#enu744#fld3030" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym112#page124#enu744#fld3031" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym112#page124#enu744#fld3032" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym112#page124#enu744#fld3033" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym112#page124#enu744#fld3034" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym112#page124#enu744#fld3035" layout:fieldLayout="WRDefault/FieldValue"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell label="Condicionantes y documentos adicionales" layout:cellLayout="Print Frame" colspan="12">
+        <layout:Unit unitId="mov1#hym112#page124#meu31" layout:unitLayout="WRDefault/Dynamic">
+          <layout:Field field="mov1#hym112#page124#meu31#fld3037" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym112#page124#meu31#fld3038" layout:fieldLayout="WRDefault/FieldValue"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell label="Validaciones" layout:cellLayout="Print Frame" colspan="12">
+        <layout:Unit unitId="mov1#hym112#page124#enu745" manualFieldOrder="mov1#hym112#page124#enu745#sfld11c mov1#hym112#page124#enu745#fld3040" manualFields="true">
+          <layout:Field field="mov1#hym112#page124#enu745#fld3040"/>
+          <layout:Field field="mov1#hym112#page124#enu745#sfld256"/>
+          <layout:Field field="mov1#hym112#page124#enu745#sfld11c"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell label="Buttons" layout:cellLayout="Print Frame" colspan="12">
+        <layout:Unit unitId="mov1#hym112#page124#enu746" layout:frameLayout="None">
+          <layout:Link link="mov1#hym112#page124#enu746#ln1747">
+            <layout:LayoutParameter name="confirmation" value="true" type="link"/>
+            <layout:LayoutParameter name="confirm-message" value="Confirm Finish" type="link"/>
+          </layout:Link>
+          <layout:Link link="mov1#hym112#page124#enu746#ln1748"/>
+          <layout:Link link="mov1#hym112#page124#enu746#ln1749"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <layout:LayoutParameter name="auto-refresh" value="true" type="page"/>
+</Page>

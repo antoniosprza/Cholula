@@ -1,0 +1,21 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym36" gr:x="1720" gr:y="630" name="Contrato de conexi&#243;n de agua - Director Administrativo - 6. Revisar contrato" bpm:moduleType="activity" bpm:uuids="IH8XYGM2_W5.IDT7OOBJ_7W8QFV" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym36#icu35" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym36#icu35#oln120" name="OKLink" automaticCoupling="true" to="mov1#hym36#page48"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym36#pu122" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym36#pu123" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym36#pu124" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym36#apu70" name="Set Parameters" gr:x="560" gr:y="58">
+      <ActivityParameter id="mov1#hym36#apu70#ap1708" name="Datos del propietario.OID" bpm:uuid="IJWKDB2T_5I64CA"/>
+      <ActivityParameter id="mov1#hym36#apu70#ap1714" name="Domicilio del solicitante.OID" bpm:uuid="IJWKDB2T_AT5VCT"/>
+      <ActivityParameter id="mov1#hym36#apu70#ap1726" name="Domicilio del predio.OID" bpm:uuid="IJWKDB2S_AUY0Q9"/>
+      <ActivityParameter id="mov1#hym36#apu70#ap1736" name="Datos generales del servicio.OID" bpm:uuid="IJWKDB2T_V1ZMN7"/>
+      <ActivityParameter id="mov1#hym36#apu70#ap1740" name="Servicio.OID" bpm:uuid="IJWKDB2S_1YGJXX"/>
+      <ActivityParameter id="mov1#hym36#apu70#ap1744" name="Validaciones.OID" bpm:uuid="IJWKDB2T_U1W4F5"/>
+      <ActivityParameter id="mov1#hym36#apu70#ap1746" name="Validaciones.&#191;Procede? " bpm:uuid="IJWKDB2T_U1W4F5/IH8MGT15_XX"/>
+      <OKLink id="mov1#hym36#apu70#oln121" name="OKLink" automaticCoupling="false" to="mov1#hym36#pu122" codeRef="mov1#hym36#page48#enu244#ln617"/>
+      <OKLink id="mov1#hym36#apu70#oln122" name="OKLink" automaticCoupling="false" to="mov1#hym36#pu123" codeRef="mov1#hym36#page48#enu244#ln618"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

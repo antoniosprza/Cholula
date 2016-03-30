@@ -1,0 +1,22 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym63" gr:x="4235" gr:y="560" name="Factibilidad de agua y drenaje - Inspector - 5.3 Realizar inspecci&#243;n y generar reporte" bpm:moduleType="activity" bpm:uuids="IH8UEEGG_60K.ICHXI4VC_AUT8X" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym63#icu62" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym63#icu62#oln201" name="OKLink" automaticCoupling="true" to="mov1#hym63#page75"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym63#pu203" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym63#pu204" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym63#pu205" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym63#apu124" name="Set Parameters" gr:x="560" gr:y="52">
+      <ActivityParameter id="mov1#hym63#apu124#ap3006" name="Predial.OID" bpm:uuid="IJWLCWG7_Q2ISDH"/>
+      <ActivityParameter id="mov1#hym63#apu124#ap3009" name="Control.OID" bpm:uuid="IJWLCWG7_7Y1Y5I"/>
+      <ActivityParameter id="mov1#hym63#apu124#ap3013" name="Domicilio del predio.OID" bpm:uuid="IJWLCWG7_USMK2N"/>
+      <ActivityParameter id="mov1#hym63#apu124#ap3026" name="Fecha y hora de visita.OID" bpm:uuid="IJWLCWG7_7HLBAW"/>
+      <ActivityParameter id="mov1#hym63#apu124#ap3029" name="Visita de inspeccion.OID" bpm:uuid="IJWLCWG7_JC8OUG"/>
+      <ActivityParameter id="mov1#hym63#apu124#ap3031" name="Visita de inspeccion.Orden de inspeccion" bpm:uuid="IJWLCWG7_JC8OUG/IH8WL3AZ_343"/>
+      <ActivityParameter id="mov1#hym63#apu124#ap3033" name="Visita de inspeccion.Acta de inspeccion" bpm:uuid="IJWLCWG7_JC8OUG/IH8WL5ZB_72F"/>
+      <ActivityParameter id="mov1#hym63#apu124#ap3035" name="Visita de inspeccion.Observaciones" bpm:uuid="IJWLCWG7_JC8OUG/IH8WL8JS_39N"/>
+      <OKLink id="mov1#hym63#apu124#oln202" name="OKLink" automaticCoupling="false" to="mov1#hym63#pu203" codeRef="mov1#hym63#page75#enu424#ln1012"/>
+      <OKLink id="mov1#hym63#apu124#oln203" name="OKLink" automaticCoupling="false" to="mov1#hym63#pu204" codeRef="mov1#hym63#page75#enu424#ln1013"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

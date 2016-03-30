@@ -1,0 +1,73 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym45" gr:x="3435" gr:y="40" name="Dictamen de Protecci&#243;n Civil - Usuario - 1. Ingresar documentaci&#243;n" bpm:moduleType="activity" bpm:uuids="IH8X4BCI_7AT.IB2RDGDT_78W" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym45#icu44" gr:x="-275" gr:y="85" name="Input">
+      <OKLink id="mov1#hym45#icu44#oln147" name="OKLink" automaticCoupling="true" to="mov1#hym45#page57"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym45#pu149" name="Complete Activity" mode="completeActivity" gr:x="820" gr:y="220"/>
+    <ProcessUnit id="mov1#hym45#pu150" name="Save Activity" mode="saveActivity" gr:x="820" gr:y="370"/>
+    <ProcessUnit id="mov1#hym45#pu151" name="Leave Activity" mode="leaveActivity" gr:x="820" gr:y="480"/>
+    <ActivityParametersUnit id="mov1#hym45#apu88" name="Set Parameters" gr:x="580" gr:y="10">
+      <ActivityParameter id="mov1#hym45#apu88#ap1907" name="Predial.OID" bpm:uuid="IJWL2XQM_V46ZD6" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1909" name="Predial.Cuenta predial" bpm:uuid="IJWL2XQM_V46ZD6/IH8L34LF_7LX" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1917" name="Datos del solicitante.OID" bpm:uuid="IJWL2XQM_Y8SD9S" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1919" name="Datos del solicitante.Tipo de interesado    " bpm:uuid="IJWL2XQM_Y8SD9S/IH8L8H4V_5Z6" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1921" name="Datos del solicitante.Primer apellido" bpm:uuid="IJWL2XQM_Y8SD9S/IH8L8H9B_7DP" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1923" name="Datos del solicitante.Segundo apellido" bpm:uuid="IJWL2XQM_Y8SD9S/IH8L8HEF_YU" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1925" name="Datos del solicitante.Nombres(s)" bpm:uuid="IJWL2XQM_Y8SD9S/IH8L8HJ3_4ZC" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1927" name="Datos del solicitante.RFC" bpm:uuid="IJWL2XQM_Y8SD9S/IH8L8HNZ_PT" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1929" name="Datos del solicitante.Tel&#233;fono particular" bpm:uuid="IJWL2XQM_Y8SD9S/IH8L8HSM_D1" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1931" name="Datos del solicitante.Tel&#233;fono celular" bpm:uuid="IJWL2XQM_Y8SD9S/IH8L8HZJ_4UA" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1933" name="Datos del solicitante.Correo electr&#243;nico" bpm:uuid="IJWL2XQM_Y8SD9S/IH8L8I9R_5RB" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1935" name="Domicilio del predio.OID" bpm:uuid="IJWL2XQL_SZ2PV2" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1937" name="Domicilio del predio.Codigo Postal" bpm:uuid="IJWL2XQL_SZ2PV2/IH8RXZLU_4XL" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1939" name="Domicilio del predio.Numero interior" bpm:uuid="IJWL2XQL_SZ2PV2/IH8RXPL7_70D" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1941" name="Domicilio del predio.Calle (exterior)" bpm:uuid="IJWL2XQL_SZ2PV2/IH8RXJNP_5JI" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1943" name="Domicilio del predio.Numero exterior" bpm:uuid="IJWL2XQL_SZ2PV2/IH8RXMHL_64F" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1945" name="Domicilio del predio.Fraccionamiento" bpm:uuid="IJWL2XQL_SZ2PV2/IH8RXUH4_6OM" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1947" name="Domicilio del predio.Colonia" bpm:uuid="IJWL2XQL_SZ2PV2/IH8RXWQ1_2TH" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1949" name="Domicilio del predio.Clave catastral" bpm:uuid="IJWL2XQL_SZ2PV2/IH8RXF2R_1PR" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1951" name="Domicilio del predio.Letra" bpm:uuid="IJWL2XQL_SZ2PV2/IH8RXS75_AC" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1953" name="Director responsable de obra.OID" bpm:uuid="IJWL2XQM_CV3RFH" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1957" name="Director responsable de obra.Registro municipal" bpm:uuid="IJWL2XQM_CV3RFH/IH8L42QB_7HP" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1965" name="Datos de la construccion.OID" bpm:uuid="IJWL2XQM_1T86K7" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1967" name="Datos de la construccion.Poblacion fija" bpm:uuid="IJWL2XQM_1T86K7/IH8X8FBQ_6Q6" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1969" name="Datos de la construccion.Elevadores" bpm:uuid="IJWL2XQM_1T86K7/IH8X8OVA_446" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1971" name="Datos de la construccion.Cargo" bpm:uuid="IJWL2XQM_1T86K7/IH8X8D6R_4MQ" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1973" name="Datos de la construccion.Antig&#252;edad" bpm:uuid="IJWL2XQM_1T86K7/IH8X93H9_2B3" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1975" name="Datos de la construccion.Estacionamiento" bpm:uuid="IJWL2XQM_1T86K7/IH8X8QXT_3VU" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1977" name="Datos de la construccion.Niveles total" bpm:uuid="IJWL2XQM_1T86K7/IH8X8MVI_ZJ" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1979" name="Datos de la construccion.Nombre fiscal" bpm:uuid="IJWL2XQM_1T86K7/IH8X8AZ5_7PL" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1981" name="Datos de la construccion.Descripcion de actividad comercial" bpm:uuid="IJWL2XQM_1T86K7/IH8X8KK6_3XY" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1983" name="Datos de la construccion.Superficie total" bpm:uuid="IJWL2XQM_1T86K7/IH8X8SW2_7BP" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1985" name="Datos de la construccion.Superficie construida" bpm:uuid="IJWL2XQM_1T86K7/IH8X915Y_9S" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1987" name="Datos de la construccion.Programa" bpm:uuid="IJWL2XQM_1T86K7/IH8X88Y1_56Z" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1989" name="Datos de la construccion.Nombre o tipo de obra" bpm:uuid="IJWL2XQM_1T86K7/IH8X86VI_5HC" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1991" name="Datos de la construccion.Poblacon flotante" bpm:uuid="IJWL2XQM_1T86K7/IH8X8HFN_3IE" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1993" name="Requsisitos.OID" bpm:uuid="IJWL2XQM_FC7K8Q" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1995" name="Requsisitos.IFE del representante" bpm:uuid="IJWL2XQM_FC7K8Q/IH8XFPNM_2A6" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1997" name="Requsisitos.RFC del representante" bpm:uuid="IJWL2XQM_FC7K8Q/IH8XFRZD_31Z" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap1999" name="Requsisitos.Carta de entrega del programa" bpm:uuid="IJWL2XQM_FC7K8Q/IH8XFTXT_694" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap2001" name="Requsisitos.Carta de responsabilidad/Corresponsabilidad" bpm:uuid="IJWL2XQM_FC7K8Q/IH8XFWPC_UO" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap2003" name="Expediente electronico.OID" bpm:uuid="IJWL2XQL_D6EK8S" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap2005" name="Expediente electronico.Fotografia 2 de se&#241;aletica y equipo de seguridad" bpm:uuid="IJWL2XQL_D6EK8S/IH8XD1OI_62B" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap2007" name="Expediente electronico.Constancia de primeros auxilios en formato DC3" bpm:uuid="IJWL2XQL_D6EK8S/IH8XCL98_6VS" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap2009" name="Expediente electronico.Oficio emitido por Desarrollo Urbano para el Dictamen" bpm:uuid="IJWL2XQL_D6EK8S/IH8XCF14_5PQ" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap2011" name="Expediente electronico.Plano arquitectonico" bpm:uuid="IJWL2XQL_D6EK8S/IH8XCH5I_74T" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap2013" name="Expediente electronico.Poliza de seguro" bpm:uuid="IJWL2XQL_D6EK8S/IH8XCJ4T_4RS" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap2015" name="Expediente electronico.Fotografia 3 de se&#241;aletica y equipo de seguridad" bpm:uuid="IJWL2XQL_D6EK8S/IH8XD4CC_20W" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap2017" name="Expediente electronico.Programa interno" bpm:uuid="IJWL2XQL_D6EK8S/IH8XCCTA_4A1" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap2019" name="Expediente electronico.Plano de ubicacion y distribucion de se&#241;al" bpm:uuid="IJWL2XQL_D6EK8S/IH8XCAI4_3W0" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap2021" name="Expediente electronico.Constancia de trabajos de altura" bpm:uuid="IJWL2XQL_D6EK8S/IH8XCTIY_J7" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap2023" name="Expediente electronico.Plano de ubicacion y colindancias" bpm:uuid="IJWL2XQL_D6EK8S/IH8XC38X_5KX" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap2025" name="Expediente electronico.Hojas de seguridad de oxigeno y acetuleno" bpm:uuid="IJWL2XQL_D6EK8S/IH8XCVYH_5Q2" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap2027" name="Expediente electronico.Constancia de soldadura (en caso de)" bpm:uuid="IJWL2XQL_D6EK8S/IH8XCR3B_2ZG" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap2029" name="Expediente electronico.Constancia manejo de extintores" bpm:uuid="IJWL2XQL_D6EK8S/IH8XCNIP_3HW" enumerated="false"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap2031" name="Expediente electronico.Fotografias de se&#241;aletica y equipo de seguridad" bpm:uuid="IJWL2XQL_D6EK8S/IH8XCY9S_2QB" enumerated="false"/>
+      <OKLink id="mov1#hym45#apu88#oln148" name="OKLink" automaticCoupling="false" to="mov1#hym45#pu149" codeRef="mov1#hym45#page57#enu290#ln718"/>
+      <OKLink id="mov1#hym45#apu88#oln149" name="OKLink" automaticCoupling="false" to="mov1#hym45#pu150" codeRef="mov1#hym45#page57#enu290#ln719"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap23c" name="Control.OID" bpm:uuid="IJWL2XQL_J0GEHD"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap25c" name="Control.Folio de ingreso" bpm:uuid="IJWL2XQL_J0GEHD/IH8KZUZV_14D"/>
+      <ActivityParameter id="mov1#hym45#apu88#ap84c" name="Control.Folio de control" bpm:uuid="IJWL2XQL_J0GEHD/IH8L0CS5_XQ"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

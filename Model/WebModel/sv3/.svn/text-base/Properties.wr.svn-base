@@ -1,0 +1,34 @@
+<SiteView xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3" name="Control View" homePage="sv3#page8" landmarks="sv3#page8 sv3#page11 sv3#page10" protected="true" bpm:uuids="IH8MUGYN_75W.ICGFMRWE_4WE IH8MUGYN_75W.ICGFO0L3_6ZV2Y IH8MUGYN_75W.ICGFOEBC_AF3E2 IH8MUGYN_75W.ICGFPMEJ_59B23 IH8MUGYN_75W.ICGFPVYY_HX77P IJWGRZ38_5F5.IDQWSWLM_28Q IJWGRZ38_5F5.IDQWWCA1_9QDKYO IJWGRZ38_5F5.IDQWWFSI_W16FUO IJWGRZ38_5F5.IDQWWI9U_RXNP4C IJWGRZ38_5F5.IDQWWLUE_S1VT99 IH8XYGM2_W5.IDQY8C54_2LU IH8XYGM2_W5.IDQYD0GA_HEIP4N IH8XYGM2_W5.IDQYDGMJ_77XAPL IH8XYGM2_W5.IDQYDM2N_SYF996 IH8XYGM2_W5.IDQYE8AG_25T53X IH8XYGM2_W5.IDQYELAY_OWVDCT IJWGUXEF_7NS.IB116PYM_2BD IJWGUXEF_7NS.IB117FA1_BIQTA IJWGUXEF_7NS.IB118YW1_4TZ2S IH8X4BCI_7AT.IB2RDGDT_31I IH8X4BCI_7AT.IB2RFVER_G7LFN IH8X4BCI_7AT.IB2RGCRV_5CQMI IH8X4BCI_7AT.IB2RGGGJ_7T4R1 IH8UEEGG_60K.ICHX4WMV_4CT IH8UEEGG_60K.ICHX7Z4R_HYMS6 IH8UEEGG_60K.ICHX853I_2H2CX IH8UEEGG_60K.ICHX8DM4_A1L1B IH8UEEGG_60K.ICHX8ILQ_HLZG IH8UEEGG_60K.ICHX8N4V_I3GU2 IJWGSGO9_4JI.IB14CBUE_49 IJWGSGO9_4JI.IB14F2HR_CNYW7 IJWGSGO9_4JI.IB14F7DM_6HDYE IH8MOSKO_307.ICFB94C4_1BQ IH8MOSKO_307.ICFBTIFG_DWX0A IH8MOSKO_307.ICFBWEKR_8V0XP IH8MOSKO_307.ICFBXRX0_HFPUQ IH8MOSKO_307.ICFBY6GS_3FSFC IH8MOSKO_307.ICFBYNSA_FQ0EO IH8MOSKO_307.ICFBZ25I_EY9RX IH8T9YT7_4NM.IB2SOUAS_6CO IH8T9YT7_4NM.ICHUZKI7_3FNYM IH8T9YT7_4NM.ICHV3BLJ_B7CV6 IH8T9YT7_4NM.ICHV3SLN_60MUW IH8T9YT7_4NM.ICHV42G9_4RW9Z IH8T9YT7_4NM.ICHV4DXN_77AOO IJ4UT20G_6WH.IB1C8BJO_6DX IJ4UT20G_6WH.IB1CDFXW_G5PG1 IJ4UT20G_6WH.IB1CDTXW_2XC59 IJ4UT20G_6WH.IB1CE4LP_FUF0V IJ4UT20G_6WH.IB1CF3IP_BIW2Q IH8R3ULM_4ER.ICGPW06I_1BU IH8R3ULM_4ER.ICGPWFZI_FR14I IH8R3ULM_4ER.ICGPWRQV_7K70H IH8R3ULM_4ER.ICGPX0Y1_37E1R IH8R3ULM_4ER.ICGPXB2A_JWF5F IH8R3ULM_4ER.ICGPXN0Q_5JAAL IH8R3ULM_4ER.ICGPXV7N_I7RKD" localized="true">
+  <OperationUnits>
+    <ResumeActivityUnit id="sv3#rau1" name="Resume Activity" gr:x="835" gr:y="485">
+      <KOLink id="sv3#rau1#kln8" name="KOLink4" to="sv3#page12#pu17">
+        <LinkParameter id="sv3#rau1#kln8#par46" name="Error Info_Error Info" source="errorInfo" target="sv3#page12#pu17.errorInfo"/>
+      </KOLink>
+    </ResumeActivityUnit>
+    <StartProcessUnit id="sv3#spu1" name="Start Process" gr:x="845" gr:y="230">
+      <KOLink id="sv3#spu1#kln9" name="KOLink3" to="sv3#page12#pu17">
+        <LinkParameter id="sv3#spu1#kln9#par47" name="Error Info_Error Info" source="errorInfo" target="sv3#page12#pu17.errorInfo"/>
+      </KOLink>
+    </StartProcessUnit>
+    <DeleteUnit id="sv3#dlu1" name="Remove Notification" gr:x="459" gr:y="42" entity="Notification">
+      <Selector id="sv3#dlu1#su10" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#dlu1#su10#kcond5" name="oids" predicate="in" implied="false"/>
+      </Selector>
+    </DeleteUnit>
+    <ModifyUnit id="sv3#mfu1" gr:x="322" gr:y="41" name="Mark as Read" entity="Notification" bulk="false">
+      <Selector id="sv3#mfu1#su11" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#mfu1#su11#kcond6" name="oids" predicate="in" implied="false"/>
+      </Selector>
+    </ModifyUnit>
+    <LogoutUnit id="sv3#lou2" name="Logout User" gr:x="1395" gr:y="245" siteView="sv1"/>
+    <ProcessUnit id="sv3#pu12" name="Rollback Activity" gr:x="600" gr:y="906" mode="rollback">
+      <KOLink id="sv3#pu12#kln10" name="KOLink9" to="sv3#page12#pu17">
+        <LinkParameter id="sv3#pu12#kln10#par48" name="Error Info_Error Info" source="errorInfo" target="sv3#page12#pu17.errorInfo"/>
+      </KOLink>
+      <OKLink id="sv3#pu12#oln9" name="OKLink42" to="sv3#page9#pdu3" gr:bendpoints="-133,-47,97,-47">
+        <LinkParameter id="sv3#pu12#oln9#par49" name="Process Instance Oid_PASSING_Process Instance Oid" sourceLinkParameter="sv3#page9#pdu3#ln53#par62" target="sv3#page9#pdu3.processInstanceOid"/>
+      </OKLink>
+    </ProcessUnit>
+  </OperationUnits>
+  <layout:LayoutParameter name="show-left-column" value="true" type="page"/>
+</SiteView>

@@ -1,0 +1,24 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym115" gr:x="9320" gr:y="440" name="Terminaci&#243;n de Obra - Jefe de Departamento de Licencias de Construcci&#243;n - 6. Analizar expediente e informe de inspecci&#243;n" bpm:moduleType="activity" bpm:uuids="IH8R3ULM_4ER.ICGQCAKW_455SQ" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym115#icu114" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym115#icu114#oln357" name="OKLink" automaticCoupling="true" to="mov1#hym115#page127"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym115#pu359" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym115#pu360" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym115#pu361" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym115#apu228" name="Set Parameters" gr:x="560" gr:y="40">
+      <ActivityParameter id="mov1#hym115#apu228#ap5131" name="Predial.OID" bpm:uuid="IJXG7WP6_NSVXYD"/>
+      <ActivityParameter id="mov1#hym115#apu228#ap5134" name="Control.OID" bpm:uuid="IJXG7WP6_57UCWL"/>
+      <ActivityParameter id="mov1#hym115#apu228#ap5138" name="Fecha y hora de visita.OID" bpm:uuid="IJXG7WP6_X16QCP"/>
+      <ActivityParameter id="mov1#hym115#apu228#ap5142" name="Informe ecologico preventiov.OID" bpm:uuid="IJXG7WP7_DBCMY8"/>
+      <ActivityParameter id="mov1#hym115#apu228#ap5152" name="Informe de terminacion de obra.OID" bpm:uuid="IJXG7WP7_4WO3W2"/>
+      <ActivityParameter id="mov1#hym115#apu228#ap5165" name="Expediente electronico.OID" bpm:uuid="IJXG7WP6_92N7A0"/>
+      <ActivityParameter id="mov1#hym115#apu228#ap5171" name="Antecendetes.OID" bpm:uuid="IJXG7WP6_WFE9FK"/>
+      <ActivityParameter id="mov1#hym115#apu228#ap5177" name="Validaciones.OID" bpm:uuid="IJXG7WP6_1AO8MB"/>
+      <ActivityParameter id="mov1#hym115#apu228#ap5179" name="Validaciones.&#191;Cumple? " bpm:uuid="IJXG7WP6_1AO8MB/IH8TOH8O_6O7"/>
+      <ActivityParameter id="mov1#hym115#apu228#ap5181" name="Validaciones.&#191;Es competencia de ecologia municipal? " bpm:uuid="IJXG7WP6_1AO8MB/IH8TOYT6_26X"/>
+      <OKLink id="mov1#hym115#apu228#oln358" name="OKLink" automaticCoupling="false" to="mov1#hym115#pu359" codeRef="mov1#hym115#page127#enu769#ln1796"/>
+      <OKLink id="mov1#hym115#apu228#oln359" name="OKLink" automaticCoupling="false" to="mov1#hym115#pu360" codeRef="mov1#hym115#page127#enu769#ln1797"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

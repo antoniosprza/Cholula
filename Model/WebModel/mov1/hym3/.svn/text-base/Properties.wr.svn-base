@@ -1,0 +1,52 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym3" gr:x="10" gr:y="50" name="Alineamiento y N&#250;mero oficial - Usuario - 2.1 Subsanar observaciones" bpm:moduleType="activity" bpm:uuids="IH8MUGYN_75W.ICGFS206_9ON0R" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym3#icu2" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym3#icu2#oln21" name="OKLink" automaticCoupling="true" to="mov1#hym3#page15"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym3#pu23" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym3#pu24" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym3#pu25" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym3#apu4" name="Set Parameters" gr:x="560" gr:y="-128">
+      <ActivityParameter id="mov1#hym3#apu4#ap66" name="Predial.OID" bpm:uuid="IJWJGHP3_GLTB4M"/>
+      <ActivityParameter id="mov1#hym3#apu4#ap68" name="Predial.Cuenta predial" bpm:uuid="IJWJGHP3_GLTB4M/IH8L34LF_7LX"/>
+      <ActivityParameter id="mov1#hym3#apu4#ap70" name="Control.OID" bpm:uuid="IJWJGHP3_TJLYLB"/>
+      <ActivityParameter id="mov1#hym3#apu4#ap72" name="Control.Folio de ingreso" bpm:uuid="IJWJGHP3_TJLYLB/IH8KZUZV_14D"/>
+      <ActivityParameter id="mov1#hym3#apu4#ap74" name="Control.Folio de control" bpm:uuid="IJWJGHP3_TJLYLB/IH8L0CS5_XQ"/>
+      <ActivityParameter id="mov1#hym3#apu4#ap76" name="Validaciones.OID" bpm:uuid="IJWJGHP3_YOW2KM"/>
+      <ActivityParameter id="mov1#hym3#apu4#ap78" name="Validaciones.Observaciones" bpm:uuid="IJWJGHP3_YOW2KM/IH8LLT4Q_5TC"/>
+      <ActivityParameter id="mov1#hym3#apu4#ap80" name="Validaciones.&#191;Procede sin inspecci&#243;n? " bpm:uuid="IJWJGHP3_YOW2KM/IH8NNAR3_7G2"/>
+      <ActivityParameter id="mov1#hym3#apu4#ap82" name="Validaciones.&#191;Esta completa la informacion? " bpm:uuid="IJWJGHP3_YOW2KM/IH8LL99N_341"/>
+      <ActivityParameter id="mov1#hym3#apu4#ap84" name="Validaciones.&#191;Procede? " bpm:uuid="IJWJGHP3_YOW2KM/IH8MGT15_XX"/>
+      <ActivityParameter id="mov1#hym3#apu4#ap86" name="Datos del solicitante.OID" bpm:uuid="IJWJGHP3_1JKBXQ"/>
+      <ActivityParameter id="mov1#hym3#apu4#ap88" name="Datos del solicitante.Tipo de interesado    " bpm:uuid="IJWJGHP3_1JKBXQ/IH8L8H4V_5Z6"/>
+      <ActivityParameter id="mov1#hym3#apu4#ap90" name="Datos del solicitante.Primer apellido" bpm:uuid="IJWJGHP3_1JKBXQ/IH8L8H9B_7DP"/>
+      <ActivityParameter id="mov1#hym3#apu4#ap92" name="Datos del solicitante.Segundo apellido" bpm:uuid="IJWJGHP3_1JKBXQ/IH8L8HEF_YU"/>
+      <ActivityParameter id="mov1#hym3#apu4#ap94" name="Datos del solicitante.Nombres(s)" bpm:uuid="IJWJGHP3_1JKBXQ/IH8L8HJ3_4ZC"/>
+      <ActivityParameter id="mov1#hym3#apu4#ap96" name="Datos del solicitante.RFC" bpm:uuid="IJWJGHP3_1JKBXQ/IH8L8HNZ_PT"/>
+      <ActivityParameter id="mov1#hym3#apu4#ap98" name="Datos del solicitante.Tel&#233;fono particular" bpm:uuid="IJWJGHP3_1JKBXQ/IH8L8HSM_D1"/>
+      <ActivityParameter id="mov1#hym3#apu4#ap100" name="Datos del solicitante.Tel&#233;fono celular" bpm:uuid="IJWJGHP3_1JKBXQ/IH8L8HZJ_4UA"/>
+      <ActivityParameter id="mov1#hym3#apu4#ap102" name="Datos del solicitante.Correo electr&#243;nico" bpm:uuid="IJWJGHP3_1JKBXQ/IH8L8I9R_5RB"/>
+      <ActivityParameter id="mov1#hym3#apu4#ap104" name="Datos del propietario.OID" bpm:uuid="IJWJGHP3_E19GWY"/>
+      <ActivityParameter id="mov1#hym3#apu4#ap106" name="Datos del propietario.Primer apellido" bpm:uuid="IJWJGHP3_E19GWY/IH8LBLG1_2V2"/>
+      <ActivityParameter id="mov1#hym3#apu4#ap108" name="Datos del propietario.Segundo apellido" bpm:uuid="IJWJGHP3_E19GWY/IH8LBLL5_6Q8"/>
+      <ActivityParameter id="mov1#hym3#apu4#ap110" name="Datos del propietario.Nombres(s)" bpm:uuid="IJWJGHP3_E19GWY/IH8LBLQQ_55H"/>
+      <ActivityParameter id="mov1#hym3#apu4#ap112" name="Datos del propietario.RFC" bpm:uuid="IJWJGHP3_E19GWY/IH8LBLW1_47V"/>
+      <ActivityParameter id="mov1#hym3#apu4#ap114" name="Expediente electronico.OID" bpm:uuid="IJWJGHP3_EQWS64"/>
+      <ActivityParameter id="mov1#hym3#apu4#ap116" name="Expediente electronico.Documento que acreedite la propiedad" bpm:uuid="IJWJGHP3_EQWS64/IH8LGKKQ_1C0"/>
+      <ActivityParameter id="mov1#hym3#apu4#ap118" name="Expediente electronico.Dictamen de integracion de vialidades" bpm:uuid="IJWJGHP3_EQWS64/IH8NKRXG_4BY"/>
+      <ActivityParameter id="mov1#hym3#apu4#ap120" name="Expediente electronico.Dictamen del INAH" bpm:uuid="IJWJGHP3_EQWS64/IH8NKY23_S2"/>
+      <ActivityParameter id="mov1#hym3#apu4#ap122" name="Expediente electronico.Tabla de indivisos" bpm:uuid="IJWJGHP3_EQWS64/IH8NKBTP_5T0"/>
+      <ActivityParameter id="mov1#hym3#apu4#ap124" name="Expediente electronico.Plano aprobado por el area de licencias" bpm:uuid="IJWJGHP3_EQWS64/IH8NK8D9_44K"/>
+      <ActivityParameter id="mov1#hym3#apu4#ap126" name="Expediente electronico.Plano aprobado de fraccionamientos" bpm:uuid="IJWJGHP3_EQWS64/IH8NK5DP_3FW"/>
+      <ActivityParameter id="mov1#hym3#apu4#ap128" name="Expediente electronico.Plano aprobado de las casas" bpm:uuid="IJWJGHP3_EQWS64/IH8NK1MT_3U1"/>
+      <ActivityParameter id="mov1#hym3#apu4#ap130" name="Expediente electronico.Ficha informativa emitida por Desarrollo Urbano de los m2 de construccion" bpm:uuid="IJWJGHP3_EQWS64/IH8NJ8P3_2R5"/>
+      <ActivityParameter id="mov1#hym3#apu4#ap132" name="Expediente electronico.Levantamiento topografico" bpm:uuid="IJWJGHP3_EQWS64/IH8NL2V7_4LS"/>
+      <ActivityParameter id="mov1#hym3#apu4#ap134" name="Expediente electronico.Licencia de fraccionamientos" bpm:uuid="IJWJGHP3_EQWS64/IH8NJ7WW_3HE"/>
+      <ActivityParameter id="mov1#hym3#apu4#ap136" name="Expediente electronico.Constancia de terminacion de obra de construccion" bpm:uuid="IJWJGHP3_EQWS64/IH8NJ6G6_7E4"/>
+      <ActivityParameter id="mov1#hym3#apu4#ap138" name="Expediente electronico.Constancia de alineamiento y numero oficial" bpm:uuid="IJWJGHP3_EQWS64/IH8NIS5R_3BX"/>
+      <ActivityParameter id="mov1#hym3#apu4#ap140" name="Expediente electronico.Dictamen de C.N.A. y Proteccion Civil" bpm:uuid="IJWJGHP3_EQWS64/IH8NKJE4_1X8"/>
+      <OKLink id="mov1#hym3#apu4#oln22" name="OKLink" automaticCoupling="false" to="mov1#hym3#pu23" codeRef="mov1#hym3#page15#enu20#ln124"/>
+      <OKLink id="mov1#hym3#apu4#oln23" name="OKLink" automaticCoupling="false" to="mov1#hym3#pu24" codeRef="mov1#hym3#page15#enu20#ln125"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

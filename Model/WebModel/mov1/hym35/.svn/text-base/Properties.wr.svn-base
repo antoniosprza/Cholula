@@ -1,0 +1,23 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym35" gr:x="1720" gr:y="695" name="Contrato de conexi&#243;n de agua - Analista t&#233;cnico - 6.1 Subsanar observaciones" bpm:moduleType="activity" bpm:uuids="IH8XYGM2_W5.IDT7PU5C_DP4M6Y" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym35#icu34" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym35#icu34#oln117" name="OKLink" automaticCoupling="true" to="mov1#hym35#page47"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym35#pu119" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym35#pu120" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym35#pu121" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym35#apu68" name="Set Parameters" gr:x="560" gr:y="46">
+      <ActivityParameter id="mov1#hym35#apu68#ap1663" name="Predial.OID" bpm:uuid="IJWKDB2T_B9LWW2"/>
+      <ActivityParameter id="mov1#hym35#apu68#ap1666" name="Control.OID" bpm:uuid="IJWKDB2S_69Y861"/>
+      <ActivityParameter id="mov1#hym35#apu68#ap1670" name="Datos del propietario.OID" bpm:uuid="IJWKDB2T_5I64CA"/>
+      <ActivityParameter id="mov1#hym35#apu68#ap1676" name="Domicilio del solicitante.OID" bpm:uuid="IJWKDB2T_AT5VCT"/>
+      <ActivityParameter id="mov1#hym35#apu68#ap1688" name="Domicilio del predio.OID" bpm:uuid="IJWKDB2S_AUY0Q9"/>
+      <ActivityParameter id="mov1#hym35#apu68#ap1698" name="Datos generales del servicio.OID" bpm:uuid="IJWKDB2T_V1ZMN7"/>
+      <ActivityParameter id="mov1#hym35#apu68#ap1702" name="Servicio.OID" bpm:uuid="IJWKDB2S_1YGJXX"/>
+      <ActivityParameter id="mov1#hym35#apu68#ap1704" name="Servicio.Observaciones" bpm:uuid="IJWKDB2S_1YGJXX/IH8ZOO12_IT"/>
+      <ActivityParameter id="mov1#hym35#apu68#ap1706" name="Servicio.Clasificacion" bpm:uuid="IJWKDB2S_1YGJXX/IH8ZOLDP_47R"/>
+      <OKLink id="mov1#hym35#apu68#oln118" name="OKLink" automaticCoupling="false" to="mov1#hym35#pu119" codeRef="mov1#hym35#page47#enu237#ln602"/>
+      <OKLink id="mov1#hym35#apu68#oln119" name="OKLink" automaticCoupling="false" to="mov1#hym35#pu120" codeRef="mov1#hym35#page47#enu237#ln603"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

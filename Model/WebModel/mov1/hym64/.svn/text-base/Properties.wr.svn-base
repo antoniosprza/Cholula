@@ -1,0 +1,17 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym64" gr:x="4235" gr:y="690" name="Factibilidad de agua y drenaje - Jur&#237;dico - 6. Revisar factibilidad" bpm:moduleType="activity" bpm:uuids="IH8UEEGG_60K.ICHXKEDN_IWU5R" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym64#icu63" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym64#icu63#oln204" name="OKLink" automaticCoupling="true" to="mov1#hym64#page76"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym64#pu206" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym64#pu207" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym64#pu208" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym64#apu126" name="Set Parameters" gr:x="560" gr:y="82">
+      <ActivityParameter id="mov1#hym64#apu126#ap3037" name="Predial.OID" bpm:uuid="IJWLCWG7_Q2ISDH"/>
+      <ActivityParameter id="mov1#hym64#apu126#ap3040" name="Control.OID" bpm:uuid="IJWLCWG7_7Y1Y5I"/>
+      <ActivityParameter id="mov1#hym64#apu126#ap3044" name="Expediente electronico.OID" bpm:uuid="IJWLCWG7_9G0J22"/>
+      <OKLink id="mov1#hym64#apu126#oln205" name="OKLink" automaticCoupling="false" to="mov1#hym64#pu206" codeRef="mov1#hym64#page76#enu428#ln1021"/>
+      <OKLink id="mov1#hym64#apu126#oln206" name="OKLink" automaticCoupling="false" to="mov1#hym64#pu207" codeRef="mov1#hym64#page76#enu428#ln1022"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

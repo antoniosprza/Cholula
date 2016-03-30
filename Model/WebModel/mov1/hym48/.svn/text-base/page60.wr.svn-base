@@ -1,0 +1,138 @@
+<Page xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym48#page60" name="8. Descargar Dictamen de Protecci&#243;n Civil" gr:x="10" gr:y="-5">
+  <ContentUnits>
+    <ActivityParametersUnit id="mov1#hym48#page60#apu95" name="Get Parameters" gr:x="0" gr:y="0">
+      <Link id="mov1#hym48#page60#apu95#ln753" name="Properties" type="transport" automaticCoupling="false" to="mov1#hym48#page60#enu306">
+        <LinkParameter id="mov1#hym48#page60#apu95#ln753#par2355" name="Predial.OID" source="mov1#hym48#page60#apu95#ap2174" target="mov1#hym48#page60#enu306#fld1283_slot"/>
+        <LinkParameter id="mov1#hym48#page60#apu95#ln753#par2356" name="Predial.Cuenta predial" source="mov1#hym48#page60#apu95#ap2176" target="mov1#hym48#page60#enu306#fld1284_slot"/>
+      </Link>
+      <ActivityParameter id="mov1#hym48#page60#apu95#ap2174" name="Predial.OID" bpm:uuid="IJWL2XQM_V46ZD6"/>
+      <ActivityParameter id="mov1#hym48#page60#apu95#ap2176" name="Predial.Cuenta predial" bpm:uuid="IJWL2XQM_V46ZD6/IH8L34LF_7LX"/>
+      <Link id="mov1#hym48#page60#apu95#ln755" name="Properties" type="transport" automaticCoupling="false" to="mov1#hym48#page60#enu307">
+        <LinkParameter id="mov1#hym48#page60#apu95#ln755#par2358" name="Control.OID" source="mov1#hym48#page60#apu95#ap2177" target="mov1#hym48#page60#enu307#fld1285_slot"/>
+        <LinkParameter id="mov1#hym48#page60#apu95#ln755#par2359" name="Control.Folio de ingreso" source="mov1#hym48#page60#apu95#ap2179" target="mov1#hym48#page60#enu307#fld1286_slot"/>
+        <LinkParameter id="mov1#hym48#page60#apu95#ln755#par2360" name="Control.Folio de control" source="mov1#hym48#page60#apu95#ap2180" target="mov1#hym48#page60#enu307#fld1287_slot"/>
+      </Link>
+      <ActivityParameter id="mov1#hym48#page60#apu95#ap2177" name="Control.OID" bpm:uuid="IJWL2XQL_J0GEHD"/>
+      <ActivityParameter id="mov1#hym48#page60#apu95#ap2179" name="Control.Folio de ingreso" bpm:uuid="IJWL2XQL_J0GEHD/IH8KZUZV_14D"/>
+      <ActivityParameter id="mov1#hym48#page60#apu95#ap2180" name="Control.Folio de control" bpm:uuid="IJWL2XQL_J0GEHD/IH8L0CS5_XQ"/>
+      <Link id="mov1#hym48#page60#apu95#ln757" name="Properties" type="transport" automaticCoupling="false" to="mov1#hym48#page60#enu308">
+        <LinkParameter id="mov1#hym48#page60#apu95#ln757#par2362" name="Expediente electronico.OID" source="mov1#hym48#page60#apu95#ap2181" target="mov1#hym48#page60#enu308#fld1288_slot"/>
+        <LinkParameter id="mov1#hym48#page60#apu95#ln757#par2363" name="Expediente electronico.Dictamen de Proteccion Civil" source="mov1#hym48#page60#apu95#ap2183" target="mov1#hym48#page60#enu308#fld1289_slot"/>
+        <LinkParameter id="mov1#hym48#page60#apu95#ln757#par2364" name="Expediente electronico.Constancia de medidas preventivas contra incendio" source="mov1#hym48#page60#apu95#ap2184" target="mov1#hym48#page60#enu308#fld1290_slot"/>
+      </Link>
+      <ActivityParameter id="mov1#hym48#page60#apu95#ap2181" name="Expediente electronico.OID" bpm:uuid="IJWL2XQL_D6EK8S"/>
+      <ActivityParameter id="mov1#hym48#page60#apu95#ap2183" name="Expediente electronico.Dictamen de Proteccion Civil" bpm:uuid="IJWL2XQL_D6EK8S/IH8XVQY0_4LB"/>
+      <ActivityParameter id="mov1#hym48#page60#apu95#ap2184" name="Expediente electronico.Constancia de medidas preventivas contra incendio" bpm:uuid="IJWL2XQL_D6EK8S/IH8XW0RD_5LT"/>
+    </ActivityParametersUnit>
+    <EntryUnit id="mov1#hym48#page60#enu306" name="Predial" bpm:uuid="IJWL2XQM_V46ZD6" gr:x="265" gr:y="80">
+      <Link id="mov1#hym48#page60#enu306#ln754" name="Parameters" type="transport" automaticCoupling="false" to="mov1#hym48#apu94" validate="true">
+        <LinkParameter id="mov1#hym48#page60#enu306#ln754#par2354" name="Predial.OID" source="mov1#hym48#page60#enu306#fld1283" target="mov1#hym48#apu94#ap2175"/>
+      </Link>
+      <Field id="mov1#hym48#page60#enu306#fld1283" name="OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJWL2XQM_V46ZD6"/>
+      <Field id="mov1#hym48#page60#enu306#fld1284" name="Cuenta predial" type="string" preloaded="true" modifiable="false" bpm:uuid="IJWL2XQM_V46ZD6/IH8L34LF_7LX"/>
+    </EntryUnit>
+    <EntryUnit id="mov1#hym48#page60#enu307" name="Control" bpm:uuid="IJWL2XQL_J0GEHD" gr:x="265" gr:y="160">
+      <Link id="mov1#hym48#page60#enu307#ln756" name="Parameters" type="transport" automaticCoupling="false" to="mov1#hym48#apu94" validate="true">
+        <LinkParameter id="mov1#hym48#page60#enu307#ln756#par2357" name="Control.OID" source="mov1#hym48#page60#enu307#fld1285" target="mov1#hym48#apu94#ap2178"/>
+      </Link>
+      <Field id="mov1#hym48#page60#enu307#fld1285" name="OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJWL2XQL_J0GEHD"/>
+      <Field id="mov1#hym48#page60#enu307#fld1286" name="Folio de ingreso" type="string" preloaded="true" modifiable="false" bpm:uuid="IJWL2XQL_J0GEHD/IH8KZUZV_14D"/>
+      <Field id="mov1#hym48#page60#enu307#fld1287" name="Folio de control" type="string" preloaded="true" modifiable="false" bpm:uuid="IJWL2XQL_J0GEHD/IH8L0CS5_XQ"/>
+    </EntryUnit>
+    <EntryUnit id="mov1#hym48#page60#enu308" name="Expediente electronico" bpm:uuid="IJWL2XQL_D6EK8S" gr:x="265" gr:y="240">
+      <Link id="mov1#hym48#page60#enu308#ln758" name="Parameters" type="transport" automaticCoupling="false" to="mov1#hym48#apu94" validate="true">
+        <LinkParameter id="mov1#hym48#page60#enu308#ln758#par2361" name="Expediente electronico.OID" source="mov1#hym48#page60#enu308#fld1288" target="mov1#hym48#apu94#ap2182"/>
+      </Link>
+      <Field id="mov1#hym48#page60#enu308#fld1288" name="OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJWL2XQL_D6EK8S"/>
+      <Field id="mov1#hym48#page60#enu308#fld1289" name="Dictamen de Proteccion Civil" type="blob" preloaded="true" modifiable="false" bpm:uuid="IJWL2XQL_D6EK8S/IH8XVQY0_4LB"/>
+      <Field id="mov1#hym48#page60#enu308#fld1290" name="Constancia de medidas preventivas contra incendio" type="blob" preloaded="true" modifiable="false" bpm:uuid="IJWL2XQL_D6EK8S/IH8XW0RD_5LT"/>
+    </EntryUnit>
+    <EntryUnit id="mov1#hym48#page60#enu309" name="Buttons" gr:x="260" gr:y="320">
+      <Link id="mov1#hym48#page60#enu309#ln759" name="Finish" type="normal" validate="true" automaticCoupling="false" to="mov1#hym48#apu94"/>
+      <Link id="mov1#hym48#page60#enu309#ln760" name="Save and Work Later" type="normal" validate="false" automaticCoupling="false" to="mov1#hym48#apu94" gr:bendpoints="164,-32,-64,96"/>
+      <Link id="mov1#hym48#page60#enu309#ln761" name="Cancel" type="normal" validate="false" automaticCoupling="false" to="mov1#hym48#pu160"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12" label="Predial" layout:cellLayout="Print Frame">
+        <layout:Unit unitId="mov1#hym48#page60#enu306">
+          <layout:Field field="mov1#hym48#page60#enu306#fld1284" layout:fieldLayout="WRDefault/FieldValue"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell label="Control" layout:cellLayout="Print Frame" colspan="12">
+        <layout:Unit unitId="mov1#hym48#page60#enu307">
+          <layout:Field field="mov1#hym48#page60#enu307#fld1286" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym48#page60#enu307#fld1287" layout:fieldLayout="WRDefault/FieldValue"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell label="Expediente electronico" layout:cellLayout="Print Frame" colspan="12">
+        <layout:Unit unitId="mov1#hym48#page60#enu308">
+          <layout:Field field="mov1#hym48#page60#enu308#fld1289" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym48#page60#enu308#fld1290" layout:fieldLayout="WRDefault/FieldValue"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell label="Buttons" layout:cellLayout="Print Frame" colspan="12">
+        <layout:Unit unitId="mov1#hym48#page60#enu309" layout:frameLayout="None">
+          <layout:Link link="mov1#hym48#page60#enu309#ln759">
+            <layout:LayoutParameter name="confirmation" value="true" type="link"/>
+            <layout:LayoutParameter name="confirm-message" value="Confirm Finish" type="link"/>
+          </layout:Link>
+          <layout:Link link="mov1#hym48#page60#enu309#ln760"/>
+          <layout:Link link="mov1#hym48#page60#enu309#ln761"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <layout:LayoutParameter name="auto-refresh" value="true" type="page"/>
+</Page>

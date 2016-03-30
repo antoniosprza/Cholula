@@ -1,0 +1,24 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym4" gr:x="10" gr:y="310" name="Alineamiento y N&#250;mero oficial - Usuario - 3.2  Confirmar visita de inspecci&#243;n" bpm:moduleType="activity" bpm:uuids="IH8MUGYN_75W.ICGFYLNK_HHVA1" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym4#icu3" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym4#icu3#oln24" name="OKLink" automaticCoupling="true" to="mov1#hym4#page16"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym4#pu26" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym4#pu27" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym4#pu28" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym4#apu6" name="Set Parameters" gr:x="560" gr:y="46">
+      <ActivityParameter id="mov1#hym4#apu6#ap142" name="Predial.OID" bpm:uuid="IJWJGHP3_GLTB4M"/>
+      <ActivityParameter id="mov1#hym4#apu6#ap145" name="Control.OID" bpm:uuid="IJWJGHP3_TJLYLB"/>
+      <ActivityParameter id="mov1#hym4#apu6#ap149" name="Fecha y hora de visita.OID" bpm:uuid="IJWJGHP2_R47MIN"/>
+      <ActivityParameter id="mov1#hym4#apu6#ap153" name="Validaciones.OID" bpm:uuid="IJWJGHP3_YOW2KM"/>
+      <ActivityParameter id="mov1#hym4#apu6#ap155" name="Validaciones.&#191;Procede? " bpm:uuid="IJWJGHP3_YOW2KM/IH8MGT15_XX"/>
+      <ActivityParameter id="mov1#hym4#apu6#ap157" name="Validaciones.&#191;Esta completa la informacion? " bpm:uuid="IJWJGHP3_YOW2KM/IH8LL99N_341"/>
+      <ActivityParameter id="mov1#hym4#apu6#ap159" name="Validaciones.&#191;Fecha y hora confirmada? " bpm:uuid="IJWJGHP3_YOW2KM/IH8QWJH6_6X0"/>
+      <ActivityParameter id="mov1#hym4#apu6#ap161" name="Validaciones.&#191;Procede sin inspecci&#243;n? " bpm:uuid="IJWJGHP3_YOW2KM/IH8NNAR3_7G2"/>
+      <ActivityParameter id="mov1#hym4#apu6#ap163" name="Validaciones.Observaciones" bpm:uuid="IJWJGHP3_YOW2KM/IH8LLT4Q_5TC"/>
+      <OKLink id="mov1#hym4#apu6#oln25" name="OKLink" automaticCoupling="false" to="mov1#hym4#pu26" codeRef="mov1#hym4#page16#enu25#ln135"/>
+      <OKLink id="mov1#hym4#apu6#oln26" name="OKLink" automaticCoupling="false" to="mov1#hym4#pu27" codeRef="mov1#hym4#page16#enu25#ln136"/>
+      <ActivityParameter id="mov1#hym4#apu6#ap100c" name="Fecha y hora de visita.fechaTimeStamp" bpm:uuid="IH8MUGYN_75W.IJWJGHP2_R47MIN/ILU05BF9_25B"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

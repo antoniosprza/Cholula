@@ -1,0 +1,49 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym114" gr:x="9320" gr:y="375" name="Terminaci&#243;n de Obra - Inspector - 5. Realizar visita e informe de inspecci&#243;n" bpm:moduleType="activity" bpm:uuids="IH8R3ULM_4ER.ICGQBER3_27ZK" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym114#icu113" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym114#icu113#oln354" name="OKLink" automaticCoupling="true" to="mov1#hym114#page126"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym114#pu356" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym114#pu357" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym114#pu358" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym114#apu226" name="Set Parameters" gr:x="560" gr:y="-110">
+      <ActivityParameter id="mov1#hym114#apu226#ap5049" name="Predial.OID" bpm:uuid="IJXG7WP6_NSVXYD"/>
+      <ActivityParameter id="mov1#hym114#apu226#ap5052" name="Control.OID" bpm:uuid="IJXG7WP6_57UCWL"/>
+      <ActivityParameter id="mov1#hym114#apu226#ap5056" name="Domicilio del predio.OID" bpm:uuid="IJXG7WP6_7LKHLB"/>
+      <ActivityParameter id="mov1#hym114#apu226#ap5065" name="Fecha y hora de visita.OID" bpm:uuid="IJXG7WP6_X16QCP"/>
+      <ActivityParameter id="mov1#hym114#apu226#ap5069" name="Informe ecologico preventiov.OID" bpm:uuid="IJXG7WP7_DBCMY8"/>
+      <ActivityParameter id="mov1#hym114#apu226#ap5071" name="Informe ecologico preventiov.Proyecto" bpm:uuid="IJXG7WP7_DBCMY8/IH8SE8UJ_5DV"/>
+      <ActivityParameter id="mov1#hym114#apu226#ap5073" name="Informe ecologico preventiov.Comentarios" bpm:uuid="IJXG7WP7_DBCMY8/IH8SEBVS_1RD"/>
+      <ActivityParameter id="mov1#hym114#apu226#ap5075" name="Informe ecologico preventiov.&#191;Cuenta con areas abiertas con material que permita la filtracion? " bpm:uuid="IJXG7WP7_DBCMY8/IH8SEFGZ_645"/>
+      <ActivityParameter id="mov1#hym114#apu226#ap5077" name="Informe ecologico preventiov.&#191;Cuenta con area verde requerida? " bpm:uuid="IJXG7WP7_DBCMY8/IH8SEID5_370"/>
+      <ActivityParameter id="mov1#hym114#apu226#ap5079" name="Informe ecologico preventiov.&#191;Cuenta con banco de tiro autorizado? " bpm:uuid="IJXG7WP7_DBCMY8/IH8SEL6K_3P5"/>
+      <ActivityParameter id="mov1#hym114#apu226#ap5081" name="Informe ecologico preventiov.&#191;Cuenta con accesorios y muebles de ba&#241;o ahorradores de agua y energia? " bpm:uuid="IJXG7WP7_DBCMY8/IH8SENNX_4NR"/>
+      <ActivityParameter id="mov1#hym114#apu226#ap5083" name="Informe ecologico preventiov.&#191;Existe material de residuos de construcion en la obra y/o via publica? " bpm:uuid="IJXG7WP7_DBCMY8/IH8SEQ1K_5X7"/>
+      <ActivityParameter id="mov1#hym114#apu226#ap5085" name="Informe ecologico preventiov.&#191;Cuenta con los arboles requeridos? " bpm:uuid="IJXG7WP7_DBCMY8/IH8SESAM_25P"/>
+      <ActivityParameter id="mov1#hym114#apu226#ap5087" name="Informe de terminacion de obra.OID" bpm:uuid="IJXG7WP7_4WO3W2"/>
+      <ActivityParameter id="mov1#hym114#apu226#ap5089" name="Informe de terminacion de obra.% de avance de carpinteria, canceleria y acabados internos" bpm:uuid="IJXG7WP7_4WO3W2/IH8SK90L_14D"/>
+      <ActivityParameter id="mov1#hym114#apu226#ap5091" name="Informe de terminacion de obra.% de acabados exteriores" bpm:uuid="IJXG7WP7_4WO3W2/IH8SKBTI_2OD"/>
+      <ActivityParameter id="mov1#hym114#apu226#ap5093" name="Informe de terminacion de obra.&#191;Cuenta con puertas y ventanas exteriores? " bpm:uuid="IJXG7WP7_4WO3W2/IH8SKE24_36I"/>
+      <ActivityParameter id="mov1#hym114#apu226#ap5095" name="Informe de terminacion de obra.&#191;Funciona la instalacion electrica? " bpm:uuid="IJXG7WP7_4WO3W2/IH8SKG8O_4N6"/>
+      <ActivityParameter id="mov1#hym114#apu226#ap5097" name="Informe de terminacion de obra.&#191;Funciona la instalacion hidro-sanitaria? " bpm:uuid="IJXG7WP7_4WO3W2/IH8SKIE5_RS"/>
+      <ActivityParameter id="mov1#hym114#apu226#ap5099" name="Informe de terminacion de obra.&#191;Funciona la instalacion de gas? " bpm:uuid="IJXG7WP7_4WO3W2/IH8SKKJG_6NH"/>
+      <ActivityParameter id="mov1#hym114#apu226#ap5101" name="Informe de terminacion de obra.&#191;Es habitable el inmueble? " bpm:uuid="IJXG7WP7_4WO3W2/IH8SKMQ6_MT"/>
+      <ActivityParameter id="mov1#hym114#apu226#ap5103" name="Informe de terminacion de obra.&#191;Corresponde con proyecto autorizado? " bpm:uuid="IJXG7WP7_4WO3W2/IH8SKPAB_6RB"/>
+      <ActivityParameter id="mov1#hym114#apu226#ap5105" name="Informe de terminacion de obra.&#191;Esta cerrada y firmada la bitacora por DROM? " bpm:uuid="IJXG7WP7_4WO3W2/IH8SKRFN_42W"/>
+      <ActivityParameter id="mov1#hym114#apu226#ap5107" name="Informe de terminacion de obra.&#191;Esta habitado el inmuebles /en funciones? " bpm:uuid="IJXG7WP7_4WO3W2/IH8SKUQ8_K5"/>
+      <ActivityParameter id="mov1#hym114#apu226#ap5109" name="Informe de terminacion de obra.&#191;Existen da&#241;os a la via publica? " bpm:uuid="IJXG7WP7_4WO3W2/IH8SKXO7_4C"/>
+      <ActivityParameter id="mov1#hym114#apu226#ap5111" name="Expediente electronico.OID" bpm:uuid="IJXG7WP6_92N7A0"/>
+      <ActivityParameter id="mov1#hym114#apu226#ap5113" name="Expediente electronico.Fotografia exterior 1" bpm:uuid="IJXG7WP6_92N7A0/IH8SOLOP_7DI"/>
+      <ActivityParameter id="mov1#hym114#apu226#ap5115" name="Expediente electronico.Fotografia exterior 2" bpm:uuid="IJXG7WP6_92N7A0/IH8SOP3E_5JX"/>
+      <ActivityParameter id="mov1#hym114#apu226#ap5117" name="Expediente electronico.Fotografia interior 2" bpm:uuid="IJXG7WP6_92N7A0/IH8SO3S7_1AB"/>
+      <ActivityParameter id="mov1#hym114#apu226#ap5119" name="Expediente electronico.Fotografia interior 1" bpm:uuid="IJXG7WP6_92N7A0/IH8SNTMD_6YM"/>
+      <ActivityParameter id="mov1#hym114#apu226#ap5121" name="Antecendetes.OID" bpm:uuid="IJXG7WP6_WFE9FK"/>
+      <ActivityParameter id="mov1#hym114#apu226#ap5123" name="Antecendetes.No. De licencia de construccion" bpm:uuid="IJXG7WP6_WFE9FK/IH8SP8B6_AU"/>
+      <ActivityParameter id="mov1#hym114#apu226#ap5125" name="Antecendetes.Vigencia" bpm:uuid="IJXG7WP6_WFE9FK/IH8SPC47_3PQ"/>
+      <ActivityParameter id="mov1#hym114#apu226#ap5127" name="Antecendetes.Fecha de ingreso de T.O." bpm:uuid="IJXG7WP6_WFE9FK/IH8SPEAG_3YP"/>
+      <ActivityParameter id="mov1#hym114#apu226#ap5129" name="Antecendetes.Tiempo transcurrido entre vigencia y fecha de ingreso" bpm:uuid="IJXG7WP6_WFE9FK/IH8SPGT7_2KZ"/>
+      <OKLink id="mov1#hym114#apu226#oln355" name="OKLink" automaticCoupling="false" to="mov1#hym114#pu356" codeRef="mov1#hym114#page126#enu760#ln1777"/>
+      <OKLink id="mov1#hym114#apu226#oln356" name="OKLink" automaticCoupling="false" to="mov1#hym114#pu357" codeRef="mov1#hym114#page126#enu760#ln1778"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

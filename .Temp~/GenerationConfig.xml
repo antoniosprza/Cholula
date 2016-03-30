@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration>
+  <Properties>
+    <Property name="ajaxActivated">true</Property>
+    <Property name="applicationServer">Tomcat</Property>
+    <Property name="cloudDeploy">false</Property>
+    <Property name="commonsLibDir">/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/plugins/com.webratio.commons.libs_7.2.11.201512290414/lib</Property>
+    <Property name="dbConfigPath">/var/folders/m8/bt648h110xq341gtpf6plhgr0000gp/T/WRDBConfig3138283431503238976.xml</Property>
+    <Property name="defaultEncoding"></Property>
+    <Property name="deployCorePluginDir">/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/configuration/org.eclipse.osgi/bundles/327/1/.cp</Property>
+    <Property name="derbySystemHome">/Users/Angel/Documents/work-space/.metadata/.plugins/com.webratio.commons.db/derby</Property>
+    <Property name="enterpriseProjectDir"></Property>
+    <Property name="eventSocketPort">55316</Property>
+    <Property name="excludedProjects" type="list"></Property>
+    <Property name="generationTime">201603301111</Property>
+    <Property name="helpersPluginDir">/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/plugins/com.webratio.generator.helpers_7.2.11.201512290414</Property>
+    <Property name="i18nBundleKeysFile" type="file"></Property>
+    <Property name="i18nExtraBundleFile" type="file"></Property>
+    <Property name="localDeploy">true</Property>
+    <Property name="lockDir">/Users/Angel/Documents/work-space/CholulaMunWEB/.Temp~</Property>
+    <Property name="normalizeDescriptors">false</Property>
+    <Property name="outputPath">/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/Tomcat/webapps/CholulaMunWEB</Property>
+    <Property name="phases">All</Property>
+    <Property name="projectDir">/Users/Angel/Documents/work-space/CholulaMunWEB</Property>
+    <Property name="projectName">CholulaMunWEB</Property>
+    <Property name="projectPath">/var/folders/m8/bt648h110xq341gtpf6plhgr0000gp/T/Project8619377155482819503.wr</Property>
+    <Property name="projectType">WEBPROJECT</Property>
+    <Property name="rootModuleName"></Property>
+    <Property name="uiPluginDir">/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/plugins/com.webratio.ide.ui_7.2.11.201512290414</Property>
+    <Property name="webappPluginDir">/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/plugins/com.webratio.generator.webapp_7.2.11.201512290414</Property>
+    <Property name="wrBuildId">201512290414</Property>
+    <Property name="wrGenerateOldValidationRules">false</Property>
+    <Property name="wrModelStatistics">pages=132|units=1661</Property>
+    <Property name="wrVersion">7.2.11</Property>
+  </Properties>
+  <Plugins>
+    <Plugin id="com.webratio.commons.libs" path="/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/plugins/com.webratio.commons.libs_7.2.11.201512290414"/>
+    <Plugin id="com.webratio.commons.transform" path="/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/plugins/com.webratio.commons.transform_7.2.11.201512290414"/>
+    <Plugin id="com.webratio.debug" path="/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/plugins/com.webratio.debug_7.2.11.201512290414"/>
+    <Plugin id="com.webratio.json" path="/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/plugins/com.webratio.json_7.2.11.201512290414"/>
+    <Plugin id="com.webratio.lib.apache.commons.codec" path="/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/plugins/com.webratio.lib.apache.commons.codec_7.2.11.201512290414"/>
+    <Plugin id="com.webratio.lib.apache.commons.collections" path="/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/plugins/com.webratio.lib.apache.commons.collections_7.2.11.201512290414"/>
+    <Plugin id="com.webratio.lib.apache.commons.httpclient" path="/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/plugins/com.webratio.lib.apache.commons.httpclient_7.2.11.201512290414"/>
+    <Plugin id="com.webratio.lib.apache.commons.lang" path="/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/plugins/com.webratio.lib.apache.commons.lang_7.2.11.201512290414"/>
+    <Plugin id="com.webratio.lib.apache.commons.logging" path="/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/plugins/com.webratio.lib.apache.commons.logging_7.2.11.201512290414"/>
+    <Plugin id="com.webratio.lib.dom4j" path="/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/plugins/com.webratio.lib.dom4j_7.2.11.201512290414"/>
+    <Plugin id="com.webratio.lib.javassist" path="/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/plugins/com.webratio.lib.javassist_7.2.11.201512290414"/>
+    <Plugin id="com.webratio.rtx.extras" path="/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/plugins/com.webratio.rtx.extras_7.2.11.201512290414"/>
+    <Plugin id="com.webratio.rtx" path="/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/plugins/com.webratio.rtx_7.2.11.201512290414"/>
+    <Plugin id="com.webratio.struts13" path="/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/plugins/com.webratio.struts13_7.2.11.201512290414"/>
+    <Plugin id="com.webratio.units.bpm" path="/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/plugins/com.webratio.units.bpm_7.2.11.201512290414" type="components"/>
+    <Plugin id="com.webratio.units.bpm" path="/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/plugins/com.webratio.units.bpm_7.2.11.201512290414" type="components"/>
+    <Plugin id="com.webratio.units.content" path="/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/plugins/com.webratio.units.content_7.2.11.201512290414" type="components"/>
+    <Plugin id="com.webratio.units.controlflow" path="/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/plugins/com.webratio.units.controlflow_7.2.11.201512290414" type="components"/>
+    <Plugin id="com.webratio.units.module" path="/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/plugins/com.webratio.units.module_7.2.11.201512290414" type="components"/>
+    <Plugin id="com.webratio.units.operation" path="/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/plugins/com.webratio.units.operation_7.2.11.201512290414" type="components"/>
+    <Plugin id="com.webratio.units.session" path="/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/plugins/com.webratio.units.session_7.2.11.201512290414" type="components"/>
+    <Plugin id="com.webratio.units.utility" path="/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/plugins/com.webratio.units.utility_7.2.11.201512290414" type="components"/>
+    <Plugin id="com.webratio.units.validation" path="/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/plugins/com.webratio.units.validation_7.2.11.201512290414" type="components"/>
+    <Plugin id="com.webratio.units.ws" path="/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/plugins/com.webratio.units.ws_7.2.11.201512290414" type="components"/>
+    <Plugin id="com.webratio.ws" path="/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/plugins/com.webratio.ws_7.2.11.201512290414"/>
+    <Plugin id="com.webratio.xsd" path="/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/plugins/com.webratio.xsd_7.2.11.201512290414"/>
+    <Plugin id="StoreComponents" path="/Users/Angel/Documents/work-space/StoreComponents" type="components"/>
+    <Plugin id="StoreComponents" path="/Users/Angel/Documents/work-space/StoreComponents"/>
+  </Plugins>
+  <Styles>
+    <Style name="Excel" path="/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/plugins/Excel_7.2.11.201512290414"/>
+    <Style name="GOBMXSTYLE" path="/Users/Angel/Documents/work-space/GOBMXSTYLE"/>
+    <Style name="Reports" path="/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/plugins/Reports_7.2.11.201512290414"/>
+    <Style name="WebRatio" path="/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/plugins/WebRatio_7.2.11.201512290414"/>
+    <Style name="WRDefault" path="/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/plugins/WRDefault_7.2.11.201512290414"/>
+  </Styles>
+  <FileEncodings/>
+</Configuration>

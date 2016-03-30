@@ -1,0 +1,134 @@
+<Page xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym6#page18" name="7. Descargar constancia de alineamiento y n&#250;mero oficial" gr:x="10" gr:y="-5">
+  <ContentUnits>
+    <ActivityParametersUnit id="mov1#hym6#page18#apu11" name="Get Parameters" gr:x="0" gr:y="0">
+      <Link id="mov1#hym6#page18#apu11#ln145" name="Properties" type="transport" automaticCoupling="false" to="mov1#hym6#page18#enu29">
+        <LinkParameter id="mov1#hym6#page18#apu11#ln145#par273" name="Predial.OID" source="mov1#hym6#page18#apu11#ap171" target="mov1#hym6#page18#enu29#fld94_slot"/>
+        <LinkParameter id="mov1#hym6#page18#apu11#ln145#par274" name="Predial.Cuenta predial" source="mov1#hym6#page18#apu11#ap173" target="mov1#hym6#page18#enu29#fld95_slot"/>
+      </Link>
+      <ActivityParameter id="mov1#hym6#page18#apu11#ap171" name="Predial.OID" bpm:uuid="IJWJGHP3_GLTB4M"/>
+      <ActivityParameter id="mov1#hym6#page18#apu11#ap173" name="Predial.Cuenta predial" bpm:uuid="IJWJGHP3_GLTB4M/IH8L34LF_7LX"/>
+      <Link id="mov1#hym6#page18#apu11#ln147" name="Properties" type="transport" automaticCoupling="false" to="mov1#hym6#page18#enu30">
+        <LinkParameter id="mov1#hym6#page18#apu11#ln147#par276" name="Control.OID" source="mov1#hym6#page18#apu11#ap174" target="mov1#hym6#page18#enu30#fld96_slot"/>
+        <LinkParameter id="mov1#hym6#page18#apu11#ln147#par277" name="Control.Folio de ingreso" source="mov1#hym6#page18#apu11#ap176" target="mov1#hym6#page18#enu30#fld97_slot"/>
+        <LinkParameter id="mov1#hym6#page18#apu11#ln147#par278" name="Control.Folio de control" source="mov1#hym6#page18#apu11#ap177" target="mov1#hym6#page18#enu30#fld98_slot"/>
+      </Link>
+      <ActivityParameter id="mov1#hym6#page18#apu11#ap174" name="Control.OID" bpm:uuid="IJWJGHP3_TJLYLB"/>
+      <ActivityParameter id="mov1#hym6#page18#apu11#ap176" name="Control.Folio de ingreso" bpm:uuid="IJWJGHP3_TJLYLB/IH8KZUZV_14D"/>
+      <ActivityParameter id="mov1#hym6#page18#apu11#ap177" name="Control.Folio de control" bpm:uuid="IJWJGHP3_TJLYLB/IH8L0CS5_XQ"/>
+      <Link id="mov1#hym6#page18#apu11#ln149" name="Properties" type="transport" automaticCoupling="false" to="mov1#hym6#page18#enu31">
+        <LinkParameter id="mov1#hym6#page18#apu11#ln149#par280" name="Expediente electronico.OID" source="mov1#hym6#page18#apu11#ap178" target="mov1#hym6#page18#enu31#fld99_slot"/>
+        <LinkParameter id="mov1#hym6#page18#apu11#ln149#par281" name="Expediente electronico.Alineamiento y numero oficial" source="mov1#hym6#page18#apu11#ap180" target="mov1#hym6#page18#enu31#fld100_slot"/>
+      </Link>
+      <ActivityParameter id="mov1#hym6#page18#apu11#ap178" name="Expediente electronico.OID" bpm:uuid="IJWJGHP3_EQWS64"/>
+      <ActivityParameter id="mov1#hym6#page18#apu11#ap180" name="Expediente electronico.Alineamiento y numero oficial" bpm:uuid="IJWJGHP3_EQWS64/IH8X2NOJ_1NF"/>
+    </ActivityParametersUnit>
+    <EntryUnit id="mov1#hym6#page18#enu29" name="Predial" bpm:uuid="IJWJGHP3_GLTB4M" gr:x="265" gr:y="80">
+      <Link id="mov1#hym6#page18#enu29#ln146" name="Parameters" type="transport" automaticCoupling="false" to="mov1#hym6#apu10" validate="true">
+        <LinkParameter id="mov1#hym6#page18#enu29#ln146#par272" name="Predial.OID" source="mov1#hym6#page18#enu29#fld94" target="mov1#hym6#apu10#ap172"/>
+      </Link>
+      <Field id="mov1#hym6#page18#enu29#fld94" name="OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJWJGHP3_GLTB4M"/>
+      <Field id="mov1#hym6#page18#enu29#fld95" name="Cuenta predial" type="string" preloaded="true" modifiable="false" bpm:uuid="IJWJGHP3_GLTB4M/IH8L34LF_7LX"/>
+    </EntryUnit>
+    <EntryUnit id="mov1#hym6#page18#enu30" name="Control" bpm:uuid="IJWJGHP3_TJLYLB" gr:x="265" gr:y="160">
+      <Link id="mov1#hym6#page18#enu30#ln148" name="Parameters" type="transport" automaticCoupling="false" to="mov1#hym6#apu10" validate="true">
+        <LinkParameter id="mov1#hym6#page18#enu30#ln148#par275" name="Control.OID" source="mov1#hym6#page18#enu30#fld96" target="mov1#hym6#apu10#ap175"/>
+      </Link>
+      <Field id="mov1#hym6#page18#enu30#fld96" name="OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJWJGHP3_TJLYLB"/>
+      <Field id="mov1#hym6#page18#enu30#fld97" name="Folio de ingreso" type="string" preloaded="true" modifiable="false" bpm:uuid="IJWJGHP3_TJLYLB/IH8KZUZV_14D"/>
+      <Field id="mov1#hym6#page18#enu30#fld98" name="Folio de control" type="string" preloaded="true" modifiable="false" bpm:uuid="IJWJGHP3_TJLYLB/IH8L0CS5_XQ"/>
+    </EntryUnit>
+    <EntryUnit id="mov1#hym6#page18#enu31" name="Expediente electronico" bpm:uuid="IJWJGHP3_EQWS64" gr:x="265" gr:y="240">
+      <Link id="mov1#hym6#page18#enu31#ln150" name="Parameters" type="transport" automaticCoupling="false" to="mov1#hym6#apu10" validate="true">
+        <LinkParameter id="mov1#hym6#page18#enu31#ln150#par279" name="Expediente electronico.OID" source="mov1#hym6#page18#enu31#fld99" target="mov1#hym6#apu10#ap179"/>
+      </Link>
+      <Field id="mov1#hym6#page18#enu31#fld99" name="OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJWJGHP3_EQWS64"/>
+      <Field id="mov1#hym6#page18#enu31#fld100" name="Alineamiento y numero oficial" type="blob" preloaded="true" modifiable="false" bpm:uuid="IJWJGHP3_EQWS64/IH8X2NOJ_1NF"/>
+    </EntryUnit>
+    <EntryUnit id="mov1#hym6#page18#enu32" name="Buttons" gr:x="260" gr:y="320">
+      <Link id="mov1#hym6#page18#enu32#ln151" name="Finish" type="normal" validate="true" automaticCoupling="false" to="mov1#hym6#apu10"/>
+      <Link id="mov1#hym6#page18#enu32#ln152" name="Save and Work Later" type="normal" validate="false" automaticCoupling="false" to="mov1#hym6#apu10" gr:bendpoints="164,-32,-64,96"/>
+      <Link id="mov1#hym6#page18#enu32#ln153" name="Cancel" type="normal" validate="false" automaticCoupling="false" to="mov1#hym6#pu34"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12" label="Predial" layout:cellLayout="Print Frame">
+        <layout:Unit unitId="mov1#hym6#page18#enu29">
+          <layout:Field field="mov1#hym6#page18#enu29#fld95" layout:fieldLayout="WRDefault/FieldValue"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell label="Control" layout:cellLayout="Print Frame" colspan="12">
+        <layout:Unit unitId="mov1#hym6#page18#enu30">
+          <layout:Field field="mov1#hym6#page18#enu30#fld97" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym6#page18#enu30#fld98" layout:fieldLayout="WRDefault/FieldValue"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell label="Expediente electronico" layout:cellLayout="Print Frame" colspan="12">
+        <layout:Unit unitId="mov1#hym6#page18#enu31">
+          <layout:Field field="mov1#hym6#page18#enu31#fld100" layout:fieldLayout="WRDefault/FieldValue"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell label="Buttons" layout:cellLayout="Print Frame" colspan="12">
+        <layout:Unit unitId="mov1#hym6#page18#enu32" layout:frameLayout="None">
+          <layout:Link link="mov1#hym6#page18#enu32#ln151">
+            <layout:LayoutParameter name="confirmation" value="true" type="link"/>
+            <layout:LayoutParameter name="confirm-message" value="Confirm Finish" type="link"/>
+          </layout:Link>
+          <layout:Link link="mov1#hym6#page18#enu32#ln152"/>
+          <layout:Link link="mov1#hym6#page18#enu32#ln153"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <layout:LayoutParameter name="auto-refresh" value="true" type="page"/>
+</Page>

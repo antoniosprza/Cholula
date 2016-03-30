@@ -1,0 +1,119 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym24" gr:x="1720" gr:y="40" name="Contrato de conexi&#243;n de agua - Usuario - 1. Ingresar documentaci&#243;n" bpm:moduleType="activity" bpm:uuids="IH8XYGM2_W5.IDQY8C54_3E" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym24#icu23" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym24#icu23#oln84" name="OKLink" automaticCoupling="true" to="mov1#hym24#page36"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym24#pu86" name="Complete Activity" mode="completeActivity" gr:x="915" gr:y="-5"/>
+    <ProcessUnit id="mov1#hym24#pu87" name="Save Activity" mode="saveActivity" gr:x="930" gr:y="85"/>
+    <ProcessUnit id="mov1#hym24#pu88" name="Leave Activity" mode="leaveActivity" gr:x="935" gr:y="175"/>
+    <ActivityParametersUnit id="mov1#hym24#apu46" name="Set Parameters" gr:x="695" gr:y="-530">
+      <ActivityParameter id="mov1#hym24#apu46#ap971" name="Predial.OID" bpm:uuid="IJWKDB2T_B9LWW2"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap973" name="Predial.Cuenta predial" bpm:uuid="IJWKDB2T_B9LWW2/IH8L34LF_7LX"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap975" name="Control.OID" bpm:uuid="IJWKDB2S_69Y861"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap977" name="Control.Folio de ingreso" bpm:uuid="IJWKDB2S_69Y861/IH8KZUZV_14D"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap979" name="Control.Folio de control" bpm:uuid="IJWKDB2S_69Y861/IH8L0CS5_XQ"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap981" name="Caracteristicas del predio.OID" bpm:uuid="IJWKDB2T_S6HXAS"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap983" name="Caracteristicas del predio.Tipo de zona     " bpm:uuid="IJWKDB2T_S6HXAS/IH8UGS22_480"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap985" name="Caracteristicas del predio.Tipo de toma o descarga     " bpm:uuid="IJWKDB2T_S6HXAS/IH8UGVBN_292"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap987" name="Datos del propietario.OID" bpm:uuid="IJWKDB2T_5I64CA"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap989" name="Datos del propietario.Segundo apellido" bpm:uuid="IJWKDB2T_5I64CA/IH8LBLL5_6Q8"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap991" name="Datos del propietario.Nombres(s)" bpm:uuid="IJWKDB2T_5I64CA/IH8LBLQQ_55H"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap993" name="Datos del propietario.Primer apellido" bpm:uuid="IJWKDB2T_5I64CA/IH8LBLG1_2V2"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap995" name="Domicilio del solicitante.OID" bpm:uuid="IJWKDB2T_AT5VCT"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap997" name="Domicilio del solicitante.Estado" bpm:uuid="IJWKDB2T_AT5VCT/IH8WOVT3_1KY"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap999" name="Domicilio del solicitante.Numero interior" bpm:uuid="IJWKDB2T_AT5VCT/IH8WR6WN_56G"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1001" name="Domicilio del solicitante.Municipio" bpm:uuid="IJWKDB2T_AT5VCT/IH8WOYMW_4RO"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1003" name="Domicilio del solicitante.Calle" bpm:uuid="IJWKDB2T_AT5VCT/IH8WP7SL_7EI"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1005" name="Domicilio del solicitante.Codigo postal" bpm:uuid="IJWKDB2T_AT5VCT/IH8WP57Z_63U"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1007" name="Domicilio del solicitante.Colonia" bpm:uuid="IJWKDB2T_AT5VCT/IH8WP30U_61X"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1009" name="Domicilio del solicitante.y calle" bpm:uuid="IJWKDB2T_AT5VCT/IH8WPCES_4FE"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1011" name="Domicilio del solicitante.Entre calle" bpm:uuid="IJWKDB2T_AT5VCT/IH8WPA6Q_1P4"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1013" name="Domicilio del solicitante.Poblacion" bpm:uuid="IJWKDB2T_AT5VCT/IH8WP0QV_YP"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1015" name="Domicilio del solicitante.Numero exterior" bpm:uuid="IJWKDB2T_AT5VCT/IH8WPEIA_I0"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1017" name="Domicilio del predio.OID" bpm:uuid="IJWKDB2S_AUY0Q9"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1019" name="Domicilio del predio.Numero exterior" bpm:uuid="IJWKDB2S_AUY0Q9/IH8RXMHL_64F"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1021" name="Domicilio del predio.Codigo Postal" bpm:uuid="IJWKDB2S_AUY0Q9/IH8RXZLU_4XL"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1023" name="Domicilio del predio.Numero interior" bpm:uuid="IJWKDB2S_AUY0Q9/IH8RXPL7_70D"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1025" name="Domicilio del predio.Fraccionamiento" bpm:uuid="IJWKDB2S_AUY0Q9/IH8RXUH4_6OM"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1027" name="Domicilio del predio.Letra" bpm:uuid="IJWKDB2S_AUY0Q9/IH8RXS75_AC"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1029" name="Domicilio del predio.Colonia" bpm:uuid="IJWKDB2S_AUY0Q9/IH8RXWQ1_2TH"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1031" name="Domicilio del predio.Calle (exterior)" bpm:uuid="IJWKDB2S_AUY0Q9/IH8RXJNP_5JI"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1033" name="Domicilio del predio.Clave catastral" bpm:uuid="IJWKDB2S_AUY0Q9/IH8RXF2R_1PR"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1035" name="Datos generales del servicio.OID" bpm:uuid="IJWKDB2T_V1ZMN7"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1037" name="Datos generales del servicio.Superficie total" bpm:uuid="IJWKDB2T_V1ZMN7/IH8UM7N6_1XM"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1039" name="Datos generales del servicio.Superficie construida" bpm:uuid="IJWKDB2T_V1ZMN7/IH8UM9TF_7DH"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1041" name="Datos generales del servicio.Cuenta con red de agua potable " bpm:uuid="IJWKDB2T_V1ZMN7/IH8UMBWG_3AZ"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1043" name="Datos generales del servicio.Distancia en metros (agua)" bpm:uuid="IJWKDB2T_V1ZMN7/IH8UMDQJ_2IH"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1045" name="Datos generales del servicio.Cuenta con red de drenaje " bpm:uuid="IJWKDB2T_V1ZMN7/IH8UMFMQ_3NX"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1047" name="Datos generales del servicio.Distancia en metros (drenaje)" bpm:uuid="IJWKDB2T_V1ZMN7/IH8UMHR5_6YT"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1049" name="Requisitos.OID" bpm:uuid="IJWKDB2T_4996R"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1051" name="Requisitos.Acta constitutiva (en caso de ser personal moral)" bpm:uuid="IJWKDB2T_4996R/IH8Y4ETX_PC"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1053" name="Requisitos.Identificacion oficial" bpm:uuid="IJWKDB2T_4996R/IH8LDZLQ_3R7"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1055" name="Requisitos.Tipo identificacion oficial   " bpm:uuid="IJWKDB2T_4996R/IH8LDZH0_1KE"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1057" name="Requisitos.Carta poder (en caso de no ser el propietario)" bpm:uuid="IJWKDB2T_4996R/IH8UPD9X_7N9"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1059" name="Expediente electronico.OID" bpm:uuid="IJWKDB2S_6PXN3D"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1061" name="Expediente electronico.Constancia de terminacion de obra" bpm:uuid="IJWKDB2S_6PXN3D/IH8T4K1I_5T1"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1063" name="Expediente electronico.Escrituras" bpm:uuid="IJWKDB2S_6PXN3D/IH8Z03TL_2QJ"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1065" name="Expediente electronico.Alineamiento y numero oficial" bpm:uuid="IJWKDB2S_6PXN3D/IH8X2NOJ_1NF"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1067" name="Empresa.OID" bpm:uuid="IJWKDB2S_XXYHB4"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1069" name="Empresa.Nombre" bpm:uuid="IJWKDB2S_XXYHB4/IH8YI61B_4U6"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1071" name="Empresa.Calle (exterior)" bpm:uuid="IJWKDB2S_XXYHB4/IH8YI8P0_631"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1073" name="Empresa.Numero exterior" bpm:uuid="IJWKDB2S_XXYHB4/IH8YICM7_2U6"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1075" name="Empresa.Colonia" bpm:uuid="IJWKDB2S_XXYHB4/IH8YIEUW_4S3"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1077" name="Empresa.Junta auxiliar" bpm:uuid="IJWKDB2S_XXYHB4/IH8YIH3Y_6HE"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1079" name="Empresa.Codigo postal" bpm:uuid="IJWKDB2S_XXYHB4/IH8YIJGM_33W"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1081" name="Empresa.Inicio de operacion" bpm:uuid="IJWKDB2S_XXYHB4/IH8YILP8_1DI"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1083" name="Empresa.Telefono" bpm:uuid="IJWKDB2S_XXYHB4/IH8YIP90_2MM"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1085" name="Empresa.R.F.C." bpm:uuid="IJWKDB2S_XXYHB4/IH8YIRV1_34T"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1087" name="Empresa.Razon social" bpm:uuid="IJWKDB2S_XXYHB4/IH8YIUVT_1L9"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1089" name="Empresa.Giro" bpm:uuid="IJWKDB2S_XXYHB4/IH8YIXHT_192"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1091" name="Empresa.Numero de empleados permanentes" bpm:uuid="IJWKDB2S_XXYHB4/IH8YIZW2_52U"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1093" name="Empresa.Numero de personal temporal" bpm:uuid="IJWKDB2S_XXYHB4/IH8YJ2BF_3GV"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1095" name="Empresa.area total del predio" bpm:uuid="IJWKDB2S_XXYHB4/IH8YJ4MS_4BG"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1097" name="Empresa.area total cubierta" bpm:uuid="IJWKDB2S_XXYHB4/IH8YJ8V5_74N"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1099" name="Empresa.area de servicio al publico" bpm:uuid="IJWKDB2S_XXYHB4/IH8YJBC1_6MF"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1101" name="Empresa.Numero de mesas" bpm:uuid="IJWKDB2S_XXYHB4/IH8YK803_4JR"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1103" name="Empresa.Observaciones" bpm:uuid="IJWKDB2S_XXYHB4/IH8YKA9L_6S5"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1105" name="Empresa.Area de generacion de descarga" bpm:uuid="IJWKDB2S_XXYHB4/IH8YKCJ2_3E7"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1107" name="Empresa.Numero de descarga(s)" bpm:uuid="IJWKDB2S_XXYHB4/IH8YKEOV_1DF"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1109" name="Empresa.Periodo de servicio de saneamiento pagado" bpm:uuid="IJWKDB2S_XXYHB4/IH8YKH69_792"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1111" name="Empresa.Fecha de servicio de saneamiento pagado" bpm:uuid="IJWKDB2S_XXYHB4/IH8YKK1Y_16Z"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1113" name="Empresa.Periodo del servicio de drenaje pagado" bpm:uuid="IJWKDB2S_XXYHB4/IH8YKMBH_6J7"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1115" name="Empresa.Fecha del servicio de drenaje pagado" bpm:uuid="IJWKDB2S_XXYHB4/IH8YKORW_6BV"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1117" name="Propietario, representante o encargado de la empresa.OID" bpm:uuid="IJWKDB2S_ASMP2Q"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1119" name="Propietario, representante o encargado de la empresa.Primer apellido" bpm:uuid="IJWKDB2S_ASMP2Q/IH8YMW2G_MP"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1121" name="Propietario, representante o encargado de la empresa.Segundo apellido" bpm:uuid="IJWKDB2S_ASMP2Q/IH8YMYAJ_6XL"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1123" name="Propietario, representante o encargado de la empresa.Nombres(s)" bpm:uuid="IJWKDB2S_ASMP2Q/IH8YN0EJ_2GC"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1125" name="Propietario, representante o encargado de la empresa.Estado" bpm:uuid="IJWKDB2S_ASMP2Q/IH8YN2R8_2ID"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1127" name="Propietario, representante o encargado de la empresa.Municipio" bpm:uuid="IJWKDB2S_ASMP2Q/IH8YN515_X4"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1129" name="Propietario, representante o encargado de la empresa.Calle" bpm:uuid="IJWKDB2S_ASMP2Q/IH8YN76Z_P7"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1131" name="Propietario, representante o encargado de la empresa.Numero exterior" bpm:uuid="IJWKDB2S_ASMP2Q/IH8YN9HU_4G8"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1133" name="Propietario, representante o encargado de la empresa.Numero interior" bpm:uuid="IJWKDB2S_ASMP2Q/IH8YNBXA_1VP"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1135" name="Propietario, representante o encargado de la empresa.Codigo postal" bpm:uuid="IJWKDB2S_ASMP2Q/IH8YNE5F_5DY"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1137" name="Propietario, representante o encargado de la empresa.Telefono particular" bpm:uuid="IJWKDB2S_ASMP2Q/IH8YNGJZ_4P4"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1139" name="Propietario, representante o encargado de la empresa.Telefono celular" bpm:uuid="IJWKDB2S_ASMP2Q/IH8YNJ61_3Y8"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1141" name="Propietario, representante o encargado de la empresa.Correo electronico" bpm:uuid="IJWKDB2S_ASMP2Q/IH8YNLMT_5N3"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1143" name="Actividad empresa.OID" bpm:uuid="IJWKDB2S_33TJII"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1145" name="Actividad empresa.Especificacion de areas generadoras " bpm:uuid="IJWKDB2S_33TJII/IH8YOB6Z_5H0"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1147" name="Actividad empresa.Sitio de descarga  " bpm:uuid="IJWKDB2S_33TJII/IH8YODQK_3GS"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1149" name="Actividad empresa.Especificar otro" bpm:uuid="IJWKDB2S_33TJII/IH8YOG59_2FY"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1151" name="Actividad empresa.Croquis de ubicacionde descarga" bpm:uuid="IJWKDB2S_33TJII/IH8YOIS5_7O3"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1153" name="Actividad empresa.Descripcion del proceso y/o actividad llevada a cabo" bpm:uuid="IJWKDB2S_33TJII/IH8YOLAU_45S"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1155" name="Suministro de agua.OID" bpm:uuid="IJWKDB2S_7N8TIP"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1157" name="Suministro de agua.Fuentes abastecedoras  " bpm:uuid="IJWKDB2S_7N8TIP/IH8YQ6FN_6VT"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1159" name="Suministro de agua.Reportes de CNA (en caso de pozo particular)" bpm:uuid="IJWKDB2S_7N8TIP/IH8YQ8LV_43B"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1161" name="Suministro de agua.Recibos de pago (en caso red municipal)" bpm:uuid="IJWKDB2S_7N8TIP/IH8YQAVE_6DE"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1163" name="Suministro de agua.Facturas (en caso de pipas)" bpm:uuid="IJWKDB2S_7N8TIP/IH8YQDHD_7BT"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1165" name="Suministro de agua.Volumen de agua  utilizado en M3/MES" bpm:uuid="IJWKDB2S_7N8TIP/IH8YQG53_1MA"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1167" name="Recibo actual de pago de agua y/o drenaje.OID" bpm:uuid="IJWKDB2S_NIGSWI"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1169" name="Recibo actual de pago de agua y/o drenaje.Primer apellido" bpm:uuid="IJWKDB2S_NIGSWI/IH8YSSLX_21B"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1171" name="Recibo actual de pago de agua y/o drenaje.Segundo apellido" bpm:uuid="IJWKDB2S_NIGSWI/IH8YSUSN_6XH"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1173" name="Recibo actual de pago de agua y/o drenaje.Nombres(s)" bpm:uuid="IJWKDB2S_NIGSWI/IH8YSWYV_48B"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1175" name="Recibo actual de pago de agua y/o drenaje.Estado" bpm:uuid="IJWKDB2S_NIGSWI/IH8YSZDW_3J2"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1177" name="Recibo actual de pago de agua y/o drenaje.Codigo postal" bpm:uuid="IJWKDB2S_NIGSWI/IH8YT1MY_5WB"/>
+      <ActivityParameter id="mov1#hym24#apu46#ap1179" name="Recibo actual de pago de agua y/o drenaje.Numero de cuenta" bpm:uuid="IJWKDB2S_NIGSWI/IH8YT3V3_5A1"/>
+      <OKLink id="mov1#hym24#apu46#oln85" name="OKLink" automaticCoupling="false" to="mov1#hym24#pu86" codeRef="mov1#hym24#page36#enu163#ln443"/>
+      <OKLink id="mov1#hym24#apu46#oln86" name="OKLink" automaticCoupling="false" to="mov1#hym24#pu87" codeRef="mov1#hym24#page36#enu163#ln444"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

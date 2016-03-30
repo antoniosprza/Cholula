@@ -1,0 +1,40 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym51" gr:x="3435" gr:y="360" name="Dictamen de Protecci&#243;n Civil - Inspector - 5. Realizar visita e informe de inspecci&#243;n" bpm:moduleType="activity" bpm:uuids="IH8X4BCI_7AT.IB2ROKKL_ICG2F" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym51#icu50" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym51#icu50#oln165" name="OKLink" automaticCoupling="true" to="mov1#hym51#page63"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym51#pu167" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym51#pu168" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym51#pu169" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym51#apu100" name="Set Parameters" gr:x="560" gr:y="-56">
+      <ActivityParameter id="mov1#hym51#apu100#ap2288" name="Predial.OID" bpm:uuid="IJWL2XQM_V46ZD6"/>
+      <ActivityParameter id="mov1#hym51#apu100#ap2291" name="Control.OID" bpm:uuid="IJWL2XQL_J0GEHD"/>
+      <ActivityParameter id="mov1#hym51#apu100#ap2295" name="Fecha y hora de visita.OID" bpm:uuid="IJWL2XQL_7JC5TS"/>
+      <ActivityParameter id="mov1#hym51#apu100#ap2299" name="Criterios de inspeccion.OID" bpm:uuid="IJWL2XQM_GGM0B3"/>
+      <ActivityParameter id="mov1#hym51#apu100#ap2301" name="Criterios de inspeccion.Inventario de los extintores " bpm:uuid="IJWL2XQM_GGM0B3/IH8XNRL4_3R0"/>
+      <ActivityParameter id="mov1#hym51#apu100#ap2303" name="Criterios de inspeccion.Croquis " bpm:uuid="IJWL2XQM_GGM0B3/IH8XNZW8_3L0"/>
+      <ActivityParameter id="mov1#hym51#apu100#ap2305" name="Criterios de inspeccion.Observaciones croquis" bpm:uuid="IJWL2XQM_GGM0B3/IH8XO31P_3AK"/>
+      <ActivityParameter id="mov1#hym51#apu100#ap2307" name="Criterios de inspeccion.Listado del personal que labora " bpm:uuid="IJWL2XQM_GGM0B3/IH8XN8M6_5OB"/>
+      <ActivityParameter id="mov1#hym51#apu100#ap2309" name="Criterios de inspeccion.Observaciones externos" bpm:uuid="IJWL2XQM_GGM0B3/IH8XLO2Q_36R"/>
+      <ActivityParameter id="mov1#hym51#apu100#ap2311" name="Criterios de inspeccion.Observaciones extintores" bpm:uuid="IJWL2XQM_GGM0B3/IH8XNUK3_4MB"/>
+      <ActivityParameter id="mov1#hym51#apu100#ap2313" name="Criterios de inspeccion.Riesgos externos " bpm:uuid="IJWL2XQM_GGM0B3/IH8XLLW0_27E"/>
+      <ActivityParameter id="mov1#hym51#apu100#ap2315" name="Criterios de inspeccion.Observaciones personal" bpm:uuid="IJWL2XQM_GGM0B3/IH8XNCDO_2LY"/>
+      <ActivityParameter id="mov1#hym51#apu100#ap2317" name="Criterios de inspeccion.Observaciones seguridad" bpm:uuid="IJWL2XQM_GGM0B3/IH8XNMYW_6HQ"/>
+      <ActivityParameter id="mov1#hym51#apu100#ap2319" name="Criterios de inspeccion.Inventario de equipo de seguridad " bpm:uuid="IJWL2XQM_GGM0B3/IH8XNJ4H_377"/>
+      <ActivityParameter id="mov1#hym51#apu100#ap2321" name="Criterios de inspeccion.Plano de ubicacion de la obra y colindancias a color " bpm:uuid="IJWL2XQM_GGM0B3/IH8XO828_D4"/>
+      <ActivityParameter id="mov1#hym51#apu100#ap2323" name="Criterios de inspeccion.Observaciones obra y colindancias" bpm:uuid="IJWL2XQM_GGM0B3/IH8XOCN3_P7"/>
+      <ActivityParameter id="mov1#hym51#apu100#ap2325" name="Criterios de inspeccion.Observaciones se&#241;aletica" bpm:uuid="IJWL2XQM_GGM0B3/IH8XONN0_43X"/>
+      <ActivityParameter id="mov1#hym51#apu100#ap2327" name="Criterios de inspeccion.Plano de ubicacion y distribucion de la se&#241;aletica " bpm:uuid="IJWL2XQM_GGM0B3/IH8XOI3V_2HL"/>
+      <ActivityParameter id="mov1#hym51#apu100#ap2329" name="Criterios de inspeccion.Observaciones internos" bpm:uuid="IJWL2XQM_GGM0B3/IH8XLJSK_1BB"/>
+      <ActivityParameter id="mov1#hym51#apu100#ap2331" name="Criterios de inspeccion.Datos generales " bpm:uuid="IJWL2XQM_GGM0B3/IH8XLFK6_38Q"/>
+      <ActivityParameter id="mov1#hym51#apu100#ap2333" name="Criterios de inspeccion.Riesgos internos " bpm:uuid="IJWL2XQM_GGM0B3/IH8XLHU4_71V"/>
+      <ActivityParameter id="mov1#hym51#apu100#ap2335" name="Criterios de inspeccion.Directorio de los grupos operativos de emergencia " bpm:uuid="IJWL2XQM_GGM0B3/IH8XMOLP_1VO"/>
+      <ActivityParameter id="mov1#hym51#apu100#ap2337" name="Criterios de inspeccion.Observaciones emergencia" bpm:uuid="IJWL2XQM_GGM0B3/IH8XMQ5Y_3VV"/>
+      <ActivityParameter id="mov1#hym51#apu100#ap2339" name="Validaciones.OID" bpm:uuid="IJWL2XQM_9Y185N"/>
+      <ActivityParameter id="mov1#hym51#apu100#ap2341" name="Validaciones.&#191;Procede? " bpm:uuid="IJWL2XQM_9Y185N/IH8MGT15_XX"/>
+      <ActivityParameter id="mov1#hym51#apu100#ap2343" name="Validaciones.Observaciones" bpm:uuid="IJWL2XQM_9Y185N/IH8LLT4Q_5TC"/>
+      <OKLink id="mov1#hym51#apu100#oln166" name="OKLink" automaticCoupling="false" to="mov1#hym51#pu167" codeRef="mov1#hym51#page63#enu330#ln804"/>
+      <OKLink id="mov1#hym51#apu100#oln167" name="OKLink" automaticCoupling="false" to="mov1#hym51#pu168" codeRef="mov1#hym51#page63#enu330#ln805"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

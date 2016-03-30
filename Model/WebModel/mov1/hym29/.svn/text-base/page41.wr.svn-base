@@ -1,0 +1,68 @@
+<Page xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym29#page41" name="Notificaci&#243;n de conexi&#243;n realizada" gr:x="10" gr:y="-5">
+  <ContentUnits>
+    <ActivityParametersUnit id="mov1#hym29#page41#apu57" name="Get Parameters" gr:x="0" gr:y="0">
+      <ActivityParameter id="mov1#hym29#page41#apu57#ap116k" name="Conexion de los servicios.OID" bpm:uuid="IJWKDB2S_WHT077"/>
+      <Link id="mov1#hym29#page41#apu57#ln25k" name="GetParameters" type="transport" automaticCoupling="false" to="mov1#hym29#page41#enu13k">
+        <LinkParameter id="mov1#hym29#page41#apu57#ln25k#par117k" name="OID" source="mov1#hym29#page41#apu57#ap116k" target="mov1#hym29#page41#enu13k#fld68k_slot"/>
+        <LinkParameter id="mov1#hym29#page41#apu57#ln25k#par119k" name="Fecha de conexion" source="mov1#hym29#page41#apu57#ap117k" target="mov1#hym29#page41#enu13k#fld69k_slot"/>
+      </Link>
+      <ActivityParameter id="mov1#hym29#page41#apu57#ap117k" name="Conexion de los servicios.Fecha de conexion" bpm:uuid="IJWKDB2S_WHT077/IKAFLD9U_J6"/>
+    </ActivityParametersUnit>
+    <EntryUnit id="mov1#hym29#page41#enu191" name="Buttons" gr:x="260" gr:y="165">
+      <Link id="mov1#hym29#page41#enu191#ln504" name="Finish" type="normal" validate="true" automaticCoupling="false" to="mov1#hym29#apu56"/>
+      <Link id="mov1#hym29#page41#enu191#ln505" name="Save and Work Later" type="normal" validate="false" automaticCoupling="false" to="mov1#hym29#apu56" gr:bendpoints="164,-32,-64,96"/>
+      <Link id="mov1#hym29#page41#enu191#ln506" name="Cancel" type="normal" validate="false" automaticCoupling="false" to="mov1#hym29#pu103"/>
+    </EntryUnit>
+    <EntryUnit id="mov1#hym29#page41#enu13k" name="Conexion de los servicios" bpm:uuid="IJWKDB2S_WHT077" gr:x="150" gr:y="80">
+      <Field id="mov1#hym29#page41#enu13k#fld68k" name="Conexion de los servicios.OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJWKDB2S_WHT077"/>
+      <Link id="mov1#hym29#page41#enu13k#ln26k" name="SetParameters" type="transport" automaticCoupling="false" to="mov1#hym29#apu56">
+        <LinkParameter id="mov1#hym29#page41#enu13k#ln26k#par118k" name="OID" source="mov1#hym29#page41#enu13k#fld68k" target="mov1#hym29#apu56#ap115k"/>
+      </Link>
+      <Field id="mov1#hym29#page41#enu13k#fld69k" name="Fecha de conexion" type="date" preloaded="true" modifiable="false" bpm:uuid="IJWKDB2S_WHT077/IKAFLD9U_J6"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12" label="Buttons" layout:cellLayout="Print Frame">
+        <layout:Unit unitId="mov1#hym29#page41#enu191" layout:frameLayout="None">
+          <layout:Link link="mov1#hym29#page41#enu191#ln504">
+            <layout:LayoutParameter name="confirmation" value="true" type="link"/>
+            <layout:LayoutParameter name="confirm-message" value="Confirm Finish" type="link"/>
+          </layout:Link>
+          <layout:Link link="mov1#hym29#page41#enu191#ln505"/>
+          <layout:Link link="mov1#hym29#page41#enu191#ln506"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell label="Conexion de los servicios" layout:cellLayout="Print Frame" colspan="12">
+        <layout:Unit unitId="mov1#hym29#page41#enu13k">
+          <layout:Field field="mov1#hym29#page41#enu13k#fld69k" layout:fieldLayout="WRDefault/FieldValue"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <layout:LayoutParameter name="auto-refresh" value="true" type="page"/>
+</Page>

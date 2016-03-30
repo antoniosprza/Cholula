@@ -1,0 +1,1141 @@
+<DataModel xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:db="http://www.webratio.com/2006/WebML/Database" xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
+  <Entity id="User" name="User" duration="persistent" gr:x="20" gr:y="158" gr:hideAttributes="false" attributeOrder="userOID userName password email" db:database="db1" db:table="user">
+    <Attribute name="oid" id="userOID" type="integer" key="true" db:column="oid"/>
+    <Attribute name="userName" id="userName" type="string" db:column="username"/>
+    <Attribute name="password" id="password" type="password" db:column="password"/>
+    <Attribute name="email" id="email" type="string" db:column="email"/>
+    <Attribute id="userDefaultGroupName" name="group" type="string" derivationQuery="simpleImported::Self.User2DefaultGroup.groupName"/>
+  </Entity>
+  <Entity id="Group" name="Group" duration="persistent" gr:x="250" gr:y="178" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db1" db:table="group">
+    <Attribute name="oid" id="groupOID" type="integer" key="true" db:column="oid"/>
+    <Attribute name="groupName" id="groupName" type="string" db:column="groupname"/>
+  </Entity>
+  <Entity id="Module" name="Module" duration="persistent" gr:x="472" gr:y="167" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName" db:database="db1" db:table="module">
+    <Attribute name="oid" id="moduleOID" type="integer" key="true" db:column="oid"/>
+    <Attribute name="moduleID" id="moduleID" type="string" db:column="moduleid"/>
+    <Attribute name="moduleName" id="moduleName" type="string" db:column="modulename"/>
+    <Attribute id="moduleDomainName" name="moduleDomainName" type="string" db:column="moduledomainname"/>
+  </Entity>
+  <Relationship id="User2Group_Group2User" name="User_Group" sourceEntity="User" targetEntity="Group" db:database="db1" db:table="user_group">
+    <RelationshipRole1 id="User2Group" name="groups" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="Group2User" name="users" maxCard="N">
+      <db:JoinColumn attribute="groupOID" name="group_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="User2DefaultGroup_DefaultGroup2User" name="User_DefaultGroup" sourceEntity="User" targetEntity="Group" gr:bendpoints="113,42,-112,44" db:database="db1" db:table="user">
+    <RelationshipRole1 id="User2DefaultGroup" name="defaultGroup" maxCard="1">
+      <db:JoinColumn attribute="userOID" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="DefaultGroup2User" name="defaultUsers" maxCard="N">
+      <db:JoinColumn attribute="groupOID" name="group_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="Group2DefaultModule_DefaultModule2Group" name="Group_DefaultModule" sourceEntity="Group" targetEntity="Module" db:database="db1" db:table="group">
+    <RelationshipRole1 id="Group2DefaultModule" name="defaultModule" maxCard="1">
+      <db:JoinColumn attribute="groupOID" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="DefaultModule2Group" name="defaultGroups" maxCard="N">
+      <db:JoinColumn attribute="moduleOID" name="module_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="Group2Module_Module2Group" name="Group_Module" sourceEntity="Group" targetEntity="Module" gr:bendpoints="110,41,-115,41" db:database="db1" db:table="group_module">
+    <RelationshipRole1 id="Group2Module" name="modules" maxCard="N">
+      <db:JoinColumn attribute="groupOID" name="group_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="Module2Group" name="groups" maxCard="N">
+      <db:JoinColumn attribute="moduleOID" name="module_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <db:Database id="db1" name="cholulamun" type="MySQL (InnoDB)" url="jdbc:mysql://localhost:3306/cholulamun" username="root" cryptedPassword="false" connectionCount="5">
+  </db:Database>
+  <Entity id="Process" gr:x="-961" gr:y="-658" name="Process" duration="persistent" attributeOrder="processOid processCode processName processDefaultInstanceName processUUID processDescription processVersion" db:database="db1" db:table="process">
+    <Attribute id="processOid" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="processCode" name="code" type="string" db:column="code"/>
+    <Attribute id="processName" name="name" type="string" db:column="name"/>
+    <Attribute id="processDefaultInstanceName" name="default instance name" type="string" db:column="default_instance_name"/>
+    <Attribute id="processDescription" name="description" type="text" contentType="text/html" db:column="description"/>
+    <Attribute id="processUUID" name="uuid" type="string" db:column="uuid"/>
+    <Attribute id="processVersion" name="version" type="string" db:column="version"/>
+  </Entity>
+  <Entity id="ProcessInstance" gr:x="-956" gr:y="-76" name="ProcessInstance" duration="persistent" attributeOrder="processInstanceOid processInstanceCode processInstanceName processInstanceProcessName processInstanceDescription processInstanceSubProcessIndex processInstanceStatus processInstanceActiveTimestamp processInstanceCompletedTimestamp processInstanceCancelledTimestamp processInstanceAbortedTimestamp processInstanceAttachmentCount" db:database="db1" db:table="processinstance">
+    <Attribute id="processInstanceOid" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="processInstanceCode" name="code" type="string" derivationQuery="simpleImported::Self.processInstance2Process.processCode"/>
+    <Attribute id="processInstanceName" name="name" type="string" db:column="name"/>
+    <Attribute id="processInstanceProcessName" name="process name" type="string" derivationQuery="simpleImported::Self.processInstance2Process.processName"/>
+    <Attribute id="processInstanceSubProcessIndex" name="subProcessIndex" type="integer" db:column="subprocessindex"/>
+    <Attribute id="processInstanceStatus" name="status" type="string" db:column="status"/>
+    <Attribute id="processInstanceActiveTimestamp" name="active since" type="timestamp" db:column="active_since"/>
+    <Attribute id="processInstanceCompletedTimestamp" name="completed at" type="timestamp" db:column="completed_at"/>
+    <Attribute id="processInstanceCancelledTimestamp" name="cancelled at" type="timestamp" db:column="cancelled_at"/>
+    <Attribute id="processInstanceAbortedTimestamp" name="aborted at" type="timestamp" db:column="aborted_at"/>
+    <Attribute id="processInstanceDescription" name="description" type="text" derivationQuery="simpleImported::Self.processInstance2Process.processDescription" contentType="text/html"/>
+    <Attribute id="processInstanceAttachmentCount" name="attachment count" type="integer" derivationQuery="calculated::count(Self.processInstance2Attachments(as Var1))" db:table="processinstance_attachment_cou" db:column="der_attr" storageType="file">
+      <db:JoinColumn attribute="processInstanceOid" name="oid"/>
+    </Attribute>
+  </Entity>
+  <Entity id="ActivityType" gr:x="-448" gr:y="-707" name="ActivityType" duration="persistent" attributeOrder="activityTypeOid activityTypeId activityTypeCode activityTypeName activityTypeProcessName activityTypeDescription activityTypeType activityTypeExecution activityTypeDefaultInstanceName activityTypeSortNumber activityTypeUUID" db:database="db1" db:table="activitytype">
+    <Attribute id="activityTypeOid" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="activityTypeId" name="ID" type="string" db:column="id"/>
+    <Attribute id="activityTypeCode" name="code" type="string" db:column="code"/>
+    <Attribute id="activityTypeName" name="name" type="string" db:column="name"/>
+    <Attribute id="activityTypeProcessName" name="process name" type="string" derivationQuery="simpleImported::Self.activityType2Process.processName"/>
+    <Attribute id="activityTypeDefaultInstanceName" name="default instance name" type="string" db:column="default_instance_name"/>
+    <Attribute id="activityTypeDescription" name="description" type="text" contentType="text/html" db:column="description"/>
+    <Attribute id="activityTypeType" name="type" type="string" db:column="type"/>
+    <Attribute id="activityTypeExecution" name="execution" type="string" db:column="execution"/>
+    <Attribute id="activityTypeSortNumber" name="sort number" type="float" db:column="sort_number"/>
+    <Attribute id="activityTypeUUID" name="uuid" type="string" db:column="uuid"/>
+  </Entity>
+  <Entity id="ActivityInstance" gr:x="-445" gr:y="-166" name="ActivityInstance" duration="persistent" attributeOrder="activityInstanceOid activityInstanceCode activityInstanceName activityInstanceProcessInstanceName activityInstanceProcessName activityInstanceActivityTypeName activityInstanceDescription activityInstanceUserName activityInstanceGroupName activityInstanceExecution activityInstanceType activityInstanceStatus activityInstanceReadyTimestamp activityInstanceActiveTimestamp activityInstanceCompletedTimestamp activityInstanceAbortedTimestamp activityInstanceCancelledTimestamp activityInstanceLastTimestamp activityInstanceProcessInstanceActiveSince activityInstanceRollbackable activityInstanceContext" db:database="db1" db:table="activityinstance">
+    <Attribute id="activityInstanceOid" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="activityInstanceCode" name="code" type="string" derivationQuery="simpleImported::Self.activityInstance2ActivityType.activityTypeCode"/>
+    <Attribute id="activityInstanceName" name="name" type="string" db:column="name"/>
+    <Attribute id="activityInstanceProcessInstanceName" name="process instance name" type="string" derivationQuery="simpleImported::Self.activityInstance2ProcessInstance.processInstanceName"/>
+    <Attribute id="activityInstanceProcessName" name="process name" type="string" derivationQuery="simpleImported::Self.activityInstance2ProcessInstance.processInstanceProcessName"/>
+    <Attribute id="activityInstanceActivityTypeName" name="activity name" type="string" derivationQuery="simpleImported::Self.activityInstance2ActivityType.activityTypeName"/>
+    <Attribute id="activityInstanceDescription" name="description" type="text" derivationQuery="simpleImported::Self.activityInstance2ActivityType.activityTypeDescription" contentType="text/html"/>
+    <Attribute id="activityInstanceUserName" name="userName" type="string" derivationQuery="simpleImported::Self.activityInstance2User.userName"/>
+    <Attribute id="activityInstanceGroupName" name="group" type="string" derivationQuery="simpleImported::Self.activityInstance2Group.groupName"/>
+    <Attribute id="activityInstanceExecution" name="execution" type="string" derivationQuery="simpleImported::Self.activityInstance2ActivityType.activityTypeExecution"/>
+    <Attribute id="activityInstanceType" name="type" type="string" derivationQuery="simpleImported::Self.activityInstance2ActivityType.activityTypeType"/>
+    <Attribute id="activityInstanceStatus" name="status" type="string" db:column="status"/>
+    <Attribute id="activityInstanceReadyTimestamp" name="ready since" type="timestamp" db:column="ready_since"/>
+    <Attribute id="activityInstanceActiveTimestamp" name="active since" type="timestamp" db:column="active_since"/>
+    <Attribute id="activityInstanceCompletedTimestamp" name="completed at" type="timestamp" db:column="completed_at"/>
+    <Attribute id="activityInstanceAbortedTimestamp" name="aborted at" type="timestamp" db:column="aborted_at"/>
+    <Attribute id="activityInstanceCancelledTimestamp" name="cancelled at" type="timestamp" db:column="cancelled_at"/>
+    <Attribute id="activityInstanceLastTimestamp" name="worked at" type="timestamp" db:column="worked_at"/>
+    <Attribute id="activityInstanceProcessInstanceActiveSince" name="process active since" type="timestamp" derivationQuery="simpleImported::Self.activityInstance2ProcessInstance.processInstanceActiveTimestamp"/>
+    <Attribute id="activityInstanceProcessInstanceAttachmentCount" name="process attachment count" type="integer" derivationQuery="simpleImported::Self.activityInstance2ProcessInstance.processInstanceAttachmentCount"/>
+    <Attribute id="activityInstanceRollbackable" name="rollbackable" type="boolean" db:column="rollbackable"/>
+    <Attribute id="activityInstanceContext" name="context" type="string" db:column="context"/>
+  </Entity>
+  <Entity id="ParameterType" gr:x="-1289" gr:y="-620" name="ParameterType" duration="persistent" attributeOrder="parameterTypeOid parameterTypeName parameterTypeDescription parameterTypeType" db:database="db1" db:table="parametertype">
+    <Attribute id="parameterTypeOid" name="oid" type="integer" key="true" db:column="oid"/>
+    <Attribute id="parameterTypeName" name="name" type="string" db:column="name"/>
+    <Attribute id="parameterTypeDescription" name="description" type="string" contentType="text/html" db:column="description"/>
+    <Attribute id="parameterTypeType" name="type" type="string" db:column="type"/>
+  </Entity>
+  <Entity id="ParameterInstance" gr:x="-1301" gr:y="0" name="ParameterInstance" duration="persistent" attributeOrder="parameterInstanceOid parameterInstanceName parameterInstanceValue parameterInstanceCurrent parameterInstanceTimestamp" db:database="db1" db:table="parameterinstance">
+    <Attribute id="parameterInstanceOid" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="parameterInstanceName" name="name" type="string" derivationQuery="simpleImported::Self.parameterInstance2ParameterType.parameterTypeName"/>
+    <Attribute id="parameterInstanceValue" name="value" type="string" db:column="value"/>
+    <Attribute id="parameterInstanceCurrent" name="current" type="boolean" db:column="current"/>
+    <Attribute id="parameterInstanceTimestamp" name="timestamp" type="timestamp" db:column="timestamp"/>
+  </Entity>
+  <Entity id="SequenceFlow" gr:x="-416" gr:y="-940" name="SequenceFlow" duration="persistent" attributeOrder="sequenceFlowOid sequenceFlowLabel sequenceFlowCondition sequenceFlowDefault sequenceFlowSortNumber" db:database="db1" db:table="sequenceflow">
+    <Attribute id="sequenceFlowOid" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="sequenceFlowLabel" name="label" type="string" db:column="label"/>
+    <Attribute id="sequenceFlowCondition" name="condition" type="string" db:column="condition"/>
+    <Attribute id="sequenceFlowDefault" name="default" type="boolean" db:column="default"/>
+    <Attribute id="sequenceFlowSortNumber" name="sort number" type="float" db:column="sort_number"/>
+  </Entity>
+  <Entity id="Notification" gr:x="-204" gr:y="286" name="Notification" duration="persistent" attributeOrder="notificationOid notificationMessage notificationRead" db:database="db1" db:table="notification">
+    <Attribute id="notificationOid" name="oid" key="true" type="integer" db:column="oid"/>
+    <Attribute id="notificationMessage" name="message" type="string" db:column="message"/>
+    <Attribute id="notificationRead" name="read" type="boolean" db:column="read"/>
+  </Entity>
+  <Entity id="Note" gr:x="-712" gr:y="-261" name="Note" duration="persistent" attributeOrder="noteOid noteText noteTimestamp noteUserName" db:database="db1" db:table="note">
+    <Attribute id="noteOid" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="noteText" name="text" type="text" db:column="text"/>
+    <Attribute id="noteTimestamp" name="timestamp" type="timestamp" db:column="timestamp"/>
+    <Attribute id="noteUserName" name="userName" type="string" derivationQuery="simpleImported::Self.note2User.userName"/>
+  </Entity>
+  <Entity id="Attachment" name="Attachment" duration="persistent" gr:x="-423" gr:y="585" attributeOrder="attachmentOid attachmentFile attachmentTitle attachmentTimestamp attachmentUserName" db:database="db1" db:table="attachment">
+    <Attribute id="attachmentOid" name="oid" key="true" type="integer" db:column="oid"/>
+    <Attribute id="attachmentFile" name="file" type="blob" storageType="file" db:column="file"/>
+    <Attribute id="attachmentTitle" name="title" type="string" db:column="title"/>
+    <Attribute id="attachmentTimestamp" name="timestamp" type="timestamp" db:column="timestamp"/>
+    <Attribute id="attachmentUserName" name="userName" type="string" derivationQuery="simpleImported::Self.attachment2User.userName"/>
+  </Entity>
+  <Relationship id="ProcessInstance_Process" name="ProcessInstance_Process" sourceEntity="ProcessInstance" targetEntity="Process" db:database="db1" db:table="processinstance">
+    <RelationshipRole1 id="processInstance2Process" name="process" maxCard="1" cascadeDelete="false">
+      <db:JoinColumn attribute="processInstanceOid" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="process2ProcessInstances" name="processInstances" maxCard="N" cascadeDelete="false">
+      <db:JoinColumn attribute="processOid" name="process_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="ActivityType_ActivityInstance" name="ActivityType_ActivityInstance" sourceEntity="ActivityType" targetEntity="ActivityInstance" db:database="db1" db:table="activityinstance">
+    <RelationshipRole1 id="activityType2ActivityInstances" name="activityInstances" maxCard="N" cascadeDelete="false">
+      <db:JoinColumn attribute="activityTypeOid" name="activitytype_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="activityInstance2ActivityType" name="activityType" maxCard="1" cascadeDelete="false">
+      <db:JoinColumn attribute="activityInstanceOid" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="Process_ActivityType" name="Process_ActivityType" sourceEntity="Process" targetEntity="ActivityType" db:database="db1" db:table="activitytype">
+    <RelationshipRole1 id="process2ActivityTypes" name="activityTypes" maxCard="N" cascadeDelete="false">
+      <db:JoinColumn attribute="processOid" name="process_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="activityType2Process" name="process" maxCard="1" cascadeDelete="false">
+      <db:JoinColumn attribute="activityTypeOid" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="ProcessInstance_ActivityInstance" name="ProcessInstance_ActivityInstance" sourceEntity="ProcessInstance" targetEntity="ActivityInstance" db:database="db1" db:table="activityinstance">
+    <RelationshipRole1 id="processInstance2ActivityInstances" name="activityInstances" maxCard="N" cascadeDelete="false">
+      <db:JoinColumn attribute="processInstanceOid" name="processinstance_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="activityInstance2ProcessInstance" name="processInstance" maxCard="1" cascadeDelete="false">
+      <db:JoinColumn attribute="activityInstanceOid" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="ParameterType_ParameterInstance" name="ParameterType_ParameterInstance" sourceEntity="ParameterType" targetEntity="ParameterInstance" db:database="db1" db:table="parameterinstance">
+    <RelationshipRole1 id="parameterType2ParameterInstances" name="parameterInstances" maxCard="N" cascadeDelete="false">
+      <db:JoinColumn attribute="parameterTypeOid" name="parametertype_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="parameterInstance2ParameterType" name="parameterType" maxCard="1" cascadeDelete="false">
+      <db:JoinColumn attribute="parameterInstanceOid" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="Process_ParameterType" name="Process_ParameterType" sourceEntity="Process" targetEntity="ParameterType" db:database="db1" db:table="parametertype">
+    <RelationshipRole1 id="process2ParameterTypes" name="parameterTypes" maxCard="N" cascadeDelete="false">
+      <db:JoinColumn attribute="processOid" name="process_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="parameterType2Process" name="process" maxCard="1" cascadeDelete="false">
+      <db:JoinColumn attribute="parameterTypeOid" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="ProcessInstance_ParameterInstance" name="ProcessInstance_ParameterInstance" sourceEntity="ProcessInstance" targetEntity="ParameterInstance" db:database="db1" db:table="parameterinstance">
+    <RelationshipRole1 id="processInstance2ParameterInstances" name="parameterInstances" maxCard="N" cascadeDelete="false">
+      <db:JoinColumn attribute="processInstanceOid" name="processinstance_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="parameterInstance2ProcessInstance" name="processInstance" maxCard="1" cascadeDelete="false">
+      <db:JoinColumn attribute="parameterInstanceOid" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="ParameterInstance_ActivityInstance" name="ParameterInstance_ActivityInstance" sourceEntity="ParameterInstance" targetEntity="ActivityInstance" gr:bendpoints="200,-232,-685,-265;391,-232,-494,-265" db:database="db1" db:table="parameterinstance">
+    <RelationshipRole1 id="parameterInstance2ActivityInstance" name="activityInstance" maxCard="1" cascadeDelete="false">
+      <db:JoinColumn attribute="parameterInstanceOid" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="activityInstance2ParameterInstances" name="parameterInstances" maxCard="N" cascadeDelete="false">
+      <db:JoinColumn attribute="activityInstanceOid" name="activityinstance_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="NextActivityType_PreviousSequenceFlow" name="NextActivityType_PreviousSequenceFlow" sourceEntity="ActivityType" targetEntity="SequenceFlow" gr:bendpoints="71,-188,75,104" db:database="db1" db:table="sequenceflow">
+    <RelationshipRole1 id="nextActivityType2PreviousSequenceFlows" name="previousConditions" maxCard="N" cascadeDelete="false">
+      <db:JoinColumn attribute="activityTypeOid" name="activitytype_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="previousSequenceFlow2NextActivityType" name="nextActivityType" maxCard="1" cascadeDelete="false">
+      <db:JoinColumn attribute="sequenceFlowOid" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="PreviousActivityType_NextSequenceFlow" name="PreviousActivityType_NextSequenceFlow" sourceEntity="ActivityType" targetEntity="SequenceFlow" gr:bendpoints="-76,-188,-72,104" db:database="db1" db:table="sequenceflow">
+    <RelationshipRole1 id="previousActivityType2NextSequenceFlows" name="nextConditions" maxCard="N" cascadeDelete="false">
+      <db:JoinColumn attribute="activityTypeOid" name="activitytype_oid_2"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="nextSequenceFlow2PreviousActivityType" name="previousActivityType" maxCard="1" cascadeDelete="false">
+      <db:JoinColumn attribute="sequenceFlowOid" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="PreviousActivityInstance_NextActivityInstance" name="PreviousActivityInstance_NextActivityInstance" sourceEntity="ActivityInstance" targetEntity="ActivityInstance" gr:bendpoints="-118,188,-118,188;-139,133,-139,133" db:database="db1" db:table="previousactivityinstance_nexta">
+    <RelationshipRole1 id="previousActivityInstance2NextActivityInstances" name="nextActivityInstances" maxCard="N" cascadeDelete="false">
+      <db:JoinColumn attribute="activityInstanceOid" name="activityinstance_oid_2"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="nextActivityInstance2PreviousActivityInstances" name="previousActivityInstances" maxCard="N" cascadeDelete="false">
+      <db:JoinColumn attribute="activityInstanceOid" name="activityinstance_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="User_ActivityInstance" name="User_ActivityInstance" sourceEntity="User" targetEntity="ActivityInstance" db:database="db1" db:table="activityinstance">
+    <RelationshipRole1 id="user2ActivityInstances" name="activityInstances" maxCard="N" cascadeDelete="false">
+      <db:JoinColumn attribute="userOID" name="user_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="activityInstance2User" name="user" maxCard="1" cascadeDelete="false">
+      <db:JoinColumn attribute="activityInstanceOid" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="ActivityInstance_CandidateUser" name="ActivityInstance_CandidateUser" sourceEntity="ActivityInstance" targetEntity="User" gr:bendpoints="201,161,-240,0" db:database="db1" db:table="activityinstance_candidateuser">
+    <RelationshipRole1 id="activityInstance2CandidateUsers" name="activityInstanceCandidateUsers" maxCard="N" cascadeDelete="false">
+      <db:JoinColumn attribute="activityInstanceOid" name="activityinstance_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="candidateUser2ActivityInstances" name="candidateUserActivityInstances" maxCard="N" cascadeDelete="false">
+      <db:JoinColumn attribute="userOID" name="user_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="Group_ActivityType" name="Group_ActivityType" sourceEntity="Group" targetEntity="ActivityType" gr:bendpoints="-112,-546,582,244" db:database="db1" db:table="group_activitytype">
+    <RelationshipRole1 id="group2ActivityTypes" name="activityTypes" maxCard="N" cascadeDelete="false">
+      <db:JoinColumn attribute="groupOID" name="group_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="activityType2Groups" name="groups" maxCard="N" cascadeDelete="false">
+      <db:JoinColumn attribute="activityTypeOid" name="activitytype_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="User_Notifications" name="User_Notifications" sourceEntity="User" targetEntity="Notification" db:database="db1" db:table="user_notifications">
+    <RelationshipRole1 id="user2Notifications" name="notifications" maxCard="N" cascadeDelete="false">
+      <db:JoinColumn attribute="userOID" name="user_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="notification2Users" name="users" maxCard="N" cascadeDelete="false">
+      <db:JoinColumn attribute="notificationOid" name="notification_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="ActivityInstance_Notifications" name="ActivityInstance_Notification" sourceEntity="ActivityInstance" targetEntity="Notification" db:database="db1" db:table="notification">
+    <RelationshipRole1 id="activityInstance2Notifications" name="notifications" maxCard="N" cascadeDelete="false">
+      <db:JoinColumn attribute="activityInstanceOid" name="activityinstance_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="notification2ActivityInstance" name="activityInstance" maxCard="1" cascadeDelete="false">
+      <db:JoinColumn attribute="notificationOid" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="Note_ProcessInstance" name="Note_ProcessInstance" sourceEntity="Note" targetEntity="ProcessInstance" db:database="db1" db:table="note_processinstance">
+    <RelationshipRole1 id="note2ProcessInstances" name="processInstances" maxCard="N" cascadeDelete="false">
+      <db:JoinColumn attribute="noteOid" name="note_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="processInstance2Notes" name="processNotes" maxCard="N" cascadeDelete="false">
+      <db:JoinColumn attribute="processInstanceOid" name="processinstance_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="Note_ActivityInstance" name="Note_ActivityInstance" sourceEntity="Note" targetEntity="ActivityInstance" db:database="db1" db:table="note_activityinstance">
+    <RelationshipRole1 id="note2ActivityInstances" name="activityInstances" maxCard="N" cascadeDelete="false">
+      <db:JoinColumn attribute="noteOid" name="note_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="activityInstance2Notes" name="activityInstanceNotes" maxCard="N" cascadeDelete="false">
+      <db:JoinColumn attribute="activityInstanceOid" name="activityinstance_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="ActivityInstance_NextActivityInstanceNotes" name="ActivityInstance_NextActivityInstanceNotes" sourceEntity="ActivityInstance" targetEntity="Note" gr:bendpoints="-230,-100,54,178" db:database="db1" db:table="note">
+    <RelationshipRole1 id="nextActivityInstance2Notes" name="nextActivityInstanceNote" maxCard="N" cascadeDelete="false">
+      <db:JoinColumn attribute="activityInstanceOid" name="activityinstance_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="note2NextActivityInstance" name="activityInstance" maxCard="1" cascadeDelete="false">
+      <db:JoinColumn attribute="noteOid" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="Note_User" name="Note_User" sourceEntity="Note" targetEntity="User" gr:bendpoints="386,-66,-342,-498" db:database="db1" db:table="note">
+    <RelationshipRole1 id="note2User" name="user" maxCard="1" cascadeDelete="false">
+      <db:JoinColumn attribute="noteOid" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="user2Notes" name="userNotes" maxCard="N" cascadeDelete="false">
+      <db:JoinColumn attribute="userOID" name="user_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="ActivityInstance_Group" name="ActivityInstance_Group" sourceEntity="ActivityInstance" targetEntity="Group" gr:bendpoints="564,-84,-130,-240" db:database="db1" db:table="activityinstance">
+    <RelationshipRole1 id="activityInstance2Group" name="activityInstanceGroup" maxCard="1" cascadeDelete="false">
+      <db:JoinColumn attribute="activityInstanceOid" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="group2ActivityInstances" name="activityInstances" maxCard="N" cascadeDelete="false">
+      <db:JoinColumn attribute="groupOID" name="group_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="Attachment_ProcessInstance" name="Attachment_ProcessInstance" sourceEntity="Attachment" targetEntity="ProcessInstance" db:database="db1" db:table="attachment_processinstance">
+    <RelationshipRole1 id="attachment2ProcessInstances" name="processInstances" maxCard="N" cascadeDelete="false">
+      <db:JoinColumn attribute="attachmentOid" name="attachment_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="processInstance2Attachments" name="processAttachments" maxCard="N" cascadeDelete="false">
+      <db:JoinColumn attribute="processInstanceOid" name="processinstance_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="Attachment_User" name="Attachment_User" sourceEntity="Attachment" targetEntity="User" db:database="db1" db:table="attachment">
+    <RelationshipRole1 id="attachment2User" name="user" maxCard="1" cascadeDelete="false">
+      <db:JoinColumn attribute="attachmentOid" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="user2Attachments" name="userAttachments" maxCard="N" cascadeDelete="false">
+      <db:JoinColumn attribute="userOID" name="user_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="SubprocessInstances_ParentProcessInstance" name="SubprocessInstances_ParentProcessInstance" sourceEntity="ProcessInstance" targetEntity="ProcessInstance" gr:bendpoints="-123,149,-123,149;-153,98,-153,98" db:database="db1" db:table="processinstance">
+    <RelationshipRole1 id="subprocessInstance2ParentProcessInstance" name="ParentProcessInstance" maxCard="1" cascadeDelete="false">
+      <db:JoinColumn attribute="processInstanceOid" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="parentProcessInstance2SubprocessInstances" name="SubprocessInstances" maxCard="N" cascadeDelete="false">
+      <db:JoinColumn attribute="processInstanceOid" name="processinstance_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Entity id="ent1" gr:x="-415" gr:y="785" name="CHOLULA-Validaciones" bpm:uuid="IH8LJWSF_5HF" db:database="db1" db:table="cholula_validaciones" attributeOrder="ent1#att1 ent1#att2 ent1#att3 ent1#att4 ent1#att5 ent1#att6 ent1#att7 ent1#att8 ent1#att9 ent1#att10 ent1#att11 ent1#att12 ent1#att13 ent1#att1c">
+    <Attribute id="ent1#att1" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent1#att2" name="&#191;Esta completa la informacion? " type="string" bpm:uuid="IH8LL99N_341" db:column="esta_completa_la_informacion"/>
+    <Attribute id="ent1#att3" name="Observaciones" type="text" bpm:uuid="IH8LLT4Q_5TC" db:column="observaciones"/>
+    <Attribute id="ent1#att4" name="&#191;Procede? " type="string" bpm:uuid="IH8MGT15_XX" db:column="procede"/>
+    <Attribute id="ent1#att5" name="Observaciones de licencia de construccion" type="text" bpm:uuid="IH8MHR3B_6PG" db:column="observaciones_de_licencia_de_c"/>
+    <Attribute id="ent1#att6" name="&#191;Procede sin inspecci&#243;n? " type="string" bpm:uuid="IH8NNAR3_7G2" db:column="procede_sin_inspeccion"/>
+    <Attribute id="ent1#att7" name="&#191;Fecha y hora confirmada? " type="string" bpm:uuid="IH8QWJH6_6X0" db:column="fecha_y_hora_confirmada"/>
+    <Attribute id="ent1#att8" name="&#191;Cumple? " type="string" bpm:uuid="IH8TOH8O_6O7" db:column="cumple"/>
+    <Attribute id="ent1#att9" name="&#191;Es competencia de ecologia municipal? " type="string" bpm:uuid="IH8TOYT6_26X" db:column="es_competencia_de_ecologia_mun"/>
+    <Attribute id="ent1#att10" name="&#191;Se requiere dictamen ecologico? " type="string" bpm:uuid="IH8TP2N4_3IE" db:column="se_requiere_dictamen_ecologico"/>
+    <Attribute id="ent1#att11" name="&#191;Esta completa la documentacion? " type="string" bpm:uuid="IH8UY1Q3_7IZ" db:column="esta_completa_la_documentacion"/>
+    <Attribute id="ent1#att12" name="&#191;Esta al corriente en los pagos? " type="string" bpm:uuid="IH8UYQZH_ZJ" db:column="esta_al_corriente_en_los_pagos"/>
+    <Attribute id="ent1#att13" name="&#191;El uso de suelo es compatible? " type="string" bpm:uuid="IH8UZ174_2WV" db:column="el_uso_de_suelo_es_compatible"/>
+    <Attribute id="ent1#att1c" name="&#191;Es de competencia municipal?" type="string" bpm:uuid="ILE0TCDP_U8" db:column="es_de_competencia_municipal"/>
+  </Entity>
+  <Entity id="ent2" gr:x="-415" gr:y="1145" name="CHOLULA-Expediente electronico" bpm:uuid="IH8LG9T6_5BG" db:database="db1" db:table="cholula_expediente_electronico">
+    <Attribute id="ent2#att14" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent2#att15" name="Identificacion oficial con fotografia" type="blob" bpm:uuid="IJZYI03C_6H7" db:column="identificacion_oficial_con_fot"/>
+    <Attribute id="ent2#att16" name="Documento que acreedite la propiedad" type="blob" bpm:uuid="IH8LGKKQ_1C0" db:column="documento_que_acreedite_la_pro"/>
+    <Attribute id="ent2#att17" name="Fotografia frontal del predio" type="blob" bpm:uuid="IH8LGKP6_3ZN" db:column="fotografia_frontal_del_predio"/>
+    <Attribute id="ent2#att18" name="Fotografia posterior del predio" type="blob" bpm:uuid="IH8LGKTE_1ZY" db:column="fotografia_posterior_del_predi"/>
+    <Attribute id="ent2#att19" name="Carnet del DROM" type="blob" bpm:uuid="IH8LGKY2_3HT" db:column="carnet_del_drom"/>
+    <Attribute id="ent2#att20" name="Proyecto arquitectonico, estructural y de instalaciones hidro-sanitarias" type="blob" bpm:uuid="IH8LGL75_1R0" db:column="proyecto_arquitectonico_estruc"/>
+    <Attribute id="ent2#att21" name="Memoria de calculo" type="blob" bpm:uuid="IH8LGLBL_1KU" db:column="memoria_de_calculo"/>
+    <Attribute id="ent2#att22" name="Bitacora de obra" type="blob" bpm:uuid="IH8LGL2H_440" db:column="bitacora_de_obra"/>
+    <Attribute id="ent2#att23" name="Proyecto autorizado por la administracion del condominio" type="blob" bpm:uuid="IH8LGLGI_5HU" db:column="proyecto_autorizado_por_la_adm"/>
+    <Attribute id="ent2#att24" name="Constancia de alineamiento y numero oficial" type="blob" bpm:uuid="IH8NIS5R_3BX" db:column="constancia_de_alineamiento_y_n"/>
+    <Attribute id="ent2#att25" name="Constancia de terminacion de obra de construccion" type="blob" bpm:uuid="IH8NJ6G6_7E4" db:column="constancia_de_terminacion_de_o"/>
+    <Attribute id="ent2#att26" name="Licencia de fraccionamientos" type="blob" bpm:uuid="IH8NJ7WW_3HE" db:column="licencia_de_fraccionamientos"/>
+    <Attribute id="ent2#att27" name="Ficha informativa emitida por Desarrollo Urbano de los m2 de construccion" type="blob" bpm:uuid="IH8NJ8P3_2R5" db:column="ficha_informativa_emitida_por"/>
+    <Attribute id="ent2#att28" name="Plano aprobado de las casas" type="blob" bpm:uuid="IH8NK1MT_3U1" db:column="plano_aprobado_de_las_casas"/>
+    <Attribute id="ent2#att29" name="Plano aprobado de fraccionamientos" type="blob" bpm:uuid="IH8NK5DP_3FW" db:column="plano_aprobado_de_fraccionamie"/>
+    <Attribute id="ent2#att30" name="Plano aprobado por el area de licencias" type="blob" bpm:uuid="IH8NK8D9_44K" db:column="plano_aprobado_por_el_area_de"/>
+    <Attribute id="ent2#att31" name="Tabla de indivisos" type="blob" bpm:uuid="IH8NKBTP_5T0" db:column="tabla_de_indivisos"/>
+    <Attribute id="ent2#att32" name="Dictamen de C.N.A. y Proteccion Civil" type="blob" bpm:uuid="IH8NKJE4_1X8" db:column="dictamen_de_c_n_a_y_proteccion"/>
+    <Attribute id="ent2#att33" name="Dictamen de integracion de vialidades" type="blob" bpm:uuid="IH8NKRXG_4BY" db:column="dictamen_de_integracion_de_via"/>
+    <Attribute id="ent2#att34" name="Dictamen del INAH" type="blob" bpm:uuid="IH8NKY23_S2" db:column="dictamen_del_inah"/>
+    <Attribute id="ent2#att35" name="Levantamiento topografico" type="blob" bpm:uuid="IH8NL2V7_4LS" db:column="levantamiento_topografico"/>
+    <Attribute id="ent2#att36" name="Licencia de construccion y recibo de pago" type="blob" bpm:uuid="IH8RHLUT_2EF" db:column="licencia_de_construccion_y_rec"/>
+    <Attribute id="ent2#att37" name="Licencia de uso de suelo" type="blob" bpm:uuid="IH8RJEBT_3QF" db:column="licencia_de_uso_de_suelo"/>
+    <Attribute id="ent2#att38" name="Informe preventivo de impacto ambiental o Dictamen de informe ecologico preventivo" type="blob" bpm:uuid="IH8RJKOK_PN" db:column="informe_preventivo_de_impacto"/>
+    <Attribute id="ent2#att39" name="Aviso de terminaci&#243;n de obra ante la SDRSOT" type="blob" bpm:uuid="IH8RJV7R_NE" db:column="aviso_de_terminacion_de_obra_a"/>
+    <Attribute id="ent2#att40" name="Contratacion de los servicios de agua y drenaje" type="blob" bpm:uuid="IH8RK0NO_5YF" db:column="contratacion_de_los_servicios"/>
+    <Attribute id="ent2#att41" name="Proyecto arquitectonico autorizado" type="blob" bpm:uuid="IH8RKLFE_1TF" db:column="proyecto_arquitectonico_autori"/>
+    <Attribute id="ent2#att42" name="Disposicion final de residuos de construccion" type="blob" bpm:uuid="IH8RKT80_6CX" db:column="disposicion_final_de_residuos"/>
+    <Attribute id="ent2#att43" name="Fotografia interior 1" type="blob" bpm:uuid="IH8SNTMD_6YM" db:column="fotografia_interior_1"/>
+    <Attribute id="ent2#att44" name="Fotografia interior 2" type="blob" bpm:uuid="IH8SO3S7_1AB" db:column="fotografia_interior_2"/>
+    <Attribute id="ent2#att45" name="Fotografia exterior 1" type="blob" bpm:uuid="IH8SOLOP_7DI" db:column="fotografia_exterior_1"/>
+    <Attribute id="ent2#att46" name="Fotografia exterior 2" type="blob" bpm:uuid="IH8SOP3E_5JX" db:column="fotografia_exterior_2"/>
+    <Attribute id="ent2#att47" name="Constancia de cumplimiento de ecologia" type="blob" bpm:uuid="IH8T37XT_6R7" db:column="constancia_de_cumplimiento_de"/>
+    <Attribute id="ent2#att48" name="Constancia de terminacion de obra" type="blob" bpm:uuid="IH8T4K1I_5T1" db:column="constancia_de_terminacion_de_3"/>
+    <Attribute id="ent2#att49" name="Plantas arquitectonicas" type="blob" bpm:uuid="IH8TG6AN_3F5" db:column="plantas_arquitectonicas"/>
+    <Attribute id="ent2#att50" name="Factibilidad de agua y drenaje" type="blob" bpm:uuid="IH8TKWMX_5I4" db:column="factibilidad_de_agua_y_drenaje"/>
+    <Attribute id="ent2#att51" name="Ejemplo cuestionario de informe preventivo" type="string" bpm:uuid="IH8TKZV4_26Q" db:column="ejemplo_cuestionario_de_inform"/>
+    <Attribute id="ent2#att52" name="Cuestionario de informe preventivo" type="blob" bpm:uuid="IH8TL2B5_3HA" db:column="cuestionario_de_informe_preven"/>
+    <Attribute id="ent2#att53" name="Licencia de uso de suelo especifico" type="blob" bpm:uuid="IH8UCBO1_3E0" db:column="licencia_de_uso_de_suelo_espec"/>
+    <Attribute id="ent2#att54" name="Plano de proyecto" type="blob" bpm:uuid="IH8URSNA_63C" db:column="plano_de_proyecto"/>
+    <Attribute id="ent2#att55" name="Fotografia 1" type="blob" bpm:uuid="IH8X06IX_5YD" db:column="fotografia_1"/>
+    <Attribute id="ent2#att56" name="Fotografia 2" type="blob" bpm:uuid="IH8X0E2L_23U" db:column="fotografia_2"/>
+    <Attribute id="ent2#att57" name="Fotografia 3" type="blob" bpm:uuid="IH8X0GHQ_4K3" db:column="fotografia_3"/>
+    <Attribute id="ent2#att58" name="Fotografia 4" type="blob" bpm:uuid="IH8X0IPD_6R7" db:column="fotografia_4"/>
+    <Attribute id="ent2#att59" name="Contrato" type="blob" bpm:uuid="IH8X0L1P_4IJ" db:column="contrato"/>
+    <Attribute id="ent2#att60" name="Alineamiento y numero oficial" type="blob" bpm:uuid="IH8X2NOJ_1NF" db:column="alineamiento_y_numero_oficial"/>
+    <Attribute id="ent2#att61" name="Factibilidad" type="blob" bpm:uuid="IH8X380F_2LC" db:column="factibilidad"/>
+    <Attribute id="ent2#att62" name="Plano de ubicacion y colindancias" type="blob" bpm:uuid="IH8XC38X_5KX" db:column="plano_de_ubicacion_y_colindanc"/>
+    <Attribute id="ent2#att63" name="Plano de ubicacion y distribucion de se&#241;al" type="blob" bpm:uuid="IH8XCAI4_3W0" db:column="plano_de_ubicacion_y_distribuc"/>
+    <Attribute id="ent2#att64" name="Programa interno" type="blob" bpm:uuid="IH8XCCTA_4A1" db:column="programa_interno"/>
+    <Attribute id="ent2#att65" name="Oficio emitido por Desarrollo Urbano para el Dictamen" type="blob" bpm:uuid="IH8XCF14_5PQ" db:column="oficio_emitido_por_desarrollo"/>
+    <Attribute id="ent2#att66" name="Plano arquitectonico" type="blob" bpm:uuid="IH8XCH5I_74T" db:column="plano_arquitectonico"/>
+    <Attribute id="ent2#att67" name="Poliza de seguro" type="blob" bpm:uuid="IH8XCJ4T_4RS" db:column="poliza_de_seguro"/>
+    <Attribute id="ent2#att68" name="Constancia de primeros auxilios en formato DC3" type="blob" bpm:uuid="IH8XCL98_6VS" db:column="constancia_de_primeros_auxilio"/>
+    <Attribute id="ent2#att69" name="Constancia manejo de extintores" type="blob" bpm:uuid="IH8XCNIP_3HW" db:column="constancia_manejo_de_extintore"/>
+    <Attribute id="ent2#att70" name="Constancia de soldadura (en caso de)" type="blob" bpm:uuid="IH8XCR3B_2ZG" db:column="constancia_de_soldadura_en_cas"/>
+    <Attribute id="ent2#att71" name="Constancia de trabajos de altura" type="blob" bpm:uuid="IH8XCTIY_J7" db:column="constancia_de_trabajos_de_altu"/>
+    <Attribute id="ent2#att72" name="Hojas de seguridad de oxigeno y acetuleno" type="blob" bpm:uuid="IH8XCVYH_5Q2" db:column="hojas_de_seguridad_de_oxigeno"/>
+    <Attribute id="ent2#att73" name="Fotografias de se&#241;aletica y equipo de seguridad" type="blob" bpm:uuid="IH8XCY9S_2QB" db:column="fotografias_de_se_aletica_y_eq"/>
+    <Attribute id="ent2#att74" name="Fotografia 2 de se&#241;aletica y equipo de seguridad" type="blob" bpm:uuid="IH8XD1OI_62B" db:column="fotografia_2_de_se_aletica_y_e"/>
+    <Attribute id="ent2#att75" name="Fotografia 3 de se&#241;aletica y equipo de seguridad" type="blob" bpm:uuid="IH8XD4CC_20W" db:column="fotografia_3_de_se_aletica_y_e"/>
+    <Attribute id="ent2#att76" name="Dictamen de Proteccion Civil" type="blob" bpm:uuid="IH8XVQY0_4LB" db:column="dictamen_de_proteccion_civil"/>
+    <Attribute id="ent2#att77" name="Constancia de medidas preventivas contra incendio" type="blob" bpm:uuid="IH8XW0RD_5LT" db:column="constancia_de_medidas_preventi"/>
+    <Attribute id="ent2#att78" name="Escrituras" type="blob" bpm:uuid="IH8Z03TL_2QJ" db:column="escrituras"/>
+    <Attribute id="ent2#att79" name="En caso de ser personal moral: acta constitutiva" type="blob" bpm:uuid="IH8Z1WT9_1P5" db:column="en_caso_de_ser_personal_moral"/>
+    <Attribute id="ent2#att80" name="Contrato de conexion" type="blob" bpm:uuid="IH901GIL_4XY" db:column="contrato_de_conexion"/>
+    <Attribute id="ent2#att81" name="Comprobante domicilio (no mayor a tres meses)" type="blob" bpm:uuid="IJ4QV4UX_1MM" db:column="comprobante_domicilio_no_mayor"/>
+    <Attribute id="ent2#att82" name="Fotografia interna" type="blob" bpm:uuid="IJ4QVMH7_6FU" db:column="fotografia_interna"/>
+    <Attribute id="ent2#att83" name="Fotografia externa" type="blob" bpm:uuid="IJ4QVOMZ_4OE" db:column="fotografia_externa"/>
+    <Attribute id="ent2#att84" name="Croquis" type="blob" bpm:uuid="IJ4QWALV_3WN" db:column="croquis"/>
+    <Attribute id="ent2#att85" name="Constancia primeros auxilios en formato DC3" type="blob" bpm:uuid="IJ4QWHJK_8I" db:column="constancia_primeros_auxilios_e"/>
+    <Attribute id="ent2#att86" name="Aviso de salubridad (en caso de que aplique)" type="blob" bpm:uuid="IJ4QX8XI_3T2" db:column="aviso_de_salubridad_en_caso_de"/>
+    <Attribute id="ent2#att87" name="Traslado de dominio" type="blob" bpm:uuid="IJW9UJVC_14X" db:column="traslado_de_dominio"/>
+    <Attribute id="ent2#att88" name="Avaluo " type="blob" bpm:uuid="IJWEALM6_62I" db:column="avaluo"/>
+    <Attribute id="ent2#att89" name="Escritura publica" type="blob" bpm:uuid="IJWEC7EX_3H" db:column="escritura_publica"/>
+    <Attribute id="ent2#att90" name="Pago de ISABI" type="blob" bpm:uuid="IJWEW016_454" db:column="pago_de_isabi"/>
+    <Attribute id="ent2#att91" name="Constancia de no adeudo predial" type="blob" bpm:uuid="IJWG2B4L_2IX" db:column="constancia_de_no_adeudo_predia"/>
+    <Attribute id="ent2#att92" name="Licencia de funcionamiento condicionada" type="blob" bpm:uuid="IK09JI29_3W4" db:column="licencia_de_funcionamiento_con"/>
+  </Entity>
+  <Entity id="ent3" gr:x="-415" gr:y="2825" name="LCFC-ALNO-TO-LUS-Datos del solicitante" bpm:uuid="IH8L8AW0_24Q" db:database="db1" db:table="lcfc_alno_to_lus_fag_dpc_datos">
+    <Attribute id="ent3#att93" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent3#att94" name="Tipo de interesado    " type="string" bpm:uuid="IH8L8H4V_5Z6" db:column="tipo_de_interesado"/>
+    <Attribute id="ent3#att95" name="Primer apellido" type="string" bpm:uuid="IH8L8H9B_7DP" db:column="primer_apellido"/>
+    <Attribute id="ent3#att96" name="Segundo apellido" type="string" bpm:uuid="IH8L8HEF_YU" db:column="segundo_apellido"/>
+    <Attribute id="ent3#att97" name="Nombres(s)" type="string" bpm:uuid="IH8L8HJ3_4ZC" db:column="nombres_s"/>
+    <Attribute id="ent3#att98" name="RFC" type="string" bpm:uuid="IH8L8HNZ_PT" db:column="rfc"/>
+    <Attribute id="ent3#att99" name="Tel&#233;fono particular" type="string" bpm:uuid="IH8L8HSM_D1" db:column="telefono_particular"/>
+    <Attribute id="ent3#att100" name="Tel&#233;fono celular" type="string" bpm:uuid="IH8L8HZJ_4UA" db:column="telefono_celular"/>
+    <Attribute id="ent3#att101" name="Correo electr&#243;nico" type="string" bpm:uuid="IH8L8I9R_5RB" db:column="correo_electronico"/>
+  </Entity>
+  <Entity id="ent4" gr:x="-415" gr:y="3105" name="CHOLULA-Pago" bpm:uuid="IH8MNGDX_99" db:database="db1" db:table="cholula_pago">
+    <Attribute id="ent4#att102" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent4#att103" name="Donaci&#243;n de &#225;rboles" type="string" bpm:uuid="IH8MNKCD_50Y" db:column="donacion_de_arboles"/>
+    <Attribute id="ent4#att104" name="Monto a pagar" type="string" bpm:uuid="IH8MNOOU_N2" db:column="monto_a_pagar"/>
+  </Entity>
+  <Entity id="ent5" gr:x="-415" gr:y="3265" name="CHOLULA-Predial" bpm:uuid="IH8L30MI_1LZ" db:database="db1" db:table="cholula_predial">
+    <Attribute id="ent5#att105" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent5#att106" name="Cuenta predial" type="string" bpm:uuid="IH8L34LF_7LX" db:column="cuenta_predial"/>
+  </Entity>
+  <Entity id="ent6" gr:x="-415" gr:y="3405" name="CHOLULA-Control" bpm:uuid="IH8K1ZGP_MP" db:database="db1" db:table="cholula_control">
+    <Attribute id="ent6#att107" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent6#att108" name="Folio de ingreso" type="string" bpm:uuid="IH8KZUZV_14D" db:column="folio_de_ingreso"/>
+    <Attribute id="ent6#att109" name="Folio de control" type="string" bpm:uuid="IH8L0CS5_XQ" db:column="folio_de_control"/>
+  </Entity>
+  <Entity id="ent7" gr:x="-415" gr:y="3565" name="LCFC-ALNO-LUS-FAG-CCNX-CNAP-Datos del propietario" bpm:uuid="IH8LBC92_1CW" db:database="db1" db:table="lcfc_alno_lus_fag_ccnx_cnap_da">
+    <Attribute id="ent7#att110" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent7#att111" name="Primer apellido" type="string" bpm:uuid="IH8LBLG1_2V2" db:column="primer_apellido"/>
+    <Attribute id="ent7#att112" name="Segundo apellido" type="string" bpm:uuid="IH8LBLL5_6Q8" db:column="segundo_apellido"/>
+    <Attribute id="ent7#att113" name="Nombres(s)" type="string" bpm:uuid="IH8LBLQQ_55H" db:column="nombres_s"/>
+    <Attribute id="ent7#att114" name="RFC" type="string" bpm:uuid="IH8LBLW1_47V" db:column="rfc"/>
+  </Entity>
+  <Entity id="ent8" gr:x="-415" gr:y="3765" name="LCFC-ALNO-LUS-FAG-AVF-ISAB-Medidas y colindancias" bpm:uuid="IH8LZ5F7_FY" db:database="db1" db:table="lcfc_alno_lus_fag_avf_isab_med">
+    <Attribute id="ent8#att115" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent8#att116" name="Orientaci&#243;n       " type="string" bpm:uuid="IH8LZ9C0_236" db:column="orientacion"/>
+    <Attribute id="ent8#att117" name="Medida" type="decimal" bpm:uuid="IH8LZDRS_6XV" db:column="medida"/>
+    <Attribute id="ent8#att118" name="Colindancia" type="text" bpm:uuid="IH8LZDWO_7C1" db:column="colindancia"/>
+  </Entity>
+  <Entity id="ent9" gr:x="-415" gr:y="3945" name="ALNO-TO-LUS-FAG-DPC-CCNX-AVF-ISAB-CNAP-Domicilio del predio" bpm:uuid="IH8RX438_54R" db:database="db1" db:table="alno_to_lus_fag_dpc_ccnx_avf_i">
+    <Attribute id="ent9#att119" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent9#att120" name="Clave catastral" type="string" bpm:uuid="IH8RXF2R_1PR" db:column="clave_catastral"/>
+    <Attribute id="ent9#att121" name="Calle (exterior)" type="string" bpm:uuid="IH8RXJNP_5JI" db:column="calle_exterior"/>
+    <Attribute id="ent9#att122" name="Numero exterior" type="string" bpm:uuid="IH8RXMHL_64F" db:column="numero_exterior"/>
+    <Attribute id="ent9#att123" name="Numero interior" type="string" bpm:uuid="IH8RXPL7_70D" db:column="numero_interior"/>
+    <Attribute id="ent9#att124" name="Letra" type="string" bpm:uuid="IH8RXS75_AC" db:column="letra"/>
+    <Attribute id="ent9#att125" name="Fraccionamiento" type="string" bpm:uuid="IH8RXUH4_6OM" db:column="fraccionamiento"/>
+    <Attribute id="ent9#att126" name="Colonia" type="string" bpm:uuid="IH8RXWQ1_2TH" db:column="colonia"/>
+    <Attribute id="ent9#att127" name="Codigo Postal" type="string" bpm:uuid="IH8RXZLU_4XL" db:column="codigo_postal"/>
+    <Attribute id="ent9#att128" name="Lote" type="string" bpm:uuid="IH8RY1X6_1TP" db:column="lote"/>
+    <Attribute id="ent9#att129" name="Manzana" type="string" bpm:uuid="IH8RY469_5EE" db:column="manzana"/>
+    <Attribute id="ent9#att130" name="Junta auxiliar" type="string" bpm:uuid="IH8RY6TH_6PX" db:column="junta_auxiliar"/>
+  </Entity>
+  <Entity id="ent10" gr:x="-415" gr:y="4285" name="ALNO-TO-FAG-DPC-CCNX-AVF-Fecha y hora de visita" bpm:uuid="IH8QVPD5_1WK" db:database="db1" db:table="alno_to_fag_dpc_ccnx_avf_fecha" attributeOrder="ent10#att131 ent10#att132 ent10#att133 ent10#att4c">
+    <Attribute id="ent10#att131" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent10#att132" name="Fecha y hora" type="date" bpm:uuid="IH8QVYUH_1YR" db:column="fecha_y_hora"/>
+    <Attribute id="ent10#att133" name="Comentarios adicionales" type="text" bpm:uuid="IH8QW68P_3AE" db:column="comentarios_adicionales"/>
+    <Attribute id="ent10#att4c" name="fechaTimeStamp" type="timestamp" bpm:uuid="ILU05BF9_25B" db:column="fechatimestamp"/>
+  </Entity>
+  <Entity id="ent11" gr:x="-415" gr:y="4445" name="ALNO-Observaciones de inspeccion" bpm:uuid="IH8QYXRO_4M9" db:database="db1" db:table="alno_observaciones_de_inspecci">
+    <Attribute id="ent11#att134" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent11#att135" name="Observaciones" type="text" bpm:uuid="IH8QYZ9S_3X4" db:column="observaciones"/>
+  </Entity>
+  <Entity id="ent12" gr:x="-415" gr:y="4585" name="ALNO-LUS-FAG-Superficies" bpm:uuid="IH8QUI77_73F" db:database="db1" db:table="alno_lus_fag_superficies">
+    <Attribute id="ent12#att136" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent12#att137" name="Superficie de terreno" type="decimal" bpm:uuid="IH8QUPAG_7DQ" db:column="superficie_de_terreno"/>
+    <Attribute id="ent12#att138" name="Superficie a ocupar" type="decimal" bpm:uuid="IH8QV0D3_3YK" db:column="superficie_a_ocupar"/>
+  </Entity>
+  <Entity id="ent13" gr:x="-415" gr:y="4745" name="ALNO-Croquis" bpm:uuid="IH8QU071_76C" db:database="db1" db:table="alno_croquis">
+    <Attribute id="ent13#att139" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent13#att140" name="Croquis" type="blob" bpm:uuid="IH8QU1SW_Z9" db:column="croquis"/>
+  </Entity>
+  <Entity id="ent14" gr:x="-415" gr:y="4885" name="AVF-Tipo de suelo" bpm:uuid="IJWATU32_2OY" db:database="db1" db:table="avf_tipo_de_suelo">
+    <Attribute id="ent14#att141" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent14#att142" name="Tipo de suelo " type="string" bpm:uuid="IJWATYIX_3RM" db:column="tipo_de_suelo"/>
+  </Entity>
+  <Entity id="ent15" gr:x="-415" gr:y="5025" name="AVF-Superficie cartografica y legal" bpm:uuid="IJWAV6GF_5OK" db:database="db1" db:table="avf_superficie_cartografica_y">
+    <Attribute id="ent15#att143" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent15#att144" name="Superficie cartografica" type="text" bpm:uuid="IJWAVCJV_K1" db:column="superficie_cartografica"/>
+    <Attribute id="ent15#att145" name="Superficie legal" type="text" bpm:uuid="IJWAVD0W_1C8" db:column="superficie_legal"/>
+  </Entity>
+  <Entity id="ent16" gr:x="-415" gr:y="5185" name="AVF-Responsable" bpm:uuid="IJWB25Y1_1FG" db:database="db1" db:table="avf_responsable">
+    <Attribute id="ent16#att146" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent16#att147" name="Nombre de responsable" type="string" bpm:uuid="IJWB299D_1MZ" db:column="nombre_de_responsable"/>
+    <Attribute id="ent16#att148" name="Folio de pago" type="string" bpm:uuid="IJWB29F5_4UV" db:column="folio_de_pago"/>
+  </Entity>
+  <Entity id="ent17" gr:x="-415" gr:y="5345" name="AVF-Requisitos" bpm:uuid="IJW9SX3X_1FN" db:database="db1" db:table="avf_requisitos">
+    <Attribute id="ent17#att149" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent17#att150" name="Tipo identificacion oficial   " type="string" bpm:uuid="IH8LDZH0_1KE" db:column="tipo_identificacion_oficial"/>
+    <Attribute id="ent17#att151" name="Documento" type="blob" bpm:uuid="IJW9ZN41_1MH" db:column="documento"/>
+  </Entity>
+  <Entity id="ent18" gr:x="-415" gr:y="5505" name="AVF-Reporte fotografico y ubicacion" bpm:uuid="IJWB37NZ_635" db:database="db1" db:table="avf_reporte_fotografico_y_ubic">
+    <Attribute id="ent18#att152" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent18#att153" name="Croquis de ubicacion" type="blob" bpm:uuid="IJWB3G1K_67H" db:column="croquis_de_ubicacion"/>
+    <Attribute id="ent18#att154" name="Fotografia 1" type="blob" bpm:uuid="IJWB3G4E_37X" db:column="fotografia_1"/>
+    <Attribute id="ent18#att155" name="Fotografia 2" type="blob" bpm:uuid="IJWB3G9S_61D" db:column="fotografia_2"/>
+    <Attribute id="ent18#att156" name="Fotografia 3" type="blob" bpm:uuid="IJWB3GEO_2Z2" db:column="fotografia_3"/>
+    <Attribute id="ent18#att157" name="Fotografia 4" type="blob" bpm:uuid="IJWB3GJK_2I4" db:column="fotografia_4"/>
+  </Entity>
+  <Entity id="ent19" gr:x="-415" gr:y="5725" name="AVF-Predios urbanos y suburbanos" bpm:uuid="IJWAMSVE_4S2" db:database="db1" db:table="avf_predios_urbanos_y_suburban">
+    <Attribute id="ent19#att158" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent19#att159" name="Tipo de zona" type="string" bpm:uuid="IJWANL2O_2HE" db:column="tipo_de_zona"/>
+    <Attribute id="ent19#att160" name="Superficie del predio" type="string" bpm:uuid="IJWAP1QI_18X" db:column="superficie_del_predio"/>
+    <Attribute id="ent19#att161" name="Frente" type="decimal" bpm:uuid="IJWAP622_2VI" db:column="frente"/>
+    <Attribute id="ent19#att162" name="Profundidad" type="decimal" bpm:uuid="IJWAP68I_528" db:column="profundidad"/>
+    <Attribute id="ent19#att163" name="Superficie legal" type="string" bpm:uuid="IJWAP6DM_17U" db:column="superficie_legal"/>
+    <Attribute id="ent19#att164" name="Valor provicional/m2" type="decimal" bpm:uuid="IJWAP6I2_N5" db:column="valor_provicional_m2"/>
+    <Attribute id="ent19#att165" name="Interes social " type="string" bpm:uuid="IJWAP6MI_L5" db:column="interes_social"/>
+    <Attribute id="ent19#att166" name="Esquina " type="string" bpm:uuid="IJWAP6QQ_7OM" db:column="esquina"/>
+    <Attribute id="ent19#att167" name="Lote interior" type="string" bpm:uuid="IJWAP6V6_4O" db:column="lote_interior"/>
+    <Attribute id="ent19#att168" name="Topografia" type="string" bpm:uuid="IJWAP6Z6_5XY" db:column="topografia"/>
+  </Entity>
+  <Entity id="ent20" gr:x="-415" gr:y="6045" name="AVF-Observaciones del avaluo" bpm:uuid="IJWBAP64_33S" db:database="db1" db:table="avf_observaciones_del_avaluo">
+    <Attribute id="ent20#att169" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent20#att170" name="Observaciones" type="string" bpm:uuid="IJWBATME_ED" db:column="observaciones"/>
+  </Entity>
+  <Entity id="ent21" gr:x="-415" gr:y="6185" name="AVF-Motivo" bpm:uuid="IJWAKWTC_28X" db:database="db1" db:table="avf_motivo">
+    <Attribute id="ent21#att171" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent21#att172" name="Localidad" type="string" bpm:uuid="IJWAKZJR_56Q" db:column="localidad"/>
+    <Attribute id="ent21#att173" name="Motivo" type="string" bpm:uuid="IJWAKZUW_VN" db:column="motivo"/>
+  </Entity>
+  <Entity id="ent22" gr:x="-415" gr:y="6345" name="AVF-Documento de propiedad" bpm:uuid="IJWAWL2N_KW" db:database="db1" db:table="avf_documento_de_propiedad">
+    <Attribute id="ent22#att174" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent22#att175" name="T.D" type="integer" bpm:uuid="IJWAWTT4_4GW" db:column="t_d"/>
+    <Attribute id="ent22#att176" name="Numero de escritura o titulo" type="string" bpm:uuid="IJWAWTYG_3E8" db:column="numero_de_escritura_o_titulo"/>
+    <Attribute id="ent22#att177" name="Fecha" type="date" bpm:uuid="IJWAWU3K_S9" db:column="fecha"/>
+    <Attribute id="ent22#att178" name="Fedatario" type="integer" bpm:uuid="IJWAWU94_61U" db:column="fedatario"/>
+    <Attribute id="ent22#att179" name="Numero de la notaria" type="integer" bpm:uuid="IJWAWUNS_3UZ" db:column="numero_de_la_notaria"/>
+  </Entity>
+  <Entity id="ent23" gr:x="-415" gr:y="6565" name="AVF-Datos del solicitante" bpm:uuid="IJWFC2MA_7IW" db:database="db1" db:table="avf_datos_del_solicitante">
+    <Attribute id="ent23#att180" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent23#att181" name="Tipo de interesado    " type="string" bpm:uuid="IH8L8H4V_5Z6" db:column="tipo_de_interesado"/>
+    <Attribute id="ent23#att182" name="Primer apellido" type="string" bpm:uuid="IH8L8H9B_7DP" db:column="primer_apellido"/>
+    <Attribute id="ent23#att183" name="Segundo apellido" type="string" bpm:uuid="IH8L8HEF_YU" db:column="segundo_apellido"/>
+    <Attribute id="ent23#att184" name="Nombres(s)" type="string" bpm:uuid="IH8L8HJ3_4ZC" db:column="nombres_s"/>
+    <Attribute id="ent23#att185" name="RFC" type="string" bpm:uuid="IH8L8HNZ_PT" db:column="rfc"/>
+  </Entity>
+  <Entity id="ent24" gr:x="-415" gr:y="6785" name="AVF-Datos del propietario" bpm:uuid="IJ4ZWU24_2LM" db:database="db1" db:table="avf_datos_del_propietario">
+    <Attribute id="ent24#att186" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent24#att187" name="Primer apellido" type="string" bpm:uuid="IH8LBLG1_2V2" db:column="primer_apellido"/>
+    <Attribute id="ent24#att188" name="Segundo apellido" type="string" bpm:uuid="IH8LBLL5_6Q8" db:column="segundo_apellido"/>
+    <Attribute id="ent24#att189" name="Nombres(s)" type="string" bpm:uuid="IH8LBLQQ_55H" db:column="nombres_s"/>
+  </Entity>
+  <Entity id="ent25" gr:x="-415" gr:y="6965" name="AVF-Datos de construcciones" bpm:uuid="IJWAZO8P_29I" db:database="db1" db:table="avf_datos_de_construcciones">
+    <Attribute id="ent25#att190" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent25#att191" name="Bloque" type="string" bpm:uuid="IJWB0HU7_3Y8" db:column="bloque"/>
+    <Attribute id="ent25#att192" name="Tipo" type="string" bpm:uuid="IJWB0HVW_23C" db:column="tipo"/>
+    <Attribute id="ent25#att193" name="Estado" type="string" bpm:uuid="IJWB0I0J_62E" db:column="estado"/>
+    <Attribute id="ent25#att194" name="Avance de obra" type="string" bpm:uuid="IJWB0I5V_5M4" db:column="avance_de_obra"/>
+    <Attribute id="ent25#att195" name="Edad" type="decimal" bpm:uuid="IJWB0IAR_20S" db:column="edad"/>
+    <Attribute id="ent25#att196" name="Niveles" type="integer" bpm:uuid="IJWB0IFF_4AQ" db:column="niveles"/>
+    <Attribute id="ent25#att197" name="Sup./m2" type="decimal" bpm:uuid="IJWB0IKS_55F" db:column="sup_m2"/>
+    <Attribute id="ent25#att198" name="Demerito" type="string" bpm:uuid="IJWB0IPN_57M" db:column="demerito"/>
+    <Attribute id="ent25#att199" name="Observaciones" type="string" bpm:uuid="IJWB0IVN_1PH" db:column="observaciones"/>
+  </Entity>
+  <Entity id="ent26" gr:x="-415" gr:y="7265" name="AVF-Datos adicionales" bpm:uuid="IJWAYB1Y_6JJ" db:database="db1" db:table="avf_datos_adicionales">
+    <Attribute id="ent26#att200" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent26#att201" name="Tipo de posesion" type="string" bpm:uuid="IJWAYHLB_1ED" db:column="tipo_de_posesion"/>
+    <Attribute id="ent26#att202" name="Regimen de propiedad" type="string" bpm:uuid="IJWAYI86_N" db:column="regimen_de_propiedad"/>
+    <Attribute id="ent26#att203" name="Tenencia" type="string" bpm:uuid="IJWAYILY_3XZ" db:column="tenencia"/>
+    <Attribute id="ent26#att204" name="Estado fisico" type="string" bpm:uuid="IJWAYIR2_5X0" db:column="estado_fisico"/>
+    <Attribute id="ent26#att205" name="Destino de uso" type="string" bpm:uuid="IJWAYIVY_WF" db:column="destino_de_uso"/>
+    <Attribute id="ent26#att206" name="Exento" type="string" bpm:uuid="IJWAYJ1I_3X4" db:column="exento"/>
+  </Entity>
+  <Entity id="ent27" gr:x="-415" gr:y="7505" name="AVF-Coordenadas UTM" bpm:uuid="IJWB4KXI_4OP" db:database="db1" db:table="avf_coordenadas_utm">
+    <Attribute id="ent27#att207" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent27#att208" name="Referencia" type="string" bpm:uuid="IJWB4RG6_6KH" db:column="referencia"/>
+    <Attribute id="ent27#att209" name="X" type="integer" bpm:uuid="IJWB4RM6_2K6" db:column="x"/>
+    <Attribute id="ent27#att210" name="Y" type="integer" bpm:uuid="IJWB4RYE_3M3" db:column="y"/>
+  </Entity>
+  <Entity id="ent28" gr:x="-415" gr:y="7685" name="AVF-Clave catastral" bpm:uuid="IJWAJBKA_3CM" db:database="db1" db:table="avf_clave_catastral">
+    <Attribute id="ent28#att211" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent28#att212" name="Municipio" type="string" bpm:uuid="IJWAI4ZF_5RL" db:column="municipio"/>
+    <Attribute id="ent28#att213" name="Region" type="string" bpm:uuid="IJWAI55N_6YA" db:column="region"/>
+    <Attribute id="ent28#att214" name="Manzana" type="string" bpm:uuid="IJWAI5B7_32T" db:column="manzana"/>
+    <Attribute id="ent28#att215" name="Predio" type="string" bpm:uuid="IJWAJUUC_6WX" db:column="predio"/>
+    <Attribute id="ent28#att216" name="Condominio" type="string" bpm:uuid="IJWAJY9P_6ML" db:column="condominio"/>
+  </Entity>
+  <Entity id="ent29" gr:x="-415" gr:y="7905" name="AVF-Clave catastral de origen" bpm:uuid="IJWAI2LY_5OE" db:database="db1" db:table="avf_clave_catastral_de_origen">
+    <Attribute id="ent29#att217" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent29#att218" name="Region" type="string" bpm:uuid="IJWAI4ZF_5RL" db:column="region"/>
+    <Attribute id="ent29#att219" name="Manzana" type="string" bpm:uuid="IJWAI55N_6YA" db:column="manzana"/>
+    <Attribute id="ent29#att220" name="Predio" type="string" bpm:uuid="IJWAI5B7_32T" db:column="predio"/>
+  </Entity>
+  <Entity id="ent30" gr:x="-415" gr:y="8085" name="LCFC-TO-FAG-CCNX-SARE-Requisitos" bpm:uuid="IH8LDV2H_3PJ" db:database="db1" db:table="lcfc_to_fag_ccnx_sare_requisit">
+    <Attribute id="ent30#att221" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent30#att222" name="Tipo identificacion oficial   " type="string" bpm:uuid="IH8LDZH0_1KE" db:column="tipo_identificacion_oficial"/>
+    <Attribute id="ent30#att223" name="Identificacion oficial" type="blob" bpm:uuid="IH8LDZLQ_3R7" db:column="identificacion_oficial"/>
+    <Attribute id="ent30#att224" name="Acta constitutiva (en caso de ser personal moral)" type="blob" bpm:uuid="IH8Y4ETX_PC" db:column="acta_constitutiva_en_caso_de_s"/>
+    <Attribute id="ent30#att225" name="Carta poder (en caso de no ser el propietario)" type="blob" bpm:uuid="IH8UPD9X_7N9" db:column="carta_poder_en_caso_de_no_ser"/>
+    <Attribute id="ent30#att226" name="Contrato de arrendamiento y/o pago de impuesto predial" type="blob" bpm:uuid="IK04I3B9_7PR" db:column="contrato_de_arrendamiento_y_o"/>
+    <Attribute id="ent30#att227" name="Comprobante domicilio del comercio" type="blob" bpm:uuid="IK08XI5T_3PA" db:column="comprobante_domicilio_del_come"/>
+  </Entity>
+  <Entity id="ent31" gr:x="-415" gr:y="8325" name="FAG-CCNX-Vista de inspeccion" bpm:uuid="IH8WKYGC_L5" db:database="db1" db:table="fag_ccnx_vista_de_inspeccion">
+    <Attribute id="ent31#att228" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent31#att229" name="Orden de inspeccion" type="string" bpm:uuid="IH8WL3AZ_343" db:column="orden_de_inspeccion"/>
+    <Attribute id="ent31#att230" name="Acta de inspeccion" type="string" bpm:uuid="IH8WL5ZB_72F" db:column="acta_de_inspeccion"/>
+    <Attribute id="ent31#att231" name="Observaciones" type="text" bpm:uuid="IH8WL8JS_39N" db:column="observaciones"/>
+  </Entity>
+  <Entity id="ent32" gr:x="-415" gr:y="8505" name="FAG-CCNX-Domicilio del solicitante" bpm:uuid="IH8WO3UB_4O1" db:database="db1" db:table="fag_ccnx_domicilio_del_solicit">
+    <Attribute id="ent32#att232" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent32#att233" name="Estado" type="string" bpm:uuid="IH8WOVT3_1KY" db:column="estado"/>
+    <Attribute id="ent32#att234" name="Municipio" type="string" bpm:uuid="IH8WOYMW_4RO" db:column="municipio"/>
+    <Attribute id="ent32#att235" name="Poblacion" type="string" bpm:uuid="IH8WP0QV_YP" db:column="poblacion"/>
+    <Attribute id="ent32#att236" name="Colonia" type="string" bpm:uuid="IH8WP30U_61X" db:column="colonia"/>
+    <Attribute id="ent32#att237" name="Codigo postal" type="string" bpm:uuid="IH8WP57Z_63U" db:column="codigo_postal"/>
+    <Attribute id="ent32#att238" name="Calle" type="string" bpm:uuid="IH8WP7SL_7EI" db:column="calle"/>
+    <Attribute id="ent32#att239" name="Entre calle" type="string" bpm:uuid="IH8WPA6Q_1P4" db:column="entre_calle"/>
+    <Attribute id="ent32#att240" name="y calle" type="string" bpm:uuid="IH8WPCES_4FE" db:column="y_calle"/>
+    <Attribute id="ent32#att241" name="Numero exterior" type="string" bpm:uuid="IH8WPEIA_I0" db:column="numero_exterior"/>
+    <Attribute id="ent32#att242" name="Numero interior" type="string" bpm:uuid="IH8WR6WN_56G" db:column="numero_interior"/>
+  </Entity>
+  <Entity id="ent33" gr:x="-415" gr:y="8825" name="FAG-CCNX-Datos generales del servicio" bpm:uuid="IH8UM3N1_7GG" db:database="db1" db:table="fag_ccnx_datos_generales_del_s">
+    <Attribute id="ent33#att243" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent33#att244" name="Superficie total" type="decimal" bpm:uuid="IH8UM7N6_1XM" db:column="superficie_total"/>
+    <Attribute id="ent33#att245" name="Superficie construida" type="decimal" bpm:uuid="IH8UM9TF_7DH" db:column="superficie_construida"/>
+    <Attribute id="ent33#att246" name="Cuenta con red de agua potable " type="string" bpm:uuid="IH8UMBWG_3AZ" db:column="cuenta_con_red_de_agua_potable"/>
+    <Attribute id="ent33#att247" name="Distancia en metros (agua)" type="decimal" bpm:uuid="IH8UMDQJ_2IH" db:column="distancia_en_metros_agua"/>
+    <Attribute id="ent33#att248" name="Cuenta con red de drenaje " type="string" bpm:uuid="IH8UMFMQ_3NX" db:column="cuenta_con_red_de_drenaje"/>
+    <Attribute id="ent33#att249" name="Distancia en metros (drenaje)" type="decimal" bpm:uuid="IH8UMHR5_6YT" db:column="distancia_en_metros_drenaje"/>
+  </Entity>
+  <Entity id="ent34" gr:x="-415" gr:y="9065" name="FAG-CCNX-Caracteristicas del predio" bpm:uuid="IH8UGMDO_5GA" db:database="db1" db:table="fag_ccnx_caracteristicas_del_p">
+    <Attribute id="ent34#att250" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent34#att251" name="Tipo de zona     " type="string" bpm:uuid="IH8UGS22_480" db:column="tipo_de_zona"/>
+    <Attribute id="ent34#att252" name="Tipo de toma o descarga     " type="string" bpm:uuid="IH8UGVBN_292" db:column="tipo_de_toma_o_descarga"/>
+  </Entity>
+  <Entity id="ent35" gr:x="-415" gr:y="9225" name="CCNX-Suministro de agua" bpm:uuid="IH8YQ2VW_MS" db:database="db1" db:table="ccnx_suministro_de_agua">
+    <Attribute id="ent35#att253" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent35#att254" name="Fuentes abastecedoras  " type="string" bpm:uuid="IH8YQ6FN_6VT" db:column="fuentes_abastecedoras"/>
+    <Attribute id="ent35#att255" name="Reportes de CNA (en caso de pozo particular)" type="blob" bpm:uuid="IH8YQ8LV_43B" db:column="reportes_de_cna_en_caso_de_poz"/>
+    <Attribute id="ent35#att256" name="Recibos de pago (en caso red municipal)" type="blob" bpm:uuid="IH8YQAVE_6DE" db:column="recibos_de_pago_en_caso_red_mu"/>
+    <Attribute id="ent35#att257" name="Facturas (en caso de pipas)" type="blob" bpm:uuid="IH8YQDHD_7BT" db:column="facturas_en_caso_de_pipas"/>
+    <Attribute id="ent35#att258" name="Volumen de agua  utilizado en M3/MES" type="string" bpm:uuid="IH8YQG53_1MA" db:column="volumen_de_agua_utilizado_en_m"/>
+  </Entity>
+  <Entity id="ent36" gr:x="-415" gr:y="9445" name="CCNX-Servicio" bpm:uuid="IH8ZOH5U_6OS" db:database="db1" db:table="ccnx_servicio">
+    <Attribute id="ent36#att259" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent36#att260" name="Clasificacion" type="string" bpm:uuid="IH8ZOLDP_47R" db:column="clasificacion"/>
+    <Attribute id="ent36#att261" name="Observaciones" type="text" bpm:uuid="IH8ZOO12_IT" db:column="observaciones"/>
+  </Entity>
+  <Entity id="ent37" gr:x="-415" gr:y="9605" name="CCNX-Recibo actual de pago de agua y-o drenaje" bpm:uuid="IH8YSPR5_2YO" db:database="db1" db:table="ccnx_recibo_actual_de_pago_de">
+    <Attribute id="ent37#att262" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent37#att263" name="Primer apellido" type="string" bpm:uuid="IH8YSSLX_21B" db:column="primer_apellido"/>
+    <Attribute id="ent37#att264" name="Segundo apellido" type="string" bpm:uuid="IH8YSUSN_6XH" db:column="segundo_apellido"/>
+    <Attribute id="ent37#att265" name="Nombres(s)" type="string" bpm:uuid="IH8YSWYV_48B" db:column="nombres_s"/>
+    <Attribute id="ent37#att266" name="Estado" type="string" bpm:uuid="IH8YSZDW_3J2" db:column="estado"/>
+    <Attribute id="ent37#att267" name="Codigo postal" type="string" bpm:uuid="IH8YT1MY_5WB" db:column="codigo_postal"/>
+    <Attribute id="ent37#att268" name="Numero de cuenta" type="string" bpm:uuid="IH8YT3V3_5A1" db:column="numero_de_cuenta"/>
+  </Entity>
+  <Entity id="ent38" gr:x="-415" gr:y="9845" name="CCNX-Propietario, representante o encargado de la empresa" bpm:uuid="IH8YMS9U_5LT" db:database="db1" db:table="ccnx_propietario_representante">
+    <Attribute id="ent38#att269" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent38#att270" name="Primer apellido" type="string" bpm:uuid="IH8YMW2G_MP" db:column="primer_apellido"/>
+    <Attribute id="ent38#att271" name="Segundo apellido" type="string" bpm:uuid="IH8YMYAJ_6XL" db:column="segundo_apellido"/>
+    <Attribute id="ent38#att272" name="Nombres(s)" type="string" bpm:uuid="IH8YN0EJ_2GC" db:column="nombres_s"/>
+    <Attribute id="ent38#att273" name="Estado" type="string" bpm:uuid="IH8YN2R8_2ID" db:column="estado"/>
+    <Attribute id="ent38#att274" name="Municipio" type="string" bpm:uuid="IH8YN515_X4" db:column="municipio"/>
+    <Attribute id="ent38#att275" name="Calle" type="string" bpm:uuid="IH8YN76Z_P7" db:column="calle"/>
+    <Attribute id="ent38#att276" name="Numero exterior" type="string" bpm:uuid="IH8YN9HU_4G8" db:column="numero_exterior"/>
+    <Attribute id="ent38#att277" name="Numero interior" type="string" bpm:uuid="IH8YNBXA_1VP" db:column="numero_interior"/>
+    <Attribute id="ent38#att278" name="Codigo postal" type="string" bpm:uuid="IH8YNE5F_5DY" db:column="codigo_postal"/>
+    <Attribute id="ent38#att279" name="Telefono particular" type="string" bpm:uuid="IH8YNGJZ_4P4" db:column="telefono_particular"/>
+    <Attribute id="ent38#att280" name="Telefono celular" type="string" bpm:uuid="IH8YNJ61_3Y8" db:column="telefono_celular"/>
+    <Attribute id="ent38#att281" name="Correo electronico" type="string" bpm:uuid="IH8YNLMT_5N3" db:column="correo_electronico"/>
+  </Entity>
+  <Entity id="ent39" gr:x="-415" gr:y="10205" name="CCNX-Orden de conexion" bpm:uuid="IH8ZP94A_46R" db:database="db1" db:table="ccnx_orden_de_conexion">
+    <Attribute id="ent39#att282" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent39#att283" name="Toma" type="integer" bpm:uuid="IH8ZPDSX_5A1" db:column="toma"/>
+    <Attribute id="ent39#att284" name="Numero de medidor" type="string" bpm:uuid="IH8ZPG3V_6LH" db:column="numero_de_medidor"/>
+    <Attribute id="ent39#att285" name="Fecha de conexion" type="date" bpm:uuid="IH8ZPJ3P_6Z7" db:column="fecha_de_conexion"/>
+    <Attribute id="ent39#att1k" name="Numero de orden" type="string" bpm:uuid="IKAE2WEV_4RO" db:column="numero_de_orden"/>
+  </Entity>
+  <Entity id="ent40" gr:x="-415" gr:y="10385" name="CCNX-Empresa" bpm:uuid="IH8YI2DQ_1TK" db:database="db1" db:table="ccnx_empresa">
+    <Attribute id="ent40#att286" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent40#att287" name="Nombre" type="string" bpm:uuid="IH8YI61B_4U6" db:column="nombre"/>
+    <Attribute id="ent40#att288" name="Calle (exterior)" type="string" bpm:uuid="IH8YI8P0_631" db:column="calle_exterior"/>
+    <Attribute id="ent40#att289" name="Numero exterior" type="string" bpm:uuid="IH8YICM7_2U6" db:column="numero_exterior"/>
+    <Attribute id="ent40#att290" name="Colonia" type="string" bpm:uuid="IH8YIEUW_4S3" db:column="colonia"/>
+    <Attribute id="ent40#att291" name="Junta auxiliar" type="string" bpm:uuid="IH8YIH3Y_6HE" db:column="junta_auxiliar"/>
+    <Attribute id="ent40#att292" name="Codigo postal" type="string" bpm:uuid="IH8YIJGM_33W" db:column="codigo_postal"/>
+    <Attribute id="ent40#att293" name="Inicio de operacion" type="date" bpm:uuid="IH8YILP8_1DI" db:column="inicio_de_operacion"/>
+    <Attribute id="ent40#att294" name="Telefono" type="string" bpm:uuid="IH8YIP90_2MM" db:column="telefono"/>
+    <Attribute id="ent40#att295" name="R.F.C." type="string" bpm:uuid="IH8YIRV1_34T" db:column="r_f_c"/>
+    <Attribute id="ent40#att296" name="Razon social" type="string" bpm:uuid="IH8YIUVT_1L9" db:column="razon_social"/>
+    <Attribute id="ent40#att297" name="Giro" type="string" bpm:uuid="IH8YIXHT_192" db:column="giro"/>
+    <Attribute id="ent40#att298" name="Numero de empleados permanentes" type="integer" bpm:uuid="IH8YIZW2_52U" db:column="numero_de_empleados_permanente"/>
+    <Attribute id="ent40#att299" name="Numero de personal temporal" type="integer" bpm:uuid="IH8YJ2BF_3GV" db:column="numero_de_personal_temporal"/>
+    <Attribute id="ent40#att300" name="area total del predio" type="string" bpm:uuid="IH8YJ4MS_4BG" db:column="area_total_del_predio"/>
+    <Attribute id="ent40#att301" name="area total cubierta" type="string" bpm:uuid="IH8YJ8V5_74N" db:column="area_total_cubierta"/>
+    <Attribute id="ent40#att302" name="area de servicio al publico" type="string" bpm:uuid="IH8YJBC1_6MF" db:column="area_de_servicio_al_publico"/>
+    <Attribute id="ent40#att303" name="Numero de mesas" type="integer" bpm:uuid="IH8YK803_4JR" db:column="numero_de_mesas"/>
+    <Attribute id="ent40#att304" name="Observaciones" type="text" bpm:uuid="IH8YKA9L_6S5" db:column="observaciones"/>
+    <Attribute id="ent40#att305" name="Area de generacion de descarga" type="string" bpm:uuid="IH8YKCJ2_3E7" db:column="area_de_generacion_de_descarga"/>
+    <Attribute id="ent40#att306" name="Numero de descarga(s)" type="string" bpm:uuid="IH8YKEOV_1DF" db:column="numero_de_descarga_s"/>
+    <Attribute id="ent40#att307" name="Periodo de servicio de saneamiento pagado" type="string" bpm:uuid="IH8YKH69_792" db:column="periodo_de_servicio_de_saneami"/>
+    <Attribute id="ent40#att308" name="Fecha de servicio de saneamiento pagado" type="date" bpm:uuid="IH8YKK1Y_16Z" db:column="fecha_de_servicio_de_saneamien"/>
+    <Attribute id="ent40#att309" name="Periodo del servicio de drenaje pagado" type="string" bpm:uuid="IH8YKMBH_6J7" db:column="periodo_del_servicio_de_drenaj"/>
+    <Attribute id="ent40#att310" name="Fecha del servicio de drenaje pagado" type="date" bpm:uuid="IH8YKORW_6BV" db:column="fecha_del_servicio_de_drenaje"/>
+  </Entity>
+  <Entity id="ent41" gr:x="-415" gr:y="10985" name="CCNX-Datos de la solicitud" bpm:uuid="IH8ZBQWO_3UV" db:database="db1" db:table="ccnx_datos_de_la_solicitud">
+    <Attribute id="ent41#att311" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent41#att312" name="Numero de solicitud" type="string" bpm:uuid="IH8ZBVLP_5M3" db:column="numero_de_solicitud"/>
+    <Attribute id="ent41#att313" name="Solicitud para:" type="string" bpm:uuid="IH8ZBYBG_1WJ" db:column="solicitud_para"/>
+    <Attribute id="ent41#att314" name="Requerido para" type="string" bpm:uuid="IH8ZC4FU_4U7" db:column="requerido_para"/>
+  </Entity>
+  <Entity id="ent42" gr:x="-415" gr:y="11165" name="CCNX-Conexion de los servicios" bpm:uuid="IH902A0W_7I" db:database="db1" db:table="ccnx_conexion_de_los_servicios">
+    <Attribute id="ent42#att315" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent42#att2k" name="Confirmacion" type="string" bpm:uuid="IKAFL9FF_43X" db:column="confirmacion"/>
+    <Attribute id="ent42#att3k" name="Fecha de conexion" type="date" bpm:uuid="IKAFLD9U_J6" db:column="fecha_de_conexion"/>
+  </Entity>
+  <Entity id="ent43" gr:x="-415" gr:y="11285" name="CCNX-Actividad empresa" bpm:uuid="IH8YO711_2J3" db:database="db1" db:table="ccnx_actividad_empresa">
+    <Attribute id="ent43#att316" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent43#att317" name="Especificacion de areas generadoras " type="text" bpm:uuid="IH8YOB6Z_5H0" db:column="especificacion_de_areas_genera"/>
+    <Attribute id="ent43#att318" name="Sitio de descarga  " type="string" bpm:uuid="IH8YODQK_3GS" db:column="sitio_de_descarga"/>
+    <Attribute id="ent43#att319" name="Especificar otro" type="string" bpm:uuid="IH8YOG59_2FY" db:column="especificar_otro"/>
+    <Attribute id="ent43#att320" name="Croquis de ubicacionde descarga" type="blob" bpm:uuid="IH8YOIS5_7O3" db:column="croquis_de_ubicacionde_descarg"/>
+    <Attribute id="ent43#att321" name="Descripcion del proceso y/o actividad llevada a cabo" type="text" bpm:uuid="IH8YOLAU_45S" db:column="descripcion_del_proceso_y_o_ac"/>
+  </Entity>
+  <Entity id="ent44" gr:x="-415" gr:y="11505" name="CNAP-Datos del solicitante" bpm:uuid="IJ4ZTPX5_2IG" db:database="db1" db:table="cnap_datos_del_solicitante">
+    <Attribute id="ent44#att322" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent44#att323" name="Tipo de interesado    " type="string" bpm:uuid="IH8L8H4V_5Z6" db:column="tipo_de_interesado"/>
+    <Attribute id="ent44#att324" name="Primer apellido" type="string" bpm:uuid="IH8L8H9B_7DP" db:column="primer_apellido"/>
+    <Attribute id="ent44#att325" name="Segundo apellido" type="string" bpm:uuid="IH8L8HEF_YU" db:column="segundo_apellido"/>
+    <Attribute id="ent44#att326" name="Nombres(s)" type="string" bpm:uuid="IH8L8HJ3_4ZC" db:column="nombres_s"/>
+    <Attribute id="ent44#att327" name="RFC" type="string" bpm:uuid="IH8L8HNZ_PT" db:column="rfc"/>
+  </Entity>
+  <Entity id="ent45" gr:x="-415" gr:y="11725" name="CNAP-Datos del predio" bpm:uuid="IJWFH8P8_2NH" db:database="db1" db:table="cnap_datos_del_predio">
+    <Attribute id="ent45#att328" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent45#att329" name="Denominacion" type="string" bpm:uuid="IJWFIHX4_25H" db:column="denominacion"/>
+    <Attribute id="ent45#att330" name="Superficie de terreno" type="string" bpm:uuid="IJWFIK0O_1IJ" db:column="superficie_de_terreno"/>
+    <Attribute id="ent45#att331" name="Superficie de construcion" type="string" bpm:uuid="IJWFIKF1_50P" db:column="superficie_de_construcion"/>
+    <Attribute id="ent45#att332" name="Base gravable" type="string" bpm:uuid="IJWFIKL1_5HW" db:column="base_gravable"/>
+  </Entity>
+  <Entity id="ent46" gr:x="-415" gr:y="11925" name="CNAP-Adeudo" bpm:uuid="IJWG3SU0_6Q1" db:database="db1" db:table="cnap_adeudo">
+    <Attribute id="ent46#att333" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent46#att334" name="Adeudo pendiente" type="blob" bpm:uuid="IJWG3YUV_WL" db:column="adeudo_pendiente"/>
+  </Entity>
+  <Entity id="ent47" gr:x="-415" gr:y="12065" name="LCFC-TO-DPC-DRO" bpm:uuid="IH8L3T5Q_UE" db:database="db1" db:table="lcfc_to_dpc_dro">
+    <Attribute id="ent47#att335" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent47#att336" name="Registro municipal" type="string" bpm:uuid="IH8L42QB_7HP" db:column="registro_municipal"/>
+    <Attribute id="ent47#att337" name="Titulo DROM" type="string" bpm:uuid="IH8L42VG_4ZG" db:column="titulo_drom"/>
+    <Attribute id="ent47#att338" name="Numero de cedula" type="string" bpm:uuid="IH8L432B_4M3" db:column="numero_de_cedula"/>
+    <Attribute id="ent47#att339" name="Primer apellido" type="string" bpm:uuid="IH8L437H_273" db:column="primer_apellido"/>
+    <Attribute id="ent47#att340" name="Segundo apellido" type="string" bpm:uuid="IH8L43CB_1JJ" db:column="segundo_apellido"/>
+    <Attribute id="ent47#att341" name="Nombres(s)" type="string" bpm:uuid="IH8L43IZ_9G" db:column="nombres_s"/>
+    <Attribute id="ent47#att342" name="Telefono particular" type="string" bpm:uuid="IH8L43YR_2F6" db:column="telefono_particular"/>
+    <Attribute id="ent47#att343" name="Tel&#233;fono celular" type="string" bpm:uuid="IH8L4451_7EE" db:column="telefono_celular"/>
+    <Attribute id="ent47#att344" name="Correo electr&#243;nico" type="string" bpm:uuid="IH8L44XG_2VQ" db:column="correo_electronico"/>
+  </Entity>
+  <Entity id="ent48" gr:x="-415" gr:y="12365" name="DPC-Requisitos" bpm:uuid="IH8XFK7M_30D" db:database="db1" db:table="dpc_requisitos">
+    <Attribute id="ent48#att345" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent48#att346" name="IFE del representante" type="blob" bpm:uuid="IH8XFPNM_2A6" db:column="ife_del_representante"/>
+    <Attribute id="ent48#att347" name="RFC del representante" type="blob" bpm:uuid="IH8XFRZD_31Z" db:column="rfc_del_representante"/>
+    <Attribute id="ent48#att348" name="Carta de entrega del programa" type="blob" bpm:uuid="IH8XFTXT_694" db:column="carta_de_entrega_del_programa"/>
+    <Attribute id="ent48#att349" name="Carta de responsabilidad/Corresponsabilidad" type="blob" bpm:uuid="IH8XFWPC_UO" db:column="carta_de_responsabilidad_corre"/>
+  </Entity>
+  <Entity id="ent49" gr:x="-415" gr:y="12565" name="DPC-Datos de la construccion" bpm:uuid="IH8X7YKV_2S1" db:database="db1" db:table="dpc_datos_de_la_construccion">
+    <Attribute id="ent49#att350" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent49#att351" name="Nombre o tipo de obra" type="string" bpm:uuid="IH8X86VI_5HC" db:column="nombre_o_tipo_de_obra"/>
+    <Attribute id="ent49#att352" name="Programa" type="date" bpm:uuid="IH8X88Y1_56Z" db:column="programa"/>
+    <Attribute id="ent49#att353" name="Nombre fiscal" type="string" bpm:uuid="IH8X8AZ5_7PL" db:column="nombre_fiscal"/>
+    <Attribute id="ent49#att354" name="Cargo" type="string" bpm:uuid="IH8X8D6R_4MQ" db:column="cargo"/>
+    <Attribute id="ent49#att355" name="Poblacion fija" type="string" bpm:uuid="IH8X8FBQ_6Q6" db:column="poblacion_fija"/>
+    <Attribute id="ent49#att356" name="Poblacon flotante" type="string" bpm:uuid="IH8X8HFN_3IE" db:column="poblacon_flotante"/>
+    <Attribute id="ent49#att357" name="Descripcion de actividad comercial" type="string" bpm:uuid="IH8X8KK6_3XY" db:column="descripcion_de_actividad_comer"/>
+    <Attribute id="ent49#att358" name="Niveles total" type="integer" bpm:uuid="IH8X8MVI_ZJ" db:column="niveles_total"/>
+    <Attribute id="ent49#att359" name="Elevadores" type="integer" bpm:uuid="IH8X8OVA_446" db:column="elevadores"/>
+    <Attribute id="ent49#att360" name="Estacionamiento" type="integer" bpm:uuid="IH8X8QXT_3VU" db:column="estacionamiento"/>
+    <Attribute id="ent49#att361" name="Superficie total" type="decimal" bpm:uuid="IH8X8SW2_7BP" db:column="superficie_total"/>
+    <Attribute id="ent49#att362" name="Superficie construida" type="decimal" bpm:uuid="IH8X915Y_9S" db:column="superficie_construida"/>
+    <Attribute id="ent49#att363" name="Antig&#252;edad" type="decimal" bpm:uuid="IH8X93H9_2B3" db:column="antiguedad"/>
+  </Entity>
+  <Entity id="ent50" gr:x="-415" gr:y="12945" name="DPC-Criterios de inspeccion" bpm:uuid="IH8XLBFT_47X" db:database="db1" db:table="dpc_criterios_de_inspeccion">
+    <Attribute id="ent50#att364" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent50#att365" name="Datos generales " type="string" bpm:uuid="IH8XLFK6_38Q" db:column="datos_generales"/>
+    <Attribute id="ent50#att366" name="Riesgos internos " type="string" bpm:uuid="IH8XLHU4_71V" db:column="riesgos_internos"/>
+    <Attribute id="ent50#att367" name="Observaciones internos" type="string" bpm:uuid="IH8XLJSK_1BB" db:column="observaciones_internos"/>
+    <Attribute id="ent50#att368" name="Riesgos externos " type="string" bpm:uuid="IH8XLLW0_27E" db:column="riesgos_externos"/>
+    <Attribute id="ent50#att369" name="Observaciones externos" type="string" bpm:uuid="IH8XLO2Q_36R" db:column="observaciones_externos"/>
+    <Attribute id="ent50#att370" name="Directorio de los grupos operativos de emergencia " type="string" bpm:uuid="IH8XMOLP_1VO" db:column="directorio_de_los_grupos_opera"/>
+    <Attribute id="ent50#att371" name="Observaciones emergencia" type="string" bpm:uuid="IH8XMQ5Y_3VV" db:column="observaciones_emergencia"/>
+    <Attribute id="ent50#att372" name="Listado del personal que labora " type="string" bpm:uuid="IH8XN8M6_5OB" db:column="listado_del_personal_que_labor"/>
+    <Attribute id="ent50#att373" name="Observaciones personal" type="string" bpm:uuid="IH8XNCDO_2LY" db:column="observaciones_personal"/>
+    <Attribute id="ent50#att374" name="Inventario de equipo de seguridad " type="string" bpm:uuid="IH8XNJ4H_377" db:column="inventario_de_equipo_de_seguri"/>
+    <Attribute id="ent50#att375" name="Observaciones seguridad" type="string" bpm:uuid="IH8XNMYW_6HQ" db:column="observaciones_seguridad"/>
+    <Attribute id="ent50#att376" name="Inventario de los extintores " type="string" bpm:uuid="IH8XNRL4_3R0" db:column="inventario_de_los_extintores"/>
+    <Attribute id="ent50#att377" name="Observaciones extintores" type="string" bpm:uuid="IH8XNUK3_4MB" db:column="observaciones_extintores"/>
+    <Attribute id="ent50#att378" name="Croquis " type="string" bpm:uuid="IH8XNZW8_3L0" db:column="croquis"/>
+    <Attribute id="ent50#att379" name="Observaciones croquis" type="string" bpm:uuid="IH8XO31P_3AK" db:column="observaciones_croquis"/>
+    <Attribute id="ent50#att380" name="Plano de ubicacion de la obra y colindancias a color " type="string" bpm:uuid="IH8XO828_D4" db:column="plano_de_ubicacion_de_la_obra"/>
+    <Attribute id="ent50#att381" name="Observaciones obra y colindancias" type="string" bpm:uuid="IH8XOCN3_P7" db:column="observaciones_obra_y_colindanc"/>
+    <Attribute id="ent50#att382" name="Plano de ubicacion y distribucion de la se&#241;aletica " type="string" bpm:uuid="IH8XOI3V_2HL" db:column="plano_de_ubicacion_y_distribuc"/>
+    <Attribute id="ent50#att383" name="Observaciones se&#241;aletica" type="string" bpm:uuid="IH8XONN0_43X" db:column="observaciones_se_aletica"/>
+  </Entity>
+  <Entity id="ent51" gr:x="-415" gr:y="13445" name="FAG-Factibilidad" bpm:uuid="IH8WHT2R_2L2" db:database="db1" db:table="fag_factibilidad">
+    <Attribute id="ent51#att384" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent51#att385" name="Estatus  " type="string" bpm:uuid="IH8WHXCY_XF" db:column="estatus"/>
+  </Entity>
+  <Entity id="ent52" gr:x="-415" gr:y="13585" name="ISAB-Oficios" bpm:uuid="IJWETKVP_LA" db:database="db1" db:table="isab_oficios">
+    <Attribute id="ent52#att386" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent52#att387" name="Oficio de no procedencia" type="blob" bpm:uuid="IJWETOYU_3XO" db:column="oficio_de_no_procedencia"/>
+  </Entity>
+  <Entity id="ent53" gr:x="-415" gr:y="13725" name="ISAB-Datos solicitud" bpm:uuid="IJWBPTW9_60G" db:database="db1" db:table="isab_datos_solicitud">
+    <Attribute id="ent53#att388" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent53#att389" name="Fecha solicitud" type="date" bpm:uuid="IJWBQ6MM_1SZ" db:column="fecha_solicitud"/>
+    <Attribute id="ent53#att2c" name="Numero solicitud" type="integer" bpm:uuid="ILCSVW44_2U5" db:column="numero_solicitud"/>
+  </Entity>
+  <Entity id="ent54" gr:x="-415" gr:y="13865" name="ISAB-Datos propiedad" bpm:uuid="IJWC2RB4_2OZ" db:database="db1" db:table="isab_datos_propiedad">
+    <Attribute id="ent54#att390" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent54#att391" name="Tipo predio " type="string" bpm:uuid="IJWC2ZVP_6DY" db:column="tipo_predio"/>
+    <Attribute id="ent54#att392" name="Fecha de la firma" type="date" bpm:uuid="IJWC3098_46D" db:column="fecha_de_la_firma"/>
+    <Attribute id="ent54#att3c" name="Numero escritura" type="integer" bpm:uuid="ILCM9ZRT_1ZP" db:column="numero_escritura"/>
+  </Entity>
+  <Entity id="ent55" gr:x="-415" gr:y="14025" name="ISAB-Datos del registro publico" bpm:uuid="IJWC87FL_EA" db:database="db1" db:table="isab_datos_del_registro_public">
+    <Attribute id="ent55#att393" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent55#att394" name="Tomo de libro" type="string" bpm:uuid="IJWCKPBN_19P" db:column="tomo_de_libro"/>
+    <Attribute id="ent55#att395" name="Numero de tomo" type="integer" bpm:uuid="IJWCKPN3_2GY" db:column="numero_de_tomo"/>
+    <Attribute id="ent55#att396" name="indice de predio" type="string" bpm:uuid="IJWCKPRZ_UO" db:column="indice_de_predio"/>
+    <Attribute id="ent55#att397" name="Partida" type="string" bpm:uuid="IJWCKPX3_62C" db:column="partida"/>
+    <Attribute id="ent55#att398" name="Inscripcion" type="string" bpm:uuid="IJWCKQ27_7BR" db:column="inscripcion"/>
+    <Attribute id="ent55#att399" name="Fojas" type="string" bpm:uuid="IJWCKQF3_7CS" db:column="fojas"/>
+  </Entity>
+  <Entity id="ent56" gr:x="-415" gr:y="14265" name="ISAB-Datos del fedatario" bpm:uuid="IJWDKNOM_5BU" db:database="db1" db:table="isab_datos_del_fedatario">
+    <Attribute id="ent56#att400" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent56#att401" name="Numero de notaria" type="integer" bpm:uuid="IJWDKU27_135" db:column="numero_de_notaria"/>
+    <Attribute id="ent56#att402" name="Apellido paterno" type="string" bpm:uuid="IJWDKXWV_5LE" db:column="apellido_paterno"/>
+    <Attribute id="ent56#att403" name="Apellido materno" type="string" bpm:uuid="IJWDL193_46D" db:column="apellido_materno"/>
+    <Attribute id="ent56#att404" name="Nombre(s)" type="string" bpm:uuid="IJWDL4PB_1WY" db:column="nombre_s"/>
+  </Entity>
+  <Entity id="ent57" gr:x="-415" gr:y="14465" name="ISAB-Datos de la operacion" bpm:uuid="IJWDGNNA_7M7" db:database="db1" db:table="isab_datos_de_la_operacion">
+    <Attribute id="ent57#att405" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent57#att406" name="Tipo de operacion " type="string" bpm:uuid="IJWDHNZW_4GF" db:column="tipo_de_operacion"/>
+    <Attribute id="ent57#att407" name="Valor catastral" type="decimal" bpm:uuid="IJWDHO5G_1O2" db:column="valor_catastral"/>
+    <Attribute id="ent57#att408" name="Valor de la operacion" type="decimal" bpm:uuid="IJWDHOOS_U2" db:column="valor_de_la_operacion"/>
+  </Entity>
+  <Entity id="ent58" gr:x="-415" gr:y="14645" name="ISAB-Datos de identificacion del enajenante" bpm:uuid="IJWDMFYD_2OD" db:database="db1" db:table="isab_datos_de_identificacion_d">
+    <Attribute id="ent58#att409" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent58#att410" name="Tipo de persona " type="string" bpm:uuid="IJWDMMIN_1Y9" db:column="tipo_de_persona"/>
+    <Attribute id="ent58#att411" name="RFC (Moral) - CURP (Fisica)" type="string" bpm:uuid="IJWDMMKC_4YH" db:column="rfc_moral_curp_fisica"/>
+    <Attribute id="ent58#att412" name="Primer apellido" type="string" bpm:uuid="IJWDMMOI_1MY" db:column="primer_apellido"/>
+    <Attribute id="ent58#att413" name="Segundo apellido" type="string" bpm:uuid="IJWDMMTP_58F" db:column="segundo_apellido"/>
+    <Attribute id="ent58#att414" name="Nombres(s)" type="string" bpm:uuid="IJWDMNTX_586" db:column="nombres_s"/>
+  </Entity>
+  <Entity id="ent59" gr:x="-415" gr:y="14865" name="ISAB-Datos de identificacion del adquiriente" bpm:uuid="IJWDS779_68Q" db:database="db1" db:table="isab_datos_de_identificacion_2">
+    <Attribute id="ent59#att415" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent59#att416" name="Tipo de persona " type="string" bpm:uuid="IJWDMMIN_1Y9" db:column="tipo_de_persona"/>
+    <Attribute id="ent59#att417" name="RFC (Moral) - CURP (Fisica)" type="string" bpm:uuid="IJWDMMKC_4YH" db:column="rfc_moral_curp_fisica"/>
+    <Attribute id="ent59#att418" name="Primer apellido" type="string" bpm:uuid="IJWDMMOI_1MY" db:column="primer_apellido"/>
+    <Attribute id="ent59#att419" name="Segundo apellido" type="string" bpm:uuid="IJWDMMTP_58F" db:column="segundo_apellido"/>
+    <Attribute id="ent59#att420" name="Nombres(s)" type="string" bpm:uuid="IJWDMNTX_586" db:column="nombres_s"/>
+  </Entity>
+  <Entity id="ent60" gr:x="-415" gr:y="15085" name="LCFC-Ubicacion" bpm:uuid="IH8LC9QC_M" db:database="db1" db:table="lcfc_ubicacion">
+    <Attribute id="ent60#att421" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent60#att422" name="Fraccionamiento" type="string" bpm:uuid="IH8LCO8G_369" db:column="fraccionamiento"/>
+  </Entity>
+  <Entity id="ent61" gr:x="-415" gr:y="15225" name="LCFC-Proyecto final" bpm:uuid="IH8MM585_5U" db:database="db1" db:table="lcfc_proyecto_final">
+    <Attribute id="ent61#att423" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent61#att424" name="Im&#225;genes autorizada 1" type="blob" bpm:uuid="IH8MMASG_7OC" db:column="imagenes_autorizada_1"/>
+    <Attribute id="ent61#att425" name="Im&#225;genes autorizadas 2" type="blob" bpm:uuid="IH8MMAXS_3D8" db:column="imagenes_autorizadas_2"/>
+    <Attribute id="ent61#att426" name="Im&#225;genes autorizadas 3" type="blob" bpm:uuid="IH8MMB2H_6EF" db:column="imagenes_autorizadas_3"/>
+    <Attribute id="ent61#att427" name="Im&#225;genes autorizadas 4" type="blob" bpm:uuid="IH8MMB7B_7I3" db:column="imagenes_autorizadas_4"/>
+    <Attribute id="ent61#att428" name="Im&#225;genes autorizadas 5" type="blob" bpm:uuid="IH8MMBDK_6EQ" db:column="imagenes_autorizadas_5"/>
+  </Entity>
+  <Entity id="ent62" gr:x="-415" gr:y="15445" name="LCFC-Observaciones ALNO" bpm:uuid="IH8M2KXL_3CU" db:database="db1" db:table="lcfc_observaciones_alno">
+    <Attribute id="ent62#att429" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent62#att430" name="Alineamiento y numero oficial" type="text" bpm:uuid="IH8M2MH6_327" db:column="alineamiento_y_numero_oficial"/>
+    <Attribute id="ent62#att431" name="Uso de suelo" type="text" bpm:uuid="IK91YYTR_1MT" db:column="uso_de_suelo"/>
+    <Attribute id="ent62#att432" name="Licencia de construccion" type="text" bpm:uuid="IJZCGHKE_74H" db:column="licencia_de_construccion"/>
+  </Entity>
+  <Entity id="ent63" gr:x="-415" gr:y="15625" name="LCFC-LUS-Coeficientes" bpm:uuid="IH8M7944_5G4" db:database="db1" db:table="lcfc_lus_coeficientes">
+    <Attribute id="ent63#att433" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent63#att434" name="Programa " type="string" bpm:uuid="IH8M7SUH_5RL" db:column="programa"/>
+    <Attribute id="ent63#att435" name="Zona (tipo)" type="string" bpm:uuid="IH8M7T0Q_32Q" db:column="zona_tipo"/>
+    <Attribute id="ent63#att436" name="Tipos de uso primario" type="string" bpm:uuid="IH8M7T61_25U" db:column="tipos_de_uso_primario"/>
+    <Attribute id="ent63#att437" name="Tipo de uso secundario" type="string" bpm:uuid="IH8M7TCQ_5VX" db:column="tipo_de_uso_secundario"/>
+    <Attribute id="ent63#att438" name="Uso espec&#237;fico" type="string" bpm:uuid="IH8M7TIQ_6J" db:column="uso_especifico"/>
+    <Attribute id="ent63#att439" name="Comptabilidad" type="string" bpm:uuid="IH8M7TOY_1YO" db:column="comptabilidad"/>
+    <Attribute id="ent63#att440" name="COS" type="decimal" bpm:uuid="IH8M7TUO_241" db:column="cos"/>
+    <Attribute id="ent63#att441" name="CUS" type="decimal" bpm:uuid="IH8M7U0Q_2EC" db:column="cus"/>
+    <Attribute id="ent63#att442" name="COS/Aplicado" type="decimal" bpm:uuid="IH8M7U75_5YS" db:column="cos_aplicado"/>
+    <Attribute id="ent63#att443" name="CUS/Aplicado" type="decimal" bpm:uuid="IH8M7UDU_68B" db:column="cus_aplicado"/>
+    <Attribute id="ent63#att444" name="Vigencia de uso de suelo" type="date" bpm:uuid="IH8M7UQY_3EO" db:column="vigencia_de_uso_de_suelo"/>
+  </Entity>
+  <Entity id="ent64" gr:x="-415" gr:y="15965" name="LCFC-Localizacion" bpm:uuid="IH8LPQO5_73Z" db:database="db1" db:table="lcfc_localizacion">
+    <Attribute id="ent64#att445" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent64#att446" name="Localizaci&#243;n    " type="string" bpm:uuid="IH8LQ0QX_3PY" db:column="localizacion"/>
+    <Attribute id="ent64#att447" name="Via publica" type="string" bpm:uuid="IH8LQ12W_32X" db:column="via_publica"/>
+    <Attribute id="ent64#att448" name="Numero oficial" type="integer" bpm:uuid="IH8LQ1BC_7OJ" db:column="numero_oficial"/>
+    <Attribute id="ent64#att449" name="Vigencia de alineamiento" type="date" bpm:uuid="IH8LQ1OP_433" db:column="vigencia_de_alineamiento"/>
+    <Attribute id="ent64#att450" name="Croquis" type="blob" bpm:uuid="IH8LQ234_6ZV" db:column="croquis"/>
+  </Entity>
+  <Entity id="ent65" gr:x="-415" gr:y="16185" name="LCFC-Domicilio del predio" bpm:uuid="IJ4ZZOJL_2B6" db:database="db1" db:table="lcfc_domicilio_del_predio">
+    <Attribute id="ent65#att451" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent65#att452" name="Fraccionamiento" type="string" bpm:uuid="IH8RU92M_56U" db:column="fraccionamiento"/>
+  </Entity>
+  <Entity id="ent66" gr:x="-415" gr:y="16325" name="LCFC-Datos de la construccion" bpm:uuid="IH8MASDA_4VW" db:database="db1" db:table="lcfc_datos_de_la_construccion">
+    <Attribute id="ent66#att453" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent66#att454" name="Sotano" type="decimal" bpm:uuid="IH8MC88Y_7E6" db:column="sotano"/>
+    <Attribute id="ent66#att455" name="Planta baja" type="decimal" bpm:uuid="IH8MC8FU_6BX" db:column="planta_baja"/>
+    <Attribute id="ent66#att456" name="1er nivel" type="decimal" bpm:uuid="IH8MC8KQ_2AO" db:column="t1er_nivel"/>
+    <Attribute id="ent66#att457" name="2do nivel" type="decimal" bpm:uuid="IH8MC8PL_3MQ" db:column="t2do_nivel"/>
+    <Attribute id="ent66#att458" name="Total construccion" type="decimal" bpm:uuid="IH8MC8U2_2QY" db:column="total_construccion"/>
+    <Attribute id="ent66#att459" name="Vigencia de licencia" type="date" bpm:uuid="IH8MC8YY_7JJ" db:column="vigencia_de_licencia"/>
+  </Entity>
+  <Entity id="ent67" gr:x="-415" gr:y="16565" name="LCFC-Aviso" bpm:uuid="IH8L7G5S_1L8" db:database="db1" db:table="lcfc_aviso">
+    <Attribute id="ent67#att460" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent67#att461" name="Aviso" type="string" bpm:uuid="IH8L7JTB_6PC" db:column="aviso"/>
+  </Entity>
+  <Entity id="ent68" gr:x="-415" gr:y="16705" name="LCFC-Documentos oficiales" bpm:uuid="IK0CBUZM_6OW" db:database="db1" db:table="lcfc_documentos_oficiales">
+    <Attribute id="ent68#att462" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent68#att463" name="Resolutivo" type="blob" bpm:uuid="IK0CC0EM_6S9" db:column="resolutivo"/>
+    <Attribute id="ent68#att464" name="Alineamiento y numero oficial" type="blob" bpm:uuid="IK0CC2LP_6JL" db:column="alineamiento_y_numero_oficial"/>
+    <Attribute id="ent68#att465" name="Constancia de agua potable y drenaje" type="blob" bpm:uuid="IK0CC2R2_5SO" db:column="constancia_de_agua_potable_y_d"/>
+    <Attribute id="ent68#att466" name="Licencia de uso de suelo" type="blob" bpm:uuid="IK0CC2W5_4NQ" db:column="licencia_de_uso_de_suelo"/>
+    <Attribute id="ent68#att467" name="Dictamen de informe ecologico preventivo" type="blob" bpm:uuid="IK0CC30U_4ZI" db:column="dictamen_de_informe_ecologico"/>
+    <Attribute id="ent68#att468" name="Licencia de construccion de obra mayor" type="blob" bpm:uuid="IK0CC350_3Y7" db:column="licencia_de_construccion_de_ob"/>
+  </Entity>
+  <Entity id="ent69" gr:x="-415" gr:y="16945" name="LUS-Vigencia" bpm:uuid="IH8TTL8J_2NO" db:database="db1" db:table="lus_vigencia">
+    <Attribute id="ent69#att469" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent69#att470" name="Vigencia de alineamiento" type="date" bpm:uuid="IH8TTP42_60R" db:column="vigencia_de_alineamiento"/>
+  </Entity>
+  <Entity id="ent70" gr:x="-415" gr:y="17085" name="LUS-Requerimientos ecologicos" bpm:uuid="IH8TUHJ7_1UC" db:database="db1" db:table="lus_requerimientos_ecologicos">
+    <Attribute id="ent70#att471" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent70#att472" name="Requerimientos" type="string" bpm:uuid="IH8TUMLA_5OP" db:column="requerimientos"/>
+  </Entity>
+  <Entity id="ent71" gr:x="-415" gr:y="17225" name="LUS-Datos del establecimiento" bpm:uuid="IH8TBUVP_75Y" db:database="db1" db:table="lus_datos_del_establecimiento">
+    <Attribute id="ent71#att473" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent71#att474" name="Plaza comercial" type="string" bpm:uuid="IH8TBZ9S_159" db:column="plaza_comercial"/>
+    <Attribute id="ent71#att475" name="Tipo de giro" type="string" bpm:uuid="IH8TC1GJ_42C" db:column="tipo_de_giro"/>
+    <Attribute id="ent71#att476" name="Nombre del proyecto" type="string" bpm:uuid="IH8TC3F9_21X" db:column="nombre_del_proyecto"/>
+    <Attribute id="ent71#att477" name="Mesas" type="integer" bpm:uuid="IH8TC5N0_5MM" db:column="mesas"/>
+    <Attribute id="ent71#att478" name="Personas" type="integer" bpm:uuid="IH8TC8UQ_3CV" db:column="personas"/>
+  </Entity>
+  <Entity id="ent72" gr:x="-415" gr:y="17445" name="LUS-Condicionantes" bpm:uuid="IH8TYDT0_6HJ" db:database="db1" db:table="lus_condicionantes">
+    <Attribute id="ent72#att479" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent72#att480" name="Condicionantes" type="text" bpm:uuid="IH8TYHPD_OY" db:column="condicionantes"/>
+  </Entity>
+  <Entity id="ent73" gr:x="-415" gr:y="17585" name="SARE-Tipo de persona" bpm:uuid="IJ4NRNHS_4MQ" db:database="db1" db:table="sare_tipo_de_persona">
+    <Attribute id="ent73#att481" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent73#att482" name="Tipo de persona" type="string" bpm:uuid="IJ4NRS8E_3O5" db:column="tipo_de_persona"/>
+  </Entity>
+  <Entity id="ent74" gr:x="-415" gr:y="17725" name="SARE-Terminos y condiciones" bpm:uuid="IJ4R8B4X_78T" db:database="db1" db:table="sare_terminos_y_condiciones">
+    <Attribute id="ent74#att483" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent74#att484" name="Estoy de acuerdo en que cumplo con los lineamientos anterioremente mencionados para empezar a operar siendo conciente que cualquier falta que la Direccion de Proteccion Civil determine que no es subsanable pueda revocar la licencia de funcionamiento de manera inmediata." type="string" bpm:uuid="IJ4R8GPN_5SI" db:column="estoy_de_acuerdo_en_que_cumplo"/>
+    <Attribute id="ent74#att485" name="Me comprometo a obtener el dictamen de uso de suelo en 30 dias" type="string" bpm:uuid="IJ4R8VUL_5WN" db:column="me_comprometo_a_obtener_el_dic"/>
+  </Entity>
+  <Entity id="ent75" gr:x="-415" gr:y="17885" name="SARE-Oficios" bpm:uuid="IJ4SJGHJ_69" db:database="db1" db:table="sare_oficios">
+    <Attribute id="ent75#att486" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent75#att487" name="Oficio de no procedencia y no compatibilidad" type="blob" bpm:uuid="IJ4SJMBQ_362" db:column="oficio_de_no_procedencia_y_no"/>
+  </Entity>
+  <Entity id="ent76" gr:x="-415" gr:y="18025" name="SARE-Medidas preventivas" bpm:uuid="IJ4R4NPE_7BJ" db:database="db1" db:table="sare_medidas_preventivas">
+    <Attribute id="ent76#att488" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent76#att489" name="Lineamientos" type="url" bpm:uuid="IJ4R4SWW_5EC" db:column="lineamientos"/>
+  </Entity>
+  <Entity id="ent77" gr:x="-415" gr:y="18165" name="SARE-Establecimiento" bpm:uuid="IJ4NWCJR_3ZX" db:database="db1" db:table="sare_establecimiento">
+    <Attribute id="ent77#att490" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent77#att491" name="Actividad o giro" type="string" bpm:uuid="IJ4NWJNW_1PP" db:column="actividad_o_giro"/>
+    <Attribute id="ent77#att492" name="Clave de giro" type="string" bpm:uuid="IJ4NWMA2_7EC" db:column="clave_de_giro"/>
+    <Attribute id="ent77#att493" name="Denominaci&#243;n comercial" type="string" bpm:uuid="IJ4NWQ4T_19U" db:column="denominacion_comercial"/>
+    <Attribute id="ent77#att494" name="Colonia" type="string" bpm:uuid="IJ4NWTK1_7NY" db:column="colonia"/>
+    <Attribute id="ent77#att495" name="Codigo postal" type="string" bpm:uuid="IJ4NWVXR_535" db:column="codigo_postal"/>
+    <Attribute id="ent77#att496" name="Calle" type="string" bpm:uuid="IJ4NYIVS_5C" db:column="calle"/>
+    <Attribute id="ent77#att497" name="Entre calle" type="string" bpm:uuid="IJ4NYLD3_181" db:column="entre_calle"/>
+    <Attribute id="ent77#att498" name="y calle" type="string" bpm:uuid="IJ4NYNUU_2A7" db:column="y_calle"/>
+    <Attribute id="ent77#att499" name="Numero exterior" type="string" bpm:uuid="IJ4NYQFM_2RR" db:column="numero_exterior"/>
+    <Attribute id="ent77#att500" name="Numero interior" type="string" bpm:uuid="IJ4NYSN8_33L" db:column="numero_interior"/>
+    <Attribute id="ent77#att501" name="Inversion aproximada" type="string" bpm:uuid="IJ4NYV38_6LU" db:column="inversion_aproximada"/>
+    <Attribute id="ent77#att502" name="Numero de empleados" type="string" bpm:uuid="IJ4NYXYG_2IR" db:column="numero_de_empleados"/>
+    <Attribute id="ent77#att503" name="Inicio de operaciones" type="date" bpm:uuid="IJ4NZ02P_6KY" db:column="inicio_de_operaciones"/>
+    <Attribute id="ent77#att504" name="Superficie m2 del establecimiento" type="string" bpm:uuid="IJ4NZ2C7_5D1" db:column="superficie_m2_del_establecimie"/>
+    <Attribute id="ent77#att505" name="Local " type="string" bpm:uuid="IJ4NZ4V0_17Q" db:column="local"/>
+    <Attribute id="ent77#att506" name="Renta" type="string" bpm:uuid="IJ4NZ75I_4A6" db:column="renta"/>
+    <Attribute id="ent77#att507" name="Estacionamiento " type="string" bpm:uuid="IJ4NZ9O9_60U" db:column="estacionamiento"/>
+    <Attribute id="ent77#att508" name="Observaciones" type="text" bpm:uuid="IJ4NZBUH_4S3" db:column="observaciones"/>
+  </Entity>
+  <Entity id="ent78" gr:x="-415" gr:y="18645" name="SARE-Datos del solicitante" bpm:uuid="IJ4NTHAS_66" db:database="db1" db:table="sare_datos_del_solicitante">
+    <Attribute id="ent78#att509" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent78#att510" name="Tipo de interesado    " type="string" bpm:uuid="IH8L8H4V_5Z6" db:column="tipo_de_interesado"/>
+    <Attribute id="ent78#att511" name="Primer apellido" type="string" bpm:uuid="IH8L8H9B_7DP" db:column="primer_apellido"/>
+    <Attribute id="ent78#att512" name="Segundo apellido" type="string" bpm:uuid="IH8L8HEF_YU" db:column="segundo_apellido"/>
+    <Attribute id="ent78#att513" name="Nombres(s)" type="string" bpm:uuid="IH8L8HJ3_4ZC" db:column="nombres_s"/>
+    <Attribute id="ent78#att514" name="RFC" type="string" bpm:uuid="IH8L8HNZ_PT" db:column="rfc"/>
+    <Attribute id="ent78#att515" name="Tel&#233;fono particular" type="string" bpm:uuid="IH8L8HSM_D1" db:column="telefono_particular"/>
+    <Attribute id="ent78#att516" name="Tel&#233;fono celular" type="string" bpm:uuid="IH8L8HZJ_4UA" db:column="telefono_celular"/>
+    <Attribute id="ent78#att517" name="Correo electr&#243;nico" type="string" bpm:uuid="IH8L8I9R_5RB" db:column="correo_electronico"/>
+  </Entity>
+  <Entity id="ent79" gr:x="-415" gr:y="18925" name="TO-Informe ecologico preventivo" bpm:uuid="IH8SE45F_7F6" db:database="db1" db:table="to_informe_ecologico_preventiv">
+    <Attribute id="ent79#att518" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent79#att519" name="Proyecto" type="string" bpm:uuid="IH8SE8UJ_5DV" db:column="proyecto"/>
+    <Attribute id="ent79#att520" name="Comentarios" type="text" bpm:uuid="IH8SEBVS_1RD" db:column="comentarios"/>
+    <Attribute id="ent79#att521" name="&#191;Cuenta con areas abiertas con material que permita la filtracion? " type="string" bpm:uuid="IH8SEFGZ_645" db:column="cuenta_con_areas_abiertas_con"/>
+    <Attribute id="ent79#att522" name="&#191;Cuenta con area verde requerida? " type="string" bpm:uuid="IH8SEID5_370" db:column="cuenta_con_area_verde_requerid"/>
+    <Attribute id="ent79#att523" name="&#191;Cuenta con banco de tiro autorizado? " type="string" bpm:uuid="IH8SEL6K_3P5" db:column="cuenta_con_banco_de_tiro_autor"/>
+    <Attribute id="ent79#att524" name="&#191;Cuenta con accesorios y muebles de ba&#241;o ahorradores de agua y energia? " type="string" bpm:uuid="IH8SENNX_4NR" db:column="cuenta_con_accesorios_y_mueble"/>
+    <Attribute id="ent79#att525" name="&#191;Existe material de residuos de construcion en la obra y/o via publica? " type="string" bpm:uuid="IH8SEQ1K_5X7" db:column="existe_material_de_residuos_de"/>
+    <Attribute id="ent79#att526" name="&#191;Cuenta con los arboles requeridos? " type="string" bpm:uuid="IH8SESAM_25P" db:column="cuenta_con_los_arboles_requeri"/>
+  </Entity>
+  <Entity id="ent80" gr:x="-415" gr:y="19205" name="TO-Informe de terminacion de obra" bpm:uuid="IH8SK19S_41K" db:database="db1" db:table="to_informe_de_terminacion_de_o">
+    <Attribute id="ent80#att527" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent80#att528" name="% de avance de carpinteria, canceleria y acabados internos" type="integer" bpm:uuid="IH8SK90L_14D" db:column="de_avance_de_carpinteria_cance"/>
+    <Attribute id="ent80#att529" name="% de acabados exteriores" type="integer" bpm:uuid="IH8SKBTI_2OD" db:column="de_acabados_exteriores"/>
+    <Attribute id="ent80#att530" name="&#191;Cuenta con puertas y ventanas exteriores? " type="string" bpm:uuid="IH8SKE24_36I" db:column="cuenta_con_puertas_y_ventanas"/>
+    <Attribute id="ent80#att531" name="&#191;Funciona la instalacion electrica? " type="string" bpm:uuid="IH8SKG8O_4N6" db:column="funciona_la_instalacion_electr"/>
+    <Attribute id="ent80#att532" name="&#191;Funciona la instalacion hidro-sanitaria? " type="string" bpm:uuid="IH8SKIE5_RS" db:column="funciona_la_instalacion_hidro"/>
+    <Attribute id="ent80#att533" name="&#191;Funciona la instalacion de gas? " type="string" bpm:uuid="IH8SKKJG_6NH" db:column="funciona_la_instalacion_de_gas"/>
+    <Attribute id="ent80#att534" name="&#191;Es habitable el inmueble? " type="string" bpm:uuid="IH8SKMQ6_MT" db:column="es_habitable_el_inmueble"/>
+    <Attribute id="ent80#att535" name="&#191;Corresponde con proyecto autorizado? " type="string" bpm:uuid="IH8SKPAB_6RB" db:column="corresponde_con_proyecto_autor"/>
+    <Attribute id="ent80#att536" name="&#191;Esta cerrada y firmada la bitacora por DROM? " type="string" bpm:uuid="IH8SKRFN_42W" db:column="esta_cerrada_y_firmada_la_bita"/>
+    <Attribute id="ent80#att537" name="&#191;Esta habitado el inmuebles /en funciones? " type="string" bpm:uuid="IH8SKUQ8_K5" db:column="esta_habitado_el_inmuebles_en"/>
+    <Attribute id="ent80#att538" name="&#191;Existen da&#241;os a la via publica? " type="string" bpm:uuid="IH8SKXO7_4C" db:column="existen_da_os_a_la_via_publica"/>
+  </Entity>
+  <Entity id="ent81" gr:x="-415" gr:y="19545" name="TO-Corresposable de seguridad estructural" bpm:uuid="IH8SWAFY_2NE" db:database="db1" db:table="to_corresposable_de_seguridad">
+    <Attribute id="ent81#att539" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent81#att540" name="Registro municipal" type="string" bpm:uuid="IH8SWLT4_1YL" db:column="registro_municipal"/>
+    <Attribute id="ent81#att541" name="Numero de cedula" type="string" bpm:uuid="IH8SWOAR_62K" db:column="numero_de_cedula"/>
+  </Entity>
+  <Entity id="ent82" gr:x="-415" gr:y="19705" name="TO-Corresposable de restauracion" bpm:uuid="IH8SXWXQ_4FN" db:database="db1" db:table="to_corresposable_de_restauraci">
+    <Attribute id="ent82#att542" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent82#att543" name="Registro municipal" type="string" bpm:uuid="IH8SY1DN_17U" db:column="registro_municipal"/>
+    <Attribute id="ent82#att544" name="Numero de cedula" type="string" bpm:uuid="IH8SY3Z6_26" db:column="numero_de_cedula"/>
+  </Entity>
+  <Entity id="ent83" gr:x="-415" gr:y="19865" name="TO-Corresposable de instalaciones mecanicas" bpm:uuid="IH8SYKKS_252" db:database="db1" db:table="to_corresposable_de_instalacio">
+    <Attribute id="ent83#att545" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent83#att546" name="Registro municipal" type="string" bpm:uuid="IH8SYOO7_5YT" db:column="registro_municipal"/>
+    <Attribute id="ent83#att547" name="Numero de cedula" type="string" bpm:uuid="IH8SYR60_25Y" db:column="numero_de_cedula"/>
+  </Entity>
+  <Entity id="ent84" gr:x="-415" gr:y="20025" name="TO-Corresposable de instalaciones electricas" bpm:uuid="IH8SZ7TI_4T8" db:database="db1" db:table="to_corresposable_de_instalac_2">
+    <Attribute id="ent84#att548" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent84#att549" name="Registro municipal" type="string" bpm:uuid="IH8SZAOE_5Q0" db:column="registro_municipal"/>
+    <Attribute id="ent84#att550" name="Numero de cedula" type="string" bpm:uuid="IH8SZD69_5CH" db:column="numero_de_cedula"/>
+  </Entity>
+  <Entity id="ent85" gr:x="-415" gr:y="20185" name="TO-Corresposable de instalaciones de gas" bpm:uuid="IH8T0DNC_1TH" db:database="db1" db:table="to_corresposable_de_instalac_3">
+    <Attribute id="ent85#att551" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent85#att552" name="Registro municipal" type="string" bpm:uuid="IH8T0GVN_634" db:column="registro_municipal"/>
+    <Attribute id="ent85#att553" name="Numero de cedula" type="string" bpm:uuid="IH8T0IYM_UF" db:column="numero_de_cedula"/>
+  </Entity>
+  <Entity id="ent86" gr:x="-415" gr:y="20345" name="TO-Corresposable de hidraulicas y sanitarias" bpm:uuid="IH8SZW8Y_6EO" db:database="db1" db:table="to_corresposable_de_hidraulica">
+    <Attribute id="ent86#att554" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent86#att555" name="Registro municipal" type="string" bpm:uuid="IH8SZZQG_6JE" db:column="registro_municipal"/>
+    <Attribute id="ent86#att556" name="Numero de cedula" type="string" bpm:uuid="IH8T01VQ_301" db:column="numero_de_cedula"/>
+  </Entity>
+  <Entity id="ent87" gr:x="-415" gr:y="20505" name="TO-Corresposable de diseno urbano y arquitectonico" bpm:uuid="IH8SX2W7_6DU" db:database="db1" db:table="to_corresposable_de_dise_o_urb">
+    <Attribute id="ent87#att557" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent87#att558" name="Registro municipal" type="string" bpm:uuid="IH8SXDJN_8H" db:column="registro_municipal"/>
+    <Attribute id="ent87#att559" name="Numero de cedula" type="string" bpm:uuid="IH8SXG72_52J" db:column="numero_de_cedula"/>
+  </Entity>
+  <Entity id="ent88" gr:x="-415" gr:y="20665" name="TO-Corresponsable(s)" bpm:uuid="IH8R9N06_22B" db:database="db1" db:table="to_corresponsable_s">
+    <Attribute id="ent88#att560" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent88#att561" name="Tipo      " type="string" bpm:uuid="IH8R9RGS_6E6" db:column="tipo"/>
+    <Attribute id="ent88#att562" name="Numero de cedula" type="string" bpm:uuid="IH8R9RM0_3CM" db:column="numero_de_cedula"/>
+    <Attribute id="ent88#att563" name="Registro municipal" type="string" bpm:uuid="IH8R9RQ6_VH" db:column="registro_municipal"/>
+  </Entity>
+  <Entity id="ent89" gr:x="-415" gr:y="20845" name="TO-Condicionantes y documentos adicionales" bpm:uuid="IH8RLZRK_2EC" db:database="db1" db:table="to_condicionantes_y_documentos">
+    <Attribute id="ent89#att564" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent89#att565" name="Documento" type="blob" bpm:uuid="IH8RM5BO_35V" db:column="documento"/>
+    <Attribute id="ent89#att566" name="Archivo anexo" type="blob" bpm:uuid="IH8RMA3Z_3E1" db:column="archivo_anexo"/>
+  </Entity>
+  <Entity id="ent90" gr:x="-415" gr:y="21005" name="TO-Antecedentes" bpm:uuid="IH8SP4IG_29A" db:database="db1" db:table="to_antecedentes">
+    <Attribute id="ent90#att567" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent90#att568" name="No. De licencia de construccion" type="string" bpm:uuid="IH8SP8B6_AU" db:column="no_de_licencia_de_construccion"/>
+    <Attribute id="ent90#att569" name="Vigencia" type="date" bpm:uuid="IH8SPC47_3PQ" db:column="vigencia"/>
+    <Attribute id="ent90#att570" name="Fecha de ingreso de T.O." type="date" bpm:uuid="IH8SPEAG_3YP" db:column="fecha_de_ingreso_de_t_o"/>
+    <Attribute id="ent90#att571" name="Tiempo transcurrido entre vigencia y fecha de ingreso" type="date" bpm:uuid="IH8SPGT7_2KZ" db:column="tiempo_transcurrido_entre_vige"/>
+  </Entity>
+  <Entity id="ent91" gr:x="-415" gr:y="21205" name="TO-Dictaminacion del informa ecologico" bpm:uuid="IK0DU42E_2LD" db:database="db1" db:table="to_dictaminacion_del_informa_e">
+    <Attribute id="ent91#att572" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent91#att573" name="Nombre del proyecto" type="string" bpm:uuid="IK0DU5QA_2Y1" db:column="nombre_del_proyecto"/>
+    <Attribute id="ent91#att574" name="Resolucion" type="string" bpm:uuid="IK0DUCWP_C0" db:column="resolucion"/>
+    <Attribute id="ent91#att575" name="Acciones faltantes" type="string" bpm:uuid="IK0DUHVT_7L7" db:column="acciones_faltantes"/>
+  </Entity>
+  <Entity id="ent92" gr:x="-415" gr:y="21385" name="TO-Documentos oficiales" bpm:uuid="IK0E81C4_HO" db:database="db1" db:table="to_documentos_oficiales">
+    <Attribute id="ent92#att576" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent92#att577" name="Licencia de construccion y recibo de pago" type="blob" bpm:uuid="IK0E89D6_3TS" db:column="licencia_de_construccion_y_rec"/>
+    <Attribute id="ent92#att578" name="Licencia de uso de suelo" type="blob" bpm:uuid="IK0E89FM_YT" db:column="licencia_de_uso_de_suelo"/>
+    <Attribute id="ent92#att579" name="Informe preventivo de impacto ambiental o Dictamen de informe ecologico preventivo" type="blob" bpm:uuid="IK0E89ID_236" db:column="informe_preventivo_de_impacto"/>
+    <Attribute id="ent92#att580" name="Aviso de terminacion de obra ante la SDRSOT" type="blob" bpm:uuid="IK0E89KO_7DT" db:column="aviso_de_terminacion_de_obra_a"/>
+    <Attribute id="ent92#att581" name="Contratacion de los servicios de agua y drenaje" type="blob" bpm:uuid="IK0E89NC_373" db:column="contratacion_de_los_servicios"/>
+    <Attribute id="ent92#att582" name="Proyecto arquitectonico autorizado" type="blob" bpm:uuid="IK0E89RL_3EZ" db:column="proyecto_arquitectonico_autori"/>
+    <Attribute id="ent92#att583" name="Disposicion final de residuos de construccion" type="blob" bpm:uuid="IK0E89VL_2AM" db:column="disposicion_final_de_residuos"/>
+  </Entity>
+  <Entity id="ent93k" gr:x="-415" gr:y="21645" name="FAG-DPC-Datos del solicitante" bpm:uuid="IK7O4H8W_1CX" db:database="db1" db:table="fag_dpc_datos_del_solicitante">
+    <Attribute id="ent93k#att584k" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent93k#att585k" name="Tipo de interesado    " type="string" bpm:uuid="IH8L8H4V_5Z6" db:column="tipo_de_interesado"/>
+    <Attribute id="ent93k#att586k" name="Primer apellido" type="string" bpm:uuid="IH8L8H9B_7DP" db:column="primer_apellido"/>
+    <Attribute id="ent93k#att587k" name="Segundo apellido" type="string" bpm:uuid="IH8L8HEF_YU" db:column="segundo_apellido"/>
+    <Attribute id="ent93k#att588k" name="Nombres(s)" type="string" bpm:uuid="IH8L8HJ3_4ZC" db:column="nombres_s"/>
+    <Attribute id="ent93k#att589k" name="RFC" type="string" bpm:uuid="IH8L8HNZ_PT" db:column="rfc"/>
+    <Attribute id="ent93k#att590k" name="Tel&#233;fono particular" type="string" bpm:uuid="IH8L8HSM_D1" db:column="telefono_particular"/>
+    <Attribute id="ent93k#att591k" name="Tel&#233;fono celular" type="string" bpm:uuid="IH8L8HZJ_4UA" db:column="telefono_celular"/>
+    <Attribute id="ent93k#att592k" name="Correo electr&#243;nico" type="string" bpm:uuid="IH8L8I9R_5RB" db:column="correo_electronico"/>
+  </Entity>
+  <Entity id="ent1k" gr:x="-415" gr:y="21925" name="LCFC-Observaciones Uso de suelo" bpm:uuid="IK91LQV3_24D" db:database="db1" db:table="lcfc_observaciones_uso_de_suel">
+    <Attribute id="ent1k#att4k" name="OID" type="integer" key="true" db:column="oid"/>
+    <Attribute id="ent1k#att5k" name="Uso de suelo" type="text" bpm:uuid="IJZCCP7Z_1HY" db:column="uso_de_suelo"/>
+    <Attribute id="ent1k#att6k" name="Licencia de construccion" type="text" bpm:uuid="IJZCGHKE_74H" db:column="licencia_de_construccion"/>
+  </Entity>
+  <Entity id="ent1c" name="Pago" duration="volatile" attributeOrder="ent1c#att5c ent1c#att6c ent1c#att7c ent1c#att8c" volatileStorage="database" gr:x="-175" gr:y="3105">
+    <Attribute id="ent1c#att5c" name="oid" key="true" type="integer"/>
+    <Attribute id="ent1c#att6c" name="producto" type="string"/>
+    <Attribute id="ent1c#att7c" name="precio" type="string"/>
+    <Attribute id="ent1c#att8c" name="cantidad" type="string"/>
+  </Entity>
+</DataModel>

@@ -1,0 +1,59 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym97#page2c" name="Error en la transaccion" layout:pageLayout="GOBMXSTYLE/Default" gr:x="-70" gr:y="730">
+  <ContentUnits>
+    <EntryUnit id="mov1#hym97#page2c#enu4c" name="Informacion del error" gr:x="0" gr:y="0">
+      <Field id="mov1#hym97#page2c#enu4c#fld93c" name="Error Code" type="string" modifiable="false" preloaded="true"/>
+      <Field id="mov1#hym97#page2c#enu4c#fld98c" name="Error Message" type="text" modifiable="false" preloaded="true"/>
+      <Field id="mov1#hym97#page2c#enu4c#fld99c" name="Error Details" type="text" modifiable="false" preloaded="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell colspan="4">
+        <layout:Unit unitId="mov1#hym97#page2c#enu4c">
+          <layout:Field field="mov1#hym97#page2c#enu4c#fld93c"/>
+          <layout:Field field="mov1#hym97#page2c#enu4c#fld98c"/>
+          <layout:Field field="mov1#hym97#page2c#enu4c#fld99c"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="8"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

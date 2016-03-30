@@ -1,0 +1,23 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym84" gr:x="5775" gr:y="580" name="Licencia de construcci&#243;n de casa habitaci&#243;n unifamiliar (fraccionamientos autorizados) - Director de Desarrollo Urbano - 7. Autorizaci&#243;n del proyecto" bpm:moduleType="activity" bpm:uuids="IH8MOSKO_307.ICFCEJT5_EUU2B" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym84#icu83" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym84#icu83#oln264" name="OKLink" automaticCoupling="true" to="mov1#hym84#page96"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym84#pu266" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym84#pu267" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym84#pu268" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym84#apu166" name="Set Parameters" gr:x="560" gr:y="46">
+      <ActivityParameter id="mov1#hym84#apu166#ap3917" name="Predial.OID" bpm:uuid="IJX7RKBP_PCH0YJ"/>
+      <ActivityParameter id="mov1#hym84#apu166#ap3920" name="Control.OID" bpm:uuid="IJX7RKBO_RRJS1O"/>
+      <ActivityParameter id="mov1#hym84#apu166#ap3924" name="Documentos oficiales.OID" bpm:uuid="IK0CDUEX_QXILBJ"/>
+      <ActivityParameter id="mov1#hym84#apu166#ap3926" name="Documentos oficiales.Resolutivo" bpm:uuid="IK0CDUEX_QXILBJ/IK0CC0EM_6S9"/>
+      <ActivityParameter id="mov1#hym84#apu166#ap3928" name="Documentos oficiales.Alineamiento y numero oficial" bpm:uuid="IK0CDUEX_QXILBJ/IK0CC2LP_6JL"/>
+      <ActivityParameter id="mov1#hym84#apu166#ap3930" name="Documentos oficiales.Constancia de agua potable y drenaje" bpm:uuid="IK0CDUEX_QXILBJ/IK0CC2R2_5SO"/>
+      <ActivityParameter id="mov1#hym84#apu166#ap3932" name="Documentos oficiales.Licencia de uso de suelo" bpm:uuid="IK0CDUEX_QXILBJ/IK0CC2W5_4NQ"/>
+      <ActivityParameter id="mov1#hym84#apu166#ap3934" name="Documentos oficiales.Dictamen de informe ecologico preventivo" bpm:uuid="IK0CDUEX_QXILBJ/IK0CC30U_4ZI"/>
+      <ActivityParameter id="mov1#hym84#apu166#ap3936" name="Documentos oficiales.Licencia de construccion de obra mayor" bpm:uuid="IK0CDUEX_QXILBJ/IK0CC350_3Y7"/>
+      <OKLink id="mov1#hym84#apu166#oln265" name="OKLink" automaticCoupling="false" to="mov1#hym84#pu266" codeRef="mov1#hym84#page96#enu576#ln1351"/>
+      <OKLink id="mov1#hym84#apu166#oln266" name="OKLink" automaticCoupling="false" to="mov1#hym84#pu267" codeRef="mov1#hym84#page96#enu576#ln1352"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

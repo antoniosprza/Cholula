@@ -1,0 +1,29 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym1c" gr:x="7160" gr:y="115" name="Alineamiento y uso de suelo espec&#237;fico - Analista de uso de suelo - 2. Revisar documentaci&#243;n" bpm:moduleType="activity" bpm:uuids="IH8T9YT7_4NM.ICHV5G55_CHLZM" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym1c#icu1c" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym1c#icu1c#oln1c" name="OKLink" automaticCoupling="true" to="mov1#hym1c#page1c"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym1c#pu1c" name="Complete Activity" mode="completeActivity" gr:x="840" gr:y="0"/>
+    <ProcessUnit id="mov1#hym1c#pu2c" name="Save Activity" mode="saveActivity" gr:x="850" gr:y="85"/>
+    <ProcessUnit id="mov1#hym1c#pu3c" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym1c#apu1c" name="Set Parameters" gr:x="560" gr:y="34">
+      <ActivityParameter id="mov1#hym1c#apu1c#ap12c" name="Predial.OID" bpm:uuid="IJX88GE1_C8I8LV"/>
+      <ActivityParameter id="mov1#hym1c#apu1c#ap17c" name="Control.OID" bpm:uuid="IJX88GE1_HGQXT9"/>
+      <ActivityParameter id="mov1#hym1c#apu1c#ap34c" name="Datos del establecimiento.OID" bpm:uuid="IJX88GE2_V2WZAO"/>
+      <ActivityParameter id="mov1#hym1c#apu1c#ap41c" name="Datos del solicitante.OID" bpm:uuid="IJX88GE1_A2RSXS"/>
+      <ActivityParameter id="mov1#hym1c#apu1c#ap51c" name="Datos del propietario.OID" bpm:uuid="IJX88GE1_9CEYRA"/>
+      <ActivityParameter id="mov1#hym1c#apu1c#ap57c" name="Domicilio del predio.OID" bpm:uuid="IJX88GE1_BS560A"/>
+      <ActivityParameter id="mov1#hym1c#apu1c#ap66c" name="Expediente electronico.OID" bpm:uuid="IJX88GE1_2WX63O"/>
+      <ActivityParameter id="mov1#hym1c#apu1c#ap77c" name="Validaciones.OID" bpm:uuid="IJX88GE1_KY1O1V"/>
+      <ActivityParameter id="mov1#hym1c#apu1c#ap79c" name="Validaciones.Observaciones" bpm:uuid="IJX88GE1_KY1O1V/IH8LLT4Q_5TC"/>
+      <ActivityParameter id="mov1#hym1c#apu1c#ap81c" name="Validaciones.&#191;Se requiere dictamen ecologico? " bpm:uuid="IH8T9YT7_4NM.IJX88GE1_KY1O1V/IH8TP2N4_3IE"/>
+      <ActivityParameter id="mov1#hym1c#apu1c#ap83c" name="Validaciones.&#191;Esta completa la informacion? " bpm:uuid="IH8T9YT7_4NM.IJX88GE1_KY1O1V/IH8LL99N_341"/>
+      <OKLink id="mov1#hym1c#apu1c#oln2c" name="OKLink" automaticCoupling="false" to="mov1#hym1c#pu1c" codeRef="mov1#hym1c#page1c#enu10c#ln21c" gr:bendpoints="139,-121,-116,-1"/>
+      <OKLink id="mov1#hym1c#apu1c#oln3c" name="OKLink" automaticCoupling="false" to="mov1#hym1c#pu2c" codeRef="mov1#hym1c#page1c#enu10c#ln22c" gr:bendpoints="135,40,-115,75;252,41,2,76"/>
+      <ActivityParameter id="mov1#hym1c#apu1c#ap93c" name="Validaciones.&#191;Esta completa la informacion? " bpm:uuid="IJX88GE1_KY1O1V/IH8LL99N_341"/>
+      <ActivityParameter id="mov1#hym1c#apu1c#ap103c" name="Control.Folio de control" bpm:uuid="IH8T9YT7_4NM.IJX88GE1_HGQXT9/IH8L0CS5_XQ"/>
+      <ActivityParameter id="mov1#hym1c#apu1c#ap104c" name="Control.Folio de ingreso" bpm:uuid="IH8T9YT7_4NM.IJX88GE1_HGQXT9/IH8KZUZV_14D"/>
+      <ActivityParameter id="mov1#hym1c#apu1c#ap105c" name="Predial.Cuenta predial" bpm:uuid="IH8T9YT7_4NM.IJX88GE1_C8I8LV/IH8L34LF_7LX"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

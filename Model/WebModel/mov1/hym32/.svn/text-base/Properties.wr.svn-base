@@ -1,0 +1,20 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym32" gr:x="1720" gr:y="300" name="Contrato de conexi&#243;n de agua - Analista t&#233;cnico - 3.1 Programar visita de inspecci&#243;n" bpm:moduleType="activity" bpm:uuids="IH8XYGM2_W5.IDT7B48A_8RWOUY" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym32#icu31" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym32#icu31#oln108" name="OKLink" automaticCoupling="true" to="mov1#hym32#page44"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym32#pu110" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym32#pu111" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym32#pu112" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym32#apu62" name="Set Parameters" gr:x="560" gr:y="64">
+      <ActivityParameter id="mov1#hym32#apu62#ap1559" name="Predial.OID" bpm:uuid="IJWKDB2T_B9LWW2"/>
+      <ActivityParameter id="mov1#hym32#apu62#ap1562" name="Control.OID" bpm:uuid="IJWKDB2S_69Y861"/>
+      <ActivityParameter id="mov1#hym32#apu62#ap1566" name="Domicilio del predio.OID" bpm:uuid="IJWKDB2S_AUY0Q9"/>
+      <ActivityParameter id="mov1#hym32#apu62#ap1576" name="Fecha y hora de visita.OID" bpm:uuid="IJWKDB2S_BXZJ4R"/>
+      <ActivityParameter id="mov1#hym32#apu62#ap1578" name="Fecha y hora de visita.Comentarios adicionales" bpm:uuid="IJWKDB2S_BXZJ4R/IH8QW68P_3AE"/>
+      <ActivityParameter id="mov1#hym32#apu62#ap1580" name="Fecha y hora de visita.Fecha y hora" bpm:uuid="IJWKDB2S_BXZJ4R/IH8QVYUH_1YR"/>
+      <OKLink id="mov1#hym32#apu62#oln109" name="OKLink" automaticCoupling="false" to="mov1#hym32#pu110" codeRef="mov1#hym32#page44#enu214#ln553"/>
+      <OKLink id="mov1#hym32#apu62#oln110" name="OKLink" automaticCoupling="false" to="mov1#hym32#pu111" codeRef="mov1#hym32#page44#enu214#ln554"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

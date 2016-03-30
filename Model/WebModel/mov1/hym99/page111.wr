@@ -1,0 +1,464 @@
+<Page xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym99#page111" name="2. Revisar documentaci&#243;n" gr:x="10" gr:y="-5" layout:pageLayout="GOBMXSTYLE/Default">
+  <ContentUnits>
+    <ActivityParametersUnit id="mov1#hym99#page111#apu197" name="Get Parameters" gr:x="0" gr:y="0">
+      <Link id="mov1#hym99#page111#apu197#ln1572" name="Properties" type="transport" automaticCoupling="false" to="mov1#hym99#page111#enu671" gr:bendpoints="148,-87,-97,-2">
+        <LinkParameter id="mov1#hym99#page111#apu197#ln1572#par4957" name="Predial.OID" source="mov1#hym99#page111#apu197#ap4631" target="mov1#hym99#page111#enu671#fld2812_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln1572#par4958" name="Predial.Cuenta predial" source="mov1#hym99#page111#apu197#ap4633" target="mov1#hym99#page111#enu671#fld2813_slot"/>
+      </Link>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap4631" name="Predial.OID" bpm:uuid="IJX8MDNU_Q9KI9L"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap4633" name="Predial.Cuenta predial" bpm:uuid="IJX8MDNU_Q9KI9L/IH8L34LF_7LX"/>
+      <Link id="mov1#hym99#page111#apu197#ln1574" name="Properties" type="transport" automaticCoupling="false" to="mov1#hym99#page111#enu672">
+        <LinkParameter id="mov1#hym99#page111#apu197#ln1574#par4960" name="Control.OID" source="mov1#hym99#page111#apu197#ap4634" target="mov1#hym99#page111#enu672#fld2814_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln1574#par4961" name="Control.Folio de ingreso" source="mov1#hym99#page111#apu197#ap4636" target="mov1#hym99#page111#enu672#fld2815_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln1574#par4962" name="Control.Folio de control" source="mov1#hym99#page111#apu197#ap4637" target="mov1#hym99#page111#enu672#fld2816_slot"/>
+      </Link>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap4634" name="Control.OID" bpm:uuid="IJX8MDNU_HIRBIO"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap4636" name="Control.Folio de ingreso" bpm:uuid="IJX8MDNU_HIRBIO/IH8KZUZV_14D"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap4637" name="Control.Folio de control" bpm:uuid="IJX8MDNU_HIRBIO/IH8L0CS5_XQ"/>
+      <Link id="mov1#hym99#page111#apu197#ln1576" name="Properties" type="transport" automaticCoupling="false" to="mov1#hym99#page111#enu673" gr:bendpoints="129,91,-121,-4">
+        <LinkParameter id="mov1#hym99#page111#apu197#ln1576#par4964" name="Datos del solicitante.OID" source="mov1#hym99#page111#apu197#ap4638" target="mov1#hym99#page111#enu673#fld2817_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln1576#par4965" name="Tipo de interesado    [values]" source="mov1#hym99#page111#apu197#ap4640_values" target="mov1#hym99#page111#enu673#sfld239#slot239"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln1576#par4966" name="Tipo de interesado    " source="mov1#hym99#page111#apu197#ap4640" target="mov1#hym99#page111#enu673#sfld239_presel"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln1576#par4967" name="Datos del solicitante.Primer apellido" source="mov1#hym99#page111#apu197#ap4641" target="mov1#hym99#page111#enu673#fld2818_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln1576#par4968" name="Datos del solicitante.Segundo apellido" source="mov1#hym99#page111#apu197#ap4642" target="mov1#hym99#page111#enu673#fld2819_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln1576#par4969" name="Datos del solicitante.Nombres(s)" source="mov1#hym99#page111#apu197#ap4643" target="mov1#hym99#page111#enu673#fld2820_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln1576#par4970" name="Datos del solicitante.RFC" source="mov1#hym99#page111#apu197#ap4644" target="mov1#hym99#page111#enu673#fld2821_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln1576#par4971" name="Datos del solicitante.Tel&#233;fono particular" source="mov1#hym99#page111#apu197#ap4645" target="mov1#hym99#page111#enu673#fld2822_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln1576#par4972" name="Datos del solicitante.Tel&#233;fono celular" source="mov1#hym99#page111#apu197#ap4646" target="mov1#hym99#page111#enu673#fld2823_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln1576#par4973" name="Datos del solicitante.Correo electr&#243;nico" source="mov1#hym99#page111#apu197#ap4647" target="mov1#hym99#page111#enu673#fld2824_slot"/>
+      </Link>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap4638" name="Datos del solicitante.OID" bpm:uuid="IJX8MDNU_GA60O3"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap4640" name="Datos del solicitante.Tipo de interesado    " bpm:uuid="IJX8MDNU_GA60O3/IH8L8H4V_5Z6"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap4641" name="Datos del solicitante.Primer apellido" bpm:uuid="IJX8MDNU_GA60O3/IH8L8H9B_7DP"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap4642" name="Datos del solicitante.Segundo apellido" bpm:uuid="IJX8MDNU_GA60O3/IH8L8HEF_YU"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap4643" name="Datos del solicitante.Nombres(s)" bpm:uuid="IJX8MDNU_GA60O3/IH8L8HJ3_4ZC"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap4644" name="Datos del solicitante.RFC" bpm:uuid="IJX8MDNU_GA60O3/IH8L8HNZ_PT"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap4645" name="Datos del solicitante.Tel&#233;fono particular" bpm:uuid="IJX8MDNU_GA60O3/IH8L8HSM_D1"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap4646" name="Datos del solicitante.Tel&#233;fono celular" bpm:uuid="IJX8MDNU_GA60O3/IH8L8HZJ_4UA"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap4647" name="Datos del solicitante.Correo electr&#243;nico" bpm:uuid="IJX8MDNU_GA60O3/IH8L8I9R_5RB"/>
+      <Link id="mov1#hym99#page111#apu197#ln1578" name="Properties" type="transport" automaticCoupling="false" to="mov1#hym99#page111#enu674" gr:bendpoints="150,176,-100,-4">
+        <LinkParameter id="mov1#hym99#page111#apu197#ln1578#par4975" name="Requisitos.OID" source="mov1#hym99#page111#apu197#ap4648" target="mov1#hym99#page111#enu674#fld2825_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln1578#par4976" name="Requisitos.Identificacion oficial" source="mov1#hym99#page111#apu197#ap4650" target="mov1#hym99#page111#enu674#fld2826_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln1578#par4977" name="Requisitos.Acta constitutiva (en caso de ser personal moral)" source="mov1#hym99#page111#apu197#ap4651" target="mov1#hym99#page111#enu674#fld2827_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln1578#par4978" name="Requisitos.Comprobante domicilio del comercio" source="mov1#hym99#page111#apu197#ap4652" target="mov1#hym99#page111#enu674#fld2828_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln1578#par4979" name="Tipo identificacion oficial   [values]" source="mov1#hym99#page111#apu197#ap4653_values" target="mov1#hym99#page111#enu674#sfld240#slot240"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln1578#par4980" name="Tipo identificacion oficial   " source="mov1#hym99#page111#apu197#ap4653" target="mov1#hym99#page111#enu674#sfld240_presel"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln1578#par225k" name="Carta poder (en caso de no ser el propietario)" source="mov1#hym99#page111#apu197#ap217k" target="mov1#hym99#page111#enu674#fld133k_slot"/>
+      </Link>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap4648" name="Requisitos.OID" bpm:uuid="IJX8MDNU_2V7YM1"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap4650" name="Requisitos.Identificacion oficial" bpm:uuid="IJX8MDNU_2V7YM1/IH8LDZLQ_3R7"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap4651" name="Requisitos.Acta constitutiva (en caso de ser personal moral)" bpm:uuid="IJX8MDNU_2V7YM1/IH8Y4ETX_PC"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap4652" name="Requisitos.Comprobante domicilio del comercio" bpm:uuid="IJX8MDNU_2V7YM1/IK08XI5T_3PA"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap4653" name="Requisitos.Tipo identificacion oficial   " bpm:uuid="IJX8MDNU_2V7YM1/IH8LDZH0_1KE"/>
+      <Link id="mov1#hym99#page111#apu197#ln1580" name="Properties" type="transport" to="mov1#hym99#page111#enu675" gr:bendpoints="124,271,-126,1">
+        <LinkParameter id="mov1#hym99#page111#apu197#ln1580#par4982" name="Expediente electronico.OID" source="mov1#hym99#page111#apu197#ap4654" target="mov1#hym99#page111#enu675#fld2829_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln1580#par4983" name="Expediente electronico.Fotografia externa" source="mov1#hym99#page111#apu197#ap4656" target="mov1#hym99#page111#enu675#fld2830_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln1580#par4984" name="Expediente electronico.Fotografia interna" source="mov1#hym99#page111#apu197#ap4657" target="mov1#hym99#page111#enu675#fld2831_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln1580#par4985" name="Expediente electronico.Constancia primeros auxilios en formato DC3" source="mov1#hym99#page111#apu197#ap4658" target="mov1#hym99#page111#enu675#fld2832_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln1580#par4986" name="Expediente electronico.Croquis" source="mov1#hym99#page111#apu197#ap4659" target="mov1#hym99#page111#enu675#fld2833_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln1580#par4987" name="Expediente electronico.Aviso de salubridad (en caso de que aplique)" source="mov1#hym99#page111#apu197#ap4660" target="mov1#hym99#page111#enu675#fld2834_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln1580#par4988" name="Expediente electronico.Comprobante domicilio (no mayor a tres meses)" source="mov1#hym99#page111#apu197#ap4661" target="mov1#hym99#page111#enu675#fld2835_slot"/>
+      </Link>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap4654" name="Expediente electronico.OID" bpm:uuid="IJX8MDNU_I679HV"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap4656" name="Expediente electronico.Fotografia externa" bpm:uuid="IJX8MDNU_I679HV/IJ4QVOMZ_4OE"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap4657" name="Expediente electronico.Fotografia interna" bpm:uuid="IJX8MDNU_I679HV/IJ4QVMH7_6FU"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap4658" name="Expediente electronico.Constancia primeros auxilios en formato DC3" bpm:uuid="IJX8MDNU_I679HV/IJ4QWHJK_8I"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap4659" name="Expediente electronico.Croquis" bpm:uuid="IJX8MDNU_I679HV/IJ4QWALV_3WN"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap4660" name="Expediente electronico.Aviso de salubridad (en caso de que aplique)" bpm:uuid="IJX8MDNU_I679HV/IJ4QX8XI_3T2"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap4661" name="Expediente electronico.Comprobante domicilio (no mayor a tres meses)" bpm:uuid="IJX8MDNU_I679HV/IJ4QV4UX_1MM"/>
+      <Link id="mov1#hym99#page111#apu197#ln1582" name="Properties" type="transport" automaticCoupling="false" to="mov1#hym99#page111#enu676" gr:bendpoints="134,358,-116,-2">
+        <LinkParameter id="mov1#hym99#page111#apu197#ln1582#par4990" name="Validaciones.OID" source="mov1#hym99#page111#apu197#ap4662" target="mov1#hym99#page111#enu676#fld2836_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln1582#par4992" name="&#191;El uso de suelo es compatible? [values]" source="mov1#hym99#page111#apu197#ap4664_values" target="mov1#hym99#page111#enu676#sfld241#slot241"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln1582#par4993" name="&#191;El uso de suelo es compatible? " source="mov1#hym99#page111#apu197#ap4664" target="mov1#hym99#page111#enu676#sfld241_presel"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln1582#par4995" name="&#191;Esta completa la informacion? [values]" source="mov1#hym99#page111#apu197#ap4666_values" target="mov1#hym99#page111#enu676#sfld242#slot242"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln1582#par4996" name="&#191;Esta completa la informacion? " source="mov1#hym99#page111#apu197#ap4666" target="mov1#hym99#page111#enu676#sfld242_presel"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln1582#par4998" name="Validaciones.Observaciones" source="mov1#hym99#page111#apu197#ap4668" target="mov1#hym99#page111#enu676#fld2837_slot"/>
+      </Link>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap4662" name="Validaciones.OID" bpm:uuid="IJX8MDNU_S4N24C"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap4664" name="Validaciones.&#191;El uso de suelo es compatible? " bpm:uuid="IJX8MDNU_S4N24C/IH8UZ174_2WV"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap4666" name="Validaciones.&#191;Esta completa la informacion? " bpm:uuid="IJ4UT20G_6WH.IJX8MDNU_S4N24C/IH8LL99N_341"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap4668" name="Validaciones.Observaciones" bpm:uuid="IJX8MDNU_S4N24C/IH8LLT4Q_5TC"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap159k" name="Tipo de persona.OID" bpm:uuid="IJX8MDNU_3Y9G0T"/>
+      <Link id="mov1#hym99#page111#apu197#ln35k" name="GetParameters" type="transport" to="mov1#hym99#page111#enu18k" gr:bendpoints="127,-170,-118,0">
+        <LinkParameter id="mov1#hym99#page111#apu197#ln35k#par161k" name="OID" source="mov1#hym99#page111#apu197#ap159k" target="mov1#hym99#page111#enu18k#fld94k_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln35k#par98c" name="Tipo de persona.Tipo de persona [Case Values]_Tipo de persona" source="mov1#hym99#page111#apu197#ap160k_values" target="mov1#hym99#page111#enu18k#fld84c#slot22c"/>
+      </Link>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap160k" name="Tipo de persona.Tipo de persona" bpm:uuid="IJX8MDNU_3Y9G0T/IJ4NRS8E_3O5"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap162k" name="Establecimiento.OID" bpm:uuid="IJX8MDNU_C3F3N2"/>
+      <Link id="mov1#hym99#page111#apu197#ln37k" name="GetParameters" type="transport" to="mov1#hym99#page111#enu19k" gr:bendpoints="121,-266,-124,-1">
+        <LinkParameter id="mov1#hym99#page111#apu197#ln37k#par165k" name="OID" source="mov1#hym99#page111#apu197#ap162k" target="mov1#hym99#page111#enu19k#fld95k_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln37k#par169k" name="Clave de giro" source="mov1#hym99#page111#apu197#ap164k" target="mov1#hym99#page111#enu19k#fld96k_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln37k#par170k" name="Denominaci&#243;n comercial" source="mov1#hym99#page111#apu197#ap165k" target="mov1#hym99#page111#enu19k#fld97k_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln37k#par171k" name="Colonia" source="mov1#hym99#page111#apu197#ap166k" target="mov1#hym99#page111#enu19k#fld98k_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln37k#par172k" name="Codigo postal" source="mov1#hym99#page111#apu197#ap167k" target="mov1#hym99#page111#enu19k#fld99k_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln37k#par173k" name="Calle" source="mov1#hym99#page111#apu197#ap168k" target="mov1#hym99#page111#enu19k#fld100k_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln37k#par174k" name="Entre calle" source="mov1#hym99#page111#apu197#ap169k" target="mov1#hym99#page111#enu19k#fld101k_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln37k#par175k" name="y calle" source="mov1#hym99#page111#apu197#ap170k" target="mov1#hym99#page111#enu19k#fld102k_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln37k#par176k" name="Numero exterior" source="mov1#hym99#page111#apu197#ap171k" target="mov1#hym99#page111#enu19k#fld103k_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln37k#par177k" name="Numero interior" source="mov1#hym99#page111#apu197#ap172k" target="mov1#hym99#page111#enu19k#fld104k_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln37k#par178k" name="Inversion aproximada" source="mov1#hym99#page111#apu197#ap173k" target="mov1#hym99#page111#enu19k#fld105k_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln37k#par179k" name="Numero de empleados" source="mov1#hym99#page111#apu197#ap174k" target="mov1#hym99#page111#enu19k#fld106k_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln37k#par180k" name="Inicio de operaciones" source="mov1#hym99#page111#apu197#ap175k" target="mov1#hym99#page111#enu19k#fld107k_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln37k#par181k" name="Superficie m2 del establecimiento" source="mov1#hym99#page111#apu197#ap176k" target="mov1#hym99#page111#enu19k#fld108k_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln37k#par184k" name="Renta" source="mov1#hym99#page111#apu197#ap178k" target="mov1#hym99#page111#enu19k#fld109k_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln37k#par187k" name="Observaciones" source="mov1#hym99#page111#apu197#ap180k" target="mov1#hym99#page111#enu19k#fld110k_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln37k#par130c" name="Establecimiento.Actividad o giro [Case Values]_Actividad o giro" source="mov1#hym99#page111#apu197#ap163k_values" target="mov1#hym99#page111#enu19k#fld85c#slot23c"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln37k#par135c" name="Establecimiento.Local  [Case Values]_Local [values]" source="mov1#hym99#page111#apu197#ap177k_values" target="mov1#hym99#page111#enu19k#fld91c#slot24c"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln37k#par137c" name="Establecimiento.Estacionamiento  [Case Values]_Estacionamiento [values]" source="mov1#hym99#page111#apu197#ap179k_values" target="mov1#hym99#page111#enu19k#fld92c#slot25c"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln37k#par165c" name="Establecimiento.Construccion_Construccion" source="mov1#hym99#page111#apu197#ap114c" target="mov1#hym99#page111#enu19k#fld88c_slot"/>
+        <LinkParameter id="mov1#hym99#page111#apu197#ln37k#par166c" name="Establecimiento.Numero de cajones_Numero de cajones" source="mov1#hym99#page111#apu197#ap117c" target="mov1#hym99#page111#enu19k#fld89c_slot"/>
+      </Link>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap163k" name="Establecimiento.Actividad o giro" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NWJNW_1PP"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap164k" name="Establecimiento.Clave de giro" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NWMA2_7EC"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap165k" name="Establecimiento.Denominaci&#243;n comercial" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NWQ4T_19U"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap166k" name="Establecimiento.Colonia" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NWTK1_7NY"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap167k" name="Establecimiento.Codigo postal" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NWVXR_535"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap168k" name="Establecimiento.Calle" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NYIVS_5C"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap169k" name="Establecimiento.Entre calle" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NYLD3_181"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap170k" name="Establecimiento.y calle" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NYNUU_2A7"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap171k" name="Establecimiento.Numero exterior" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NYQFM_2RR"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap172k" name="Establecimiento.Numero interior" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NYSN8_33L"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap173k" name="Establecimiento.Inversion aproximada" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NYV38_6LU"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap174k" name="Establecimiento.Numero de empleados" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NYXYG_2IR"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap175k" name="Establecimiento.Inicio de operaciones" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NZ02P_6KY"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap176k" name="Establecimiento.Superficie m2 del establecimiento" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NZ2C7_5D1"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap177k" name="Establecimiento.Local " bpm:uuid="IJX8MDNU_C3F3N2/IJ4NZ4V0_17Q"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap178k" name="Establecimiento.Renta" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NZ75I_4A6"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap179k" name="Establecimiento.Estacionamiento " bpm:uuid="IJX8MDNU_C3F3N2/IJ4NZ9O9_60U"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap180k" name="Establecimiento.Observaciones" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NZBUH_4S3"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap217k" name="Requisitos.Carta poder (en caso de no ser el propietario)" bpm:uuid="IJX8MDNU_2V7YM1/IH8UPD9X_7N9"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap117c" name="Establecimiento.Numero de cajones" bpm:uuid="IJ4UT20G_6WH.IJX8MDNU_C3F3N2/IM1MQDAI_6JH"/>
+      <ActivityParameter id="mov1#hym99#page111#apu197#ap114c" name="Establecimiento.Construccion" bpm:uuid="IJ4UT20G_6WH.IJX8MDNU_C3F3N2/IM1MHU4W_500"/>
+    </ActivityParametersUnit>
+    <EntryUnit id="mov1#hym99#page111#enu671" name="Predial" bpm:uuid="IJX8MDNU_Q9KI9L" gr:x="295" gr:y="225">
+      <Link id="mov1#hym99#page111#enu671#ln1573" name="Parameters" type="transport" automaticCoupling="false" to="mov1#hym99#apu196" validate="true">
+        <LinkParameter id="mov1#hym99#page111#enu671#ln1573#par4956" name="Predial.OID" source="mov1#hym99#page111#enu671#fld2812" target="mov1#hym99#apu196#ap4632"/>
+      </Link>
+      <Field id="mov1#hym99#page111#enu671#fld2812" name="OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJX8MDNU_Q9KI9L"/>
+      <Field id="mov1#hym99#page111#enu671#fld2813" name="Cuenta predial" type="string" preloaded="true" modifiable="false" bpm:uuid="IJX8MDNU_Q9KI9L/IH8L34LF_7LX"/>
+    </EntryUnit>
+    <EntryUnit id="mov1#hym99#page111#enu672" name="Control" bpm:uuid="IJX8MDNU_HIRBIO" gr:x="295" gr:y="315">
+      <Link id="mov1#hym99#page111#enu672#ln1575" name="Parameters" type="transport" automaticCoupling="false" to="mov1#hym99#apu196" validate="true">
+        <LinkParameter id="mov1#hym99#page111#enu672#ln1575#par4959" name="Control.OID" source="mov1#hym99#page111#enu672#fld2814" target="mov1#hym99#apu196#ap4635"/>
+      </Link>
+      <Field id="mov1#hym99#page111#enu672#fld2814" name="OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJX8MDNU_HIRBIO"/>
+      <Field id="mov1#hym99#page111#enu672#fld2815" name="Folio de ingreso" type="string" preloaded="true" modifiable="false" bpm:uuid="IJX8MDNU_HIRBIO/IH8KZUZV_14D"/>
+      <Field id="mov1#hym99#page111#enu672#fld2816" name="Folio de control" type="string" preloaded="true" modifiable="false" bpm:uuid="IJX8MDNU_HIRBIO/IH8L0CS5_XQ"/>
+    </EntryUnit>
+    <EntryUnit id="mov1#hym99#page111#enu673" name="Datos del solicitante" bpm:uuid="IJX8MDNU_GA60O3" gr:x="260" gr:y="405">
+      <Link id="mov1#hym99#page111#enu673#ln1577" name="Parameters" type="transport" automaticCoupling="false" to="mov1#hym99#apu196" validate="true">
+        <LinkParameter id="mov1#hym99#page111#enu673#ln1577#par4963" name="Datos del solicitante.OID" source="mov1#hym99#page111#enu673#fld2817" target="mov1#hym99#apu196#ap4639"/>
+      </Link>
+      <Field id="mov1#hym99#page111#enu673#fld2817" name="OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJX8MDNU_GA60O3"/>
+      <SelectionField id="mov1#hym99#page111#enu673#sfld239" name="Tipo de interesado    " type="string" bpm:uuid="IJX8MDNU_GA60O3/IH8L8H4V_5Z6">
+        <Slot id="mov1#hym99#page111#enu673#sfld239#slot239" name="values" label="true" output="true"/>
+      </SelectionField>
+      <Field id="mov1#hym99#page111#enu673#fld2818" name="Primer apellido" type="string" preloaded="true" modifiable="false" bpm:uuid="IJX8MDNU_GA60O3/IH8L8H9B_7DP"/>
+      <Field id="mov1#hym99#page111#enu673#fld2819" name="Segundo apellido" type="string" preloaded="true" modifiable="false" bpm:uuid="IJX8MDNU_GA60O3/IH8L8HEF_YU"/>
+      <Field id="mov1#hym99#page111#enu673#fld2820" name="Nombres(s)" type="string" preloaded="true" modifiable="false" bpm:uuid="IJX8MDNU_GA60O3/IH8L8HJ3_4ZC"/>
+      <Field id="mov1#hym99#page111#enu673#fld2821" name="RFC" type="string" preloaded="true" modifiable="false" bpm:uuid="IJX8MDNU_GA60O3/IH8L8HNZ_PT"/>
+      <Field id="mov1#hym99#page111#enu673#fld2822" name="Tel&#233;fono particular" type="string" preloaded="true" modifiable="false" bpm:uuid="IJX8MDNU_GA60O3/IH8L8HSM_D1"/>
+      <Field id="mov1#hym99#page111#enu673#fld2823" name="Tel&#233;fono celular" type="string" preloaded="true" modifiable="false" bpm:uuid="IJX8MDNU_GA60O3/IH8L8HZJ_4UA"/>
+      <Field id="mov1#hym99#page111#enu673#fld2824" name="Correo electr&#243;nico" type="string" preloaded="true" modifiable="false" bpm:uuid="IJX8MDNU_GA60O3/IH8L8I9R_5RB"/>
+    </EntryUnit>
+    <EntryUnit id="mov1#hym99#page111#enu674" name="Requisitos" bpm:uuid="IJX8MDNU_2V7YM1" gr:x="290" gr:y="490">
+      <Link id="mov1#hym99#page111#enu674#ln1579" name="Parameters" type="transport" automaticCoupling="false" to="mov1#hym99#apu196" validate="true">
+        <LinkParameter id="mov1#hym99#page111#enu674#ln1579#par4974" name="Requisitos.OID" source="mov1#hym99#page111#enu674#fld2825" target="mov1#hym99#apu196#ap4649"/>
+      </Link>
+      <Field id="mov1#hym99#page111#enu674#fld2825" name="OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJX8MDNU_2V7YM1"/>
+      <Field id="mov1#hym99#page111#enu674#fld2826" name="Identificacion oficial" type="blob" preloaded="true" modifiable="false" bpm:uuid="IJX8MDNU_2V7YM1/IH8LDZLQ_3R7"/>
+      <Field id="mov1#hym99#page111#enu674#fld2827" name="Acta constitutiva (en caso de ser personal moral)" type="blob" preloaded="true" modifiable="false" bpm:uuid="IJX8MDNU_2V7YM1/IH8Y4ETX_PC"/>
+      <Field id="mov1#hym99#page111#enu674#fld2828" name="Comprobante domicilio del comercio" type="blob" preloaded="true" modifiable="false" bpm:uuid="IJX8MDNU_2V7YM1/IK08XI5T_3PA"/>
+      <SelectionField id="mov1#hym99#page111#enu674#sfld240" name="Tipo identificacion oficial   " type="string" bpm:uuid="IJX8MDNU_2V7YM1/IH8LDZH0_1KE">
+        <Slot id="mov1#hym99#page111#enu674#sfld240#slot240" name="values" label="true" output="true"/>
+      </SelectionField>
+      <Field id="mov1#hym99#page111#enu674#fld133k" name="Carta poder (en caso de no ser el propietario)" type="blob" preloaded="true" modifiable="false" bpm:uuid="IJX8MDNU_2V7YM1/IH8UPD9X_7N9"/>
+    </EntryUnit>
+    <EntryUnit id="mov1#hym99#page111#enu675" name="Expediente electronico" bpm:uuid="IJX8MDNU_I679HV" gr:x="255" gr:y="580">
+      <Link id="mov1#hym99#page111#enu675#ln1581" name="Parameters" type="transport" automaticCoupling="false" to="mov1#hym99#apu196" validate="true">
+        <LinkParameter id="mov1#hym99#page111#enu675#ln1581#par4981" name="Expediente electronico.OID" source="mov1#hym99#page111#enu675#fld2829" target="mov1#hym99#apu196#ap4655"/>
+      </Link>
+      <Field id="mov1#hym99#page111#enu675#fld2829" name="OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJX8MDNU_I679HV"/>
+      <Field id="mov1#hym99#page111#enu675#fld2830" name="Fotografia externa" type="blob" preloaded="true" modifiable="false" bpm:uuid="IJX8MDNU_I679HV/IJ4QVOMZ_4OE"/>
+      <Field id="mov1#hym99#page111#enu675#fld2831" name="Fotografia interna" type="blob" preloaded="true" modifiable="false" bpm:uuid="IJX8MDNU_I679HV/IJ4QVMH7_6FU"/>
+      <Field id="mov1#hym99#page111#enu675#fld2832" name="Constancia primeros auxilios en formato DC3" type="blob" preloaded="true" modifiable="false" bpm:uuid="IJX8MDNU_I679HV/IJ4QWHJK_8I"/>
+      <Field id="mov1#hym99#page111#enu675#fld2833" name="Croquis" type="blob" preloaded="true" modifiable="false" bpm:uuid="IJX8MDNU_I679HV/IJ4QWALV_3WN"/>
+      <Field id="mov1#hym99#page111#enu675#fld2834" name="Aviso de salubridad (en caso de que aplique)" type="blob" preloaded="true" modifiable="false" bpm:uuid="IJX8MDNU_I679HV/IJ4QX8XI_3T2"/>
+      <Field id="mov1#hym99#page111#enu675#fld2835" name="Comprobante domicilio (no mayor a tres meses)" type="blob" preloaded="true" modifiable="false" bpm:uuid="IJX8MDNU_I679HV/IJ4QV4UX_1MM"/>
+    </EntryUnit>
+    <EntryUnit id="mov1#hym99#page111#enu676" name="Validaciones" bpm:uuid="IJX8MDNU_S4N24C" gr:x="275" gr:y="670">
+      <Link id="mov1#hym99#page111#enu676#ln1583" name="Parameters" type="transport" automaticCoupling="false" to="mov1#hym99#apu196" validate="true">
+        <LinkParameter id="mov1#hym99#page111#enu676#ln1583#par4989" name="Validaciones.OID" source="mov1#hym99#page111#enu676#fld2836" target="mov1#hym99#apu196#ap4663"/>
+        <LinkParameter id="mov1#hym99#page111#enu676#ln1583#par4991" name="Validaciones.&#191;El uso de suelo es compatible? " source="mov1#hym99#page111#enu676#sfld241" target="mov1#hym99#apu196#ap4665"/>
+        <LinkParameter id="mov1#hym99#page111#enu676#ln1583#par4994" name="Validaciones.&#191;Esta completa la informacion? " source="mov1#hym99#page111#enu676#sfld242" target="mov1#hym99#apu196#ap4667"/>
+        <LinkParameter id="mov1#hym99#page111#enu676#ln1583#par4997" name="Validaciones.Observaciones" source="mov1#hym99#page111#enu676#fld2837" target="mov1#hym99#apu196#ap4669"/>
+      </Link>
+      <Field id="mov1#hym99#page111#enu676#fld2836" name="OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJX8MDNU_S4N24C"/>
+      <SelectionField id="mov1#hym99#page111#enu676#sfld241" name="&#191;El uso de suelo es compatible? " type="string" bpm:uuid="IJX8MDNU_S4N24C/IH8UZ174_2WV">
+        <Slot id="mov1#hym99#page111#enu676#sfld241#slot241" name="values" label="true" output="true"/>
+        <VRules>
+          <MandatoryValidationRule id="mov1#hym99#page111#enu676#sfld241#mnd647" name="required"/>
+        </VRules>
+      </SelectionField>
+      <SelectionField id="mov1#hym99#page111#enu676#sfld242" name="&#191;Esta completa la informacion? " type="string" bpm:uuid="IJ4UT20G_6WH.IJX8MDNU_S4N24C/IH8LL99N_341">
+        <Slot id="mov1#hym99#page111#enu676#sfld242#slot242" name="values" label="true" output="true"/>
+        <VRules>
+          <MandatoryValidationRule id="mov1#hym99#page111#enu676#sfld242#mnd648" name="required"/>
+        </VRules>
+      </SelectionField>
+      <Field id="mov1#hym99#page111#enu676#fld2837" name="Observaciones" type="text" preloaded="true" modifiable="true" bpm:uuid="IJX8MDNU_S4N24C/IH8LLT4Q_5TC"/>
+    </EntryUnit>
+    <EntryUnit id="mov1#hym99#page111#enu677" name="Buttons" gr:x="450" gr:y="720" linkOrder="mov1#hym99#page111#enu677#ln1584 mov1#hym99#page111#enu677#ln1585 mov1#hym99#page111#enu677#ln1586">
+      <Link id="mov1#hym99#page111#enu677#ln1584" name="Finish" type="normal" validate="true" automaticCoupling="false" to="mov1#hym99#apu196"/>
+      <Link id="mov1#hym99#page111#enu677#ln1585" name="Save and Work Later" type="normal" validate="false" automaticCoupling="false" to="mov1#hym99#apu196" gr:bendpoints="164,-32,-64,96"/>
+      <Link id="mov1#hym99#page111#enu677#ln1586" name="Cancel" type="normal" validate="false" automaticCoupling="false" to="mov1#hym99#pu313"/>
+    </EntryUnit>
+    <EntryUnit id="mov1#hym99#page111#enu18k" name="Tipo de persona" bpm:uuid="IJX8MDNU_3Y9G0T" gr:x="270" gr:y="140">
+      <Field id="mov1#hym99#page111#enu18k#fld94k" name="Tipo de persona.OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJX8MDNU_3Y9G0T"/>
+      <Link id="mov1#hym99#page111#enu18k#ln36k" name="SetParameters" type="transport" automaticCoupling="false" to="mov1#hym99#apu196">
+        <LinkParameter id="mov1#hym99#page111#enu18k#ln36k#par162k" name="OID" source="mov1#hym99#page111#enu18k#fld94k" target="mov1#hym99#apu196#ap158k"/>
+      </Link>
+      <Field id="mov1#hym99#page111#enu18k#fld84c" type="string" modifiable="false" name="Tipo de persona" bpm:uuid="IJX8MDNU_3Y9G0T/IJ4NRS8E_3O5" preloaded="true">
+        <Slot id="mov1#hym99#page111#enu18k#fld84c#slot22c" label="true" output="true" name="values"/>
+      </Field>
+    </EntryUnit>
+    <EntryUnit id="mov1#hym99#page111#enu19k" name="Establecimiento" bpm:uuid="IJX8MDNU_C3F3N2" gr:x="270" gr:y="45">
+      <Field id="mov1#hym99#page111#enu19k#fld95k" name="Establecimiento.OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJX8MDNU_C3F3N2"/>
+      <Link id="mov1#hym99#page111#enu19k#ln38k" name="SetParameters" type="transport" automaticCoupling="false" to="mov1#hym99#apu196">
+        <LinkParameter id="mov1#hym99#page111#enu19k#ln38k#par166k" name="OID" source="mov1#hym99#page111#enu19k#fld95k" target="mov1#hym99#apu196#ap161k"/>
+      </Link>
+      <Field id="mov1#hym99#page111#enu19k#fld96k" name="Clave de giro" type="string" preloaded="true" modifiable="false" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NWMA2_7EC"/>
+      <Field id="mov1#hym99#page111#enu19k#fld97k" name="Denominaci&#243;n comercial" type="string" preloaded="true" modifiable="false" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NWQ4T_19U"/>
+      <Field id="mov1#hym99#page111#enu19k#fld98k" name="Colonia" type="string" preloaded="true" modifiable="false" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NWTK1_7NY"/>
+      <Field id="mov1#hym99#page111#enu19k#fld99k" name="Codigo postal" type="string" preloaded="true" modifiable="false" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NWVXR_535"/>
+      <Field id="mov1#hym99#page111#enu19k#fld100k" name="Calle" type="string" preloaded="true" modifiable="false" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NYIVS_5C"/>
+      <Field id="mov1#hym99#page111#enu19k#fld101k" name="Entre calle" type="string" preloaded="true" modifiable="false" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NYLD3_181"/>
+      <Field id="mov1#hym99#page111#enu19k#fld102k" name="y calle" type="string" preloaded="true" modifiable="false" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NYNUU_2A7"/>
+      <Field id="mov1#hym99#page111#enu19k#fld103k" name="Numero exterior" type="string" preloaded="true" modifiable="false" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NYQFM_2RR"/>
+      <Field id="mov1#hym99#page111#enu19k#fld104k" name="Numero interior" type="string" preloaded="true" modifiable="false" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NYSN8_33L"/>
+      <Field id="mov1#hym99#page111#enu19k#fld105k" name="Inversion aproximada" type="string" preloaded="true" modifiable="false" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NYV38_6LU"/>
+      <Field id="mov1#hym99#page111#enu19k#fld106k" name="Numero de empleados" type="string" preloaded="true" modifiable="false" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NYXYG_2IR"/>
+      <Field id="mov1#hym99#page111#enu19k#fld107k" name="Inicio de operaciones" type="date" preloaded="true" modifiable="false" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NZ02P_6KY"/>
+      <Field id="mov1#hym99#page111#enu19k#fld108k" name="Superficie m2 del establecimiento" type="string" preloaded="true" modifiable="false" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NZ2C7_5D1"/>
+      <Field id="mov1#hym99#page111#enu19k#fld109k" name="Renta" type="string" preloaded="true" modifiable="false" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NZ75I_4A6"/>
+      <Field id="mov1#hym99#page111#enu19k#fld110k" name="Observaciones" type="text" preloaded="true" modifiable="false" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NZBUH_4S3"/>
+      <Field id="mov1#hym99#page111#enu19k#fld85c" type="string" modifiable="false" name="Actividad o giro" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NWJNW_1PP" preloaded="true">
+        <Slot id="mov1#hym99#page111#enu19k#fld85c#slot23c" label="true" output="true" name="values"/>
+      </Field>
+      <Field id="mov1#hym99#page111#enu19k#fld88c" name="Construccion" type="string" modifiable="false" preloaded="true" bpm:uuid="IJ4UT20G_6WH.IJX8MDNU_C3F3N2/IM1MHU4W_500"/>
+      <Field id="mov1#hym99#page111#enu19k#fld89c" name="Numero de cajones" type="integer" modifiable="false" preloaded="true" bpm:uuid="IJ4UT20G_6WH.IJX8MDNU_C3F3N2/IM1MQDAI_6JH"/>
+      <Field id="mov1#hym99#page111#enu19k#fld91c" type="string" modifiable="false" name="Local " bpm:uuid="IJX8MDNU_C3F3N2/IJ4NZ4V0_17Q" preloaded="true">
+        <Slot id="mov1#hym99#page111#enu19k#fld91c#slot24c" label="true" output="true" name="values"/>
+      </Field>
+      <Field id="mov1#hym99#page111#enu19k#fld92c" type="string" modifiable="false" name="Estacionamiento " bpm:uuid="IJX8MDNU_C3F3N2/IJ4NZ9O9_60U" preloaded="true">
+        <Slot id="mov1#hym99#page111#enu19k#fld92c#slot25c" label="true" output="true" name="values"/>
+      </Field>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12" label="Predial" layout:cellLayout="Print Frame">
+        <layout:Unit unitId="mov1#hym99#page111#enu671">
+          <layout:Field field="mov1#hym99#page111#enu671#fld2813" layout:fieldLayout="WRDefault/FieldValue"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell label="Control" layout:cellLayout="Print Frame" colspan="12">
+        <layout:Unit unitId="mov1#hym99#page111#enu672">
+          <layout:Field field="mov1#hym99#page111#enu672#fld2815" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym99#page111#enu672#fld2816" layout:fieldLayout="WRDefault/FieldValue"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12" label="Tipo de persona" layout:cellLayout="Print Frame">
+        <layout:Unit unitId="mov1#hym99#page111#enu18k" manualFields="true" manualFieldOrder="mov1#hym99#page111#enu18k#fld84c">
+          <layout:Field field="mov1#hym99#page111#enu18k#fld84c"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell label="Datos del solicitante" layout:cellLayout="Print Frame" colspan="12">
+        <layout:Unit unitId="mov1#hym99#page111#enu673">
+          <layout:Field field="mov1#hym99#page111#enu673#sfld239" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym99#page111#enu673#fld2818" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym99#page111#enu673#fld2819" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym99#page111#enu673#fld2820" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym99#page111#enu673#fld2821" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym99#page111#enu673#fld2822" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym99#page111#enu673#fld2823" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym99#page111#enu673#fld2824" layout:fieldLayout="WRDefault/FieldValue"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12" label="Establecimiento" layout:cellLayout="Print Frame">
+        <layout:Unit unitId="mov1#hym99#page111#enu19k" manualFields="true" manualFieldOrder="mov1#hym99#page111#enu19k#fld85c mov1#hym99#page111#enu19k#fld96k mov1#hym99#page111#enu19k#fld97k mov1#hym99#page111#enu19k#fld98k mov1#hym99#page111#enu19k#fld99k mov1#hym99#page111#enu19k#fld100k mov1#hym99#page111#enu19k#fld101k mov1#hym99#page111#enu19k#fld102k mov1#hym99#page111#enu19k#fld103k mov1#hym99#page111#enu19k#fld104k mov1#hym99#page111#enu19k#fld105k mov1#hym99#page111#enu19k#fld106k mov1#hym99#page111#enu19k#fld107k mov1#hym99#page111#enu19k#fld108k mov1#hym99#page111#enu19k#fld88c mov1#hym99#page111#enu19k#fld91c mov1#hym99#page111#enu19k#fld109k mov1#hym99#page111#enu19k#fld92c mov1#hym99#page111#enu19k#fld89c mov1#hym99#page111#enu19k#fld110k">
+          <layout:Field field="mov1#hym99#page111#enu19k#fld85c"/>
+          <layout:Field field="mov1#hym99#page111#enu19k#fld96k"/>
+          <layout:Field field="mov1#hym99#page111#enu19k#fld97k"/>
+          <layout:Field field="mov1#hym99#page111#enu19k#fld98k"/>
+          <layout:Field field="mov1#hym99#page111#enu19k#fld99k"/>
+          <layout:Field field="mov1#hym99#page111#enu19k#fld100k"/>
+          <layout:Field field="mov1#hym99#page111#enu19k#fld101k"/>
+          <layout:Field field="mov1#hym99#page111#enu19k#fld102k"/>
+          <layout:Field field="mov1#hym99#page111#enu19k#fld103k"/>
+          <layout:Field field="mov1#hym99#page111#enu19k#fld104k"/>
+          <layout:Field field="mov1#hym99#page111#enu19k#fld105k"/>
+          <layout:Field field="mov1#hym99#page111#enu19k#fld106k"/>
+          <layout:Field field="mov1#hym99#page111#enu19k#fld107k"/>
+          <layout:Field field="mov1#hym99#page111#enu19k#fld108k"/>
+          <layout:Field field="mov1#hym99#page111#enu19k#fld88c"/>
+          <layout:Field field="mov1#hym99#page111#enu19k#fld91c"/>
+          <layout:Field field="mov1#hym99#page111#enu19k#fld109k"/>
+          <layout:Field field="mov1#hym99#page111#enu19k#fld92c"/>
+          <layout:Field field="mov1#hym99#page111#enu19k#fld89c"/>
+          <layout:Field field="mov1#hym99#page111#enu19k#fld110k"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell label="Requisitos" layout:cellLayout="Print Frame" colspan="12">
+        <layout:Unit unitId="mov1#hym99#page111#enu674" manualFieldOrder="mov1#hym99#page111#enu674#sfld240 mov1#hym99#page111#enu674#fld2826 mov1#hym99#page111#enu674#fld2828 mov1#hym99#page111#enu674#fld2827" manualFields="true">
+          <layout:Field field="mov1#hym99#page111#enu674#sfld240" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym99#page111#enu674#fld2826" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym99#page111#enu674#fld2828" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym99#page111#enu674#fld2827" layout:fieldLayout="WRDefault/FieldValue"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell label="Expediente electronico" layout:cellLayout="Print Frame" colspan="12">
+        <layout:Unit unitId="mov1#hym99#page111#enu675" manualFieldOrder="mov1#hym99#page111#enu675#fld2831 mov1#hym99#page111#enu675#fld2830 mov1#hym99#page111#enu675#fld2832 mov1#hym99#page111#enu675#fld2833 mov1#hym99#page111#enu675#fld2834" manualFields="true">
+          <layout:Field field="mov1#hym99#page111#enu675#fld2831" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym99#page111#enu675#fld2830" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym99#page111#enu675#fld2832" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym99#page111#enu675#fld2833" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym99#page111#enu675#fld2834" layout:fieldLayout="WRDefault/FieldValue"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell label="Validaciones" layout:cellLayout="Print Frame" colspan="12">
+        <layout:Unit unitId="mov1#hym99#page111#enu676" manualFieldOrder="mov1#hym99#page111#enu676#sfld242 mov1#hym99#page111#enu676#fld2837 mov1#hym99#page111#enu676#sfld241" manualFields="true">
+          <layout:Field field="mov1#hym99#page111#enu676#sfld241"/>
+          <layout:Field field="mov1#hym99#page111#enu676#sfld242"/>
+          <layout:Field field="mov1#hym99#page111#enu676#fld2837"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12" label="Buttons" layout:cellLayout="Print Frame">
+        <layout:Unit unitId="mov1#hym99#page111#enu677" layout:frameLayout="None">
+          <layout:Link link="mov1#hym99#page111#enu677#ln1584">
+            <layout:LayoutParameter name="confirmation" value="true" type="link"/>
+            <layout:LayoutParameter name="confirm-message" value="Confirm Finish" type="link"/>
+          </layout:Link>
+          <layout:Link link="mov1#hym99#page111#enu677#ln1585"/>
+          <layout:Link link="mov1#hym99#page111#enu677#ln1586"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <layout:LayoutParameter name="auto-refresh" value="true" type="page"/>
+</Page>

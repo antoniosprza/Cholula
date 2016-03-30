@@ -1,0 +1,17 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym17" gr:x="890" gr:y="530" name="Aval&#250;o final - Usuario - 10. Descargar aval&#250;o" bpm:moduleType="activity" bpm:uuids="IJWGRZ38_5F5.IDQY65RC_AVBH16" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym17#icu16" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym17#icu16#oln63" name="OKLink" automaticCoupling="true" to="mov1#hym17#page29"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym17#pu65" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym17#pu66" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym17#pu67" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym17#apu32" name="Set Parameters" gr:x="560" gr:y="82">
+      <ActivityParameter id="mov1#hym17#apu32#ap673" name="Predial.OID" bpm:uuid="IJWJZXTU_9CK5Z4"/>
+      <ActivityParameter id="mov1#hym17#apu32#ap676" name="Control.OID" bpm:uuid="IJWJMRH2_6NIAXA"/>
+      <ActivityParameter id="mov1#hym17#apu32#ap680" name="Expediente electronico.OID" bpm:uuid="IJWJMRH2_EIVVE6"/>
+      <OKLink id="mov1#hym17#apu32#oln64" name="OKLink" automaticCoupling="false" to="mov1#hym17#pu65" codeRef="mov1#hym17#page29#enu102#ln312"/>
+      <OKLink id="mov1#hym17#apu32#oln65" name="OKLink" automaticCoupling="false" to="mov1#hym17#pu66" codeRef="mov1#hym17#page29#enu102#ln313"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

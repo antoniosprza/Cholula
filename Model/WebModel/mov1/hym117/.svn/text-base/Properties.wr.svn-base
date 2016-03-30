@@ -1,0 +1,24 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym117" gr:x="9320" gr:y="640" name="Terminaci&#243;n de Obra - Departamento de ecolog&#237;a, imagen y equipamiento urbano - 6.2 Elaborar constancia de cumplimiento o incumplimiento del informe ecol&#243;gico" bpm:moduleType="activity" bpm:uuids="IH8R3ULM_4ER.ICGQHUZN_98NNK" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym117#icu116" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym117#icu116#oln363" name="OKLink" automaticCoupling="true" to="mov1#hym117#page129"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym117#pu365" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym117#pu366" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym117#pu367" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym117#apu232" name="Set Parameters" gr:x="560" gr:y="40">
+      <ActivityParameter id="mov1#hym117#apu232#ap5315" name="Predial.OID" bpm:uuid="IJXG7WP6_NSVXYD"/>
+      <ActivityParameter id="mov1#hym117#apu232#ap5318" name="Control.OID" bpm:uuid="IJXG7WP6_57UCWL"/>
+      <ActivityParameter id="mov1#hym117#apu232#ap5322" name="Informe ecologico preventiov.OID" bpm:uuid="IJXG7WP7_DBCMY8"/>
+      <ActivityParameter id="mov1#hym117#apu232#ap5332" name="Antecendetes.OID" bpm:uuid="IJXG7WP6_WFE9FK"/>
+      <ActivityParameter id="mov1#hym117#apu232#ap5338" name="Dictaminacion del informe ecologico.OID" bpm:uuid="IK0DWBR4_LYOE78"/>
+      <ActivityParameter id="mov1#hym117#apu232#ap5340" name="Dictaminacion del informe ecologico.Nombre del proyecto" bpm:uuid="IK0DWBR4_LYOE78/IK0DU5QA_2Y1"/>
+      <ActivityParameter id="mov1#hym117#apu232#ap5342" name="Dictaminacion del informe ecologico.Resolucion" bpm:uuid="IK0DWBR4_LYOE78/IK0DUCWP_C0"/>
+      <ActivityParameter id="mov1#hym117#apu232#ap5344" name="Dictaminacion del informe ecologico.Acciones faltantes" bpm:uuid="IK0DWBR4_LYOE78/IK0DUHVT_7L7"/>
+      <ActivityParameter id="mov1#hym117#apu232#ap5346" name="Expediente electronico.OID" bpm:uuid="IJXG7WP6_92N7A0"/>
+      <ActivityParameter id="mov1#hym117#apu232#ap5348" name="Expediente electronico.Constancia de cumplimiento de ecologia" bpm:uuid="IJXG7WP6_92N7A0/IH8T37XT_6R7"/>
+      <OKLink id="mov1#hym117#apu232#oln364" name="OKLink" automaticCoupling="false" to="mov1#hym117#pu365" codeRef="mov1#hym117#page129#enu797#ln1856"/>
+      <OKLink id="mov1#hym117#apu232#oln365" name="OKLink" automaticCoupling="false" to="mov1#hym117#pu366" codeRef="mov1#hym117#page129#enu797#ln1857"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

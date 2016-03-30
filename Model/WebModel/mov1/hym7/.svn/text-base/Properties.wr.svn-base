@@ -1,0 +1,50 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym7" gr:x="10" gr:y="115" name="Alineamiento y N&#250;mero oficial - Analista de alineamiento y n&#250;mero oficial - 2. Revisar documentaci&#243;n" bpm:moduleType="activity" bpm:uuids="IH8MUGYN_75W.ICGFR5ED_21OGI" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym7#icu6" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym7#icu6#oln33" name="OKLink" automaticCoupling="true" to="mov1#hym7#page19"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym7#pu35" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym7#pu36" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym7#pu37" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym7#apu12" name="Set Parameters" gr:x="560" gr:y="70">
+      <ActivityParameter id="mov1#hym7#apu12#ap182" name="Validaciones.OID" bpm:uuid="IJWJGHP3_YOW2KM"/>
+      <ActivityParameter id="mov1#hym7#apu12#ap190" name="Validaciones.Observaciones" bpm:uuid="IJWJGHP3_YOW2KM/IH8LLT4Q_5TC"/>
+      <OKLink id="mov1#hym7#apu12#oln34" name="OKLink" to="mov1#hym7#pu35" codeRef="mov1#hym7#page19#enu34#ln156"/>
+      <OKLink id="mov1#hym7#apu12#oln35" name="OKLink" automaticCoupling="false" to="mov1#hym7#pu36" codeRef="mov1#hym7#page19#enu34#ln157"/>
+      <ActivityParameter id="mov1#hym7#apu12#ap2k" name="Predial.OID" bpm:uuid="IJWJGHP3_GLTB4M"/>
+      <ActivityParameter id="mov1#hym7#apu12#ap4k" name="Predial.Cuenta predial" bpm:uuid="IJWJGHP3_GLTB4M/IH8L34LF_7LX"/>
+      <ActivityParameter id="mov1#hym7#apu12#ap6k" name="Control.OID" bpm:uuid="IJWJGHP3_TJLYLB"/>
+      <ActivityParameter id="mov1#hym7#apu12#ap8k" name="Control.Folio de ingreso" bpm:uuid="IJWJGHP3_TJLYLB/IH8KZUZV_14D"/>
+      <ActivityParameter id="mov1#hym7#apu12#ap10k" name="Control.Folio de control" bpm:uuid="IJWJGHP3_TJLYLB/IH8L0CS5_XQ"/>
+      <ActivityParameter id="mov1#hym7#apu12#ap12k" name="Datos del solicitante.OID" bpm:uuid="IJWJGHP3_1JKBXQ"/>
+      <ActivityParameter id="mov1#hym7#apu12#ap14k" name="Datos del solicitante.Tipo de interesado    " bpm:uuid="IJWJGHP3_1JKBXQ/IH8L8H4V_5Z6"/>
+      <ActivityParameter id="mov1#hym7#apu12#ap16k" name="Datos del solicitante.Primer apellido" bpm:uuid="IJWJGHP3_1JKBXQ/IH8L8H9B_7DP"/>
+      <ActivityParameter id="mov1#hym7#apu12#ap18k" name="Datos del solicitante.Segundo apellido" bpm:uuid="IJWJGHP3_1JKBXQ/IH8L8HEF_YU"/>
+      <ActivityParameter id="mov1#hym7#apu12#ap20k" name="Datos del solicitante.Nombres(s)" bpm:uuid="IJWJGHP3_1JKBXQ/IH8L8HJ3_4ZC"/>
+      <ActivityParameter id="mov1#hym7#apu12#ap22k" name="Datos del solicitante.RFC" bpm:uuid="IJWJGHP3_1JKBXQ/IH8L8HNZ_PT"/>
+      <ActivityParameter id="mov1#hym7#apu12#ap24k" name="Datos del solicitante.Tel&#233;fono particular" bpm:uuid="IJWJGHP3_1JKBXQ/IH8L8HSM_D1"/>
+      <ActivityParameter id="mov1#hym7#apu12#ap26k" name="Datos del solicitante.Tel&#233;fono celular" bpm:uuid="IJWJGHP3_1JKBXQ/IH8L8HZJ_4UA"/>
+      <ActivityParameter id="mov1#hym7#apu12#ap28k" name="Datos del solicitante.Correo electr&#243;nico" bpm:uuid="IJWJGHP3_1JKBXQ/IH8L8I9R_5RB"/>
+      <ActivityParameter id="mov1#hym7#apu12#ap30k" name="Datos del propietario.OID" bpm:uuid="IJWJGHP3_E19GWY"/>
+      <ActivityParameter id="mov1#hym7#apu12#ap32k" name="Datos del propietario.Primer apellido" bpm:uuid="IJWJGHP3_E19GWY/IH8LBLG1_2V2"/>
+      <ActivityParameter id="mov1#hym7#apu12#ap34k" name="Datos del propietario.Segundo apellido" bpm:uuid="IJWJGHP3_E19GWY/IH8LBLL5_6Q8"/>
+      <ActivityParameter id="mov1#hym7#apu12#ap36k" name="Datos del propietario.Nombres(s)" bpm:uuid="IJWJGHP3_E19GWY/IH8LBLQQ_55H"/>
+      <ActivityParameter id="mov1#hym7#apu12#ap38k" name="Datos del propietario.RFC" bpm:uuid="IJWJGHP3_E19GWY/IH8LBLW1_47V"/>
+      <ActivityParameter id="mov1#hym7#apu12#ap40k" name="Expediente electronico.OID" bpm:uuid="IJWJGHP3_EQWS64"/>
+      <ActivityParameter id="mov1#hym7#apu12#ap42k" name="Expediente electronico.Documento que acreedite la propiedad" bpm:uuid="IJWJGHP3_EQWS64/IH8LGKKQ_1C0"/>
+      <ActivityParameter id="mov1#hym7#apu12#ap44k" name="Expediente electronico.Constancia de alineamiento y numero oficial" bpm:uuid="IJWJGHP3_EQWS64/IH8NIS5R_3BX"/>
+      <ActivityParameter id="mov1#hym7#apu12#ap46k" name="Expediente electronico.Constancia de terminacion de obra de construccion" bpm:uuid="IJWJGHP3_EQWS64/IH8NJ6G6_7E4"/>
+      <ActivityParameter id="mov1#hym7#apu12#ap48k" name="Expediente electronico.Licencia de fraccionamientos" bpm:uuid="IJWJGHP3_EQWS64/IH8NJ7WW_3HE"/>
+      <ActivityParameter id="mov1#hym7#apu12#ap50k" name="Expediente electronico.Ficha informativa emitida por Desarrollo Urbano de los m2 de construccion" bpm:uuid="IJWJGHP3_EQWS64/IH8NJ8P3_2R5"/>
+      <ActivityParameter id="mov1#hym7#apu12#ap52k" name="Expediente electronico.Plano aprobado de las casas" bpm:uuid="IJWJGHP3_EQWS64/IH8NK1MT_3U1"/>
+      <ActivityParameter id="mov1#hym7#apu12#ap54k" name="Expediente electronico.Plano aprobado de fraccionamientos" bpm:uuid="IJWJGHP3_EQWS64/IH8NK5DP_3FW"/>
+      <ActivityParameter id="mov1#hym7#apu12#ap56k" name="Expediente electronico.Plano aprobado por el area de licencias" bpm:uuid="IJWJGHP3_EQWS64/IH8NK8D9_44K"/>
+      <ActivityParameter id="mov1#hym7#apu12#ap58k" name="Expediente electronico.Tabla de indivisos" bpm:uuid="IJWJGHP3_EQWS64/IH8NKBTP_5T0"/>
+      <ActivityParameter id="mov1#hym7#apu12#ap60k" name="Expediente electronico.Dictamen de C.N.A. y Proteccion Civil" bpm:uuid="IJWJGHP3_EQWS64/IH8NKJE4_1X8"/>
+      <ActivityParameter id="mov1#hym7#apu12#ap62k" name="Expediente electronico.Dictamen de integracion de vialidades" bpm:uuid="IJWJGHP3_EQWS64/IH8NKRXG_4BY"/>
+      <ActivityParameter id="mov1#hym7#apu12#ap64k" name="Expediente electronico.Dictamen del INAH" bpm:uuid="IJWJGHP3_EQWS64/IH8NKY23_S2"/>
+      <ActivityParameter id="mov1#hym7#apu12#ap66k" name="Expediente electronico.Levantamiento topografico" bpm:uuid="IJWJGHP3_EQWS64/IH8NL2V7_4LS"/>
+      <ActivityParameter id="mov1#hym7#apu12#ap87c" name="Validaciones.&#191;Esta completa la informacion? " bpm:uuid="IJWJGHP3_YOW2KM/IH8LL99N_341"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

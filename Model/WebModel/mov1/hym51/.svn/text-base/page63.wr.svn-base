@@ -1,0 +1,361 @@
+<Page xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym51#page63" name="5. Realizar visita e informe de inspecci&#243;n" gr:x="10" gr:y="-5">
+  <ContentUnits>
+    <ActivityParametersUnit id="mov1#hym51#page63#apu101" name="Get Parameters" gr:x="0" gr:y="0">
+      <Link id="mov1#hym51#page63#apu101#ln794" name="Properties" type="transport" automaticCoupling="false" to="mov1#hym51#page63#enu325">
+        <LinkParameter id="mov1#hym51#page63#apu101#ln794#par2472" name="Predial.OID" source="mov1#hym51#page63#apu101#ap2287" target="mov1#hym51#page63#enu325#fld1372_slot"/>
+        <LinkParameter id="mov1#hym51#page63#apu101#ln794#par2473" name="Predial.Cuenta predial" source="mov1#hym51#page63#apu101#ap2289" target="mov1#hym51#page63#enu325#fld1373_slot"/>
+      </Link>
+      <ActivityParameter id="mov1#hym51#page63#apu101#ap2287" name="Predial.OID" bpm:uuid="IJWL2XQM_V46ZD6"/>
+      <ActivityParameter id="mov1#hym51#page63#apu101#ap2289" name="Predial.Cuenta predial" bpm:uuid="IJWL2XQM_V46ZD6/IH8L34LF_7LX"/>
+      <Link id="mov1#hym51#page63#apu101#ln796" name="Properties" type="transport" automaticCoupling="false" to="mov1#hym51#page63#enu326">
+        <LinkParameter id="mov1#hym51#page63#apu101#ln796#par2475" name="Control.OID" source="mov1#hym51#page63#apu101#ap2290" target="mov1#hym51#page63#enu326#fld1374_slot"/>
+        <LinkParameter id="mov1#hym51#page63#apu101#ln796#par2476" name="Control.Folio de ingreso" source="mov1#hym51#page63#apu101#ap2292" target="mov1#hym51#page63#enu326#fld1375_slot"/>
+        <LinkParameter id="mov1#hym51#page63#apu101#ln796#par2477" name="Control.Folio de control" source="mov1#hym51#page63#apu101#ap2293" target="mov1#hym51#page63#enu326#fld1376_slot"/>
+      </Link>
+      <ActivityParameter id="mov1#hym51#page63#apu101#ap2290" name="Control.OID" bpm:uuid="IJWL2XQL_J0GEHD"/>
+      <ActivityParameter id="mov1#hym51#page63#apu101#ap2292" name="Control.Folio de ingreso" bpm:uuid="IJWL2XQL_J0GEHD/IH8KZUZV_14D"/>
+      <ActivityParameter id="mov1#hym51#page63#apu101#ap2293" name="Control.Folio de control" bpm:uuid="IJWL2XQL_J0GEHD/IH8L0CS5_XQ"/>
+      <Link id="mov1#hym51#page63#apu101#ln798" name="Properties" type="transport" automaticCoupling="false" to="mov1#hym51#page63#enu327">
+        <LinkParameter id="mov1#hym51#page63#apu101#ln798#par2479" name="Fecha y hora de visita.OID" source="mov1#hym51#page63#apu101#ap2294" target="mov1#hym51#page63#enu327#fld1377_slot"/>
+        <LinkParameter id="mov1#hym51#page63#apu101#ln798#par2480" name="Fecha y hora de visita.Fecha y hora" source="mov1#hym51#page63#apu101#ap2296" target="mov1#hym51#page63#enu327#fld1378_slot"/>
+        <LinkParameter id="mov1#hym51#page63#apu101#ln798#par2481" name="Fecha y hora de visita.Comentarios adicionales" source="mov1#hym51#page63#apu101#ap2297" target="mov1#hym51#page63#enu327#fld1379_slot"/>
+      </Link>
+      <ActivityParameter id="mov1#hym51#page63#apu101#ap2294" name="Fecha y hora de visita.OID" bpm:uuid="IJWL2XQL_7JC5TS"/>
+      <ActivityParameter id="mov1#hym51#page63#apu101#ap2296" name="Fecha y hora de visita.Fecha y hora" bpm:uuid="IJWL2XQL_7JC5TS/IH8QVYUH_1YR"/>
+      <ActivityParameter id="mov1#hym51#page63#apu101#ap2297" name="Fecha y hora de visita.Comentarios adicionales" bpm:uuid="IJWL2XQL_7JC5TS/IH8QW68P_3AE"/>
+      <Link id="mov1#hym51#page63#apu101#ln800" name="Properties" type="transport" automaticCoupling="false" to="mov1#hym51#page63#enu328">
+        <LinkParameter id="mov1#hym51#page63#apu101#ln800#par2483" name="Criterios de inspeccion.OID" source="mov1#hym51#page63#apu101#ap2298" target="mov1#hym51#page63#enu328#fld1380_slot"/>
+        <LinkParameter id="mov1#hym51#page63#apu101#ln800#par2485" name="Inventario de los extintores [values]" source="mov1#hym51#page63#apu101#ap2300_values" target="mov1#hym51#page63#enu328#sfld102#slot98"/>
+        <LinkParameter id="mov1#hym51#page63#apu101#ln800#par2486" name="Inventario de los extintores " source="mov1#hym51#page63#apu101#ap2300" target="mov1#hym51#page63#enu328#sfld102_presel"/>
+        <LinkParameter id="mov1#hym51#page63#apu101#ln800#par2488" name="Croquis [values]" source="mov1#hym51#page63#apu101#ap2302_values" target="mov1#hym51#page63#enu328#sfld103#slot99"/>
+        <LinkParameter id="mov1#hym51#page63#apu101#ln800#par2489" name="Croquis " source="mov1#hym51#page63#apu101#ap2302" target="mov1#hym51#page63#enu328#sfld103_presel"/>
+        <LinkParameter id="mov1#hym51#page63#apu101#ln800#par2491" name="Criterios de inspeccion.Observaciones croquis" source="mov1#hym51#page63#apu101#ap2304" target="mov1#hym51#page63#enu328#fld1381_slot"/>
+        <LinkParameter id="mov1#hym51#page63#apu101#ln800#par2493" name="Listado del personal que labora [values]" source="mov1#hym51#page63#apu101#ap2306_values" target="mov1#hym51#page63#enu328#sfld104#slot100"/>
+        <LinkParameter id="mov1#hym51#page63#apu101#ln800#par2494" name="Listado del personal que labora " source="mov1#hym51#page63#apu101#ap2306" target="mov1#hym51#page63#enu328#sfld104_presel"/>
+        <LinkParameter id="mov1#hym51#page63#apu101#ln800#par2496" name="Criterios de inspeccion.Observaciones externos" source="mov1#hym51#page63#apu101#ap2308" target="mov1#hym51#page63#enu328#fld1382_slot"/>
+        <LinkParameter id="mov1#hym51#page63#apu101#ln800#par2498" name="Criterios de inspeccion.Observaciones extintores" source="mov1#hym51#page63#apu101#ap2310" target="mov1#hym51#page63#enu328#fld1383_slot"/>
+        <LinkParameter id="mov1#hym51#page63#apu101#ln800#par2500" name="Riesgos externos [values]" source="mov1#hym51#page63#apu101#ap2312_values" target="mov1#hym51#page63#enu328#sfld105#slot101"/>
+        <LinkParameter id="mov1#hym51#page63#apu101#ln800#par2501" name="Riesgos externos " source="mov1#hym51#page63#apu101#ap2312" target="mov1#hym51#page63#enu328#sfld105_presel"/>
+        <LinkParameter id="mov1#hym51#page63#apu101#ln800#par2503" name="Criterios de inspeccion.Observaciones personal" source="mov1#hym51#page63#apu101#ap2314" target="mov1#hym51#page63#enu328#fld1384_slot"/>
+        <LinkParameter id="mov1#hym51#page63#apu101#ln800#par2505" name="Criterios de inspeccion.Observaciones seguridad" source="mov1#hym51#page63#apu101#ap2316" target="mov1#hym51#page63#enu328#fld1385_slot"/>
+        <LinkParameter id="mov1#hym51#page63#apu101#ln800#par2507" name="Inventario de equipo de seguridad [values]" source="mov1#hym51#page63#apu101#ap2318_values" target="mov1#hym51#page63#enu328#sfld106#slot102"/>
+        <LinkParameter id="mov1#hym51#page63#apu101#ln800#par2508" name="Inventario de equipo de seguridad " source="mov1#hym51#page63#apu101#ap2318" target="mov1#hym51#page63#enu328#sfld106_presel"/>
+        <LinkParameter id="mov1#hym51#page63#apu101#ln800#par2510" name="Plano de ubicacion de la obra y colindancias a color [values]" source="mov1#hym51#page63#apu101#ap2320_values" target="mov1#hym51#page63#enu328#sfld107#slot103"/>
+        <LinkParameter id="mov1#hym51#page63#apu101#ln800#par2511" name="Plano de ubicacion de la obra y colindancias a color " source="mov1#hym51#page63#apu101#ap2320" target="mov1#hym51#page63#enu328#sfld107_presel"/>
+        <LinkParameter id="mov1#hym51#page63#apu101#ln800#par2513" name="Criterios de inspeccion.Observaciones obra y colindancias" source="mov1#hym51#page63#apu101#ap2322" target="mov1#hym51#page63#enu328#fld1386_slot"/>
+        <LinkParameter id="mov1#hym51#page63#apu101#ln800#par2515" name="Criterios de inspeccion.Observaciones se&#241;aletica" source="mov1#hym51#page63#apu101#ap2324" target="mov1#hym51#page63#enu328#fld1387_slot"/>
+        <LinkParameter id="mov1#hym51#page63#apu101#ln800#par2517" name="Plano de ubicacion y distribucion de la se&#241;aletica [values]" source="mov1#hym51#page63#apu101#ap2326_values" target="mov1#hym51#page63#enu328#sfld108#slot104"/>
+        <LinkParameter id="mov1#hym51#page63#apu101#ln800#par2518" name="Plano de ubicacion y distribucion de la se&#241;aletica " source="mov1#hym51#page63#apu101#ap2326" target="mov1#hym51#page63#enu328#sfld108_presel"/>
+        <LinkParameter id="mov1#hym51#page63#apu101#ln800#par2520" name="Criterios de inspeccion.Observaciones internos" source="mov1#hym51#page63#apu101#ap2328" target="mov1#hym51#page63#enu328#fld1388_slot"/>
+        <LinkParameter id="mov1#hym51#page63#apu101#ln800#par2522" name="Criterios de inspeccion.Datos generales " source="mov1#hym51#page63#apu101#ap2330" target="mov1#hym51#page63#enu328#fld1389_slot"/>
+        <LinkParameter id="mov1#hym51#page63#apu101#ln800#par2524" name="Riesgos internos [values]" source="mov1#hym51#page63#apu101#ap2332_values" target="mov1#hym51#page63#enu328#sfld109#slot105"/>
+        <LinkParameter id="mov1#hym51#page63#apu101#ln800#par2525" name="Riesgos internos " source="mov1#hym51#page63#apu101#ap2332" target="mov1#hym51#page63#enu328#sfld109_presel"/>
+        <LinkParameter id="mov1#hym51#page63#apu101#ln800#par2527" name="Directorio de los grupos operativos de emergencia [values]" source="mov1#hym51#page63#apu101#ap2334_values" target="mov1#hym51#page63#enu328#sfld110#slot106"/>
+        <LinkParameter id="mov1#hym51#page63#apu101#ln800#par2528" name="Directorio de los grupos operativos de emergencia " source="mov1#hym51#page63#apu101#ap2334" target="mov1#hym51#page63#enu328#sfld110_presel"/>
+        <LinkParameter id="mov1#hym51#page63#apu101#ln800#par2530" name="Criterios de inspeccion.Observaciones emergencia" source="mov1#hym51#page63#apu101#ap2336" target="mov1#hym51#page63#enu328#fld1390_slot"/>
+      </Link>
+      <ActivityParameter id="mov1#hym51#page63#apu101#ap2298" name="Criterios de inspeccion.OID" bpm:uuid="IJWL2XQM_GGM0B3"/>
+      <ActivityParameter id="mov1#hym51#page63#apu101#ap2300" name="Criterios de inspeccion.Inventario de los extintores " bpm:uuid="IJWL2XQM_GGM0B3/IH8XNRL4_3R0"/>
+      <ActivityParameter id="mov1#hym51#page63#apu101#ap2302" name="Criterios de inspeccion.Croquis " bpm:uuid="IJWL2XQM_GGM0B3/IH8XNZW8_3L0"/>
+      <ActivityParameter id="mov1#hym51#page63#apu101#ap2304" name="Criterios de inspeccion.Observaciones croquis" bpm:uuid="IJWL2XQM_GGM0B3/IH8XO31P_3AK"/>
+      <ActivityParameter id="mov1#hym51#page63#apu101#ap2306" name="Criterios de inspeccion.Listado del personal que labora " bpm:uuid="IJWL2XQM_GGM0B3/IH8XN8M6_5OB"/>
+      <ActivityParameter id="mov1#hym51#page63#apu101#ap2308" name="Criterios de inspeccion.Observaciones externos" bpm:uuid="IJWL2XQM_GGM0B3/IH8XLO2Q_36R"/>
+      <ActivityParameter id="mov1#hym51#page63#apu101#ap2310" name="Criterios de inspeccion.Observaciones extintores" bpm:uuid="IJWL2XQM_GGM0B3/IH8XNUK3_4MB"/>
+      <ActivityParameter id="mov1#hym51#page63#apu101#ap2312" name="Criterios de inspeccion.Riesgos externos " bpm:uuid="IJWL2XQM_GGM0B3/IH8XLLW0_27E"/>
+      <ActivityParameter id="mov1#hym51#page63#apu101#ap2314" name="Criterios de inspeccion.Observaciones personal" bpm:uuid="IJWL2XQM_GGM0B3/IH8XNCDO_2LY"/>
+      <ActivityParameter id="mov1#hym51#page63#apu101#ap2316" name="Criterios de inspeccion.Observaciones seguridad" bpm:uuid="IJWL2XQM_GGM0B3/IH8XNMYW_6HQ"/>
+      <ActivityParameter id="mov1#hym51#page63#apu101#ap2318" name="Criterios de inspeccion.Inventario de equipo de seguridad " bpm:uuid="IJWL2XQM_GGM0B3/IH8XNJ4H_377"/>
+      <ActivityParameter id="mov1#hym51#page63#apu101#ap2320" name="Criterios de inspeccion.Plano de ubicacion de la obra y colindancias a color " bpm:uuid="IJWL2XQM_GGM0B3/IH8XO828_D4"/>
+      <ActivityParameter id="mov1#hym51#page63#apu101#ap2322" name="Criterios de inspeccion.Observaciones obra y colindancias" bpm:uuid="IJWL2XQM_GGM0B3/IH8XOCN3_P7"/>
+      <ActivityParameter id="mov1#hym51#page63#apu101#ap2324" name="Criterios de inspeccion.Observaciones se&#241;aletica" bpm:uuid="IJWL2XQM_GGM0B3/IH8XONN0_43X"/>
+      <ActivityParameter id="mov1#hym51#page63#apu101#ap2326" name="Criterios de inspeccion.Plano de ubicacion y distribucion de la se&#241;aletica " bpm:uuid="IJWL2XQM_GGM0B3/IH8XOI3V_2HL"/>
+      <ActivityParameter id="mov1#hym51#page63#apu101#ap2328" name="Criterios de inspeccion.Observaciones internos" bpm:uuid="IJWL2XQM_GGM0B3/IH8XLJSK_1BB"/>
+      <ActivityParameter id="mov1#hym51#page63#apu101#ap2330" name="Criterios de inspeccion.Datos generales " bpm:uuid="IJWL2XQM_GGM0B3/IH8XLFK6_38Q"/>
+      <ActivityParameter id="mov1#hym51#page63#apu101#ap2332" name="Criterios de inspeccion.Riesgos internos " bpm:uuid="IJWL2XQM_GGM0B3/IH8XLHU4_71V"/>
+      <ActivityParameter id="mov1#hym51#page63#apu101#ap2334" name="Criterios de inspeccion.Directorio de los grupos operativos de emergencia " bpm:uuid="IJWL2XQM_GGM0B3/IH8XMOLP_1VO"/>
+      <ActivityParameter id="mov1#hym51#page63#apu101#ap2336" name="Criterios de inspeccion.Observaciones emergencia" bpm:uuid="IJWL2XQM_GGM0B3/IH8XMQ5Y_3VV"/>
+      <Link id="mov1#hym51#page63#apu101#ln802" name="Properties" type="transport" automaticCoupling="false" to="mov1#hym51#page63#enu329">
+        <LinkParameter id="mov1#hym51#page63#apu101#ln802#par2532" name="Validaciones.OID" source="mov1#hym51#page63#apu101#ap2338" target="mov1#hym51#page63#enu329#fld1391_slot"/>
+        <LinkParameter id="mov1#hym51#page63#apu101#ln802#par2534" name="&#191;Procede? [values]" source="mov1#hym51#page63#apu101#ap2340_values" target="mov1#hym51#page63#enu329#sfld111#slot107"/>
+        <LinkParameter id="mov1#hym51#page63#apu101#ln802#par2535" name="&#191;Procede? " source="mov1#hym51#page63#apu101#ap2340" target="mov1#hym51#page63#enu329#sfld111_presel"/>
+        <LinkParameter id="mov1#hym51#page63#apu101#ln802#par2537" name="Validaciones.Observaciones" source="mov1#hym51#page63#apu101#ap2342" target="mov1#hym51#page63#enu329#fld1392_slot"/>
+      </Link>
+      <ActivityParameter id="mov1#hym51#page63#apu101#ap2338" name="Validaciones.OID" bpm:uuid="IJWL2XQM_9Y185N"/>
+      <ActivityParameter id="mov1#hym51#page63#apu101#ap2340" name="Validaciones.&#191;Procede? " bpm:uuid="IJWL2XQM_9Y185N/IH8MGT15_XX"/>
+      <ActivityParameter id="mov1#hym51#page63#apu101#ap2342" name="Validaciones.Observaciones" bpm:uuid="IJWL2XQM_9Y185N/IH8LLT4Q_5TC"/>
+    </ActivityParametersUnit>
+    <EntryUnit id="mov1#hym51#page63#enu325" name="Predial" bpm:uuid="IJWL2XQM_V46ZD6" gr:x="265" gr:y="80">
+      <Link id="mov1#hym51#page63#enu325#ln795" name="Parameters" type="transport" automaticCoupling="false" to="mov1#hym51#apu100" validate="true">
+        <LinkParameter id="mov1#hym51#page63#enu325#ln795#par2471" name="Predial.OID" source="mov1#hym51#page63#enu325#fld1372" target="mov1#hym51#apu100#ap2288"/>
+      </Link>
+      <Field id="mov1#hym51#page63#enu325#fld1372" name="OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJWL2XQM_V46ZD6"/>
+      <Field id="mov1#hym51#page63#enu325#fld1373" name="Cuenta predial" type="string" preloaded="true" modifiable="false" bpm:uuid="IJWL2XQM_V46ZD6/IH8L34LF_7LX"/>
+    </EntryUnit>
+    <EntryUnit id="mov1#hym51#page63#enu326" name="Control" bpm:uuid="IJWL2XQL_J0GEHD" gr:x="265" gr:y="160">
+      <Link id="mov1#hym51#page63#enu326#ln797" name="Parameters" type="transport" automaticCoupling="false" to="mov1#hym51#apu100" validate="true">
+        <LinkParameter id="mov1#hym51#page63#enu326#ln797#par2474" name="Control.OID" source="mov1#hym51#page63#enu326#fld1374" target="mov1#hym51#apu100#ap2291"/>
+      </Link>
+      <Field id="mov1#hym51#page63#enu326#fld1374" name="OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJWL2XQL_J0GEHD"/>
+      <Field id="mov1#hym51#page63#enu326#fld1375" name="Folio de ingreso" type="string" preloaded="true" modifiable="false" bpm:uuid="IJWL2XQL_J0GEHD/IH8KZUZV_14D"/>
+      <Field id="mov1#hym51#page63#enu326#fld1376" name="Folio de control" type="string" preloaded="true" modifiable="false" bpm:uuid="IJWL2XQL_J0GEHD/IH8L0CS5_XQ"/>
+    </EntryUnit>
+    <EntryUnit id="mov1#hym51#page63#enu327" name="Fecha y hora de visita" bpm:uuid="IJWL2XQL_7JC5TS" gr:x="265" gr:y="240">
+      <Link id="mov1#hym51#page63#enu327#ln799" name="Parameters" type="transport" automaticCoupling="false" to="mov1#hym51#apu100" validate="true">
+        <LinkParameter id="mov1#hym51#page63#enu327#ln799#par2478" name="Fecha y hora de visita.OID" source="mov1#hym51#page63#enu327#fld1377" target="mov1#hym51#apu100#ap2295"/>
+      </Link>
+      <Field id="mov1#hym51#page63#enu327#fld1377" name="OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJWL2XQL_7JC5TS"/>
+      <Field id="mov1#hym51#page63#enu327#fld1378" name="Fecha y hora" type="date" preloaded="true" modifiable="false" bpm:uuid="IJWL2XQL_7JC5TS/IH8QVYUH_1YR"/>
+      <Field id="mov1#hym51#page63#enu327#fld1379" name="Comentarios adicionales" type="text" preloaded="true" modifiable="false" bpm:uuid="IJWL2XQL_7JC5TS/IH8QW68P_3AE"/>
+    </EntryUnit>
+    <EntryUnit id="mov1#hym51#page63#enu328" name="Criterios de inspeccion" bpm:uuid="IJWL2XQM_GGM0B3" gr:x="265" gr:y="320">
+      <Link id="mov1#hym51#page63#enu328#ln801" name="Parameters" type="transport" automaticCoupling="false" to="mov1#hym51#apu100" validate="true">
+        <LinkParameter id="mov1#hym51#page63#enu328#ln801#par2482" name="Criterios de inspeccion.OID" source="mov1#hym51#page63#enu328#fld1380" target="mov1#hym51#apu100#ap2299"/>
+        <LinkParameter id="mov1#hym51#page63#enu328#ln801#par2484" name="Criterios de inspeccion.Inventario de los extintores " source="mov1#hym51#page63#enu328#sfld102" target="mov1#hym51#apu100#ap2301"/>
+        <LinkParameter id="mov1#hym51#page63#enu328#ln801#par2487" name="Criterios de inspeccion.Croquis " source="mov1#hym51#page63#enu328#sfld103" target="mov1#hym51#apu100#ap2303"/>
+        <LinkParameter id="mov1#hym51#page63#enu328#ln801#par2490" name="Criterios de inspeccion.Observaciones croquis" source="mov1#hym51#page63#enu328#fld1381" target="mov1#hym51#apu100#ap2305"/>
+        <LinkParameter id="mov1#hym51#page63#enu328#ln801#par2492" name="Criterios de inspeccion.Listado del personal que labora " source="mov1#hym51#page63#enu328#sfld104" target="mov1#hym51#apu100#ap2307"/>
+        <LinkParameter id="mov1#hym51#page63#enu328#ln801#par2495" name="Criterios de inspeccion.Observaciones externos" source="mov1#hym51#page63#enu328#fld1382" target="mov1#hym51#apu100#ap2309"/>
+        <LinkParameter id="mov1#hym51#page63#enu328#ln801#par2497" name="Criterios de inspeccion.Observaciones extintores" source="mov1#hym51#page63#enu328#fld1383" target="mov1#hym51#apu100#ap2311"/>
+        <LinkParameter id="mov1#hym51#page63#enu328#ln801#par2499" name="Criterios de inspeccion.Riesgos externos " source="mov1#hym51#page63#enu328#sfld105" target="mov1#hym51#apu100#ap2313"/>
+        <LinkParameter id="mov1#hym51#page63#enu328#ln801#par2502" name="Criterios de inspeccion.Observaciones personal" source="mov1#hym51#page63#enu328#fld1384" target="mov1#hym51#apu100#ap2315"/>
+        <LinkParameter id="mov1#hym51#page63#enu328#ln801#par2504" name="Criterios de inspeccion.Observaciones seguridad" source="mov1#hym51#page63#enu328#fld1385" target="mov1#hym51#apu100#ap2317"/>
+        <LinkParameter id="mov1#hym51#page63#enu328#ln801#par2506" name="Criterios de inspeccion.Inventario de equipo de seguridad " source="mov1#hym51#page63#enu328#sfld106" target="mov1#hym51#apu100#ap2319"/>
+        <LinkParameter id="mov1#hym51#page63#enu328#ln801#par2509" name="Criterios de inspeccion.Plano de ubicacion de la obra y colindancias a color " source="mov1#hym51#page63#enu328#sfld107" target="mov1#hym51#apu100#ap2321"/>
+        <LinkParameter id="mov1#hym51#page63#enu328#ln801#par2512" name="Criterios de inspeccion.Observaciones obra y colindancias" source="mov1#hym51#page63#enu328#fld1386" target="mov1#hym51#apu100#ap2323"/>
+        <LinkParameter id="mov1#hym51#page63#enu328#ln801#par2514" name="Criterios de inspeccion.Observaciones se&#241;aletica" source="mov1#hym51#page63#enu328#fld1387" target="mov1#hym51#apu100#ap2325"/>
+        <LinkParameter id="mov1#hym51#page63#enu328#ln801#par2516" name="Criterios de inspeccion.Plano de ubicacion y distribucion de la se&#241;aletica " source="mov1#hym51#page63#enu328#sfld108" target="mov1#hym51#apu100#ap2327"/>
+        <LinkParameter id="mov1#hym51#page63#enu328#ln801#par2519" name="Criterios de inspeccion.Observaciones internos" source="mov1#hym51#page63#enu328#fld1388" target="mov1#hym51#apu100#ap2329"/>
+        <LinkParameter id="mov1#hym51#page63#enu328#ln801#par2521" name="Criterios de inspeccion.Datos generales " source="mov1#hym51#page63#enu328#fld1389" target="mov1#hym51#apu100#ap2331"/>
+        <LinkParameter id="mov1#hym51#page63#enu328#ln801#par2523" name="Criterios de inspeccion.Riesgos internos " source="mov1#hym51#page63#enu328#sfld109" target="mov1#hym51#apu100#ap2333"/>
+        <LinkParameter id="mov1#hym51#page63#enu328#ln801#par2526" name="Criterios de inspeccion.Directorio de los grupos operativos de emergencia " source="mov1#hym51#page63#enu328#sfld110" target="mov1#hym51#apu100#ap2335"/>
+        <LinkParameter id="mov1#hym51#page63#enu328#ln801#par2529" name="Criterios de inspeccion.Observaciones emergencia" source="mov1#hym51#page63#enu328#fld1390" target="mov1#hym51#apu100#ap2337"/>
+      </Link>
+      <Field id="mov1#hym51#page63#enu328#fld1380" name="OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJWL2XQM_GGM0B3"/>
+      <SelectionField id="mov1#hym51#page63#enu328#sfld102" name="Inventario de los extintores " type="string" bpm:uuid="IJWL2XQM_GGM0B3/IH8XNRL4_3R0">
+        <Slot id="mov1#hym51#page63#enu328#sfld102#slot98" name="values" label="true" output="true"/>
+        <VRules>
+          <MandatoryValidationRule id="mov1#hym51#page63#enu328#sfld102#mnd310" name="required"/>
+        </VRules>
+      </SelectionField>
+      <SelectionField id="mov1#hym51#page63#enu328#sfld103" name="Croquis " type="string" bpm:uuid="IJWL2XQM_GGM0B3/IH8XNZW8_3L0">
+        <Slot id="mov1#hym51#page63#enu328#sfld103#slot99" name="values" label="true" output="true"/>
+        <VRules>
+          <MandatoryValidationRule id="mov1#hym51#page63#enu328#sfld103#mnd311" name="required"/>
+        </VRules>
+      </SelectionField>
+      <Field id="mov1#hym51#page63#enu328#fld1381" name="Observaciones croquis" type="string" preloaded="true" modifiable="true" bpm:uuid="IJWL2XQM_GGM0B3/IH8XO31P_3AK"/>
+      <SelectionField id="mov1#hym51#page63#enu328#sfld104" name="Listado del personal que labora " type="string" bpm:uuid="IJWL2XQM_GGM0B3/IH8XN8M6_5OB">
+        <Slot id="mov1#hym51#page63#enu328#sfld104#slot100" name="values" label="true" output="true"/>
+        <VRules>
+          <MandatoryValidationRule id="mov1#hym51#page63#enu328#sfld104#mnd312" name="required"/>
+        </VRules>
+      </SelectionField>
+      <Field id="mov1#hym51#page63#enu328#fld1382" name="Observaciones externos" type="string" preloaded="true" modifiable="true" bpm:uuid="IJWL2XQM_GGM0B3/IH8XLO2Q_36R"/>
+      <Field id="mov1#hym51#page63#enu328#fld1383" name="Observaciones extintores" type="string" preloaded="true" modifiable="true" bpm:uuid="IJWL2XQM_GGM0B3/IH8XNUK3_4MB"/>
+      <SelectionField id="mov1#hym51#page63#enu328#sfld105" name="Riesgos externos " type="string" bpm:uuid="IJWL2XQM_GGM0B3/IH8XLLW0_27E">
+        <Slot id="mov1#hym51#page63#enu328#sfld105#slot101" name="values" label="true" output="true"/>
+        <VRules>
+          <MandatoryValidationRule id="mov1#hym51#page63#enu328#sfld105#mnd313" name="required"/>
+        </VRules>
+      </SelectionField>
+      <Field id="mov1#hym51#page63#enu328#fld1384" name="Observaciones personal" type="string" preloaded="true" modifiable="true" bpm:uuid="IJWL2XQM_GGM0B3/IH8XNCDO_2LY"/>
+      <Field id="mov1#hym51#page63#enu328#fld1385" name="Observaciones seguridad" type="string" preloaded="true" modifiable="true" bpm:uuid="IJWL2XQM_GGM0B3/IH8XNMYW_6HQ"/>
+      <SelectionField id="mov1#hym51#page63#enu328#sfld106" name="Inventario de equipo de seguridad " type="string" bpm:uuid="IJWL2XQM_GGM0B3/IH8XNJ4H_377">
+        <Slot id="mov1#hym51#page63#enu328#sfld106#slot102" name="values" label="true" output="true"/>
+        <VRules>
+          <MandatoryValidationRule id="mov1#hym51#page63#enu328#sfld106#mnd314" name="required"/>
+        </VRules>
+      </SelectionField>
+      <SelectionField id="mov1#hym51#page63#enu328#sfld107" name="Plano de ubicacion de la obra y colindancias a color " type="string" bpm:uuid="IJWL2XQM_GGM0B3/IH8XO828_D4">
+        <Slot id="mov1#hym51#page63#enu328#sfld107#slot103" name="values" label="true" output="true"/>
+        <VRules>
+          <MandatoryValidationRule id="mov1#hym51#page63#enu328#sfld107#mnd315" name="required"/>
+        </VRules>
+      </SelectionField>
+      <Field id="mov1#hym51#page63#enu328#fld1386" name="Observaciones obra y colindancias" type="string" preloaded="true" modifiable="true" bpm:uuid="IJWL2XQM_GGM0B3/IH8XOCN3_P7"/>
+      <Field id="mov1#hym51#page63#enu328#fld1387" name="Observaciones se&#241;aletica" type="string" preloaded="true" modifiable="true" bpm:uuid="IJWL2XQM_GGM0B3/IH8XONN0_43X"/>
+      <SelectionField id="mov1#hym51#page63#enu328#sfld108" name="Plano de ubicacion y distribucion de la se&#241;aletica " type="string" bpm:uuid="IJWL2XQM_GGM0B3/IH8XOI3V_2HL">
+        <Slot id="mov1#hym51#page63#enu328#sfld108#slot104" name="values" label="true" output="true"/>
+        <VRules>
+          <MandatoryValidationRule id="mov1#hym51#page63#enu328#sfld108#mnd316" name="required"/>
+        </VRules>
+      </SelectionField>
+      <Field id="mov1#hym51#page63#enu328#fld1388" name="Observaciones internos" type="string" preloaded="true" modifiable="true" bpm:uuid="IJWL2XQM_GGM0B3/IH8XLJSK_1BB"/>
+      <Field id="mov1#hym51#page63#enu328#fld1389" name="Datos generales " type="string" preloaded="true" modifiable="true" bpm:uuid="IJWL2XQM_GGM0B3/IH8XLFK6_38Q">
+        <VRules>
+          <MandatoryValidationRule id="mov1#hym51#page63#enu328#fld1389#mnd317" name="required"/>
+        </VRules>
+      </Field>
+      <SelectionField id="mov1#hym51#page63#enu328#sfld109" name="Riesgos internos " type="string" bpm:uuid="IJWL2XQM_GGM0B3/IH8XLHU4_71V">
+        <Slot id="mov1#hym51#page63#enu328#sfld109#slot105" name="values" label="true" output="true"/>
+        <VRules>
+          <MandatoryValidationRule id="mov1#hym51#page63#enu328#sfld109#mnd318" name="required"/>
+        </VRules>
+      </SelectionField>
+      <SelectionField id="mov1#hym51#page63#enu328#sfld110" name="Directorio de los grupos operativos de emergencia " type="string" bpm:uuid="IJWL2XQM_GGM0B3/IH8XMOLP_1VO">
+        <Slot id="mov1#hym51#page63#enu328#sfld110#slot106" name="values" label="true" output="true"/>
+        <VRules>
+          <MandatoryValidationRule id="mov1#hym51#page63#enu328#sfld110#mnd319" name="required"/>
+        </VRules>
+      </SelectionField>
+      <Field id="mov1#hym51#page63#enu328#fld1390" name="Observaciones emergencia" type="string" preloaded="true" modifiable="true" bpm:uuid="IJWL2XQM_GGM0B3/IH8XMQ5Y_3VV"/>
+    </EntryUnit>
+    <EntryUnit id="mov1#hym51#page63#enu329" name="Validaciones" bpm:uuid="IJWL2XQM_9Y185N" gr:x="265" gr:y="400">
+      <Link id="mov1#hym51#page63#enu329#ln803" name="Parameters" type="transport" automaticCoupling="false" to="mov1#hym51#apu100" validate="true">
+        <LinkParameter id="mov1#hym51#page63#enu329#ln803#par2531" name="Validaciones.OID" source="mov1#hym51#page63#enu329#fld1391" target="mov1#hym51#apu100#ap2339"/>
+        <LinkParameter id="mov1#hym51#page63#enu329#ln803#par2533" name="Validaciones.&#191;Procede? " source="mov1#hym51#page63#enu329#sfld111" target="mov1#hym51#apu100#ap2341"/>
+        <LinkParameter id="mov1#hym51#page63#enu329#ln803#par2536" name="Validaciones.Observaciones" source="mov1#hym51#page63#enu329#fld1392" target="mov1#hym51#apu100#ap2343"/>
+      </Link>
+      <Field id="mov1#hym51#page63#enu329#fld1391" name="OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJWL2XQM_9Y185N"/>
+      <SelectionField id="mov1#hym51#page63#enu329#sfld111" name="&#191;Procede? " type="string" bpm:uuid="IJWL2XQM_9Y185N/IH8MGT15_XX">
+        <Slot id="mov1#hym51#page63#enu329#sfld111#slot107" name="values" label="true" output="true"/>
+        <VRules>
+          <MandatoryValidationRule id="mov1#hym51#page63#enu329#sfld111#mnd320" name="required"/>
+        </VRules>
+      </SelectionField>
+      <Field id="mov1#hym51#page63#enu329#fld1392" name="Observaciones" type="text" preloaded="true" modifiable="true" bpm:uuid="IJWL2XQM_9Y185N/IH8LLT4Q_5TC"/>
+    </EntryUnit>
+    <EntryUnit id="mov1#hym51#page63#enu330" name="Buttons" gr:x="260" gr:y="480">
+      <Link id="mov1#hym51#page63#enu330#ln804" name="Finish" type="normal" validate="true" automaticCoupling="false" to="mov1#hym51#apu100"/>
+      <Link id="mov1#hym51#page63#enu330#ln805" name="Save and Work Later" type="normal" validate="false" automaticCoupling="false" to="mov1#hym51#apu100" gr:bendpoints="164,-32,-64,96"/>
+      <Link id="mov1#hym51#page63#enu330#ln806" name="Cancel" type="normal" validate="false" automaticCoupling="false" to="mov1#hym51#pu169"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12" label="Predial" layout:cellLayout="Print Frame">
+        <layout:Unit unitId="mov1#hym51#page63#enu325">
+          <layout:Field field="mov1#hym51#page63#enu325#fld1373" layout:fieldLayout="WRDefault/FieldValue"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell label="Control" layout:cellLayout="Print Frame" colspan="12">
+        <layout:Unit unitId="mov1#hym51#page63#enu326">
+          <layout:Field field="mov1#hym51#page63#enu326#fld1375" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym51#page63#enu326#fld1376" layout:fieldLayout="WRDefault/FieldValue"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell label="Fecha y hora de visita" layout:cellLayout="Print Frame" colspan="12">
+        <layout:Unit unitId="mov1#hym51#page63#enu327">
+          <layout:Field field="mov1#hym51#page63#enu327#fld1378" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym51#page63#enu327#fld1379" layout:fieldLayout="WRDefault/FieldValue"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell label="Criterios de inspeccion" layout:cellLayout="Print Frame" colspan="12">
+        <layout:Unit unitId="mov1#hym51#page63#enu328">
+          <layout:Field field="mov1#hym51#page63#enu328#fld1381"/>
+          <layout:Field field="mov1#hym51#page63#enu328#fld1382"/>
+          <layout:Field field="mov1#hym51#page63#enu328#fld1383"/>
+          <layout:Field field="mov1#hym51#page63#enu328#fld1384"/>
+          <layout:Field field="mov1#hym51#page63#enu328#fld1385"/>
+          <layout:Field field="mov1#hym51#page63#enu328#fld1386"/>
+          <layout:Field field="mov1#hym51#page63#enu328#fld1387"/>
+          <layout:Field field="mov1#hym51#page63#enu328#fld1388"/>
+          <layout:Field field="mov1#hym51#page63#enu328#fld1389"/>
+          <layout:Field field="mov1#hym51#page63#enu328#fld1390"/>
+          <layout:Field field="mov1#hym51#page63#enu328#sfld102"/>
+          <layout:Field field="mov1#hym51#page63#enu328#sfld103"/>
+          <layout:Field field="mov1#hym51#page63#enu328#sfld104"/>
+          <layout:Field field="mov1#hym51#page63#enu328#sfld105"/>
+          <layout:Field field="mov1#hym51#page63#enu328#sfld106"/>
+          <layout:Field field="mov1#hym51#page63#enu328#sfld107"/>
+          <layout:Field field="mov1#hym51#page63#enu328#sfld108"/>
+          <layout:Field field="mov1#hym51#page63#enu328#sfld109"/>
+          <layout:Field field="mov1#hym51#page63#enu328#sfld110"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell label="Validaciones" layout:cellLayout="Print Frame" colspan="12">
+        <layout:Unit unitId="mov1#hym51#page63#enu329">
+          <layout:Field field="mov1#hym51#page63#enu329#fld1392"/>
+          <layout:Field field="mov1#hym51#page63#enu329#sfld111"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell label="Buttons" layout:cellLayout="Print Frame" colspan="12">
+        <layout:Unit unitId="mov1#hym51#page63#enu330" layout:frameLayout="None">
+          <layout:Link link="mov1#hym51#page63#enu330#ln804">
+            <layout:LayoutParameter name="confirmation" value="true" type="link"/>
+            <layout:LayoutParameter name="confirm-message" value="Confirm Finish" type="link"/>
+          </layout:Link>
+          <layout:Link link="mov1#hym51#page63#enu330#ln805"/>
+          <layout:Link link="mov1#hym51#page63#enu330#ln806"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <layout:LayoutParameter name="auto-refresh" value="true" type="page"/>
+</Page>

@@ -1,0 +1,95 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym20" gr:x="890" gr:y="240" name="Aval&#250;o final - Inspector - 5. Realizar informe de inspecci&#243;n" bpm:moduleType="activity" bpm:uuids="IJWGRZ38_5F5.IDQXYA3P_CYK8QC" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym20#icu19" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym20#icu19#oln72" name="OKLink" automaticCoupling="true" to="mov1#hym20#page32"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym20#pu74" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym20#pu75" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym20#pu76" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym20#apu38" name="Set Parameters" gr:x="560" gr:y="-380">
+      <ActivityParameter id="mov1#hym20#apu38#ap767" name="Predial.OID" bpm:uuid="IJWJZXTU_9CK5Z4"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap770" name="Control.OID" bpm:uuid="IJWJMRH2_6NIAXA"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap774" name="Fecha y hora de visita.OID" bpm:uuid="IJWJMRH1_G5AY0R"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap776" name="Fecha y hora de visita.Fecha y hora" bpm:uuid="IJWJMRH1_G5AY0R/IH8QVYUH_1YR"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap778" name="Clave catastral de origen.OID" bpm:uuid="IJWJMRH1_JFK6NQ"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap780" name="Clave catastral de origen.Region" bpm:uuid="IJWJMRH1_JFK6NQ/IJWAI4ZF_5RL"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap782" name="Clave catastral de origen.Manzana" bpm:uuid="IJWJMRH1_JFK6NQ/IJWAI55N_6YA"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap784" name="Clave catastral de origen.Predio" bpm:uuid="IJWJMRH1_JFK6NQ/IJWAI5B7_32T"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap786" name="Clave Catastral.OID" bpm:uuid="IJWJMRH1_X38QLH"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap788" name="Clave Catastral.Manzana" bpm:uuid="IJWJMRH1_X38QLH/IJWAI5B7_32T"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap791" name="Clave Catastral.Condominio" bpm:uuid="IJWJMRH1_X38QLH/IJWAJY9P_6ML"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap793" name="Clave Catastral.Predio" bpm:uuid="IJWJMRH1_X38QLH/IJWAJUUC_6WX"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap795" name="Clave Catastral.Region" bpm:uuid="IJWJMRH1_X38QLH/IJWAI55N_6YA"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap797" name="Motivo.OID" bpm:uuid="IJWJMRH2_ABJKX"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap800" name="Motivo.Motivo" bpm:uuid="IJWJMRH2_ABJKX/IJWAKZUW_VN"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap802" name="Datos del propietario.OID" bpm:uuid="IJWJMRH1_IXC2JW"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap804" name="Datos del propietario.Primer apellido" bpm:uuid="IJWJMRH1_IXC2JW/IH8LBLG1_2V2"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap806" name="Datos del propietario.Segundo apellido" bpm:uuid="IJWJMRH1_IXC2JW/IH8LBLL5_6Q8"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap808" name="Datos del propietario.Nombres(s)" bpm:uuid="IJWJMRH1_IXC2JW/IH8LBLQQ_55H"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap810" name="Domicilio del predio.OID" bpm:uuid="IJWJMRH1_ENZJDI"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap812" name="Domicilio del predio.Fraccionamiento" bpm:uuid="IJWJMRH1_ENZJDI/IH8RXUH4_6OM"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap814" name="Domicilio del predio.Calle (exterior)" bpm:uuid="IJWJMRH1_ENZJDI/IH8RXJNP_5JI"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap816" name="Domicilio del predio.Clave catastral" bpm:uuid="IJWJMRH1_ENZJDI/IH8RXF2R_1PR"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap818" name="Domicilio del predio.Numero interior" bpm:uuid="IJWJMRH1_ENZJDI/IH8RXPL7_70D"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap820" name="Domicilio del predio.Junta auxiliar" bpm:uuid="IJWJMRH1_ENZJDI/IH8RY6TH_6PX"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap822" name="Domicilio del predio.Numero exterior" bpm:uuid="IJWJMRH1_ENZJDI/IH8RXMHL_64F"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap824" name="Domicilio del predio.Letra" bpm:uuid="IJWJMRH1_ENZJDI/IH8RXS75_AC"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap826" name="Domicilio del predio.Codigo Postal" bpm:uuid="IJWJMRH1_ENZJDI/IH8RXZLU_4XL"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap828" name="Domicilio del predio.Colonia" bpm:uuid="IJWJMRH1_ENZJDI/IH8RXWQ1_2TH"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap830" name="Predios urbanos y suburbanos.OID" bpm:uuid="IJWJMRH2_2EGSE8"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap832" name="Predios urbanos y suburbanos.Superficie del predio" bpm:uuid="IJWJMRH2_2EGSE8/IJWAP1QI_18X"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap834" name="Predios urbanos y suburbanos.Tipo de zona" bpm:uuid="IJWJMRH2_2EGSE8/IJWANL2O_2HE"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap836" name="Predios urbanos y suburbanos.Interes social " bpm:uuid="IJWJMRH2_2EGSE8/IJWAP6MI_L5"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap838" name="Predios urbanos y suburbanos.Profundidad" bpm:uuid="IJWJMRH2_2EGSE8/IJWAP68I_528"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap840" name="Predios urbanos y suburbanos.Esquina " bpm:uuid="IJWJMRH2_2EGSE8/IJWAP6QQ_7OM"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap842" name="Predios urbanos y suburbanos.Frente" bpm:uuid="IJWJMRH2_2EGSE8/IJWAP622_2VI"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap845" name="Predios urbanos y suburbanos.Lote interior" bpm:uuid="IJWJMRH2_2EGSE8/IJWAP6V6_4O"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap847" name="Predios urbanos y suburbanos.Superficie legal" bpm:uuid="IJWJMRH2_2EGSE8/IJWAP6DM_17U"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap849" name="Predios urbanos y suburbanos.Valor provicional/m2" bpm:uuid="IJWJMRH2_2EGSE8/IJWAP6I2_N5"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap851" name="Tipo de suelo.OID" bpm:uuid="IJWJMRH2_SHH562"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap853" name="Tipo de suelo.Tipo de suelo " bpm:uuid="IJWJMRH2_SHH562/IJWATYIX_3RM"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap855" name="Superficie cartografica y legal.OID" bpm:uuid="IJWJMRH2_EMV5NF"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap857" name="Superficie cartografica y legal.Superficie cartografica" bpm:uuid="IJWJMRH2_EMV5NF/IJWAVCJV_K1"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap859" name="Superficie cartografica y legal.Superficie legal" bpm:uuid="IJWJMRH2_EMV5NF/IJWAVD0W_1C8"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap861" name="Documento de propiedad.OID" bpm:uuid="IJWJMRH2_G2OQ12"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap864" name="Documento de propiedad.Numero de escritura o titulo" bpm:uuid="IJWJMRH2_G2OQ12/IJWAWTYG_3E8"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap866" name="Documento de propiedad.Fecha" bpm:uuid="IJWJMRH2_G2OQ12/IJWAWU3K_S9"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap868" name="Documento de propiedad.Fedatario" bpm:uuid="IJWJMRH2_G2OQ12/IJWAWU94_61U"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap870" name="Datos adicionales.OID" bpm:uuid="IJWJMRH1_PCZZEE"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap872" name="Datos adicionales.Tipo de posesion" bpm:uuid="IJWJMRH1_PCZZEE/IJWAYHLB_1ED"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap874" name="Datos adicionales.Regimen de propiedad" bpm:uuid="IJWJMRH1_PCZZEE/IJWAYI86_N"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap876" name="Datos adicionales.Tenencia" bpm:uuid="IJWJMRH1_PCZZEE/IJWAYILY_3XZ"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap878" name="Datos adicionales.Estado fisico" bpm:uuid="IJWJMRH1_PCZZEE/IJWAYIR2_5X0"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap880" name="Datos adicionales.Destino de uso" bpm:uuid="IJWJMRH1_PCZZEE/IJWAYIVY_WF"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap882" name="Datos adicionales.Exento" bpm:uuid="IJWJMRH1_PCZZEE/IJWAYJ1I_3X4"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap884" name="Datos de contrucciones.OID" bpm:uuid="IJWJMRH1_N0UR17"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap886" name="Datos de contrucciones.Bloque" bpm:uuid="IJWJMRH1_N0UR17/IJWB0HU7_3Y8"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap888" name="Datos de contrucciones.Tipo" bpm:uuid="IJWJMRH1_N0UR17/IJWB0HVW_23C"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap890" name="Datos de contrucciones.Estado" bpm:uuid="IJWJMRH1_N0UR17/IJWB0I0J_62E"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap892" name="Datos de contrucciones.Avance de obra" bpm:uuid="IJWJMRH1_N0UR17/IJWB0I5V_5M4"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap894" name="Datos de contrucciones.Edad" bpm:uuid="IJWJMRH1_N0UR17/IJWB0IAR_20S"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap896" name="Datos de contrucciones.Niveles" bpm:uuid="IJWJMRH1_N0UR17/IJWB0IFF_4AQ"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap898" name="Datos de contrucciones.Sup./m2" bpm:uuid="IJWJMRH1_N0UR17/IJWB0IKS_55F"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap900" name="Datos de contrucciones.Demerito" bpm:uuid="IJWJMRH1_N0UR17/IJWB0IPN_57M"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap902" name="Datos de contrucciones.Observaciones" bpm:uuid="IJWJMRH1_N0UR17/IJWB0IVN_1PH"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap904" name="Responsable.OID" bpm:uuid="IJWJMRH2_GL4KQM"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap906" name="Responsable.Folio de pago" bpm:uuid="IJWJMRH2_GL4KQM/IJWB29F5_4UV"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap908" name="Responsable.Nombre de responsable" bpm:uuid="IJWJMRH2_GL4KQM/IJWB299D_1MZ"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap910" name="Reporte fotografico y ubicacion.OID" bpm:uuid="IJWJMRH2_M81EPC"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap912" name="Reporte fotografico y ubicacion.Croquis de ubicacion" bpm:uuid="IJWJMRH2_M81EPC/IJWB3G1K_67H"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap914" name="Reporte fotografico y ubicacion.Fotografia 1" bpm:uuid="IJWJMRH2_M81EPC/IJWB3G4E_37X"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap916" name="Reporte fotografico y ubicacion.Fotografia 2" bpm:uuid="IJWJMRH2_M81EPC/IJWB3G9S_61D"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap918" name="Reporte fotografico y ubicacion.Fotografia 3" bpm:uuid="IJWJMRH2_M81EPC/IJWB3GEO_2Z2"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap920" name="Reporte fotografico y ubicacion.Fotografia 4" bpm:uuid="IJWJMRH2_M81EPC/IJWB3GJK_2I4"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap922" name="Coordenadas UTM.OID" bpm:uuid="IJWJMRH1_8FFKY6"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap924" name="Coordenadas UTM.Referencia" bpm:uuid="IJWJMRH1_8FFKY6/IJWB4RG6_6KH"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap926" name="Coordenadas UTM.X" bpm:uuid="IJWJMRH1_8FFKY6/IJWB4RM6_2K6"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap928" name="Coordenadas UTM.Y" bpm:uuid="IJWJMRH1_8FFKY6/IJWB4RYE_3M3"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap930" name="Observaciones del avaluo.OID" bpm:uuid="IJWJMRH2_NQAWY6"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap932" name="Observaciones del avaluo.Observaciones" bpm:uuid="IJWJMRH2_NQAWY6/IJWBATME_ED"/>
+      <OKLink id="mov1#hym20#apu38#oln73" name="OKLink" automaticCoupling="false" to="mov1#hym20#pu74" codeRef="mov1#hym20#page32#enu135#ln383"/>
+      <OKLink id="mov1#hym20#apu38#oln74" name="OKLink" automaticCoupling="false" to="mov1#hym20#pu75" codeRef="mov1#hym20#page32#enu135#ln384"/>
+      <ActivityParameter id="mov1#hym20#apu38#ap108c" name="Fecha y hora de visita.fechaTimeStamp" bpm:uuid="IJWGRZ38_5F5.IJWJMRH1_G5AY0R/ILU05BF9_25B"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

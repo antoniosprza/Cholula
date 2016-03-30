@@ -1,0 +1,45 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym8" gr:x="10" gr:y="185" name="Alineamiento y N&#250;mero oficial - Analista de alineamiento y n&#250;mero oficial - 3. Asignaci&#243;n de medidas y colindancias" bpm:moduleType="activity" bpm:uuids="IH8MUGYN_75W.ICGFUL7U_GWYI6" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym8#icu7" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym8#icu7#oln36" name="OKLink" automaticCoupling="true" to="mov1#hym8#page20"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym8#pu38" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym8#pu39" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym8#pu40" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym8#apu14" name="Set Parameters" gr:x="560" gr:y="-86">
+      <ActivityParameter id="mov1#hym8#apu14#ap192" name="Predial.OID" bpm:uuid="IJWJGHP3_GLTB4M"/>
+      <ActivityParameter id="mov1#hym8#apu14#ap195" name="Control.OID" bpm:uuid="IJWJGHP3_TJLYLB"/>
+      <ActivityParameter id="mov1#hym8#apu14#ap199" name="Datos del solicitante.OID" bpm:uuid="IJWJGHP3_1JKBXQ"/>
+      <ActivityParameter id="mov1#hym8#apu14#ap209" name="Datos del propietario.OID" bpm:uuid="IJWJGHP3_E19GWY"/>
+      <ActivityParameter id="mov1#hym8#apu14#ap215" name="Domicilio del predio.OID" bpm:uuid="IJWJGHP2_L1DW3D"/>
+      <ActivityParameter id="mov1#hym8#apu14#ap217" name="Domicilio del predio.Lote" bpm:uuid="IJWJGHP2_L1DW3D/IH8RY1X6_1TP"/>
+      <ActivityParameter id="mov1#hym8#apu14#ap219" name="Domicilio del predio.Codigo Postal" bpm:uuid="IJWJGHP2_L1DW3D/IH8RXZLU_4XL"/>
+      <ActivityParameter id="mov1#hym8#apu14#ap221" name="Domicilio del predio.Calle (exterior)" bpm:uuid="IJWJGHP2_L1DW3D/IH8RXJNP_5JI"/>
+      <ActivityParameter id="mov1#hym8#apu14#ap223" name="Domicilio del predio.Clave catastral" bpm:uuid="IJWJGHP2_L1DW3D/IH8RXF2R_1PR"/>
+      <ActivityParameter id="mov1#hym8#apu14#ap225" name="Domicilio del predio.Junta auxiliar" bpm:uuid="IJWJGHP2_L1DW3D/IH8RY6TH_6PX"/>
+      <ActivityParameter id="mov1#hym8#apu14#ap227" name="Domicilio del predio.Manzana" bpm:uuid="IJWJGHP2_L1DW3D/IH8RY469_5EE"/>
+      <ActivityParameter id="mov1#hym8#apu14#ap229" name="Domicilio del predio.Colonia" bpm:uuid="IJWJGHP2_L1DW3D/IH8RXWQ1_2TH"/>
+      <ActivityParameter id="mov1#hym8#apu14#ap231" name="Domicilio del predio.Numero exterior" bpm:uuid="IJWJGHP2_L1DW3D/IH8RXMHL_64F"/>
+      <ActivityParameter id="mov1#hym8#apu14#ap233" name="Domicilio del predio.Numero interior" bpm:uuid="IJWJGHP2_L1DW3D/IH8RXPL7_70D"/>
+      <ActivityParameter id="mov1#hym8#apu14#ap235" name="Domicilio del predio.Letra" bpm:uuid="IJWJGHP2_L1DW3D/IH8RXS75_AC"/>
+      <ActivityParameter id="mov1#hym8#apu14#ap237" name="Domicilio del predio.Fraccionamiento" bpm:uuid="IJWJGHP2_L1DW3D/IH8RXUH4_6OM"/>
+      <ActivityParameter id="mov1#hym8#apu14#ap239" name="Expediente electronico.OID" bpm:uuid="IJWJGHP3_EQWS64"/>
+      <ActivityParameter id="mov1#hym8#apu14#ap253" name="Croquis.OID" bpm:uuid="IJWJGHP2_P1KKNQ"/>
+      <ActivityParameter id="mov1#hym8#apu14#ap255" name="Croquis.Croquis" bpm:uuid="IJWJGHP2_P1KKNQ/IH8QU1SW_Z9"/>
+      <ActivityParameter id="mov1#hym8#apu14#ap257" name="Superficies.OID" bpm:uuid="IJWJGHP2_F17ZFP"/>
+      <ActivityParameter id="mov1#hym8#apu14#ap259" name="Superficies.Superficie de terreno" bpm:uuid="IJWJGHP2_F17ZFP/IH8QUPAG_7DQ"/>
+      <ActivityParameter id="mov1#hym8#apu14#ap261" name="Superficies.Superficie a ocupar" bpm:uuid="IJWJGHP2_F17ZFP/IH8QV0D3_3YK"/>
+      <ActivityParameter id="mov1#hym8#apu14#ap263" name="Medidas y colindancias.OID" bpm:uuid="IJWJGHP3_25P7RN"/>
+      <ActivityParameter id="mov1#hym8#apu14#ap265" name="Medidas y colindancias.Orientaci&#243;n       " bpm:uuid="IJWJGHP3_25P7RN/IH8LZ9C0_236"/>
+      <ActivityParameter id="mov1#hym8#apu14#ap267" name="Medidas y colindancias.Medida" bpm:uuid="IJWJGHP3_25P7RN/IH8LZDRS_6XV"/>
+      <ActivityParameter id="mov1#hym8#apu14#ap269" name="Medidas y colindancias.Colindancia" bpm:uuid="IJWJGHP3_25P7RN/IH8LZDWO_7C1"/>
+      <ActivityParameter id="mov1#hym8#apu14#ap271" name="Validaciones.OID" bpm:uuid="IJWJGHP3_YOW2KM"/>
+      <ActivityParameter id="mov1#hym8#apu14#ap273" name="Validaciones.&#191;Procede sin inspecci&#243;n? " bpm:uuid="IJWJGHP3_YOW2KM/IH8NNAR3_7G2"/>
+      <ActivityParameter id="mov1#hym8#apu14#ap275" name="Validaciones.Observaciones" bpm:uuid="IJWJGHP3_YOW2KM/IH8LLT4Q_5TC"/>
+      <ActivityParameter id="mov1#hym8#apu14#ap277" name="Validaciones.&#191;Procede? " bpm:uuid="IJWJGHP3_YOW2KM/IH8MGT15_XX"/>
+      <ActivityParameter id="mov1#hym8#apu14#ap279" name="Validaciones.&#191;Esta completa la informacion? " bpm:uuid="IJWJGHP3_YOW2KM/IH8LL99N_341"/>
+      <OKLink id="mov1#hym8#apu14#oln37" name="OKLink" automaticCoupling="false" to="mov1#hym8#pu38" codeRef="mov1#hym8#page20#enu44#ln179"/>
+      <OKLink id="mov1#hym8#apu14#oln38" name="OKLink" automaticCoupling="false" to="mov1#hym8#pu39" codeRef="mov1#hym8#page20#enu44#ln180"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

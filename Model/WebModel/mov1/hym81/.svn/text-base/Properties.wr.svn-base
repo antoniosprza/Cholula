@@ -1,0 +1,40 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym81" gr:x="5775" gr:y="315" name="Licencia de construcci&#243;n de casa habitaci&#243;n unifamiliar (fraccionamientos autorizados) - Jefatura de uso de suelo - 4. Asignar coeficientes, densidades y condicionantes" bpm:moduleType="activity" bpm:uuids="IH8MOSKO_307.ICFC9HCX_4J8KW" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym81#icu80" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym81#icu80#oln255" name="OKLink" automaticCoupling="true" to="mov1#hym81#page93"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym81#pu257" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym81#pu258" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym81#pu259" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym81#apu160" name="Set Parameters" gr:x="560" gr:y="-44">
+      <ActivityParameter id="mov1#hym81#apu160#ap3674" name="Predial.OID" bpm:uuid="IJX7RKBP_PCH0YJ"/>
+      <ActivityParameter id="mov1#hym81#apu160#ap3677" name="Control.OID" bpm:uuid="IJX7RKBO_RRJS1O"/>
+      <ActivityParameter id="mov1#hym81#apu160#ap3681" name="Observaciones ALNO.OID" bpm:uuid="IJX7RKBP_V6NQ3O"/>
+      <ActivityParameter id="mov1#hym81#apu160#ap3683" name="Observaciones ALNO.Alineamiento y numero oficial" bpm:uuid="IJX7RKBP_V6NQ3O/IH8M2MH6_327"/>
+      <ActivityParameter id="mov1#hym81#apu160#ap3685" name="Observaciones uso de suelo.Uso de suelo" bpm:uuid="IH8MOSKO_307.IK91NI3S_PAS6O7/IJZCCP7Z_1HY"/>
+      <ActivityParameter id="mov1#hym81#apu160#ap3687" name="Observaciones.Licencia de construccion" bpm:uuid="IJX7RKBP_V6NQ3O/IJZCGHKE_74H"/>
+      <ActivityParameter id="mov1#hym81#apu160#ap3689" name="Director responsable de obra.OID" bpm:uuid="IJX7RKBP_MAJNLD"/>
+      <ActivityParameter id="mov1#hym81#apu160#ap3700" name="Datos del solicitante.OID" bpm:uuid="IJX7RKBP_JOAN2E"/>
+      <ActivityParameter id="mov1#hym81#apu160#ap3710" name="Datos de propietario.OID" bpm:uuid="IJX7RKBP_IB7OI3"/>
+      <ActivityParameter id="mov1#hym81#apu160#ap3716" name="Domicilio del predio.OID" bpm:uuid="IJX7RKBP_RX3ZOV"/>
+      <ActivityParameter id="mov1#hym81#apu160#ap3719" name="Requisitos.OID" bpm:uuid="IJX7RKBP_OZQN1O"/>
+      <ActivityParameter id="mov1#hym81#apu160#ap3723" name="Expediente electronico.OID" bpm:uuid="IJX7RKBO_D7MJG7"/>
+      <ActivityParameter id="mov1#hym81#apu160#ap3734" name="Coeficientes.OID" bpm:uuid="IJX7RKBP_SDVKXG"/>
+      <ActivityParameter id="mov1#hym81#apu160#ap3736" name="Coeficientes.Programa " bpm:uuid="IJX7RKBP_SDVKXG/IH8M7SUH_5RL"/>
+      <ActivityParameter id="mov1#hym81#apu160#ap3738" name="Coeficientes.CUS/Aplicado" bpm:uuid="IJX7RKBP_SDVKXG/IH8M7UDU_68B"/>
+      <ActivityParameter id="mov1#hym81#apu160#ap3740" name="Coeficientes.Comptabilidad" bpm:uuid="IJX7RKBP_SDVKXG/IH8M7TOY_1YO"/>
+      <ActivityParameter id="mov1#hym81#apu160#ap3742" name="Coeficientes.COS/Aplicado" bpm:uuid="IJX7RKBP_SDVKXG/IH8M7U75_5YS"/>
+      <ActivityParameter id="mov1#hym81#apu160#ap3744" name="Coeficientes.Uso espec&#237;fico" bpm:uuid="IJX7RKBP_SDVKXG/IH8M7TIQ_6J"/>
+      <ActivityParameter id="mov1#hym81#apu160#ap3746" name="Coeficientes.CUS" bpm:uuid="IJX7RKBP_SDVKXG/IH8M7U0Q_2EC"/>
+      <ActivityParameter id="mov1#hym81#apu160#ap3748" name="Coeficientes.Tipo de uso secundario" bpm:uuid="IJX7RKBP_SDVKXG/IH8M7TCQ_5VX"/>
+      <ActivityParameter id="mov1#hym81#apu160#ap3750" name="Coeficientes.COS" bpm:uuid="IJX7RKBP_SDVKXG/IH8M7TUO_241"/>
+      <ActivityParameter id="mov1#hym81#apu160#ap3752" name="Coeficientes.Zona (tipo)" bpm:uuid="IJX7RKBP_SDVKXG/IH8M7T0Q_32Q"/>
+      <ActivityParameter id="mov1#hym81#apu160#ap3754" name="Coeficientes.Vigencia de uso de suelo" bpm:uuid="IJX7RKBP_SDVKXG/IH8M7UQY_3EO"/>
+      <ActivityParameter id="mov1#hym81#apu160#ap3756" name="Coeficientes.Tipos de uso primario" bpm:uuid="IJX7RKBP_SDVKXG/IH8M7T61_25U"/>
+      <OKLink id="mov1#hym81#apu160#oln256" name="OKLink" automaticCoupling="false" to="mov1#hym81#pu257" codeRef="mov1#hym81#page93#enu547#ln1288"/>
+      <OKLink id="mov1#hym81#apu160#oln257" name="OKLink" automaticCoupling="false" to="mov1#hym81#pu258" codeRef="mov1#hym81#page93#enu547#ln1289"/>
+      <ActivityParameter id="mov1#hym81#apu160#ap209k" name="Observaciones uso de suelo.OID" bpm:uuid="IK91NI3S_PAS6O7"/>
+      <ActivityParameter id="mov1#hym81#apu160#ap211k" name="Observaciones uso de suelo.Uso de suelo" bpm:uuid="IK91NI3S_PAS6O7/IJZCCP7Z_1HY"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

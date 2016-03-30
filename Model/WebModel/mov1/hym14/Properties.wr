@@ -1,0 +1,45 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym14" gr:x="890" gr:y="55" name="Aval&#250;o final - Usuario - 2.1 Subsanar observaciones" bpm:moduleType="activity" bpm:uuids="IJWGRZ38_5F5.IDQX5EPJ_JTD9A" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym14#icu13" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym14#icu13#oln54" name="OKLink" automaticCoupling="true" to="mov1#hym14#page26"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym14#pu56" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym14#pu57" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym14#pu58" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym14#apu26" name="Set Parameters" gr:x="560" gr:y="-80">
+      <ActivityParameter id="mov1#hym14#apu26#ap580" name="Predial.OID" bpm:uuid="IJWJZXTU_9CK5Z4"/>
+      <ActivityParameter id="mov1#hym14#apu26#ap583" name="Control.OID" bpm:uuid="IJWJMRH2_6NIAXA"/>
+      <ActivityParameter id="mov1#hym14#apu26#ap587" name="Validaciones.OID" bpm:uuid="IJWJZXTU_6HKD1K"/>
+      <ActivityParameter id="mov1#hym14#apu26#ap590" name="Datos del solicitante.OID" bpm:uuid="IJWJMRH2_CK24TS"/>
+      <ActivityParameter id="mov1#hym14#apu26#ap592" name="Datos del solicitante.Nombres(s)" bpm:uuid="IJWJMRH2_CK24TS/IH8L8HJ3_4ZC"/>
+      <ActivityParameter id="mov1#hym14#apu26#ap594" name="Datos del solicitante.Segundo apellido" bpm:uuid="IJWJMRH2_CK24TS/IH8L8HEF_YU"/>
+      <ActivityParameter id="mov1#hym14#apu26#ap596" name="Datos del solicitante.RFC" bpm:uuid="IJWJMRH2_CK24TS/IH8L8HNZ_PT"/>
+      <ActivityParameter id="mov1#hym14#apu26#ap598" name="Datos del solicitante.Primer apellido" bpm:uuid="IJWJMRH2_CK24TS/IH8L8H9B_7DP"/>
+      <ActivityParameter id="mov1#hym14#apu26#ap600" name="Datos del solicitante.Tipo de interesado    " bpm:uuid="IJWJMRH2_CK24TS/IH8L8H4V_5Z6"/>
+      <ActivityParameter id="mov1#hym14#apu26#ap602" name="Datos del propietario.OID" bpm:uuid="IJWJMRH1_IXC2JW"/>
+      <ActivityParameter id="mov1#hym14#apu26#ap604" name="Datos del propietario.Primer apellido" bpm:uuid="IJWJMRH1_IXC2JW/IH8LBLG1_2V2"/>
+      <ActivityParameter id="mov1#hym14#apu26#ap606" name="Datos del propietario.Segundo apellido" bpm:uuid="IJWJMRH1_IXC2JW/IH8LBLL5_6Q8"/>
+      <ActivityParameter id="mov1#hym14#apu26#ap608" name="Datos del propietario.Nombres(s)" bpm:uuid="IJWJMRH1_IXC2JW/IH8LBLQQ_55H"/>
+      <ActivityParameter id="mov1#hym14#apu26#ap610" name="Domicilio del predio.OID" bpm:uuid="IJWJMRH1_ENZJDI"/>
+      <ActivityParameter id="mov1#hym14#apu26#ap612" name="Domicilio del predio.Numero exterior" bpm:uuid="IJWJMRH1_ENZJDI/IH8RXMHL_64F"/>
+      <ActivityParameter id="mov1#hym14#apu26#ap614" name="Domicilio del predio.Numero interior" bpm:uuid="IJWJMRH1_ENZJDI/IH8RXPL7_70D"/>
+      <ActivityParameter id="mov1#hym14#apu26#ap616" name="Domicilio del predio.Letra" bpm:uuid="IJWJMRH1_ENZJDI/IH8RXS75_AC"/>
+      <ActivityParameter id="mov1#hym14#apu26#ap618" name="Domicilio del predio.Calle (exterior)" bpm:uuid="IJWJMRH1_ENZJDI/IH8RXJNP_5JI"/>
+      <ActivityParameter id="mov1#hym14#apu26#ap620" name="Domicilio del predio.Fraccionamiento" bpm:uuid="IJWJMRH1_ENZJDI/IH8RXUH4_6OM"/>
+      <ActivityParameter id="mov1#hym14#apu26#ap622" name="Domicilio del predio.Clave catastral" bpm:uuid="IJWJMRH1_ENZJDI/IH8RXF2R_1PR"/>
+      <ActivityParameter id="mov1#hym14#apu26#ap624" name="Domicilio del predio.Colonia" bpm:uuid="IJWJMRH1_ENZJDI/IH8RXWQ1_2TH"/>
+      <ActivityParameter id="mov1#hym14#apu26#ap626" name="Medidas y colindancias.OID" bpm:uuid="IJWJZXTU_A9H7HY"/>
+      <ActivityParameter id="mov1#hym14#apu26#ap631" name="Requisitos.OID" bpm:uuid="IJWJMRH2_QNBB38"/>
+      <ActivityParameter id="mov1#hym14#apu26#ap633" name="Requisitos.Tipo identificacion oficial   " bpm:uuid="IJWJMRH2_QNBB38/IH8LDZH0_1KE"/>
+      <ActivityParameter id="mov1#hym14#apu26#ap635" name="Requisitos.Documento" bpm:uuid="IJWJMRH2_QNBB38/IJW9ZN41_1MH"/>
+      <ActivityParameter id="mov1#hym14#apu26#ap637" name="Expediente electronico.OID" bpm:uuid="IJWJMRH2_EIVVE6"/>
+      <ActivityParameter id="mov1#hym14#apu26#ap639" name="Expediente electronico.Alineamiento y numero oficial" bpm:uuid="IJWJMRH2_EIVVE6/IH8X2NOJ_1NF"/>
+      <ActivityParameter id="mov1#hym14#apu26#ap641" name="Expediente electronico.Croquis" bpm:uuid="IJWJMRH2_EIVVE6/IJ4QWALV_3WN"/>
+      <ActivityParameter id="mov1#hym14#apu26#ap643" name="Expediente electronico.Traslado de dominio" bpm:uuid="IJWJMRH2_EIVVE6/IJW9UJVC_14X"/>
+      <ActivityParameter id="mov1#hym14#apu26#ap645" name="Expediente electronico.Documento que acreedite la propiedad" bpm:uuid="IJWJMRH2_EIVVE6/IH8LGKKQ_1C0"/>
+      <OKLink id="mov1#hym14#apu26#oln55" name="OKLink" automaticCoupling="false" to="mov1#hym14#pu56" codeRef="mov1#hym14#page26#enu89#ln283"/>
+      <OKLink id="mov1#hym14#apu26#oln56" name="OKLink" automaticCoupling="false" to="mov1#hym14#pu57" codeRef="mov1#hym14#page26#enu89#ln284"/>
+      <ActivityParameter id="mov1#hym14#apu26#ap183k" name="Expediente electronico.Licencia de construccion y recibo de pago" bpm:uuid="IJWJMRH2_EIVVE6/IH8RHLUT_2EF"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

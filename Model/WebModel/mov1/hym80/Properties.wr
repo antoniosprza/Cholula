@@ -1,0 +1,36 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym80" gr:x="5775" gr:y="250" name="Licencia de construcci&#243;n de casa habitaci&#243;n unifamiliar (fraccionamientos autorizados) - Jefatura de alineamiento y n&#250;mero oficial - 3. Dictaminar y asignar alineamiento y n&#250;mero oficial" bpm:moduleType="activity" bpm:uuids="IH8MOSKO_307.ICFC6ZPW_C33CZ" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym80#icu79" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym80#icu79#oln252" name="OKLink" automaticCoupling="true" to="mov1#hym80#page92"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym80#pu254" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym80#pu255" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym80#pu256" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym80#apu158" name="Set Parameters" gr:x="560" gr:y="-32">
+      <ActivityParameter id="mov1#hym80#apu158#ap3594" name="Predial.OID" bpm:uuid="IJX7RKBP_PCH0YJ"/>
+      <ActivityParameter id="mov1#hym80#apu158#ap3597" name="Control.OID" bpm:uuid="IJX7RKBO_RRJS1O"/>
+      <ActivityParameter id="mov1#hym80#apu158#ap3601" name="Director responsable de obra.OID" bpm:uuid="IJX7RKBP_MAJNLD"/>
+      <ActivityParameter id="mov1#hym80#apu158#ap3612" name="Datos del solicitante.OID" bpm:uuid="IJX7RKBP_JOAN2E"/>
+      <ActivityParameter id="mov1#hym80#apu158#ap3622" name="Datos de propietario.OID" bpm:uuid="IJX7RKBP_IB7OI3"/>
+      <ActivityParameter id="mov1#hym80#apu158#ap3628" name="Ubicacion.OID" bpm:uuid="IJX7RKBP_CCP78N"/>
+      <ActivityParameter id="mov1#hym80#apu158#ap3631" name="Requisitos.OID" bpm:uuid="IJX7RKBP_OZQN1O"/>
+      <ActivityParameter id="mov1#hym80#apu158#ap3635" name="Expediente electronico.OID" bpm:uuid="IJX7RKBO_D7MJG7"/>
+      <ActivityParameter id="mov1#hym80#apu158#ap3646" name="Localizacion.OID" bpm:uuid="IJX7RKBP_H0DCZP"/>
+      <ActivityParameter id="mov1#hym80#apu158#ap3648" name="Localizacion.Numero oficial" bpm:uuid="IJX7RKBP_H0DCZP/IH8LQ1BC_7OJ"/>
+      <ActivityParameter id="mov1#hym80#apu158#ap3650" name="Localizacion.Croquis" bpm:uuid="IJX7RKBP_H0DCZP/IH8LQ234_6ZV"/>
+      <ActivityParameter id="mov1#hym80#apu158#ap3652" name="Localizacion.Via publica" bpm:uuid="IJX7RKBP_H0DCZP/IH8LQ12W_32X"/>
+      <ActivityParameter id="mov1#hym80#apu158#ap3654" name="Localizacion.Localizaci&#243;n    " bpm:uuid="IJX7RKBP_H0DCZP/IH8LQ0QX_3PY"/>
+      <ActivityParameter id="mov1#hym80#apu158#ap3656" name="Localizacion.Vigencia de alineamiento" bpm:uuid="IJX7RKBP_H0DCZP/IH8LQ1OP_433"/>
+      <ActivityParameter id="mov1#hym80#apu158#ap3658" name="Medidas y colindancias.OID" bpm:uuid="IJX7RKBP_UFN1VZ"/>
+      <ActivityParameter id="mov1#hym80#apu158#ap3660" name="Medidas y colindancias.Orientaci&#243;n       " bpm:uuid="IJX7RKBP_UFN1VZ/IH8LZ9C0_236"/>
+      <ActivityParameter id="mov1#hym80#apu158#ap3662" name="Medidas y colindancias.Medida" bpm:uuid="IJX7RKBP_UFN1VZ/IH8LZDRS_6XV"/>
+      <ActivityParameter id="mov1#hym80#apu158#ap3664" name="Medidas y colindancias.Colindancia" bpm:uuid="IJX7RKBP_UFN1VZ/IH8LZDWO_7C1"/>
+      <ActivityParameter id="mov1#hym80#apu158#ap3666" name="Observaciones ALNO.OID" bpm:uuid="IJX7RKBP_V6NQ3O"/>
+      <ActivityParameter id="mov1#hym80#apu158#ap3668" name="Observaciones ALNO.Alineamiento y numero oficial" bpm:uuid="IJX7RKBP_V6NQ3O/IH8M2MH6_327"/>
+      <ActivityParameter id="mov1#hym80#apu158#ap3670" name="Observaciones uso de suelo.Uso de suelo" bpm:uuid="IH8MOSKO_307.IK91NI3S_PAS6O7/IJZCCP7Z_1HY"/>
+      <ActivityParameter id="mov1#hym80#apu158#ap3672" name="Observaciones.Licencia de construccion" bpm:uuid="IJX7RKBP_V6NQ3O/IJZCGHKE_74H"/>
+      <OKLink id="mov1#hym80#apu158#oln253" name="OKLink" automaticCoupling="false" to="mov1#hym80#pu254" codeRef="mov1#hym80#page92#enu536#ln1265"/>
+      <OKLink id="mov1#hym80#apu158#oln254" name="OKLink" automaticCoupling="false" to="mov1#hym80#pu255" codeRef="mov1#hym80#page92#enu536#ln1266"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

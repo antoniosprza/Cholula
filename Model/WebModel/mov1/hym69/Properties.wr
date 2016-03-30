@@ -1,0 +1,29 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym69" gr:x="5075" gr:y="100" name="Pago ISABI - Usuario - 2. Validar informaci&#243;n" bpm:moduleType="activity" bpm:uuids="IJWGSGO9_4JI.IDPH2LUC_1O7YU" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym69#icu68" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym69#icu68#oln219" name="OKLink" automaticCoupling="true" to="mov1#hym69#page81"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym69#pu221" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym69#pu222" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym69#pu223" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym69#apu136" name="Set Parameters" gr:x="560" gr:y="16">
+      <ActivityParameter id="mov1#hym69#apu136#ap3169" name="Predial.OID" bpm:uuid="IJX6VZOA_BITD6Y"/>
+      <ActivityParameter id="mov1#hym69#apu136#ap3172" name="Control.OID" bpm:uuid="IJX6VZO9_3E2CCZ"/>
+      <ActivityParameter id="mov1#hym69#apu136#ap3176" name="Datos solicitud.OID" bpm:uuid="IJX6VZOA_5RXID8"/>
+      <ActivityParameter id="mov1#hym69#apu136#ap3179" name="Datos propiedad.OID" bpm:uuid="IJX6VZOA_D2TS2H"/>
+      <ActivityParameter id="mov1#hym69#apu136#ap3183" name="Datos del registro publico.OID" bpm:uuid="IJX6VZOA_T1CF3O"/>
+      <ActivityParameter id="mov1#hym69#apu136#ap3191" name="Datos de la operacion.OID" bpm:uuid="IJX6VZOA_ZWA70"/>
+      <ActivityParameter id="mov1#hym69#apu136#ap3196" name="Datos del fedatario.OID" bpm:uuid="IJX6VZOA_V0QH7F"/>
+      <ActivityParameter id="mov1#hym69#apu136#ap3202" name="Datos de identificacion del enajenante.OID" bpm:uuid="IJX6VZOA_20F8U4"/>
+      <ActivityParameter id="mov1#hym69#apu136#ap3209" name="Datos de identificacion del adquiriente.OID" bpm:uuid="IJX6VZOA_V3412R"/>
+      <ActivityParameter id="mov1#hym69#apu136#ap3216" name="Medidas y colindancias.OID" bpm:uuid="IJX6VZOA_JF99EE"/>
+      <ActivityParameter id="mov1#hym69#apu136#ap3221" name="Domicilio del predio.OID" bpm:uuid="IJX6VZO9_A6IV3W"/>
+      <ActivityParameter id="mov1#hym69#apu136#ap3231" name="Expediente electronico.OID" bpm:uuid="IJX6VZOA_KNOL9L"/>
+      <ActivityParameter id="mov1#hym69#apu136#ap3236" name="Validaciones.OID" bpm:uuid="IJX6VZOA_V30SLU"/>
+      <ActivityParameter id="mov1#hym69#apu136#ap3238" name="Validaciones.&#191;Esta completa la documentacion? " bpm:uuid="IJWGSGO9_4JI.IJX6VZOA_V30SLU/IH8UY1Q3_7IZ"/>
+      <OKLink id="mov1#hym69#apu136#oln220" name="OKLink" automaticCoupling="false" to="mov1#hym69#pu221" codeRef="mov1#hym69#page81#enu461#ln1102"/>
+      <OKLink id="mov1#hym69#apu136#oln221" name="OKLink" automaticCoupling="false" to="mov1#hym69#pu222" codeRef="mov1#hym69#page81#enu461#ln1103"/>
+      <ActivityParameter id="mov1#hym69#apu136#ap89c" name="Validaciones.&#191;Esta completa la informacion? " bpm:uuid="IJX6VZOA_V30SLU/IH8LL99N_341"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

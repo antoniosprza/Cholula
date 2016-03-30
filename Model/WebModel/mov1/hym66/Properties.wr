@@ -1,0 +1,67 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym66" gr:x="5075" gr:y="40" name="Pago ISABI - Usuario - 1. Ingresar documentaci&#243;n" bpm:moduleType="activity" bpm:uuids="IJWGSGO9_4JI.IB14CBUE_W" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym66#icu65" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym66#icu65#oln210" name="OKLink" automaticCoupling="true" to="mov1#hym66#page78"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym66#pu212" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym66#pu213" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym66#pu214" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym66#apu130" name="Set Parameters" gr:x="560" gr:y="-176">
+      <ActivityParameter id="mov1#hym66#apu130#ap3057" name="Predial.OID" bpm:uuid="IJX6VZOA_BITD6Y"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3059" name="Predial.Cuenta predial" bpm:uuid="IJX6VZOA_BITD6Y/IH8L34LF_7LX"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3061" name="Control.OID" bpm:uuid="IJX6VZO9_3E2CCZ"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3063" name="Control.Folio de ingreso" bpm:uuid="IJX6VZO9_3E2CCZ/IH8KZUZV_14D"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3065" name="Control.Folio de control" bpm:uuid="IJX6VZO9_3E2CCZ/IH8L0CS5_XQ"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3067" name="Datos solicitud.OID" bpm:uuid="IJX6VZOA_5RXID8"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3069" name="Datos solicitud.Fecha solicitud" bpm:uuid="IJX6VZOA_5RXID8/IJWBQ6MM_1SZ"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3071" name="Datos propiedad.OID" bpm:uuid="IJX6VZOA_D2TS2H"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3073" name="Datos propiedad.Tipo predio " bpm:uuid="IJX6VZOA_D2TS2H/IJWC2ZVP_6DY"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3075" name="Datos propiedad.Fecha de la firma" bpm:uuid="IJX6VZOA_D2TS2H/IJWC3098_46D"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3077" name="Datos del registro publico.OID" bpm:uuid="IJX6VZOA_T1CF3O"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3079" name="Datos del registro publico.Fojas" bpm:uuid="IJX6VZOA_T1CF3O/IJWCKQF3_7CS"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3081" name="Datos de la operacion.OID" bpm:uuid="IJX6VZOA_ZWA70"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3083" name="Datos de la operacion.Valor de la operacion" bpm:uuid="IJX6VZOA_ZWA70/IJWDHOOS_U2"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3085" name="Datos de la operacion.Tipo de operacion " bpm:uuid="IJX6VZOA_ZWA70/IJWDHNZW_4GF"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3087" name="Datos de la operacion.Valor catastral" bpm:uuid="IJX6VZOA_ZWA70/IJWDHO5G_1O2"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3089" name="Datos del fedatario.OID" bpm:uuid="IJX6VZOA_V0QH7F"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3091" name="Datos del fedatario.Numero de notaria" bpm:uuid="IJX6VZOA_V0QH7F/IJWDKU27_135"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3093" name="Datos del fedatario.Apellido paterno" bpm:uuid="IJX6VZOA_V0QH7F/IJWDKXWV_5LE"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3095" name="Datos del fedatario.Apellido materno" bpm:uuid="IJX6VZOA_V0QH7F/IJWDL193_46D"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3097" name="Datos del fedatario.Nombre(s)" bpm:uuid="IJX6VZOA_V0QH7F/IJWDL4PB_1WY"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3099" name="Datos de identificacion del enajenante.OID" bpm:uuid="IJX6VZOA_20F8U4"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3101" name="Datos de identificacion del enajenante.Tipo de persona " bpm:uuid="IJX6VZOA_20F8U4/IJWDMMIN_1Y9"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3103" name="Datos de identificacion del enajenante.RFC (Moral) - CURP (Fisica)" bpm:uuid="IJX6VZOA_20F8U4/IJWDMMKC_4YH"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3105" name="Datos de identificacion del enajenante.Primer apellido" bpm:uuid="IJX6VZOA_20F8U4/IJWDMMOI_1MY"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3107" name="Datos de identificacion del enajenante.Segundo apellido" bpm:uuid="IJX6VZOA_20F8U4/IJWDMMTP_58F"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3109" name="Datos de identificacion del enajenante.Nombres(s)" bpm:uuid="IJX6VZOA_20F8U4/IJWDMNTX_586"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3111" name="Datos de identificacion del adquiriente.OID" bpm:uuid="IJX6VZOA_V3412R"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3113" name="Datos de identificacion del adquiriente.Tipo de persona " bpm:uuid="IJX6VZOA_V3412R/IJWDMMIN_1Y9"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3115" name="Datos de identificacion del adquiriente.RFC (Moral) - CURP (Fisica)" bpm:uuid="IJX6VZOA_V3412R/IJWDMMKC_4YH"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3117" name="Datos de identificacion del adquiriente.Primer apellido" bpm:uuid="IJX6VZOA_V3412R/IJWDMMOI_1MY"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3119" name="Datos de identificacion del adquiriente.Segundo apellido" bpm:uuid="IJX6VZOA_V3412R/IJWDMMTP_58F"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3121" name="Datos de identificacion del adquiriente.Nombres(s)" bpm:uuid="IJX6VZOA_V3412R/IJWDMNTX_586"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3123" name="Expediente electronico.OID" bpm:uuid="IJX6VZOA_KNOL9L"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3125" name="Expediente electronico.Avaluo " bpm:uuid="IJX6VZOA_KNOL9L/IJWEALM6_62I"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3127" name="Expediente electronico.Escritura publica" bpm:uuid="IJX6VZOA_KNOL9L/IJWEC7EX_3H"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3129" name="Expediente electronico.Pago de ISABI" bpm:uuid="IJX6VZOA_KNOL9L/IJWEW016_454"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3131" name="Domicilio del predio.OID" bpm:uuid="IJX6VZO9_A6IV3W"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3133" name="Domicilio del predio.Numero interior" bpm:uuid="IJX6VZO9_A6IV3W/IH8RXPL7_70D"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3135" name="Domicilio del predio.Numero exterior" bpm:uuid="IJX6VZO9_A6IV3W/IH8RXMHL_64F"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3137" name="Domicilio del predio.Calle (exterior)" bpm:uuid="IJX6VZO9_A6IV3W/IH8RXJNP_5JI"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3139" name="Domicilio del predio.Clave catastral" bpm:uuid="IJX6VZO9_A6IV3W/IH8RXF2R_1PR"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3141" name="Domicilio del predio.Fraccionamiento" bpm:uuid="IJX6VZO9_A6IV3W/IH8RXUH4_6OM"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3143" name="Domicilio del predio.Colonia" bpm:uuid="IJX6VZO9_A6IV3W/IH8RXWQ1_2TH"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3145" name="Domicilio del predio.Codigo Postal" bpm:uuid="IJX6VZO9_A6IV3W/IH8RXZLU_4XL"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap3147" name="Domicilio del predio.Letra" bpm:uuid="IJX6VZO9_A6IV3W/IH8RXS75_AC"/>
+      <OKLink id="mov1#hym66#apu130#oln211" name="OKLink" automaticCoupling="false" to="mov1#hym66#pu212" codeRef="mov1#hym66#page78#enu442#ln1055"/>
+      <OKLink id="mov1#hym66#apu130#oln212" name="OKLink" automaticCoupling="false" to="mov1#hym66#pu213" codeRef="mov1#hym66#page78#enu442#ln1056"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap2c" name="Datos del registro publico.Tomo de libro" bpm:uuid="IJX6VZOA_T1CF3O/IJWCKPBN_19P"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap4c" name="Datos del registro publico.Numero de tomo" bpm:uuid="IJX6VZOA_T1CF3O/IJWCKPN3_2GY"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap6c" name="Datos del registro publico.indice de predio" bpm:uuid="IJX6VZOA_T1CF3O/IJWCKPRZ_UO"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap8c" name="Datos del registro publico.Partida" bpm:uuid="IJX6VZOA_T1CF3O/IJWCKPX3_62C"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap10c" name="Datos del registro publico.Inscripcion" bpm:uuid="IJX6VZOA_T1CF3O/IJWCKQ27_7BR"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap26c" name="Datos solicitud.Numero solicitud" bpm:uuid="IJX6VZOA_5RXID8/ILCSVW44_2U5"/>
+      <ActivityParameter id="mov1#hym66#apu130#ap28c" name="Datos propiedad.Numero escritura" bpm:uuid="IJX6VZOA_D2TS2H/ILCM9ZRT_1ZP"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

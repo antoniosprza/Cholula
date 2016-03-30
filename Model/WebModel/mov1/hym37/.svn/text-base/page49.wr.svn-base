@@ -1,0 +1,84 @@
+<Page xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym37#page49" name="Confirmaci&#243;n de conexi&#243;n realizada" gr:x="10" gr:y="-5">
+  <ContentUnits>
+    <ActivityParametersUnit id="mov1#hym37#page49#apu73" name="Get Parameters" gr:x="0" gr:y="0">
+      <ActivityParameter id="mov1#hym37#page49#apu73#ap121k" name="Conexion de los servicios.OID" bpm:uuid="IJWKDB2S_WHT077"/>
+      <Link id="mov1#hym37#page49#apu73#ln27k" name="GetParameters" type="transport" automaticCoupling="false" to="mov1#hym37#page49#enu14k">
+        <LinkParameter id="mov1#hym37#page49#apu73#ln27k#par122k" name="OID" source="mov1#hym37#page49#apu73#ap121k" target="mov1#hym37#page49#enu14k#fld71k_slot"/>
+        <LinkParameter id="mov1#hym37#page49#apu73#ln27k#par124k" name="Confirmacion[values]" source="mov1#hym37#page49#apu73#ap123k_values" target="mov1#hym37#page49#enu14k#msfld1k#slot3k"/>
+        <LinkParameter id="mov1#hym37#page49#apu73#ln27k#par125k" name="Confirmacion" source="mov1#hym37#page49#apu73#ap123k" target="mov1#hym37#page49#enu14k#msfld1k_presel"/>
+        <LinkParameter id="mov1#hym37#page49#apu73#ln27k#par127k" name="Fecha de conexion" source="mov1#hym37#page49#apu73#ap125k" target="mov1#hym37#page49#enu14k#fld72k_slot"/>
+      </Link>
+      <ActivityParameter id="mov1#hym37#page49#apu73#ap123k" name="Conexion de los servicios.Confirmacion" bpm:uuid="IJWKDB2S_WHT077/IKAFL9FF_43X"/>
+      <ActivityParameter id="mov1#hym37#page49#apu73#ap125k" name="Conexion de los servicios.Fecha de conexion" bpm:uuid="IJWKDB2S_WHT077/IKAFLD9U_J6"/>
+    </ActivityParametersUnit>
+    <EntryUnit id="mov1#hym37#page49#enu245" name="Buttons" gr:x="260" gr:y="165">
+      <Link id="mov1#hym37#page49#enu245#ln620" name="Finish" type="normal" validate="true" automaticCoupling="false" to="mov1#hym37#apu72"/>
+      <Link id="mov1#hym37#page49#enu245#ln621" name="Save and Work Later" type="normal" validate="false" automaticCoupling="false" to="mov1#hym37#apu72" gr:bendpoints="164,-32,-64,96"/>
+      <Link id="mov1#hym37#page49#enu245#ln622" name="Cancel" type="normal" validate="false" automaticCoupling="false" to="mov1#hym37#pu127"/>
+    </EntryUnit>
+    <EntryUnit id="mov1#hym37#page49#enu14k" name="Conexion de los servicios" bpm:uuid="IJWKDB2S_WHT077" gr:x="150" gr:y="80">
+      <Field id="mov1#hym37#page49#enu14k#fld71k" name="Conexion de los servicios.OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJWKDB2S_WHT077"/>
+      <Link id="mov1#hym37#page49#enu14k#ln28k" name="SetParameters" type="transport" automaticCoupling="false" to="mov1#hym37#apu72">
+        <LinkParameter id="mov1#hym37#page49#enu14k#ln28k#par123k" name="OID" source="mov1#hym37#page49#enu14k#fld71k" target="mov1#hym37#apu72#ap120k"/>
+        <LinkParameter id="mov1#hym37#page49#enu14k#ln28k#par126k" name="Confirmacion" source="mov1#hym37#page49#enu14k#msfld1k" target="mov1#hym37#apu72#ap122k"/>
+        <LinkParameter id="mov1#hym37#page49#enu14k#ln28k#par128k" name="Fecha de conexion" source="mov1#hym37#page49#enu14k#fld72k" target="mov1#hym37#apu72#ap124k"/>
+      </Link>
+      <MultiSelectionField id="mov1#hym37#page49#enu14k#msfld1k" name="Confirmacion" type="string" bpm:uuid="IJWKDB2S_WHT077/IKAFL9FF_43X">
+        <Slot id="mov1#hym37#page49#enu14k#msfld1k#slot3k" name="values" label="true" output="true"/>
+        <VRules>
+          <CheckedFieldItemsValidationRule id="mov1#hym37#page49#enu14k#msfld1k#ckd1k" name="required" predicate="min" itemCount="1"/>
+        </VRules>
+      </MultiSelectionField>
+      <Field id="mov1#hym37#page49#enu14k#fld72k" name="Fecha de conexion" type="date" preloaded="true" modifiable="true" bpm:uuid="IJWKDB2S_WHT077/IKAFLD9U_J6">
+        <VRules>
+          <MandatoryValidationRule id="mov1#hym37#page49#enu14k#fld72k#mnd19k" name="required"/>
+        </VRules>
+      </Field>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12" label="Buttons" layout:cellLayout="Print Frame">
+        <layout:Unit unitId="mov1#hym37#page49#enu245" layout:frameLayout="None">
+          <layout:Link link="mov1#hym37#page49#enu245#ln620">
+            <layout:LayoutParameter name="confirmation" value="true" type="link"/>
+            <layout:LayoutParameter name="confirm-message" value="Confirm Finish" type="link"/>
+          </layout:Link>
+          <layout:Link link="mov1#hym37#page49#enu245#ln621"/>
+          <layout:Link link="mov1#hym37#page49#enu245#ln622"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell label="Conexion de los servicios" layout:cellLayout="Print Frame" colspan="12">
+        <layout:Unit unitId="mov1#hym37#page49#enu14k">
+          <layout:Field field="mov1#hym37#page49#enu14k#fld72k"/>
+          <layout:Field field="mov1#hym37#page49#enu14k#msfld1k"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <layout:LayoutParameter name="auto-refresh" value="true" type="page"/>
+</Page>

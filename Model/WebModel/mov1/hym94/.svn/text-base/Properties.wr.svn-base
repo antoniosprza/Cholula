@@ -1,0 +1,69 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym94" gr:x="8270" gr:y="40" name="SARE - Usuario - 1. Ingresar documentaci&#243;n" bpm:moduleType="activity" bpm:uuids="IJ4UT20G_6WH.IB1C8BJO_34E" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym94#icu93" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym94#icu93#oln294" name="OKLink" automaticCoupling="true" to="mov1#hym94#page106"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym94#pu296" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym94#pu297" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym94#pu298" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym94#apu186" name="Set Parameters" gr:x="560" gr:y="-218">
+      <ActivityParameter id="mov1#hym94#apu186#ap4390" name="Predial.OID" bpm:uuid="IJX8MDNU_Q9KI9L"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4392" name="Predial.Cuenta predial" bpm:uuid="IJX8MDNU_Q9KI9L/IH8L34LF_7LX"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4400" name="Tipo de persona.OID" bpm:uuid="IJX8MDNU_3Y9G0T"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4402" name="Tipo de persona.Tipo de persona" bpm:uuid="IJX8MDNU_3Y9G0T/IJ4NRS8E_3O5"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4404" name="Datos del solicitante.OID" bpm:uuid="IJX8MDNU_GA60O3"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4406" name="Datos del solicitante.Tipo de interesado    " bpm:uuid="IJX8MDNU_GA60O3/IH8L8H4V_5Z6"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4408" name="Datos del solicitante.Primer apellido" bpm:uuid="IJX8MDNU_GA60O3/IH8L8H9B_7DP"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4410" name="Datos del solicitante.Segundo apellido" bpm:uuid="IJX8MDNU_GA60O3/IH8L8HEF_YU"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4412" name="Datos del solicitante.Nombres(s)" bpm:uuid="IJX8MDNU_GA60O3/IH8L8HJ3_4ZC"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4414" name="Datos del solicitante.RFC" bpm:uuid="IJX8MDNU_GA60O3/IH8L8HNZ_PT"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4416" name="Datos del solicitante.Tel&#233;fono particular" bpm:uuid="IJX8MDNU_GA60O3/IH8L8HSM_D1"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4418" name="Datos del solicitante.Tel&#233;fono celular" bpm:uuid="IJX8MDNU_GA60O3/IH8L8HZJ_4UA"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4420" name="Datos del solicitante.Correo electr&#243;nico" bpm:uuid="IJX8MDNU_GA60O3/IH8L8I9R_5RB"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4422" name="Establecimiento.OID" bpm:uuid="IJX8MDNU_C3F3N2"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4424" name="Establecimiento.Inicio de operaciones" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NZ02P_6KY"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4426" name="Establecimiento.Superficie m2 del establecimiento" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NZ2C7_5D1"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4428" name="Establecimiento.Entre calle" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NYLD3_181"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4430" name="Establecimiento.Calle" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NYIVS_5C"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4432" name="Establecimiento.Colonia" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NWTK1_7NY"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4434" name="Establecimiento.Codigo postal" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NWVXR_535"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4436" name="Establecimiento.Numero exterior" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NYQFM_2RR"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4438" name="Establecimiento.y calle" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NYNUU_2A7"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4440" name="Establecimiento.Inversion aproximada" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NYV38_6LU"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4442" name="Establecimiento.Numero interior" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NYSN8_33L"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4444" name="Establecimiento.Denominaci&#243;n comercial" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NWQ4T_19U"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4446" name="Establecimiento.Local " bpm:uuid="IJX8MDNU_C3F3N2/IJ4NZ4V0_17Q"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4448" name="Establecimiento.Observaciones" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NZBUH_4S3"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4450" name="Establecimiento.Actividad o giro" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NWJNW_1PP"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4452" name="Establecimiento.Estacionamiento " bpm:uuid="IJX8MDNU_C3F3N2/IJ4NZ9O9_60U"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4454" name="Establecimiento.Numero de empleados" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NYXYG_2IR"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4456" name="Establecimiento.Clave de giro" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NWMA2_7EC"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4458" name="Establecimiento.Renta" bpm:uuid="IJX8MDNU_C3F3N2/IJ4NZ75I_4A6"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4460" name="Requisitos.OID" bpm:uuid="IJX8MDNU_2V7YM1"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4462" name="Requisitos.Tipo identificacion oficial   " bpm:uuid="IJX8MDNU_2V7YM1/IH8LDZH0_1KE"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4464" name="Requisitos.Identificacion oficial" bpm:uuid="IJX8MDNU_2V7YM1/IH8LDZLQ_3R7"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4466" name="Requisitos.Acta constitutiva (en caso de ser personal moral)" bpm:uuid="IJX8MDNU_2V7YM1/IH8Y4ETX_PC"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4469" name="Requisitos.Carta poder (en caso de no ser el propietario)" bpm:uuid="IJX8MDNU_2V7YM1/IH8UPD9X_7N9"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4471" name="Requisitos.Comprobante domicilio del comercio" bpm:uuid="IJX8MDNU_2V7YM1/IK08XI5T_3PA"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4473" name="Expediente electronico.OID" bpm:uuid="IJX8MDNU_I679HV"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4475" name="Expediente electronico.Constancia primeros auxilios en formato DC3" bpm:uuid="IJX8MDNU_I679HV/IJ4QWHJK_8I"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4477" name="Expediente electronico.Fotografia externa" bpm:uuid="IJX8MDNU_I679HV/IJ4QVOMZ_4OE"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4479" name="Expediente electronico.Fotografia interna" bpm:uuid="IJX8MDNU_I679HV/IJ4QVMH7_6FU"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4481" name="Expediente electronico.Comprobante domicilio (no mayor a tres meses)" bpm:uuid="IJX8MDNU_I679HV/IJ4QV4UX_1MM"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4483" name="Expediente electronico.Croquis" bpm:uuid="IJX8MDNU_I679HV/IJ4QWALV_3WN"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4485" name="Expediente electronico.Licencia de uso de suelo" bpm:uuid="IJX8MDNU_I679HV/IH8RJEBT_3QF"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4487" name="Medidas preventivas.OID" bpm:uuid="IJX8MDNU_PHBOT9"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4489" name="Medidas preventivas.Lineamientos" bpm:uuid="IJX8MDNU_PHBOT9/IJ4R4SWW_5EC"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4491" name="Terminos y condiciones.OID" bpm:uuid="IJX8MDNU_WQGAZA"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4493" name="Terminos y condiciones.Estoy de acuerdo en que cumplo con los lineamientos anterioremente mencionados para empezar a operar siendo conciente que cualquier falta que la Direccion de Proteccion Civil determine que no es subsanable pueda revocar la licencia de funcionamiento de manera inmediata." bpm:uuid="IJX8MDNU_WQGAZA/IJ4R8GPN_5SI"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap4495" name="Terminos y condiciones.Me comprometo a obtener el dictamen de uso de suelo en 30 dias" bpm:uuid="IJX8MDNU_WQGAZA/IJ4R8VUL_5WN"/>
+      <OKLink id="mov1#hym94#apu186#oln295" name="OKLink" automaticCoupling="false" to="mov1#hym94#pu296" codeRef="mov1#hym94#page106#enu647#ln1519"/>
+      <OKLink id="mov1#hym94#apu186#oln296" name="OKLink" automaticCoupling="false" to="mov1#hym94#pu297" codeRef="mov1#hym94#page106#enu647#ln1520"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap154k" name="Requisitos.Contrato de arrendamiento y/o pago de impuesto predial" bpm:uuid="IJX8MDNU_2V7YM1/IK04I3B9_7PR"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap155k" name="Expediente electronico.Aviso de salubridad (en caso de que aplique)" bpm:uuid="IJX8MDNU_I679HV/IJ4QX8XI_3T2"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap110c" name="Establecimiento.Construccion" bpm:uuid="IJ4UT20G_6WH.IJX8MDNU_C3F3N2/IM1MHU4W_500"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap111c" name="Establecimiento.Numero de cajones" bpm:uuid="IJ4UT20G_6WH.IJX8MDNU_C3F3N2/IM1MQDAI_6JH"/>
+      <ActivityParameter id="mov1#hym94#apu186#ap113c" name="Establecimiento.Numero de cajones" bpm:uuid="IJ4UT20G_6WH.IJX8MDNU_C3F3N2/IM1MQDAI_6JH"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

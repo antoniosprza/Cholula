@@ -1,0 +1,43 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym116" gr:x="9320" gr:y="710" name="Terminaci&#243;n de Obra - Jefe de Departamento de Licencias de Construcci&#243;n - 7. Cuantificar monto a pagar" bpm:moduleType="activity" bpm:uuids="IH8R3ULM_4ER.ICGQIWOM_69Z9P" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym116#icu115" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym116#icu115#oln360" name="OKLink" automaticCoupling="true" to="mov1#hym116#page128"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym116#pu362" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym116#pu363" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym116#pu364" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym116#apu230" name="Set Parameters" gr:x="560" gr:y="-74">
+      <ActivityParameter id="mov1#hym116#apu230#ap5183" name="Predial.OID" bpm:uuid="IJXG7WP6_NSVXYD"/>
+      <ActivityParameter id="mov1#hym116#apu230#ap5186" name="Control.OID" bpm:uuid="IJXG7WP6_57UCWL"/>
+      <ActivityParameter id="mov1#hym116#apu230#ap5190" name="Datos del solicitante.OID" bpm:uuid="IJXG7WP6_IZFCMY"/>
+      <ActivityParameter id="mov1#hym116#apu230#ap5200" name="Director responsable de obra.OID" bpm:uuid="IJXG7WP6_TWEMP9"/>
+      <ActivityParameter id="mov1#hym116#apu230#ap5211" name="Corresponsable de seguridad estructural.OID" bpm:uuid="IJXG7WP7_XQQP9A"/>
+      <ActivityParameter id="mov1#hym116#apu230#ap5215" name="Corresponsable de dise&#241;o urbano y arquetectonico.OID" bpm:uuid="IJXG7WP6_EGI1TG"/>
+      <ActivityParameter id="mov1#hym116#apu230#ap5219" name="Corresponsable de restauracion.OID" bpm:uuid="IJXG7WP7_114B75"/>
+      <ActivityParameter id="mov1#hym116#apu230#ap5223" name="Corresponsable de instalaciones mecanicas.OID" bpm:uuid="IJXG7WP7_M0ATYM"/>
+      <ActivityParameter id="mov1#hym116#apu230#ap5227" name="Corresponsable de instalaciones electricas.OID" bpm:uuid="IJXG7WP6_SE3385"/>
+      <ActivityParameter id="mov1#hym116#apu230#ap5231" name="Corresponsable de hidraulicas y sanitarias.OID" bpm:uuid="IJXG7WP6_54R57Q"/>
+      <ActivityParameter id="mov1#hym116#apu230#ap5235" name="Corresponsable de instalaciones de gas.OID" bpm:uuid="IJXG7WP6_MY4W1Y"/>
+      <ActivityParameter id="mov1#hym116#apu230#ap5239" name="Domicilio del predio.OID" bpm:uuid="IJXG7WP6_7LKHLB"/>
+      <ActivityParameter id="mov1#hym116#apu230#ap5248" name="Requisitos.OID" bpm:uuid="IJXG7WP6_O54IU8"/>
+      <ActivityParameter id="mov1#hym116#apu230#ap5252" name="Documentos oficiales.OID" bpm:uuid="IK0E9RFH_3M1FJY"/>
+      <ActivityParameter id="mov1#hym116#apu230#ap5254" name="Documentos oficiales.Licencia de construccion y recibo de pago" bpm:uuid="IK0E9RFH_3M1FJY/IK0E89D6_3TS"/>
+      <ActivityParameter id="mov1#hym116#apu230#ap5256" name="Documentos oficiales.Licencia de uso de suelo" bpm:uuid="IK0E9RFH_3M1FJY/IK0E89FM_YT"/>
+      <ActivityParameter id="mov1#hym116#apu230#ap5258" name="Documentos oficiales.Informe preventivo de impacto ambiental o Dictamen de informe ecologico preventivo" bpm:uuid="IK0E9RFH_3M1FJY/IK0E89ID_236"/>
+      <ActivityParameter id="mov1#hym116#apu230#ap5260" name="Documentos oficiales.Aviso de terminacion de obra ante la SDRSOT" bpm:uuid="IK0E9RFH_3M1FJY/IK0E89KO_7DT"/>
+      <ActivityParameter id="mov1#hym116#apu230#ap5262" name="Documentos oficiales.Contratacion de los servicios de agua y drenaje" bpm:uuid="IK0E9RFH_3M1FJY/IK0E89NC_373"/>
+      <ActivityParameter id="mov1#hym116#apu230#ap5264" name="Documentos oficiales.Proyecto arquitectonico autorizado" bpm:uuid="IK0E9RFH_3M1FJY/IK0E89RL_3EZ"/>
+      <ActivityParameter id="mov1#hym116#apu230#ap5266" name="Documentos oficiales.Disposicion final de residuos de construccion" bpm:uuid="IK0E9RFH_3M1FJY/IK0E89VL_2AM"/>
+      <ActivityParameter id="mov1#hym116#apu230#ap5268" name="Condicionantes y documentos adicionales.OID" bpm:uuid="IJXG7WP6_R8OTKH"/>
+      <ActivityParameter id="mov1#hym116#apu230#ap5272" name="Fecha y hora de visita.OID" bpm:uuid="IJXG7WP6_X16QCP"/>
+      <ActivityParameter id="mov1#hym116#apu230#ap5276" name="Informe ecologico preventiov.OID" bpm:uuid="IJXG7WP7_DBCMY8"/>
+      <ActivityParameter id="mov1#hym116#apu230#ap5286" name="Informe de terminacion de obra.OID" bpm:uuid="IJXG7WP7_4WO3W2"/>
+      <ActivityParameter id="mov1#hym116#apu230#ap5299" name="Expediente electronico.OID" bpm:uuid="IJXG7WP6_92N7A0"/>
+      <ActivityParameter id="mov1#hym116#apu230#ap5305" name="Antecendetes.OID" bpm:uuid="IJXG7WP6_WFE9FK"/>
+      <ActivityParameter id="mov1#hym116#apu230#ap5311" name="Pago.OID" bpm:uuid="IJXG7WP6_TRX0X9"/>
+      <ActivityParameter id="mov1#hym116#apu230#ap5313" name="Pago.Monto a pagar" bpm:uuid="IJXG7WP6_TRX0X9/IH8MNOOU_N2"/>
+      <OKLink id="mov1#hym116#apu230#oln361" name="OKLink" automaticCoupling="false" to="mov1#hym116#pu362" codeRef="mov1#hym116#page128#enu790#ln1841"/>
+      <OKLink id="mov1#hym116#apu230#oln362" name="OKLink" automaticCoupling="false" to="mov1#hym116#pu363" codeRef="mov1#hym116#page128#enu790#ln1842"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

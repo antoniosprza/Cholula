@@ -1,0 +1,135 @@
+<Page xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym28#page40" name="Descargar contrato" gr:x="10" gr:y="-5">
+  <ContentUnits>
+    <ActivityParametersUnit id="mov1#hym28#page40#apu55" name="Get Parameters" gr:x="0" gr:y="0">
+      <ActivityParameter id="mov1#hym28#page40#apu55#ap69k" name="Predial.OID" bpm:uuid="IJWKDB2T_B9LWW2"/>
+      <Link id="mov1#hym28#page40#apu55#ln11k" name="GetParameters" type="transport" automaticCoupling="false" to="mov1#hym28#page40#enu6k">
+        <LinkParameter id="mov1#hym28#page40#apu55#ln11k#par69k" name="OID" source="mov1#hym28#page40#apu55#ap69k" target="mov1#hym28#page40#enu6k#fld34k_slot"/>
+        <LinkParameter id="mov1#hym28#page40#apu55#ln11k#par71k" name="Cuenta predial" source="mov1#hym28#page40#apu55#ap70k" target="mov1#hym28#page40#enu6k#fld35k_slot"/>
+      </Link>
+      <ActivityParameter id="mov1#hym28#page40#apu55#ap70k" name="Predial.Cuenta predial" bpm:uuid="IJWKDB2T_B9LWW2/IH8L34LF_7LX"/>
+      <ActivityParameter id="mov1#hym28#page40#apu55#ap72k" name="Control.OID" bpm:uuid="IJWKDB2S_69Y861"/>
+      <Link id="mov1#hym28#page40#apu55#ln13k" name="GetParameters" type="transport" automaticCoupling="false" to="mov1#hym28#page40#enu7k">
+        <LinkParameter id="mov1#hym28#page40#apu55#ln13k#par72k" name="OID" source="mov1#hym28#page40#apu55#ap72k" target="mov1#hym28#page40#enu7k#fld36k_slot"/>
+        <LinkParameter id="mov1#hym28#page40#apu55#ln13k#par74k" name="Folio de ingreso" source="mov1#hym28#page40#apu55#ap73k" target="mov1#hym28#page40#enu7k#fld37k_slot"/>
+        <LinkParameter id="mov1#hym28#page40#apu55#ln13k#par75k" name="Folio de control" source="mov1#hym28#page40#apu55#ap74k" target="mov1#hym28#page40#enu7k#fld38k_slot"/>
+      </Link>
+      <ActivityParameter id="mov1#hym28#page40#apu55#ap73k" name="Control.Folio de ingreso" bpm:uuid="IJWKDB2S_69Y861/IH8KZUZV_14D"/>
+      <ActivityParameter id="mov1#hym28#page40#apu55#ap74k" name="Control.Folio de control" bpm:uuid="IJWKDB2S_69Y861/IH8L0CS5_XQ"/>
+      <ActivityParameter id="mov1#hym28#page40#apu55#ap112k" name="Expediente electronico.OID" bpm:uuid="IJWKDB2S_6PXN3D"/>
+      <Link id="mov1#hym28#page40#apu55#ln23k" name="GetParameters" type="transport" automaticCoupling="false" to="mov1#hym28#page40#enu12k">
+        <LinkParameter id="mov1#hym28#page40#apu55#ln23k#par113k" name="OID" source="mov1#hym28#page40#apu55#ap112k" target="mov1#hym28#page40#enu12k#fld66k_slot"/>
+        <LinkParameter id="mov1#hym28#page40#apu55#ln23k#par115k" name="Contratacion de los servicios de agua y drenaje" source="mov1#hym28#page40#apu55#ap114k" target="mov1#hym28#page40#enu12k#fld67k_slot"/>
+      </Link>
+      <ActivityParameter id="mov1#hym28#page40#apu55#ap114k" name="Expediente electronico.Contratacion de los servicios de agua y drenaje" bpm:uuid="IJWKDB2S_6PXN3D/IH8RK0NO_5YF"/>
+    </ActivityParametersUnit>
+    <EntryUnit id="mov1#hym28#page40#enu190" name="Buttons" gr:x="260" gr:y="165">
+      <Link id="mov1#hym28#page40#enu190#ln501" name="Finish" type="normal" validate="true" automaticCoupling="false" to="mov1#hym28#apu54"/>
+      <Link id="mov1#hym28#page40#enu190#ln502" name="Save and Work Later" type="normal" validate="false" automaticCoupling="false" to="mov1#hym28#apu54" gr:bendpoints="164,-32,-64,96"/>
+      <Link id="mov1#hym28#page40#enu190#ln503" name="Cancel" type="normal" validate="false" automaticCoupling="false" to="mov1#hym28#pu100"/>
+    </EntryUnit>
+    <EntryUnit id="mov1#hym28#page40#enu6k" name="Predial" bpm:uuid="IJWKDB2T_B9LWW2" gr:x="150" gr:y="80">
+      <Field id="mov1#hym28#page40#enu6k#fld34k" name="Predial.OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJWKDB2T_B9LWW2"/>
+      <Link id="mov1#hym28#page40#enu6k#ln12k" name="SetParameters" type="transport" automaticCoupling="false" to="mov1#hym28#apu54">
+        <LinkParameter id="mov1#hym28#page40#enu6k#ln12k#par70k" name="OID" source="mov1#hym28#page40#enu6k#fld34k" target="mov1#hym28#apu54#ap68k"/>
+      </Link>
+      <Field id="mov1#hym28#page40#enu6k#fld35k" name="Cuenta predial" type="string" preloaded="true" modifiable="false" bpm:uuid="IJWKDB2T_B9LWW2/IH8L34LF_7LX"/>
+    </EntryUnit>
+    <EntryUnit id="mov1#hym28#page40#enu7k" name="Control" bpm:uuid="IJWKDB2S_69Y861" gr:x="150" gr:y="80">
+      <Field id="mov1#hym28#page40#enu7k#fld36k" name="Control.OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJWKDB2S_69Y861"/>
+      <Link id="mov1#hym28#page40#enu7k#ln14k" name="SetParameters" type="transport" automaticCoupling="false" to="mov1#hym28#apu54">
+        <LinkParameter id="mov1#hym28#page40#enu7k#ln14k#par73k" name="OID" source="mov1#hym28#page40#enu7k#fld36k" target="mov1#hym28#apu54#ap71k"/>
+      </Link>
+      <Field id="mov1#hym28#page40#enu7k#fld37k" name="Folio de ingreso" type="string" preloaded="true" modifiable="false" bpm:uuid="IJWKDB2S_69Y861/IH8KZUZV_14D"/>
+      <Field id="mov1#hym28#page40#enu7k#fld38k" name="Folio de control" type="string" preloaded="true" modifiable="false" bpm:uuid="IJWKDB2S_69Y861/IH8L0CS5_XQ"/>
+    </EntryUnit>
+    <EntryUnit id="mov1#hym28#page40#enu12k" name="Expediente electronico" bpm:uuid="IJWKDB2S_6PXN3D" gr:x="150" gr:y="80">
+      <Field id="mov1#hym28#page40#enu12k#fld66k" name="Expediente electronico.OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJWKDB2S_6PXN3D"/>
+      <Link id="mov1#hym28#page40#enu12k#ln24k" name="SetParameters" type="transport" automaticCoupling="false" to="mov1#hym28#apu54">
+        <LinkParameter id="mov1#hym28#page40#enu12k#ln24k#par114k" name="OID" source="mov1#hym28#page40#enu12k#fld66k" target="mov1#hym28#apu54#ap111k"/>
+        <LinkParameter id="mov1#hym28#page40#enu12k#ln24k#par116k" name="Contratacion de los servicios de agua y drenaje" source="mov1#hym28#page40#enu12k#fld67k" target="mov1#hym28#apu54#ap113k"/>
+      </Link>
+      <Field id="mov1#hym28#page40#enu12k#fld67k" name="Contratacion de los servicios de agua y drenaje" type="blob" preloaded="true" modifiable="true" bpm:uuid="IJWKDB2S_6PXN3D/IH8RK0NO_5YF"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12" label="Buttons" layout:cellLayout="Print Frame">
+        <layout:Unit unitId="mov1#hym28#page40#enu190" layout:frameLayout="None">
+          <layout:Link link="mov1#hym28#page40#enu190#ln501">
+            <layout:LayoutParameter name="confirmation" value="true" type="link"/>
+            <layout:LayoutParameter name="confirm-message" value="Confirm Finish" type="link"/>
+          </layout:Link>
+          <layout:Link link="mov1#hym28#page40#enu190#ln502"/>
+          <layout:Link link="mov1#hym28#page40#enu190#ln503"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell label="Predial" layout:cellLayout="Print Frame" colspan="12">
+        <layout:Unit unitId="mov1#hym28#page40#enu6k">
+          <layout:Field field="mov1#hym28#page40#enu6k#fld35k" layout:fieldLayout="WRDefault/FieldValue"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell label="Control" layout:cellLayout="Print Frame" colspan="12">
+        <layout:Unit unitId="mov1#hym28#page40#enu7k">
+          <layout:Field field="mov1#hym28#page40#enu7k#fld37k" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym28#page40#enu7k#fld38k" layout:fieldLayout="WRDefault/FieldValue"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell label="Expediente electronico" layout:cellLayout="Print Frame" colspan="12">
+        <layout:Unit unitId="mov1#hym28#page40#enu12k">
+          <layout:Field field="mov1#hym28#page40#enu12k#fld67k"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <layout:LayoutParameter name="auto-refresh" value="true" type="page"/>
+</Page>

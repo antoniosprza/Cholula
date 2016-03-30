@@ -1,0 +1,17 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym26" gr:x="1720" gr:y="500" name="Contrato de conexi&#243;n de agua - Usuario - 4. Realizar pago" bpm:moduleType="activity" bpm:uuids="IH8XYGM2_W5.IDT78ZUU_S3LJN3" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym26#icu25" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym26#icu25#oln90" name="OKLink" automaticCoupling="true" to="mov1#hym26#page38"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym26#pu92" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym26#pu93" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym26#pu94" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym26#apu50" name="Set Parameters" gr:x="560" gr:y="82">
+      <ActivityParameter id="mov1#hym26#apu50#ap1402" name="Predial.OID" bpm:uuid="IJWKDB2T_B9LWW2"/>
+      <ActivityParameter id="mov1#hym26#apu50#ap1405" name="Control.OID" bpm:uuid="IJWKDB2S_69Y861"/>
+      <ActivityParameter id="mov1#hym26#apu50#ap1409" name="Pago.OID" bpm:uuid="IJWKDB2S_ANT7VV"/>
+      <OKLink id="mov1#hym26#apu50#oln91" name="OKLink" automaticCoupling="false" to="mov1#hym26#pu92" codeRef="mov1#hym26#page38#enu184#ln487"/>
+      <OKLink id="mov1#hym26#apu50#oln92" name="OKLink" automaticCoupling="false" to="mov1#hym26#pu93" codeRef="mov1#hym26#page38#enu184#ln488"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

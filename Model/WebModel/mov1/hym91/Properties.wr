@@ -1,0 +1,23 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym91" gr:x="7160" gr:y="315" name="Alineamiento y uso de suelo espec&#237;fico - Analista ecolog&#237;a - 3.B Elaborar dictamen ecol&#243;gico" bpm:moduleType="activity" bpm:uuids="IH8T9YT7_4NM.ICHVAQW0_IZK5A" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym91#icu90" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym91#icu90#oln285" name="OKLink" automaticCoupling="true" to="mov1#hym91#page103"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym91#pu287" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym91#pu288" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym91#pu289" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym91#apu180" name="Set Parameters" gr:x="560" gr:y="46">
+      <ActivityParameter id="mov1#hym91#apu180#ap4256" name="Predial.OID" bpm:uuid="IJX88GE1_C8I8LV"/>
+      <ActivityParameter id="mov1#hym91#apu180#ap4259" name="Control.OID" bpm:uuid="IJX88GE1_HGQXT9"/>
+      <ActivityParameter id="mov1#hym91#apu180#ap4263" name="Datos del establecimiento.OID" bpm:uuid="IJX88GE2_V2WZAO"/>
+      <ActivityParameter id="mov1#hym91#apu180#ap4270" name="Datos del solicitante.OID" bpm:uuid="IJX88GE1_A2RSXS"/>
+      <ActivityParameter id="mov1#hym91#apu180#ap4280" name="Datos del propietario.OID" bpm:uuid="IJX88GE1_9CEYRA"/>
+      <ActivityParameter id="mov1#hym91#apu180#ap4286" name="Domicilio del predio.OID" bpm:uuid="IJX88GE1_BS560A"/>
+      <ActivityParameter id="mov1#hym91#apu180#ap4295" name="Expediente electronico.OID" bpm:uuid="IJX88GE1_2WX63O"/>
+      <ActivityParameter id="mov1#hym91#apu180#ap4306" name="Requerimientos ecologicos.OID" bpm:uuid="IJX88GE2_H4Z9S4"/>
+      <ActivityParameter id="mov1#hym91#apu180#ap4308" name="Requerimientos ecologicos.Requerimientos" bpm:uuid="IJX88GE2_H4Z9S4/IH8TUMLA_5OP"/>
+      <OKLink id="mov1#hym91#apu180#oln286" name="OKLink" automaticCoupling="false" to="mov1#hym91#pu287" codeRef="mov1#hym91#page103#enu624#ln1466"/>
+      <OKLink id="mov1#hym91#apu180#oln287" name="OKLink" automaticCoupling="false" to="mov1#hym91#pu288" codeRef="mov1#hym91#page103#enu624#ln1467"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

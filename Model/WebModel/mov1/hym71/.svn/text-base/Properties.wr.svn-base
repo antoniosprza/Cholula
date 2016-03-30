@@ -1,0 +1,20 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym71" gr:x="5075" gr:y="160" name="Pago ISABI - Asistente - 3. Revisar documentaci&#243;n" bpm:moduleType="activity" bpm:uuids="IJWGSGO9_4JI.IB18AAP5_1SKDY" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym71#icu70" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym71#icu70#oln225" name="OKLink" automaticCoupling="true" to="mov1#hym71#page83"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym71#pu227" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym71#pu228" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym71#pu229" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym71#apu140" name="Set Parameters" gr:x="560" gr:y="82">
+      <ActivityParameter id="mov1#hym71#apu140#ap3250" name="Predial.OID" bpm:uuid="IJX6VZOA_BITD6Y"/>
+      <ActivityParameter id="mov1#hym71#apu140#ap3253" name="Control.OID" bpm:uuid="IJX6VZO9_3E2CCZ"/>
+      <ActivityParameter id="mov1#hym71#apu140#ap3257" name="Expediente electronico.OID" bpm:uuid="IJX6VZOA_KNOL9L"/>
+      <OKLink id="mov1#hym71#apu140#oln226" name="OKLink" automaticCoupling="false" to="mov1#hym71#pu227" codeRef="mov1#hym71#page83#enu469#ln1120"/>
+      <OKLink id="mov1#hym71#apu140#oln227" name="OKLink" automaticCoupling="false" to="mov1#hym71#pu228" codeRef="mov1#hym71#page83#enu469#ln1121"/>
+      <ActivityParameter id="mov1#hym71#apu140#ap189k" name="Validaciones.OID" bpm:uuid="IJX6VZOA_V30SLU"/>
+      <ActivityParameter id="mov1#hym71#apu140#ap191k" name="Validaciones.Observaciones" bpm:uuid="IJX6VZOA_V30SLU/IH8LLT4Q_5TC"/>
+      <ActivityParameter id="mov1#hym71#apu140#ap193k" name="Validaciones.&#191;Procede? " bpm:uuid="IJX6VZOA_V30SLU/IH8MGT15_XX"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

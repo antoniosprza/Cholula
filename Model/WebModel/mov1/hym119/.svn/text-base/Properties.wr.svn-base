@@ -1,0 +1,18 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym119" gr:x="9320" gr:y="780" name="Terminaci&#243;n de Obra - Director de Desarrollo Urbano - 8. Autorizar constancia" bpm:moduleType="activity" bpm:uuids="IH8R3ULM_4ER.ICGQKGZX_FKHFF" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym119#icu118" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym119#icu118#oln369" name="OKLink" automaticCoupling="true" to="mov1#hym119#page131"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym119#pu371" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym119#pu372" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym119#pu373" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym119#apu236" name="Set Parameters" gr:x="560" gr:y="76">
+      <ActivityParameter id="mov1#hym119#apu236#ap5368" name="Predial.OID" bpm:uuid="IJXG7WP6_NSVXYD"/>
+      <ActivityParameter id="mov1#hym119#apu236#ap5371" name="Control.OID" bpm:uuid="IJXG7WP6_57UCWL"/>
+      <ActivityParameter id="mov1#hym119#apu236#ap5375" name="Expediente electronico.OID" bpm:uuid="IJXG7WP6_92N7A0"/>
+      <ActivityParameter id="mov1#hym119#apu236#ap5377" name="Expediente electronico.Constancia de terminacion de obra de construccion" bpm:uuid="IJXG7WP6_92N7A0/IH8NJ6G6_7E4"/>
+      <OKLink id="mov1#hym119#apu236#oln370" name="OKLink" automaticCoupling="false" to="mov1#hym119#pu371" codeRef="mov1#hym119#page131#enu805#ln1874"/>
+      <OKLink id="mov1#hym119#apu236#oln371" name="OKLink" automaticCoupling="false" to="mov1#hym119#pu372" codeRef="mov1#hym119#page131#enu805#ln1875"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

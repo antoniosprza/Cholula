@@ -1,0 +1,33 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym82" gr:x="5775" gr:y="385" name="Licencia de construcci&#243;n de casa habitaci&#243;n unifamiliar (fraccionamientos autorizados) - Analista de licencia de construcci&#243;n - 5. Revisi&#243;n de proyecto" bpm:moduleType="activity" bpm:uuids="IH8MOSKO_307.ICFCA8D5_8543Q" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym82#icu81" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym82#icu81#oln258" name="OKLink" automaticCoupling="true" to="mov1#hym82#page94"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym82#pu260" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym82#pu261" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym82#pu262" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym82#apu162" name="Set Parameters" gr:x="560" gr:y="-8">
+      <ActivityParameter id="mov1#hym82#apu162#ap3758" name="Predial.OID" bpm:uuid="IJX7RKBP_PCH0YJ"/>
+      <ActivityParameter id="mov1#hym82#apu162#ap3761" name="Control.OID" bpm:uuid="IJX7RKBO_RRJS1O"/>
+      <ActivityParameter id="mov1#hym82#apu162#ap3765" name="Observaciones ALNO.OID" bpm:uuid="IJX7RKBP_V6NQ3O"/>
+      <ActivityParameter id="mov1#hym82#apu162#ap3770" name="Director responsable de obra.OID" bpm:uuid="IJX7RKBP_MAJNLD"/>
+      <ActivityParameter id="mov1#hym82#apu162#ap3781" name="Datos del solicitante.OID" bpm:uuid="IJX7RKBP_JOAN2E"/>
+      <ActivityParameter id="mov1#hym82#apu162#ap3791" name="Datos de propietario.OID" bpm:uuid="IJX7RKBP_IB7OI3"/>
+      <ActivityParameter id="mov1#hym82#apu162#ap3797" name="Domicilio del predio.OID" bpm:uuid="IJX7RKBP_RX3ZOV"/>
+      <ActivityParameter id="mov1#hym82#apu162#ap3800" name="Expediente electronico.OID" bpm:uuid="IJX7RKBO_D7MJG7"/>
+      <ActivityParameter id="mov1#hym82#apu162#ap3811" name="Localizacion.OID" bpm:uuid="IJX7RKBP_H0DCZP"/>
+      <ActivityParameter id="mov1#hym82#apu162#ap3818" name="Medidas y colindancias.OID" bpm:uuid="IJX7RKBP_UFN1VZ"/>
+      <ActivityParameter id="mov1#hym82#apu162#ap3823" name="Proyecto final.OID" bpm:uuid="IJX7RKBP_OAQEE9"/>
+      <ActivityParameter id="mov1#hym82#apu162#ap3830" name="Datos de la construccion.OID" bpm:uuid="IJX7RKBP_QL20U5"/>
+      <ActivityParameter id="mov1#hym82#apu162#ap3832" name="Datos de la construccion.Planta baja" bpm:uuid="IJX7RKBP_QL20U5/IH8MC8FU_6BX"/>
+      <ActivityParameter id="mov1#hym82#apu162#ap3834" name="Datos de la construccion.1er nivel" bpm:uuid="IJX7RKBP_QL20U5/IH8MC8KQ_2AO"/>
+      <ActivityParameter id="mov1#hym82#apu162#ap3836" name="Datos de la construccion.2do nivel" bpm:uuid="IJX7RKBP_QL20U5/IH8MC8PL_3MQ"/>
+      <ActivityParameter id="mov1#hym82#apu162#ap3838" name="Datos de la construccion.Vigencia de licencia" bpm:uuid="IJX7RKBP_QL20U5/IH8MC8YY_7JJ"/>
+      <ActivityParameter id="mov1#hym82#apu162#ap3840" name="Validaciones.OID" bpm:uuid="IJX7RKBP_PSLZ07"/>
+      <ActivityParameter id="mov1#hym82#apu162#ap3842" name="Validaciones.&#191;Procede? " bpm:uuid="IJX7RKBP_PSLZ07/IH8MGT15_XX"/>
+      <OKLink id="mov1#hym82#apu162#oln259" name="OKLink" automaticCoupling="false" to="mov1#hym82#pu260" codeRef="mov1#hym82#page94#enu560#ln1317"/>
+      <OKLink id="mov1#hym82#apu162#oln260" name="OKLink" automaticCoupling="false" to="mov1#hym82#pu261" codeRef="mov1#hym82#page94#enu560#ln1318"/>
+      <ActivityParameter id="mov1#hym82#apu162#ap151k" name="Datos de la construccion.Sotano" bpm:uuid="IJX7RKBP_QL20U5/IH8MC88Y_7E6"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

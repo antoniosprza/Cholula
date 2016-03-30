@@ -1,0 +1,27 @@
+[28 mar 2016 20:06:47] DEBUG Executing SQL script
+[28 mar 2016 20:06:47] INFO ================================================================================
+[28 mar 2016 20:06:47] INFO outputPath= '/Users/Angel/Documents/work-space/CholulaMunWEB/.Temp~/UpdateSQL.xml'
+[28 mar 2016 20:06:47] INFO onError= 'stop'
+[28 mar 2016 20:06:47] INFO statementSeparator= ';'
+[28 mar 2016 20:06:47] INFO derby.system.home= '/Users/Angel/Documents/work-space/.metadata/.plugins/com.webratio.commons.db/derby'
+[28 mar 2016 20:06:47] INFO password= ''
+[28 mar 2016 20:06:47] INFO url= 'jdbc:mysql://localhost:3306/cholulamun'
+[28 mar 2016 20:06:47] INFO username= 'root'
+[28 mar 2016 20:06:47] INFO autoCommit= 'false'
+[28 mar 2016 20:06:47] INFO outputLogPath= '/Users/Angel/Documents/work-space/CholulaMunWEB/.Temp~/UpdateSQL.xml.log'
+[28 mar 2016 20:06:47] INFO driverClass= 'com.mysql.jdbc.Driver'
+[28 mar 2016 20:06:47] INFO encoding= ''
+[28 mar 2016 20:06:47] INFO eventSocketPort= '62424'
+[28 mar 2016 20:06:47] INFO sqlScript= '/Users/Angel/Documents/work-space/CholulaMunWEB/.Temp~/UpdateSQL.sql'
+[28 mar 2016 20:06:47] INFO ================================================================================
+[28 mar 2016 20:06:47] INFO Connecting to the Database...
+[28 mar 2016 20:06:47] INFO Database connection estabilished
+[28 mar 2016 20:06:47] INFO transaction isolation: 4
+[28 mar 2016 20:06:47] DEBUG ================================================================================
+[28 mar 2016 20:06:47] DEBUG Executing SQL script file: /Users/Angel/Documents/work-space/CholulaMunWEB/.Temp~/UpdateSQL.sql
+[28 mar 2016 20:06:47] DEBUG Executing statement:  alter table `sare_establecimiento`  add column  `numerocajones`  integer
+[28 mar 2016 20:06:48] DEBUG Executing statement:  alter table `sare_establecimiento`  add column  `construccion`  varchar(255)
+[28 mar 2016 20:06:48] DEBUG ================================================================================
+[28 mar 2016 20:06:48] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[28 mar 2016 20:06:48] INFO Database connection closed
+[28 mar 2016 20:06:48] DEBUG Total time: 428 milliseconds

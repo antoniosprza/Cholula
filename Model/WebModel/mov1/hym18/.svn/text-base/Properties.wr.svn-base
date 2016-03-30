@@ -1,0 +1,26 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym18" gr:x="890" gr:y="-10" name="Aval&#250;o final - Analista de ventanilla - 2. Revisar documentaci&#243;n" bpm:moduleType="activity" bpm:uuids="IJWGRZ38_5F5.IDQX43BX_VC6PC2" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym18#icu17" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym18#icu17#oln66" name="OKLink" automaticCoupling="true" to="mov1#hym18#page30"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym18#pu68" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym18#pu69" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym18#pu70" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym18#apu34" name="Set Parameters" gr:x="560" gr:y="34">
+      <ActivityParameter id="mov1#hym18#apu34#ap683" name="Predial.OID" bpm:uuid="IJWJZXTU_9CK5Z4"/>
+      <ActivityParameter id="mov1#hym18#apu34#ap686" name="Clave Catastral.OID" bpm:uuid="IJWJMRH1_X38QLH"/>
+      <ActivityParameter id="mov1#hym18#apu34#ap693" name="Datos del solicitante.OID" bpm:uuid="IJWJMRH2_CK24TS"/>
+      <ActivityParameter id="mov1#hym18#apu34#ap700" name="Datos del propietario.OID" bpm:uuid="IJWJMRH1_IXC2JW"/>
+      <ActivityParameter id="mov1#hym18#apu34#ap705" name="Domicilio del predio.OID" bpm:uuid="IJWJMRH1_ENZJDI"/>
+      <ActivityParameter id="mov1#hym18#apu34#ap718" name="Medidas y colindancias.OID" bpm:uuid="IJWJZXTU_A9H7HY"/>
+      <ActivityParameter id="mov1#hym18#apu34#ap723" name="Requisitos.OID" bpm:uuid="IJWJMRH2_QNBB38"/>
+      <ActivityParameter id="mov1#hym18#apu34#ap727" name="Expediente electronico.OID" bpm:uuid="IJWJMRH2_EIVVE6"/>
+      <ActivityParameter id="mov1#hym18#apu34#ap733" name="Validaciones.OID" bpm:uuid="IJWJZXTU_6HKD1K"/>
+      <ActivityParameter id="mov1#hym18#apu34#ap735" name="&#191;Esta completa la documentacion? " bpm:uuid="IJWGRZ38_5F5.IJWJZXTU_6HKD1K/IH8UY1Q3_7IZ"/>
+      <ActivityParameter id="mov1#hym18#apu34#ap737" name="Validaciones.Observaciones" bpm:uuid="IJWJZXTU_6HKD1K/IH8LLT4Q_5TC"/>
+      <OKLink id="mov1#hym18#apu34#oln67" name="OKLink" automaticCoupling="false" to="mov1#hym18#pu68" codeRef="mov1#hym18#page30#enu111#ln333"/>
+      <OKLink id="mov1#hym18#apu34#oln68" name="OKLink" automaticCoupling="false" to="mov1#hym18#pu69" codeRef="mov1#hym18#page30#enu111#ln334"/>
+      <ActivityParameter id="mov1#hym18#apu34#ap21c" name="Validaciones.&#191;Esta completa la informacion? " bpm:uuid="IJWJZXTU_6HKD1K/IH8LL99N_341"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

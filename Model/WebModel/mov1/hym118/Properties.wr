@@ -1,0 +1,17 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym118" gr:x="9320" gr:y="570" name="Terminaci&#243;n de Obra - Departamento de gesti&#243;n urbana - 6.1.B Registrar el incumplimiento del DRO" bpm:moduleType="activity" bpm:uuids="IH8R3ULM_4ER.ICGQFETA_8VUYI" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym118#icu117" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym118#icu117#oln366" name="OKLink" automaticCoupling="true" to="mov1#hym118#page130"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym118#pu368" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym118#pu369" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym118#pu370" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym118#apu234" name="Set Parameters" gr:x="560" gr:y="82">
+      <ActivityParameter id="mov1#hym118#apu234#ap5350" name="Predial.OID" bpm:uuid="IJXG7WP6_NSVXYD"/>
+      <ActivityParameter id="mov1#hym118#apu234#ap5353" name="Control.OID" bpm:uuid="IJXG7WP6_57UCWL"/>
+      <ActivityParameter id="mov1#hym118#apu234#ap5357" name="Director responsable de obra.OID" bpm:uuid="IJXG7WP6_TWEMP9"/>
+      <OKLink id="mov1#hym118#apu234#oln367" name="OKLink" automaticCoupling="false" to="mov1#hym118#pu368" codeRef="mov1#hym118#page130#enu801#ln1865"/>
+      <OKLink id="mov1#hym118#apu234#oln368" name="OKLink" automaticCoupling="false" to="mov1#hym118#pu369" codeRef="mov1#hym118#page130#enu801#ln1866"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

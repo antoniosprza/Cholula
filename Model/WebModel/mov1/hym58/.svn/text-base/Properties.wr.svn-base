@@ -1,0 +1,30 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym58" gr:x="4235" gr:y="100" name="Factibilidad de agua y drenaje - Analista administrativo - 2. Revisar documentaci&#243;n" bpm:moduleType="activity" bpm:uuids="IH8UEEGG_60K.ICHX9FKW_HGSCH" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym58#icu57" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym58#icu57#oln186" name="OKLink" automaticCoupling="true" to="mov1#hym58#page70"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym58#pu188" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym58#pu189" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym58#pu190" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym58#apu114" name="Set Parameters" gr:x="560" gr:y="16">
+      <ActivityParameter id="mov1#hym58#apu114#ap2670" name="Predial.OID" bpm:uuid="IJWLCWG7_Q2ISDH"/>
+      <ActivityParameter id="mov1#hym58#apu114#ap2673" name="Control.OID" bpm:uuid="IJWLCWG7_7Y1Y5I"/>
+      <ActivityParameter id="mov1#hym58#apu114#ap2677" name="Caracteristicas del predio.OID" bpm:uuid="IJWLCWG7_Q2ZDKL"/>
+      <ActivityParameter id="mov1#hym58#apu114#ap2681" name="Datos del solicitante.OID" bpm:uuid="IJWLCWG7_CZ1524"/>
+      <ActivityParameter id="mov1#hym58#apu114#ap2691" name="Datos del propietario.OID" bpm:uuid="IJWLCWG7_OXM08J"/>
+      <ActivityParameter id="mov1#hym58#apu114#ap2697" name="Domicilio del predio.OID" bpm:uuid="IJWLCWG7_USMK2N"/>
+      <ActivityParameter id="mov1#hym58#apu114#ap2710" name="Datos generales del servicio.OID" bpm:uuid="IJWLCWG7_79IRGQ"/>
+      <ActivityParameter id="mov1#hym58#apu114#ap2718" name="Requisitos.OID" bpm:uuid="IJWLCWG7_9K8E4F"/>
+      <ActivityParameter id="mov1#hym58#apu114#ap2726" name="Expediente electronico.OID" bpm:uuid="IJWLCWG7_9G0J22"/>
+      <ActivityParameter id="mov1#hym58#apu114#ap2806" name="Medidas y colindancias.OID" bpm:uuid="IJWLCWG7_BZUCDD"/>
+      <ActivityParameter id="mov1#hym58#apu114#ap2811" name="Superficie.OID" bpm:uuid="IJWLCWG7_8CCNPW"/>
+      <ActivityParameter id="mov1#hym58#apu114#ap2815" name="Validaciones.OID" bpm:uuid="IJWLCWG7_586MHG"/>
+      <ActivityParameter id="mov1#hym58#apu114#ap2817" name="Validaciones.&#191;Esta completa la documentacion? " bpm:uuid="IJWLCWG7_586MHG/IH8UY1Q3_7IZ"/>
+      <ActivityParameter id="mov1#hym58#apu114#ap2819" name="Validaciones.Observaciones" bpm:uuid="IJWLCWG7_586MHG/IH8LLT4Q_5TC"/>
+      <OKLink id="mov1#hym58#apu114#oln187" name="OKLink" automaticCoupling="false" to="mov1#hym58#pu188" codeRef="mov1#hym58#page70#enu385#ln927"/>
+      <OKLink id="mov1#hym58#apu114#oln188" name="OKLink" automaticCoupling="false" to="mov1#hym58#pu189" codeRef="mov1#hym58#page70#enu385#ln928"/>
+      <ActivityParameter id="mov1#hym58#apu114#ap138k" name="Control.Folio de ingreso" bpm:uuid="IJWLCWG7_7Y1Y5I/IH8KZUZV_14D"/>
+      <ActivityParameter id="mov1#hym58#apu114#ap188k" name="Control.Folio de control" bpm:uuid="IJWLCWG7_7Y1Y5I/IH8L0CS5_XQ"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

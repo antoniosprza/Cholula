@@ -1,0 +1,17 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym93" gr:x="7160" gr:y="460" name="Alineamiento y uso de suelo espec&#237;fico - Director de desarrollo urbano - 5. Autorizaci&#243;n del proyecto" bpm:moduleType="activity" bpm:uuids="IH8T9YT7_4NM.ICHVD2EB_FKTGO" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym93#icu92" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym93#icu92#oln291" name="OKLink" automaticCoupling="true" to="mov1#hym93#page105"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym93#pu293" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym93#pu294" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym93#pu295" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym93#apu184" name="Set Parameters" gr:x="560" gr:y="82">
+      <ActivityParameter id="mov1#hym93#apu184#ap4380" name="Predial.OID" bpm:uuid="IJX88GE1_C8I8LV"/>
+      <ActivityParameter id="mov1#hym93#apu184#ap4383" name="Control.OID" bpm:uuid="IJX88GE1_HGQXT9"/>
+      <ActivityParameter id="mov1#hym93#apu184#ap4387" name="Expediente electronico.OID" bpm:uuid="IJX88GE1_2WX63O"/>
+      <OKLink id="mov1#hym93#apu184#oln292" name="OKLink" automaticCoupling="false" to="mov1#hym93#pu293" codeRef="mov1#hym93#page105#enu637#ln1498"/>
+      <OKLink id="mov1#hym93#apu184#oln293" name="OKLink" automaticCoupling="false" to="mov1#hym93#pu294" codeRef="mov1#hym93#page105#enu637#ln1499"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

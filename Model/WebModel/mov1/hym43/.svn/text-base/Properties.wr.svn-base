@@ -1,0 +1,27 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym43" gr:x="2610" gr:y="105" name="Constancia de No Adeudo - Analista - 2. Verificar adeudos en el sistema" bpm:moduleType="activity" bpm:uuids="IJWGUXEF_7NS.IB12MVVK_143UX" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym43#icu42" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym43#icu42#oln141" name="OKLink" automaticCoupling="true" to="mov1#hym43#page55"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym43#pu143" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym43#pu144" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym43#pu145" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym43#apu84" name="Set Parameters" gr:x="560" gr:y="34">
+      <ActivityParameter id="mov1#hym43#apu84#ap1854" name="Predial.OID" bpm:uuid="IJWKRH4S_B8VI14"/>
+      <ActivityParameter id="mov1#hym43#apu84#ap1857" name="Control.OID" bpm:uuid="IJWKRH4R_JLMSF3"/>
+      <ActivityParameter id="mov1#hym43#apu84#ap1861" name="Datos del predio.OID" bpm:uuid="IJWKRH4S_UG8FW2"/>
+      <ActivityParameter id="mov1#hym43#apu84#ap1863" name="Datos del predio.Superficie de construcion" bpm:uuid="IJWKRH4S_UG8FW2/IJWFIKF1_50P"/>
+      <ActivityParameter id="mov1#hym43#apu84#ap1866" name="Datos del predio.Superficie de terreno" bpm:uuid="IJWKRH4S_UG8FW2/IJWFIK0O_1IJ"/>
+      <ActivityParameter id="mov1#hym43#apu84#ap1868" name="Datos del predio.Base gravable" bpm:uuid="IJWKRH4S_UG8FW2/IJWFIKL1_5HW"/>
+      <ActivityParameter id="mov1#hym43#apu84#ap1870" name="Datos del solicitante.OID" bpm:uuid="IJWKRH4S_BKFLIG"/>
+      <ActivityParameter id="mov1#hym43#apu84#ap1877" name="Datos del propietario.OID" bpm:uuid="IJWKRH4S_4WM7SQ"/>
+      <ActivityParameter id="mov1#hym43#apu84#ap1883" name="Domicilio del predio.OID" bpm:uuid="IJWKRH4R_VNDUYA"/>
+      <ActivityParameter id="mov1#hym43#apu84#ap1893" name="Validaciones.OID" bpm:uuid="IJWKRH4S_75T0JM"/>
+      <ActivityParameter id="mov1#hym43#apu84#ap1895" name="Validaciones.&#191;Esta al corriente en los pagos? " bpm:uuid="IJWKRH4S_75T0JM/IH8UYQZH_ZJ"/>
+      <OKLink id="mov1#hym43#apu84#oln142" name="OKLink" automaticCoupling="false" to="mov1#hym43#pu143" codeRef="mov1#hym43#page55#enu277#ln690"/>
+      <OKLink id="mov1#hym43#apu84#oln143" name="OKLink" automaticCoupling="false" to="mov1#hym43#pu144" codeRef="mov1#hym43#page55#enu277#ln691"/>
+      <ActivityParameter id="mov1#hym43#apu84#ap130k" name="Control.Folio de ingreso" bpm:uuid="IJWKRH4R_JLMSF3/IH8KZUZV_14D"/>
+      <ActivityParameter id="mov1#hym43#apu84#ap186k" name="Control.Folio de control" bpm:uuid="IJWKRH4R_JLMSF3/IH8L0CS5_XQ"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

@@ -1,0 +1,28 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym34" gr:x="1720" gr:y="565" name="Contrato de conexi&#243;n de agua - Analista t&#233;cnico - 5. Realizar relaci&#243;n de medidores a instalar y registrar &#243;rdenes de conexi&#243;n" bpm:moduleType="activity" bpm:uuids="IH8XYGM2_W5.IDT7GTJP_Z4XYUK" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym34#icu33" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym34#icu33#oln114" name="OKLink" automaticCoupling="true" to="mov1#hym34#page46"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym34#pu116" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym34#pu117" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym34#pu118" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym34#apu66" name="Set Parameters" gr:x="560" gr:y="22">
+      <ActivityParameter id="mov1#hym34#apu66#ap1610" name="Predial.OID" bpm:uuid="IJWKDB2T_B9LWW2"/>
+      <ActivityParameter id="mov1#hym34#apu66#ap1613" name="Control.OID" bpm:uuid="IJWKDB2S_69Y861"/>
+      <ActivityParameter id="mov1#hym34#apu66#ap1617" name="Datos del propietario.OID" bpm:uuid="IJWKDB2T_5I64CA"/>
+      <ActivityParameter id="mov1#hym34#apu66#ap1623" name="Domicilio del solicitante.OID" bpm:uuid="IJWKDB2T_AT5VCT"/>
+      <ActivityParameter id="mov1#hym34#apu66#ap1635" name="Domicilio del predio.OID" bpm:uuid="IJWKDB2S_AUY0Q9"/>
+      <ActivityParameter id="mov1#hym34#apu66#ap1645" name="Datos generales del servicio.OID" bpm:uuid="IJWKDB2T_V1ZMN7"/>
+      <ActivityParameter id="mov1#hym34#apu66#ap1649" name="Servicio.OID" bpm:uuid="IJWKDB2S_1YGJXX"/>
+      <ActivityParameter id="mov1#hym34#apu66#ap1651" name="Servicio.Observaciones" bpm:uuid="IJWKDB2S_1YGJXX/IH8ZOO12_IT"/>
+      <ActivityParameter id="mov1#hym34#apu66#ap1653" name="Servicio.Clasificacion" bpm:uuid="IJWKDB2S_1YGJXX/IH8ZOLDP_47R"/>
+      <ActivityParameter id="mov1#hym34#apu66#ap1655" name="Orden de conexion.OID" bpm:uuid="IJWKDB2S_ZD6F1A"/>
+      <ActivityParameter id="mov1#hym34#apu66#ap1657" name="Orden de conexion.Toma" bpm:uuid="IJWKDB2S_ZD6F1A/IH8ZPDSX_5A1"/>
+      <ActivityParameter id="mov1#hym34#apu66#ap1659" name="Orden de conexion.Numero de medidor" bpm:uuid="IJWKDB2S_ZD6F1A/IH8ZPG3V_6LH"/>
+      <ActivityParameter id="mov1#hym34#apu66#ap1661" name="Orden de conexion.Fecha de conexion" bpm:uuid="IJWKDB2S_ZD6F1A/IH8ZPJ3P_6Z7"/>
+      <OKLink id="mov1#hym34#apu66#oln115" name="OKLink" automaticCoupling="false" to="mov1#hym34#pu116" codeRef="mov1#hym34#page46#enu229#ln585"/>
+      <OKLink id="mov1#hym34#apu66#oln116" name="OKLink" automaticCoupling="false" to="mov1#hym34#pu117" codeRef="mov1#hym34#page46#enu229#ln586"/>
+      <ActivityParameter id="mov1#hym34#apu66#ap118k" name="Orden de conexion.Numero de orden" bpm:uuid="IJWKDB2S_ZD6F1A/IKAE2WEV_4RO"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

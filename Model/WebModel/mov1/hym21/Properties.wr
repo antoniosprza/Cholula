@@ -1,0 +1,19 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym21" gr:x="890" gr:y="305" name="Aval&#250;o final - Valuador - 6. Generar aval&#250;o y cuantificar monto a pagar" bpm:moduleType="activity" bpm:uuids="IJWGRZ38_5F5.IDQXZQT0_O1035" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym21#icu20" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym21#icu20#oln75" name="OKLink" automaticCoupling="true" to="mov1#hym21#page33"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym21#pu77" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym21#pu78" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym21#pu79" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym21#apu40" name="Set Parameters" gr:x="560" gr:y="70">
+      <ActivityParameter id="mov1#hym21#apu40#ap934" name="Predial.OID" bpm:uuid="IJWJZXTU_9CK5Z4"/>
+      <ActivityParameter id="mov1#hym21#apu40#ap937" name="Control.OID" bpm:uuid="IJWJMRH2_6NIAXA"/>
+      <ActivityParameter id="mov1#hym21#apu40#ap941" name="Pago.OID" bpm:uuid="IJWJZXTU_WHC343"/>
+      <ActivityParameter id="mov1#hym21#apu40#ap943" name="Pago.Monto a pagar" bpm:uuid="IJWJZXTU_WHC343/IH8MNOOU_N2"/>
+      <ActivityParameter id="mov1#hym21#apu40#ap945" name="Validaciones.OID" bpm:uuid="IJWJZXTU_6HKD1K"/>
+      <OKLink id="mov1#hym21#apu40#oln76" name="OKLink" automaticCoupling="false" to="mov1#hym21#pu77" codeRef="mov1#hym21#page33#enu140#ln394"/>
+      <OKLink id="mov1#hym21#apu40#oln77" name="OKLink" automaticCoupling="false" to="mov1#hym21#pu78" codeRef="mov1#hym21#page33#enu140#ln395"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

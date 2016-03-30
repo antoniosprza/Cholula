@@ -1,0 +1,215 @@
+<Page xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym4#page16" name="3.2  Confirmar visita de inspecci&#243;n" gr:x="0" gr:y="-10">
+  <ContentUnits>
+    <ActivityParametersUnit id="mov1#hym4#page16#apu7" name="Get Parameters" gr:x="0" gr:y="25">
+      <Link id="mov1#hym4#page16#apu7#ln127" name="Properties" type="transport" automaticCoupling="false" to="mov1#hym4#page16#enu21" gr:bendpoints="121,-123,-89,-3">
+        <LinkParameter id="mov1#hym4#page16#apu7#ln127#par239" name="Predial.OID" source="mov1#hym4#page16#apu7#ap141" target="mov1#hym4#page16#enu21#fld79_slot"/>
+        <LinkParameter id="mov1#hym4#page16#apu7#ln127#par240" name="Predial.Cuenta predial" source="mov1#hym4#page16#apu7#ap143" target="mov1#hym4#page16#enu21#fld80_slot"/>
+      </Link>
+      <ActivityParameter id="mov1#hym4#page16#apu7#ap141" name="Predial.OID" bpm:uuid="IJWJGHP3_GLTB4M"/>
+      <ActivityParameter id="mov1#hym4#page16#apu7#ap143" name="Predial.Cuenta predial" bpm:uuid="IJWJGHP3_GLTB4M/IH8L34LF_7LX"/>
+      <Link id="mov1#hym4#page16#apu7#ln129" name="Properties" type="transport" automaticCoupling="false" to="mov1#hym4#page16#enu22" gr:bendpoints="115,-51,-95,-1">
+        <LinkParameter id="mov1#hym4#page16#apu7#ln129#par242" name="Control.OID" source="mov1#hym4#page16#apu7#ap144" target="mov1#hym4#page16#enu22#fld81_slot"/>
+        <LinkParameter id="mov1#hym4#page16#apu7#ln129#par243" name="Control.Folio de ingreso" source="mov1#hym4#page16#apu7#ap146" target="mov1#hym4#page16#enu22#fld82_slot"/>
+        <LinkParameter id="mov1#hym4#page16#apu7#ln129#par244" name="Control.Folio de control" source="mov1#hym4#page16#apu7#ap147" target="mov1#hym4#page16#enu22#fld83_slot"/>
+      </Link>
+      <ActivityParameter id="mov1#hym4#page16#apu7#ap144" name="Control.OID" bpm:uuid="IJWJGHP3_TJLYLB"/>
+      <ActivityParameter id="mov1#hym4#page16#apu7#ap146" name="Control.Folio de ingreso" bpm:uuid="IJWJGHP3_TJLYLB/IH8KZUZV_14D"/>
+      <ActivityParameter id="mov1#hym4#page16#apu7#ap147" name="Control.Folio de control" bpm:uuid="IJWJGHP3_TJLYLB/IH8L0CS5_XQ"/>
+      <Link id="mov1#hym4#page16#apu7#ln131" name="Properties" type="transport" automaticCoupling="false" to="mov1#hym4#page16#enu23" gr:bendpoints="128,18,-127,-2">
+        <LinkParameter id="mov1#hym4#page16#apu7#ln131#par246" name="Fecha y hora de visita.OID" source="mov1#hym4#page16#apu7#ap148" target="mov1#hym4#page16#enu23#fld84_slot"/>
+        <LinkParameter id="mov1#hym4#page16#apu7#ln131#par247" name="Fecha y hora de visita.Fecha y hora" source="mov1#hym4#page16#apu7#ap150" target="mov1#hym4#page16#enu23#fld85_slot"/>
+        <LinkParameter id="mov1#hym4#page16#apu7#ln131#par248" name="Fecha y hora de visita.Comentarios adicionales" source="mov1#hym4#page16#apu7#ap151" target="mov1#hym4#page16#enu23#fld86_slot"/>
+        <LinkParameter id="mov1#hym4#page16#apu7#ln131#par2c" name="fechaTimeStamp" source="mov1#hym4#page16#apu7#ap101c" target="mov1#hym4#page16#enu23#fld85_slot"/>
+      </Link>
+      <ActivityParameter id="mov1#hym4#page16#apu7#ap148" name="Fecha y hora de visita.OID" bpm:uuid="IJWJGHP2_R47MIN"/>
+      <ActivityParameter id="mov1#hym4#page16#apu7#ap150" name="Fecha y hora de visita.Fecha y hora" bpm:uuid="IJWJGHP2_R47MIN/IH8QVYUH_1YR"/>
+      <ActivityParameter id="mov1#hym4#page16#apu7#ap151" name="Fecha y hora de visita.Comentarios adicionales" bpm:uuid="IJWJGHP2_R47MIN/IH8QW68P_3AE"/>
+      <Link id="mov1#hym4#page16#apu7#ln133" name="Properties" type="transport" automaticCoupling="false" to="mov1#hym4#page16#enu24" gr:bendpoints="128,85,-107,-5">
+        <LinkParameter id="mov1#hym4#page16#apu7#ln133#par250" name="Validaciones.OID" source="mov1#hym4#page16#apu7#ap152" target="mov1#hym4#page16#enu24#fld87_slot"/>
+        <LinkParameter id="mov1#hym4#page16#apu7#ln133#par252" name="&#191;Procede? [values]" source="mov1#hym4#page16#apu7#ap154_values" target="mov1#hym4#page16#enu24#sfld18#slot11"/>
+        <LinkParameter id="mov1#hym4#page16#apu7#ln133#par253" name="&#191;Procede? " source="mov1#hym4#page16#apu7#ap154" target="mov1#hym4#page16#enu24#sfld18_presel"/>
+        <LinkParameter id="mov1#hym4#page16#apu7#ln133#par255" name="&#191;Esta completa la informacion? [values]" source="mov1#hym4#page16#apu7#ap156_values" target="mov1#hym4#page16#enu24#sfld19#slot12"/>
+        <LinkParameter id="mov1#hym4#page16#apu7#ln133#par256" name="&#191;Esta completa la informacion? " source="mov1#hym4#page16#apu7#ap156" target="mov1#hym4#page16#enu24#sfld19_presel"/>
+        <LinkParameter id="mov1#hym4#page16#apu7#ln133#par258" name="&#191;Fecha y hora confirmada? [values]" source="mov1#hym4#page16#apu7#ap158_values" target="mov1#hym4#page16#enu24#sfld20#slot13"/>
+        <LinkParameter id="mov1#hym4#page16#apu7#ln133#par259" name="&#191;Fecha y hora confirmada? " source="mov1#hym4#page16#apu7#ap158" target="mov1#hym4#page16#enu24#sfld20_presel"/>
+        <LinkParameter id="mov1#hym4#page16#apu7#ln133#par261" name="&#191;Procede sin inspecci&#243;n? [values]" source="mov1#hym4#page16#apu7#ap160_values" target="mov1#hym4#page16#enu24#sfld21#slot14"/>
+        <LinkParameter id="mov1#hym4#page16#apu7#ln133#par262" name="&#191;Procede sin inspecci&#243;n? " source="mov1#hym4#page16#apu7#ap160" target="mov1#hym4#page16#enu24#sfld21_presel"/>
+        <LinkParameter id="mov1#hym4#page16#apu7#ln133#par264" name="Validaciones.Observaciones" source="mov1#hym4#page16#apu7#ap162" target="mov1#hym4#page16#enu24#fld88_slot"/>
+      </Link>
+      <ActivityParameter id="mov1#hym4#page16#apu7#ap152" name="Validaciones.OID" bpm:uuid="IJWJGHP3_YOW2KM"/>
+      <ActivityParameter id="mov1#hym4#page16#apu7#ap154" name="Validaciones.&#191;Procede? " bpm:uuid="IJWJGHP3_YOW2KM/IH8MGT15_XX"/>
+      <ActivityParameter id="mov1#hym4#page16#apu7#ap156" name="Validaciones.&#191;Esta completa la informacion? " bpm:uuid="IJWJGHP3_YOW2KM/IH8LL99N_341"/>
+      <ActivityParameter id="mov1#hym4#page16#apu7#ap158" name="Validaciones.&#191;Fecha y hora confirmada? " bpm:uuid="IJWJGHP3_YOW2KM/IH8QWJH6_6X0"/>
+      <ActivityParameter id="mov1#hym4#page16#apu7#ap160" name="Validaciones.&#191;Procede sin inspecci&#243;n? " bpm:uuid="IJWJGHP3_YOW2KM/IH8NNAR3_7G2"/>
+      <ActivityParameter id="mov1#hym4#page16#apu7#ap162" name="Validaciones.Observaciones" bpm:uuid="IJWJGHP3_YOW2KM/IH8LLT4Q_5TC"/>
+      <ActivityParameter id="mov1#hym4#page16#apu7#ap99c" name="Fecha y hora de visita.fechaTimeStamp" bpm:uuid="IH8MUGYN_75W.IJWJGHP2_R47MIN/ILU05BF9_25B"/>
+      <ActivityParameter id="mov1#hym4#page16#apu7#ap101c" name="Fecha y hora de visita.fechaTimeStamp" bpm:uuid="IJWJGHP2_R47MIN/ILU05BF9_25B"/>
+    </ActivityParametersUnit>
+    <EntryUnit id="mov1#hym4#page16#enu21" name="Predial" bpm:uuid="IJWJGHP3_GLTB4M" gr:x="260" gr:y="0">
+      <Link id="mov1#hym4#page16#enu21#ln128" name="Parameters" type="transport" automaticCoupling="false" to="mov1#hym4#apu6" validate="true">
+        <LinkParameter id="mov1#hym4#page16#enu21#ln128#par238" name="Predial.OID" source="mov1#hym4#page16#enu21#fld79" target="mov1#hym4#apu6#ap142"/>
+      </Link>
+      <Field id="mov1#hym4#page16#enu21#fld79" name="OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJWJGHP3_GLTB4M"/>
+      <Field id="mov1#hym4#page16#enu21#fld80" name="Cuenta predial" type="string" preloaded="true" modifiable="false" bpm:uuid="IJWJGHP3_GLTB4M/IH8L34LF_7LX"/>
+    </EntryUnit>
+    <EntryUnit id="mov1#hym4#page16#enu22" name="Control" bpm:uuid="IJWJGHP3_TJLYLB" gr:x="260" gr:y="70">
+      <Link id="mov1#hym4#page16#enu22#ln130" name="Parameters" type="transport" automaticCoupling="false" to="mov1#hym4#apu6" validate="true">
+        <LinkParameter id="mov1#hym4#page16#enu22#ln130#par241" name="Control.OID" source="mov1#hym4#page16#enu22#fld81" target="mov1#hym4#apu6#ap145"/>
+      </Link>
+      <Field id="mov1#hym4#page16#enu22#fld81" name="OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJWJGHP3_TJLYLB"/>
+      <Field id="mov1#hym4#page16#enu22#fld82" name="Folio de ingreso" type="string" preloaded="true" modifiable="false" bpm:uuid="IJWJGHP3_TJLYLB/IH8KZUZV_14D"/>
+      <Field id="mov1#hym4#page16#enu22#fld83" name="Folio de control" type="string" preloaded="true" modifiable="false" bpm:uuid="IJWJGHP3_TJLYLB/IH8L0CS5_XQ"/>
+    </EntryUnit>
+    <EntryUnit id="mov1#hym4#page16#enu23" name="Fecha y hora de visita" bpm:uuid="IJWJGHP2_R47MIN" gr:x="260" gr:y="140">
+      <Link id="mov1#hym4#page16#enu23#ln132" name="Parameters" type="transport" automaticCoupling="false" to="mov1#hym4#apu6" validate="true">
+        <LinkParameter id="mov1#hym4#page16#enu23#ln132#par245" name="Fecha y hora de visita.OID" source="mov1#hym4#page16#enu23#fld84" target="mov1#hym4#apu6#ap149"/>
+      </Link>
+      <Field id="mov1#hym4#page16#enu23#fld84" name="OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJWJGHP2_R47MIN"/>
+      <Field id="mov1#hym4#page16#enu23#fld85" name="fechaTimeStamp" type="timestamp" preloaded="true" modifiable="false" bpm:uuid="IH8MUGYN_75W.IJWJGHP2_R47MIN/ILU05BF9_25B" hidden="false"/>
+      <Field id="mov1#hym4#page16#enu23#fld86" name="Comentarios adicionales" type="text" preloaded="true" modifiable="false" bpm:uuid="IJWJGHP2_R47MIN/IH8QW68P_3AE"/>
+    </EntryUnit>
+    <EntryUnit id="mov1#hym4#page16#enu24" name="Validaciones" bpm:uuid="IJWJGHP3_YOW2KM" gr:x="260" gr:y="210">
+      <Link id="mov1#hym4#page16#enu24#ln134" name="Parameters" type="transport" automaticCoupling="false" to="mov1#hym4#apu6" validate="true">
+        <LinkParameter id="mov1#hym4#page16#enu24#ln134#par249" name="Validaciones.OID" source="mov1#hym4#page16#enu24#fld87" target="mov1#hym4#apu6#ap153"/>
+        <LinkParameter id="mov1#hym4#page16#enu24#ln134#par251" name="Validaciones.&#191;Procede? " source="mov1#hym4#page16#enu24#sfld18" target="mov1#hym4#apu6#ap155"/>
+        <LinkParameter id="mov1#hym4#page16#enu24#ln134#par254" name="Validaciones.&#191;Esta completa la informacion? " source="mov1#hym4#page16#enu24#sfld19" target="mov1#hym4#apu6#ap157"/>
+        <LinkParameter id="mov1#hym4#page16#enu24#ln134#par257" name="Validaciones.&#191;Fecha y hora confirmada? " source="mov1#hym4#page16#enu24#sfld20" target="mov1#hym4#apu6#ap159"/>
+        <LinkParameter id="mov1#hym4#page16#enu24#ln134#par260" name="Validaciones.&#191;Procede sin inspecci&#243;n? " source="mov1#hym4#page16#enu24#sfld21" target="mov1#hym4#apu6#ap161"/>
+        <LinkParameter id="mov1#hym4#page16#enu24#ln134#par263" name="Validaciones.Observaciones" source="mov1#hym4#page16#enu24#fld88" target="mov1#hym4#apu6#ap163"/>
+      </Link>
+      <Field id="mov1#hym4#page16#enu24#fld87" name="OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJWJGHP3_YOW2KM"/>
+      <SelectionField id="mov1#hym4#page16#enu24#sfld20" name="&#191;Fecha y hora confirmada? " type="string" bpm:uuid="IJWJGHP3_YOW2KM/IH8QWJH6_6X0">
+        <Slot id="mov1#hym4#page16#enu24#sfld20#slot13" name="values" label="true" output="true"/>
+        <VRules>
+          <MandatoryValidationRule id="mov1#hym4#page16#enu24#sfld20#mnd31" name="required"/>
+        </VRules>
+      </SelectionField>
+      <Field id="mov1#hym4#page16#enu24#fld88" name="Observaciones" type="text" preloaded="true" modifiable="true" bpm:uuid="IJWJGHP3_YOW2KM/IH8LLT4Q_5TC"/>
+    </EntryUnit>
+    <EntryUnit id="mov1#hym4#page16#enu25" name="Buttons" gr:x="390" gr:y="295" linkOrder="mov1#hym4#page16#enu25#ln135 mov1#hym4#page16#enu25#ln137 mov1#hym4#page16#enu25#ln136">
+      <Link id="mov1#hym4#page16#enu25#ln135" name="Finish" type="normal" validate="true" automaticCoupling="false" to="mov1#hym4#apu6"/>
+      <Link id="mov1#hym4#page16#enu25#ln136" name="Save and Work Later" type="normal" validate="false" automaticCoupling="false" to="mov1#hym4#apu6" gr:bendpoints="164,-32,-64,96"/>
+      <Link id="mov1#hym4#page16#enu25#ln137" name="Cancel" type="normal" validate="false" automaticCoupling="false" to="mov1#hym4#pu28"/>
+    </EntryUnit>
+    <MultiMessageUnit gr:x="260" gr:y="280" id="mov1#hym4#page16#mssu3c" name="Aviso">
+      <Message xml:space="preserve">Deber&#225; presentarse el d&#237;a de la cita por el inspector y regresarlo una vez terminada la inspecci&#243;n.</Message>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12" label="Predial" layout:cellLayout="Print Frame">
+        <layout:Unit unitId="mov1#hym4#page16#enu21">
+          <layout:Field field="mov1#hym4#page16#enu21#fld80" layout:fieldLayout="WRDefault/FieldValue"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell label="Control" layout:cellLayout="Print Frame" colspan="12">
+        <layout:Unit unitId="mov1#hym4#page16#enu22">
+          <layout:Field field="mov1#hym4#page16#enu22#fld82" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym4#page16#enu22#fld83" layout:fieldLayout="WRDefault/FieldValue"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#hym4#page16#mssu3c"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12" label="Fecha y hora de visita" layout:cellLayout="Print Frame">
+        <layout:Unit unitId="mov1#hym4#page16#enu23" manualFieldOrder="mov1#hym4#page16#enu23#fld86" manualFields="true">
+          <layout:Field field="mov1#hym4#page16#enu23#fld85" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym4#page16#enu23#fld86" layout:fieldLayout="WRDefault/FieldValue"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell label="Validaciones" layout:cellLayout="Print Frame" colspan="12">
+        <layout:Unit unitId="mov1#hym4#page16#enu24" manualFields="true" manualFieldOrder="mov1#hym4#page16#enu24#fld88 mov1#hym4#page16#enu24#sfld20">
+          <layout:Field field="mov1#hym4#page16#enu24#fld88"/>
+          <layout:Field field="mov1#hym4#page16#enu24#sfld20"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell label="Buttons" layout:cellLayout="Print Frame" colspan="12">
+        <layout:Unit unitId="mov1#hym4#page16#enu25" layout:frameLayout="None">
+          <layout:Link link="mov1#hym4#page16#enu25#ln135">
+            <layout:LayoutParameter name="confirmation" value="true" type="link"/>
+            <layout:LayoutParameter name="confirm-message" value="Confirm Finish" type="link"/>
+          </layout:Link>
+          <layout:Link link="mov1#hym4#page16#enu25#ln137"/>
+          <layout:Link link="mov1#hym4#page16#enu25#ln136"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <layout:LayoutParameter name="auto-refresh" value="true" type="page"/>
+</Page>

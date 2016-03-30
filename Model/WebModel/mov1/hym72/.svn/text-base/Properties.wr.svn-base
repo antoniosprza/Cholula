@@ -1,0 +1,18 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym72" gr:x="5075" gr:y="290" name="Pago ISABI - Asistente - 4. Calcular impuesto" bpm:moduleType="activity" bpm:uuids="IJWGSGO9_4JI.IDPHEWA5_8URE52" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym72#icu71" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym72#icu71#oln228" name="OKLink" automaticCoupling="true" to="mov1#hym72#page84"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym72#pu230" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym72#pu231" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym72#pu232" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym72#apu142" name="Set Parameters" gr:x="560" gr:y="76">
+      <ActivityParameter id="mov1#hym72#apu142#ap3262" name="Predial.OID" bpm:uuid="IJX6VZOA_BITD6Y"/>
+      <ActivityParameter id="mov1#hym72#apu142#ap3265" name="Control.OID" bpm:uuid="IJX6VZO9_3E2CCZ"/>
+      <ActivityParameter id="mov1#hym72#apu142#ap3269" name="Pago.OID" bpm:uuid="IJX6VZOA_X5GEB2"/>
+      <ActivityParameter id="mov1#hym72#apu142#ap3271" name="Pago.Monto a pagar" bpm:uuid="IJX6VZOA_X5GEB2/IH8MNOOU_N2"/>
+      <OKLink id="mov1#hym72#apu142#oln229" name="OKLink" automaticCoupling="false" to="mov1#hym72#pu230" codeRef="mov1#hym72#page84#enu473#ln1129"/>
+      <OKLink id="mov1#hym72#apu142#oln230" name="OKLink" automaticCoupling="false" to="mov1#hym72#pu231" codeRef="mov1#hym72#page84#enu473#ln1130"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

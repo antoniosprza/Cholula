@@ -1,0 +1,58 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym97" gr:x="8270" gr:y="470" name="SARE - Usuario - 5. Realizar pago" bpm:moduleType="activity" bpm:uuids="IJ4UT20G_6WH.IB1D52YN_7ZEEB" layout:singleLayout="true" layout:pageLayout="GOBMXSTYLE/Default">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym97#icu96" gr:x="-275" gr:y="85" name="Input">
+      <OKLink id="mov1#hym97#icu96#oln303" name="OKLink" automaticCoupling="true" to="mov1#hym97#page109"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym97#pu305" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym97#pu306" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym97#pu307" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym97#apu192" name="Set Parameters" gr:x="560" gr:y="76">
+      <ActivityParameter id="mov1#hym97#apu192#ap4610" name="Predial.OID" bpm:uuid="IJX8MDNU_Q9KI9L"/>
+      <ActivityParameter id="mov1#hym97#apu192#ap4613" name="Control.OID" bpm:uuid="IJX8MDNU_HIRBIO"/>
+      <ActivityParameter id="mov1#hym97#apu192#ap4617" name="Pago.OID" bpm:uuid="IJX8MDNU_NZENGC"/>
+      <ActivityParameter id="mov1#hym97#apu192#ap4619" name="Pago.Monto a pagar" bpm:uuid="IJX8MDNU_NZENGC/IH8MNOOU_N2"/>
+      <OKLink id="mov1#hym97#apu192#oln304" name="OKLink" automaticCoupling="false" to="mov1#hym97#pu305" codeRef="mov1#hym97#page109#enu666#ln1560"/>
+      <OKLink id="mov1#hym97#apu192#oln305" name="OKLink" automaticCoupling="false" to="mov1#hym97#pu306" codeRef="mov1#hym97#page109#enu666#ln1561"/>
+    </ActivityParametersUnit>
+    <CreateUnit id="mov1#hym97#cru2c" name="PrepararPago" gr:x="195" gr:y="605" entity="ent1c">
+      <OKLink id="mov1#hym97#cru2c#oln4c" name="OKFlow4" to="mov1#hym97#ppu1c">
+        <LinkParameter id="mov1#hym97#cru2c#oln4c#par140c" name="nombreTramite_PASSING_Item Names" sourceLinkParameter="mov1#hym97#page109#enu665#ln26c#par134c" target="mov1#hym97#ppu1c.itemNames"/>
+        <LinkParameter id="mov1#hym97#cru2c#oln4c#par143c" name="precio_Item Prices" source="ent1c#att7cArray" target="mov1#hym97#ppu1c.itemPrices"/>
+        <LinkParameter id="mov1#hym97#cru2c#oln4c#par144c" name="cantidad_Item Quantities" source="ent1c#att8cArray" target="mov1#hym97#ppu1c.itemQuantities"/>
+        <LinkParameter id="mov1#hym97#cru2c#oln4c#par145c" name="nombreTramite_PASSING" sourceLinkParameter="mov1#hym97#page109#enu665#ln26c#par134c" passing="true"/>
+        <LinkParameter id="mov1#hym97#cru2c#oln4c#par150c" name="MXN_Transaction Currency" sourceValue="MXN" target="mov1#hym97#ppu1c.currency"/>
+      </OKLink>
+    </CreateUnit>
+    <PayPalUnit gr:x="-15" gr:y="605" id="mov1#hym97#ppu1c" name="Prepara" action="prepare">
+      <OKLink id="mov1#hym97#ppu1c#oln5c" name="Cancelar Pago" to="mov1#hym97#page109" automaticCoupling="true" gr:bendpoints="-8,-64,-292,316"/>
+      <KOLink id="mov1#hym97#ppu1c#kln1c" name="KOFlow1" to="mov1#hym97#page2c#enu4c">
+        <LinkParameter id="mov1#hym97#ppu1c#kln1c#par146c" name="Error Code_Error Code" source="errorCode" target="mov1#hym97#page2c#enu4c#fld93c_slot"/>
+        <LinkParameter id="mov1#hym97#ppu1c#kln1c#par147c" name="Error Details_Error Details" source="errorDetails" target="mov1#hym97#page2c#enu4c#fld99c_slot"/>
+        <LinkParameter id="mov1#hym97#ppu1c#kln1c#par148c" name="Error Message_Error Message" source="errorMessage" target="mov1#hym97#page2c#enu4c#fld98c_slot"/>
+      </KOLink>
+      <OKLink id="mov1#hym97#ppu1c#oln6c" name="OKFlow6" to="mov1#hym97#ppu2c">
+        <LinkParameter id="mov1#hym97#ppu1c#oln6c#par154c" name="Payer ID_Payer ID" source="payerID" target="mov1#hym97#ppu2c.payerID"/>
+        <LinkParameter id="mov1#hym97#ppu1c#oln6c#par155c" name="Transaction Amount_Transaction Amount" source="amount" target="mov1#hym97#ppu2c.amount"/>
+        <LinkParameter id="mov1#hym97#ppu1c#oln6c#par156c" name="Transaction Currency_Transaction Currency" source="currency" target="mov1#hym97#ppu2c.currency"/>
+        <LinkParameter id="mov1#hym97#ppu1c#oln6c#par157c" name="Transaction Token_Transaction Token" source="token" target="mov1#hym97#ppu2c.token"/>
+      </OKLink>
+    </PayPalUnit>
+    <PayPalUnit gr:x="285" gr:y="760" id="mov1#hym97#ppu2c" name="Pagar" action="pay">
+      <KOLink id="mov1#hym97#ppu2c#kln2c" name="KOFlow2" to="mov1#hym97#page2c#enu4c">
+        <LinkParameter id="mov1#hym97#ppu2c#kln2c#par151c" name="Error Code_Error Code" source="errorCode" target="mov1#hym97#page2c#enu4c#fld93c_slot"/>
+        <LinkParameter id="mov1#hym97#ppu2c#kln2c#par152c" name="Error Details_Error Details" source="errorDetails" target="mov1#hym97#page2c#enu4c#fld99c_slot"/>
+        <LinkParameter id="mov1#hym97#ppu2c#kln2c#par153c" name="Error Message_Error Message" source="errorMessage" target="mov1#hym97#page2c#enu4c#fld98c_slot"/>
+      </KOLink>
+      <OKLink id="mov1#hym97#ppu2c#oln12c" name="OKFlow11" to="mov1#hym97#opu1c" automaticCoupling="true"/>
+    </PayPalUnit>
+    <NoOpOperationUnit id="mov1#hym97#opu1c" name="No hacer nada" gr:x="415" gr:y="765" linkOrder="mov1#hym97#opu1c#ln7c">
+      <Link id="mov1#hym97#opu1c#ln7c" name="Flow7" to="mov1#hym97#page109" type="transport" validate="true">
+        <LinkParameter id="mov1#hym97#opu1c#ln7c#par173c" name="1_fin" sourceValue="1" targetVariable="mov1#hym97#page109#var1c"/>
+        <LinkParameter id="mov1#hym97#opu1c#ln7c#par174c" name="0_pago" sourceValue="0" targetVariable="mov1#hym97#page109#var2c"/>
+      </Link>
+      <OKLink id="mov1#hym97#opu1c#oln13c" name="OKFlow13" to="mov1#hym97#page109#mssu12c" gr:bendpoints="-102,-158,-2,152">
+        <LinkParameter id="mov1#hym97#opu1c#oln13c#par178c" name="El pago realizado con &amp;eacutexito_Shown Messages" sourceValue="Su pago se ha realizado con &#233;xito; presione terminar para finalizar." target="mov1#hym97#page109#mssu12c.shownMessages"/>
+      </OKLink>
+    </NoOpOperationUnit>
+  </OperationUnits>
+</HybridModule>

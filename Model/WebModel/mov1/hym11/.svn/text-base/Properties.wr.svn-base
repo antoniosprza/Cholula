@@ -1,0 +1,27 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym11" gr:x="10" gr:y="435" name="Alineamiento y N&#250;mero oficial - Jefe de Departamento - 4. Dictaminar y cuantificar monto a pagar" bpm:moduleType="activity" bpm:uuids="IH8MUGYN_75W.ICGGXA7N_7GO4" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym11#icu10" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym11#icu10#oln45" name="OKLink" automaticCoupling="true" to="mov1#hym11#page23"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym11#pu47" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="-15"/>
+    <ProcessUnit id="mov1#hym11#pu48" name="Save Activity" mode="saveActivity" gr:x="815" gr:y="65"/>
+    <ProcessUnit id="mov1#hym11#pu49" name="Leave Activity" mode="leaveActivity" gr:x="815" gr:y="150"/>
+    <ActivityParametersUnit id="mov1#hym11#apu20" name="Set Parameters" gr:x="605" gr:y="-10">
+      <ActivityParameter id="mov1#hym11#apu20#ap353" name="Predial.OID" bpm:uuid="IJWJGHP3_GLTB4M"/>
+      <ActivityParameter id="mov1#hym11#apu20#ap356" name="Control.OID" bpm:uuid="IJWJGHP3_TJLYLB"/>
+      <ActivityParameter id="mov1#hym11#apu20#ap360" name="Datos del solicitante.OID" bpm:uuid="IJWJGHP3_1JKBXQ"/>
+      <ActivityParameter id="mov1#hym11#apu20#ap370" name="Datos del propietario.OID" bpm:uuid="IJWJGHP3_E19GWY"/>
+      <ActivityParameter id="mov1#hym11#apu20#ap376" name="Expediente electronico.OID" bpm:uuid="IJWJGHP3_EQWS64"/>
+      <ActivityParameter id="mov1#hym11#apu20#ap456" name="Observaciones de inspeccion.OID" bpm:uuid="IJWJGHP2_IGXNFX"/>
+      <ActivityParameter id="mov1#hym11#apu20#ap459" name="Domicilio del predio.OID" bpm:uuid="IJWJGHP2_L1DW3D"/>
+      <ActivityParameter id="mov1#hym11#apu20#ap472" name="Medidas y colindancias.OID" bpm:uuid="IJWJGHP3_25P7RN"/>
+      <ActivityParameter id="mov1#hym11#apu20#ap477" name="Croquis.OID" bpm:uuid="IJWJGHP2_P1KKNQ"/>
+      <ActivityParameter id="mov1#hym11#apu20#ap480" name="Superficies.OID" bpm:uuid="IJWJGHP2_F17ZFP"/>
+      <ActivityParameter id="mov1#hym11#apu20#ap484" name="Pago.OID" bpm:uuid="IJWJGHP3_FQQUTO"/>
+      <ActivityParameter id="mov1#hym11#apu20#ap486" name="Pago.Donaci&#243;n de &#225;rboles" bpm:uuid="IJWJGHP3_FQQUTO/IH8MNKCD_50Y"/>
+      <ActivityParameter id="mov1#hym11#apu20#ap488" name="Pago.Monto a pagar" bpm:uuid="IJWJGHP3_FQQUTO/IH8MNOOU_N2"/>
+      <OKLink id="mov1#hym11#apu20#oln46" name="OKLink" automaticCoupling="false" to="mov1#hym11#pu47" codeRef="mov1#hym11#page23#enu68#ln234"/>
+      <OKLink id="mov1#hym11#apu20#oln47" name="OKLink" automaticCoupling="false" to="mov1#hym11#pu48" codeRef="mov1#hym11#page23#enu68#ln235"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

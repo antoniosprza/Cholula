@@ -1,0 +1,46 @@
+<SiteView xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="BP Administration" customURLName="BPAdmin" bpm:adminView="true" landmarks="sv2#page5" homePage="sv2#page5" localized="true">
+  <OperationUnits>
+    <ProcessUnit id="sv2#pu2" name="Synchronize MetaData" gr:x="474" gr:y="-10" mode="synchronizeMetadata" createTestUsers="true">
+      <KOLink id="sv2#pu2#kln2" name="KOLink1" to="sv2#page5#pu11">
+        <LinkParameter id="sv2#pu2#kln2#par5" name="Error Info_Error Info" source="errorInfo" target="sv2#page5#pu11.errorInfo"/>
+      </KOLink>
+      <OKLink id="sv2#pu2#oln2" name="OKLink1" to="sv2#page5" automaticCoupling="true"/>
+    </ProcessUnit>
+    <LogoutUnit id="sv2#lou1" name="Logout User" gr:x="1360" gr:y="120" siteView="sv1"/>
+    <ProcessUnit id="sv2#pu3" gr:x="220" gr:y="878" name="Cancel Process Instance" mode="cancelProcessInstance">
+      <KOLink id="sv2#pu3#kln3" name="KOLink7" to="sv2#page4#pu9">
+        <LinkParameter id="sv2#pu3#kln3#par6" name="Error Info_Error Info" source="errorInfo" target="sv2#page4#pu9.errorInfo"/>
+      </KOLink>
+      <OKLink id="sv2#pu3#oln3" name="OKLink21" to="sv2#page3" automaticCoupling="true"/>
+    </ProcessUnit>
+    <ProcessUnit id="sv2#pu4" name="Rollback Activity Instance" gr:x="-82" gr:y="721" mode="rollback">
+      <KOLink id="sv2#pu4#kln4" name="KOLink9" to="sv2#page4#pu9">
+        <LinkParameter id="sv2#pu4#kln4#par7" name="Error Info_Error Info" source="errorInfo" target="sv2#page4#pu9.errorInfo"/>
+      </KOLink>
+      <OKLink id="sv2#pu4#oln4" name="OKLink42" to="sv2#page7#pdu2" gr:bendpoints="-101,-77,-19,96">
+        <LinkParameter id="sv2#pu4#oln4#par8" name="Process Instance Oid_PASSING_Process Instance Oid" sourceLinkParameter="sv2#page7#pdu2#ln36#par45" target="sv2#page7#pdu2.processInstanceOid"/>
+      </OKLink>
+    </ProcessUnit>
+    <ProcessUnit id="sv2#pu5" gr:x="318" gr:y="-10" name="Delete Process" mode="deleteProcess">
+      <OKLink id="sv2#pu5#oln5" name="OKLink22" to="sv2#page5" automaticCoupling="true"/>
+      <KOLink id="sv2#pu5#kln5" name="KOLink10" to="sv2#page5#pu11">
+        <LinkParameter id="sv2#pu5#kln5#par9" name="Error Info_Error Info" source="errorInfo" target="sv2#page5#pu11.errorInfo"/>
+      </KOLink>
+    </ProcessUnit>
+    <ProcessUnit id="sv2#pu6" name="Delete Process Instance" gr:x="106" gr:y="738" mode="deleteProcess">
+      <KOLink id="sv2#pu6#kln6" name="KOLink11" to="sv2#page4#pu9">
+        <LinkParameter id="sv2#pu6#kln6#par10" name="Error Info_Error Info" source="errorInfo" target="sv2#page4#pu9.errorInfo"/>
+      </KOLink>
+      <OKLink id="sv2#pu6#oln6" name="OKLink23" to="sv2#page5" automaticCoupling="true"/>
+    </ProcessUnit>
+    <ProcessUnit id="sv2#pu7" gr:x="452" gr:y="880" name="Disconnect User and Group" mode="assignActivity">
+      <OKLink id="sv2#pu7#oln7" name="OKLink36" to="sv2#page3" automaticCoupling="true"/>
+    </ProcessUnit>
+    <ProcessUnit id="sv2#pu8" name="Change User and Group" gr:x="694" gr:y="672" mode="assignActivity">
+      <OKLink id="sv2#pu8#oln8" name="OKLink16" to="sv2#page3" automaticCoupling="true"/>
+      <UnitComputation unitId="sv2#page3#pwu1" mode="execute"/>
+      <KOLink id="sv2#pu8#kln7" name="KOLink12" to="sv2#page3" automaticCoupling="true" gr:bendpoints="-129,-34,203,-91"/>
+    </ProcessUnit>
+    <JumpUnit id="sv2#ju1" gr:x="1370" gr:y="245" name="Go to home" direction="forward" ignoreHistory="false" collectorUnit="sv1#pcu1"/>
+  </OperationUnits>
+</SiteView>

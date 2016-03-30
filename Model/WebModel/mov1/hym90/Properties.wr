@@ -1,0 +1,30 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym90" gr:x="7160" gr:y="250" name="Alineamiento y uso de suelo espec&#237;fico - Jefatura de alineamiento y n&#250;mero oficial - 3.A Dictaminar y asignar alineamiento y n&#250;mero oficial" bpm:moduleType="activity" bpm:uuids="IH8T9YT7_4NM.ICHV8TQM_GZ9LG" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym90#icu89" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym90#icu89#oln282" name="OKLink" automaticCoupling="true" to="mov1#hym90#page102"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym90#pu284" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym90#pu285" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym90#pu286" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym90#apu178" name="Set Parameters" gr:x="560" gr:y="4">
+      <ActivityParameter id="mov1#hym90#apu178#ap4188" name="Predial.OID" bpm:uuid="IJX88GE1_C8I8LV"/>
+      <ActivityParameter id="mov1#hym90#apu178#ap4191" name="Control.OID" bpm:uuid="IJX88GE1_HGQXT9"/>
+      <ActivityParameter id="mov1#hym90#apu178#ap4195" name="Datos del establecimiento.OID" bpm:uuid="IJX88GE2_V2WZAO"/>
+      <ActivityParameter id="mov1#hym90#apu178#ap4202" name="Datos del solicitante.OID" bpm:uuid="IJX88GE1_A2RSXS"/>
+      <ActivityParameter id="mov1#hym90#apu178#ap4212" name="Datos del propietario.OID" bpm:uuid="IJX88GE1_9CEYRA"/>
+      <ActivityParameter id="mov1#hym90#apu178#ap4218" name="Domicilio del predio.OID" bpm:uuid="IJX88GE1_BS560A"/>
+      <ActivityParameter id="mov1#hym90#apu178#ap4227" name="Expediente electronico.OID" bpm:uuid="IJX88GE1_2WX63O"/>
+      <ActivityParameter id="mov1#hym90#apu178#ap4238" name="Medidas y colindancias.OID" bpm:uuid="IJX88GE1_5QK2WD"/>
+      <ActivityParameter id="mov1#hym90#apu178#ap4240" name="Medidas y colindancias.Orientaci&#243;n       " bpm:uuid="IJX88GE1_5QK2WD/IH8LZ9C0_236"/>
+      <ActivityParameter id="mov1#hym90#apu178#ap4242" name="Medidas y colindancias.Medida" bpm:uuid="IJX88GE1_5QK2WD/IH8LZDRS_6XV"/>
+      <ActivityParameter id="mov1#hym90#apu178#ap4244" name="Medidas y colindancias.Colindancia" bpm:uuid="IJX88GE1_5QK2WD/IH8LZDWO_7C1"/>
+      <ActivityParameter id="mov1#hym90#apu178#ap4246" name="Superficies.OID" bpm:uuid="IJX88GE1_BK568K"/>
+      <ActivityParameter id="mov1#hym90#apu178#ap4248" name="Superficies.Superficie de terreno" bpm:uuid="IJX88GE1_BK568K/IH8QUPAG_7DQ"/>
+      <ActivityParameter id="mov1#hym90#apu178#ap4250" name="Superficies.Superficie a ocupar" bpm:uuid="IJX88GE1_BK568K/IH8QV0D3_3YK"/>
+      <ActivityParameter id="mov1#hym90#apu178#ap4252" name="Vigencia.OID" bpm:uuid="IJX88GE2_DJ8ZD6"/>
+      <ActivityParameter id="mov1#hym90#apu178#ap4254" name="Vigencia.Vigencia de alineamiento" bpm:uuid="IJX88GE2_DJ8ZD6/IH8TTP42_60R"/>
+      <OKLink id="mov1#hym90#apu178#oln283" name="OKLink" automaticCoupling="false" to="mov1#hym90#pu284" codeRef="mov1#hym90#page102#enu616#ln1447"/>
+      <OKLink id="mov1#hym90#apu178#oln284" name="OKLink" automaticCoupling="false" to="mov1#hym90#pu285" codeRef="mov1#hym90#page102#enu616#ln1448"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

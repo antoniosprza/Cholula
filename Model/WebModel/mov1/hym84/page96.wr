@@ -1,0 +1,160 @@
+<Page xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym84#page96" name="7. Autorizaci&#243;n del proyecto" gr:x="10" gr:y="-5">
+  <ContentUnits>
+    <ActivityParametersUnit id="mov1#hym84#page96#apu167" name="Get Parameters" gr:x="0" gr:y="0">
+      <Link id="mov1#hym84#page96#apu167#ln1345" name="Properties" type="transport" automaticCoupling="false" to="mov1#hym84#page96#enu573">
+        <LinkParameter id="mov1#hym84#page96#apu167#ln1345#par4197" name="Predial.OID" source="mov1#hym84#page96#apu167#ap3916" target="mov1#hym84#page96#enu573#fld2410_slot"/>
+        <LinkParameter id="mov1#hym84#page96#apu167#ln1345#par4198" name="Predial.Cuenta predial" source="mov1#hym84#page96#apu167#ap3918" target="mov1#hym84#page96#enu573#fld2411_slot"/>
+      </Link>
+      <ActivityParameter id="mov1#hym84#page96#apu167#ap3916" name="Predial.OID" bpm:uuid="IJX7RKBP_PCH0YJ"/>
+      <ActivityParameter id="mov1#hym84#page96#apu167#ap3918" name="Predial.Cuenta predial" bpm:uuid="IJX7RKBP_PCH0YJ/IH8L34LF_7LX"/>
+      <Link id="mov1#hym84#page96#apu167#ln1347" name="Properties" type="transport" automaticCoupling="false" to="mov1#hym84#page96#enu574">
+        <LinkParameter id="mov1#hym84#page96#apu167#ln1347#par4200" name="Control.OID" source="mov1#hym84#page96#apu167#ap3919" target="mov1#hym84#page96#enu574#fld2412_slot"/>
+        <LinkParameter id="mov1#hym84#page96#apu167#ln1347#par4201" name="Control.Folio de ingreso" source="mov1#hym84#page96#apu167#ap3921" target="mov1#hym84#page96#enu574#fld2413_slot"/>
+        <LinkParameter id="mov1#hym84#page96#apu167#ln1347#par4202" name="Control.Folio de control" source="mov1#hym84#page96#apu167#ap3922" target="mov1#hym84#page96#enu574#fld2414_slot"/>
+      </Link>
+      <ActivityParameter id="mov1#hym84#page96#apu167#ap3919" name="Control.OID" bpm:uuid="IJX7RKBO_RRJS1O"/>
+      <ActivityParameter id="mov1#hym84#page96#apu167#ap3921" name="Control.Folio de ingreso" bpm:uuid="IJX7RKBO_RRJS1O/IH8KZUZV_14D"/>
+      <ActivityParameter id="mov1#hym84#page96#apu167#ap3922" name="Control.Folio de control" bpm:uuid="IJX7RKBO_RRJS1O/IH8L0CS5_XQ"/>
+      <Link id="mov1#hym84#page96#apu167#ln1349" name="Properties" type="transport" automaticCoupling="false" to="mov1#hym84#page96#enu575">
+        <LinkParameter id="mov1#hym84#page96#apu167#ln1349#par4204" name="Documentos oficiales.OID" source="mov1#hym84#page96#apu167#ap3923" target="mov1#hym84#page96#enu575#fld2415_slot"/>
+        <LinkParameter id="mov1#hym84#page96#apu167#ln1349#par4206" name="Documentos oficiales.Resolutivo" source="mov1#hym84#page96#apu167#ap3925" target="mov1#hym84#page96#enu575#fld2416_slot"/>
+        <LinkParameter id="mov1#hym84#page96#apu167#ln1349#par4208" name="Documentos oficiales.Alineamiento y numero oficial" source="mov1#hym84#page96#apu167#ap3927" target="mov1#hym84#page96#enu575#fld2417_slot"/>
+        <LinkParameter id="mov1#hym84#page96#apu167#ln1349#par4210" name="Documentos oficiales.Constancia de agua potable y drenaje" source="mov1#hym84#page96#apu167#ap3929" target="mov1#hym84#page96#enu575#fld2418_slot"/>
+        <LinkParameter id="mov1#hym84#page96#apu167#ln1349#par4212" name="Documentos oficiales.Licencia de uso de suelo" source="mov1#hym84#page96#apu167#ap3931" target="mov1#hym84#page96#enu575#fld2419_slot"/>
+        <LinkParameter id="mov1#hym84#page96#apu167#ln1349#par4214" name="Documentos oficiales.Dictamen de informe ecologico preventivo" source="mov1#hym84#page96#apu167#ap3933" target="mov1#hym84#page96#enu575#fld2420_slot"/>
+        <LinkParameter id="mov1#hym84#page96#apu167#ln1349#par4216" name="Documentos oficiales.Licencia de construccion de obra mayor" source="mov1#hym84#page96#apu167#ap3935" target="mov1#hym84#page96#enu575#fld2421_slot"/>
+      </Link>
+      <ActivityParameter id="mov1#hym84#page96#apu167#ap3923" name="Documentos oficiales.OID" bpm:uuid="IK0CDUEX_QXILBJ"/>
+      <ActivityParameter id="mov1#hym84#page96#apu167#ap3925" name="Documentos oficiales.Resolutivo" bpm:uuid="IK0CDUEX_QXILBJ/IK0CC0EM_6S9"/>
+      <ActivityParameter id="mov1#hym84#page96#apu167#ap3927" name="Documentos oficiales.Alineamiento y numero oficial" bpm:uuid="IK0CDUEX_QXILBJ/IK0CC2LP_6JL"/>
+      <ActivityParameter id="mov1#hym84#page96#apu167#ap3929" name="Documentos oficiales.Constancia de agua potable y drenaje" bpm:uuid="IK0CDUEX_QXILBJ/IK0CC2R2_5SO"/>
+      <ActivityParameter id="mov1#hym84#page96#apu167#ap3931" name="Documentos oficiales.Licencia de uso de suelo" bpm:uuid="IK0CDUEX_QXILBJ/IK0CC2W5_4NQ"/>
+      <ActivityParameter id="mov1#hym84#page96#apu167#ap3933" name="Documentos oficiales.Dictamen de informe ecologico preventivo" bpm:uuid="IK0CDUEX_QXILBJ/IK0CC30U_4ZI"/>
+      <ActivityParameter id="mov1#hym84#page96#apu167#ap3935" name="Documentos oficiales.Licencia de construccion de obra mayor" bpm:uuid="IK0CDUEX_QXILBJ/IK0CC350_3Y7"/>
+    </ActivityParametersUnit>
+    <EntryUnit id="mov1#hym84#page96#enu573" name="Predial" bpm:uuid="IJX7RKBP_PCH0YJ" gr:x="265" gr:y="80">
+      <Link id="mov1#hym84#page96#enu573#ln1346" name="Parameters" type="transport" automaticCoupling="false" to="mov1#hym84#apu166" validate="true">
+        <LinkParameter id="mov1#hym84#page96#enu573#ln1346#par4196" name="Predial.OID" source="mov1#hym84#page96#enu573#fld2410" target="mov1#hym84#apu166#ap3917"/>
+      </Link>
+      <Field id="mov1#hym84#page96#enu573#fld2410" name="OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJX7RKBP_PCH0YJ"/>
+      <Field id="mov1#hym84#page96#enu573#fld2411" name="Cuenta predial" type="string" preloaded="true" modifiable="false" bpm:uuid="IJX7RKBP_PCH0YJ/IH8L34LF_7LX"/>
+    </EntryUnit>
+    <EntryUnit id="mov1#hym84#page96#enu574" name="Control" bpm:uuid="IJX7RKBO_RRJS1O" gr:x="265" gr:y="160">
+      <Link id="mov1#hym84#page96#enu574#ln1348" name="Parameters" type="transport" automaticCoupling="false" to="mov1#hym84#apu166" validate="true">
+        <LinkParameter id="mov1#hym84#page96#enu574#ln1348#par4199" name="Control.OID" source="mov1#hym84#page96#enu574#fld2412" target="mov1#hym84#apu166#ap3920"/>
+      </Link>
+      <Field id="mov1#hym84#page96#enu574#fld2412" name="OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IJX7RKBO_RRJS1O"/>
+      <Field id="mov1#hym84#page96#enu574#fld2413" name="Folio de ingreso" type="string" preloaded="true" modifiable="false" bpm:uuid="IJX7RKBO_RRJS1O/IH8KZUZV_14D"/>
+      <Field id="mov1#hym84#page96#enu574#fld2414" name="Folio de control" type="string" preloaded="true" modifiable="false" bpm:uuid="IJX7RKBO_RRJS1O/IH8L0CS5_XQ"/>
+    </EntryUnit>
+    <EntryUnit id="mov1#hym84#page96#enu575" name="Documentos oficiales" bpm:uuid="IK0CDUEX_QXILBJ" gr:x="265" gr:y="240">
+      <Link id="mov1#hym84#page96#enu575#ln1350" name="Parameters" type="transport" automaticCoupling="false" to="mov1#hym84#apu166" validate="true">
+        <LinkParameter id="mov1#hym84#page96#enu575#ln1350#par4203" name="Documentos oficiales.OID" source="mov1#hym84#page96#enu575#fld2415" target="mov1#hym84#apu166#ap3924"/>
+        <LinkParameter id="mov1#hym84#page96#enu575#ln1350#par4205" name="Documentos oficiales.Resolutivo" source="mov1#hym84#page96#enu575#fld2416" target="mov1#hym84#apu166#ap3926"/>
+        <LinkParameter id="mov1#hym84#page96#enu575#ln1350#par4207" name="Documentos oficiales.Alineamiento y numero oficial" source="mov1#hym84#page96#enu575#fld2417" target="mov1#hym84#apu166#ap3928"/>
+        <LinkParameter id="mov1#hym84#page96#enu575#ln1350#par4209" name="Documentos oficiales.Constancia de agua potable y drenaje" source="mov1#hym84#page96#enu575#fld2418" target="mov1#hym84#apu166#ap3930"/>
+        <LinkParameter id="mov1#hym84#page96#enu575#ln1350#par4211" name="Documentos oficiales.Licencia de uso de suelo" source="mov1#hym84#page96#enu575#fld2419" target="mov1#hym84#apu166#ap3932"/>
+        <LinkParameter id="mov1#hym84#page96#enu575#ln1350#par4213" name="Documentos oficiales.Dictamen de informe ecologico preventivo" source="mov1#hym84#page96#enu575#fld2420" target="mov1#hym84#apu166#ap3934"/>
+        <LinkParameter id="mov1#hym84#page96#enu575#ln1350#par4215" name="Documentos oficiales.Licencia de construccion de obra mayor" source="mov1#hym84#page96#enu575#fld2421" target="mov1#hym84#apu166#ap3936"/>
+      </Link>
+      <Field id="mov1#hym84#page96#enu575#fld2415" name="OID" type="string" preloaded="true" modifiable="false" hidden="true" bpm:uuid="IK0CDUEX_QXILBJ"/>
+      <Field id="mov1#hym84#page96#enu575#fld2416" name="Resolutivo" type="blob" preloaded="true" modifiable="false" bpm:uuid="IK0CDUEX_QXILBJ/IK0CC0EM_6S9" hidden="false"/>
+      <Field id="mov1#hym84#page96#enu575#fld2417" name="Alineamiento y numero oficial" type="blob" preloaded="true" modifiable="false" bpm:uuid="IK0CDUEX_QXILBJ/IK0CC2LP_6JL" hidden="false"/>
+      <Field id="mov1#hym84#page96#enu575#fld2418" name="Constancia de agua potable y drenaje" type="blob" preloaded="true" modifiable="false" bpm:uuid="IK0CDUEX_QXILBJ/IK0CC2R2_5SO" hidden="false"/>
+      <Field id="mov1#hym84#page96#enu575#fld2419" name="Licencia de uso de suelo" type="blob" preloaded="true" modifiable="false" bpm:uuid="IK0CDUEX_QXILBJ/IK0CC2W5_4NQ" hidden="false"/>
+      <Field id="mov1#hym84#page96#enu575#fld2420" name="Dictamen de informe ecologico preventivo" type="blob" preloaded="true" modifiable="false" bpm:uuid="IK0CDUEX_QXILBJ/IK0CC30U_4ZI" hidden="false"/>
+      <Field id="mov1#hym84#page96#enu575#fld2421" name="Licencia de construccion de obra mayor" type="blob" preloaded="true" modifiable="false" bpm:uuid="IK0CDUEX_QXILBJ/IK0CC350_3Y7" hidden="false"/>
+    </EntryUnit>
+    <EntryUnit id="mov1#hym84#page96#enu576" name="Buttons" gr:x="260" gr:y="320">
+      <Link id="mov1#hym84#page96#enu576#ln1351" name="Finish" type="normal" validate="true" automaticCoupling="false" to="mov1#hym84#apu166"/>
+      <Link id="mov1#hym84#page96#enu576#ln1352" name="Save and Work Later" type="normal" validate="false" automaticCoupling="false" to="mov1#hym84#apu166" gr:bendpoints="164,-32,-64,96"/>
+      <Link id="mov1#hym84#page96#enu576#ln1353" name="Cancel" type="normal" validate="false" automaticCoupling="false" to="mov1#hym84#pu268"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12" label="Predial" layout:cellLayout="Print Frame">
+        <layout:Unit unitId="mov1#hym84#page96#enu573">
+          <layout:Field field="mov1#hym84#page96#enu573#fld2411" layout:fieldLayout="WRDefault/FieldValue"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell label="Control" layout:cellLayout="Print Frame" colspan="12">
+        <layout:Unit unitId="mov1#hym84#page96#enu574">
+          <layout:Field field="mov1#hym84#page96#enu574#fld2413" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym84#page96#enu574#fld2414" layout:fieldLayout="WRDefault/FieldValue"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell label="Documentos oficiales" layout:cellLayout="Print Frame" colspan="12">
+        <layout:Unit unitId="mov1#hym84#page96#enu575">
+          <layout:Field field="mov1#hym84#page96#enu575#fld2416" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym84#page96#enu575#fld2417" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym84#page96#enu575#fld2418" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym84#page96#enu575#fld2419" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym84#page96#enu575#fld2420" layout:fieldLayout="WRDefault/FieldValue"/>
+          <layout:Field field="mov1#hym84#page96#enu575#fld2421" layout:fieldLayout="WRDefault/FieldValue"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell label="Buttons" layout:cellLayout="Print Frame" colspan="12">
+        <layout:Unit unitId="mov1#hym84#page96#enu576" layout:frameLayout="None">
+          <layout:Link link="mov1#hym84#page96#enu576#ln1351">
+            <layout:LayoutParameter name="confirmation" value="true" type="link"/>
+            <layout:LayoutParameter name="confirm-message" value="Confirm Finish" type="link"/>
+          </layout:Link>
+          <layout:Link link="mov1#hym84#page96#enu576#ln1352"/>
+          <layout:Link link="mov1#hym84#page96#enu576#ln1353"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <layout:LayoutParameter name="auto-refresh" value="true" type="page"/>
+</Page>

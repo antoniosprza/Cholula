@@ -1,0 +1,27 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym83" gr:x="5775" gr:y="510" name="Licencia de construcci&#243;n de casa habitaci&#243;n unifamiliar (fraccionamientos autorizados) - Jefatura de licencia de construcci&#243;n - 6. Cuantificar monto a pagar y notifica n&#250;mero de &#225;rboles a donar" bpm:moduleType="activity" bpm:uuids="IH8MOSKO_307.ICFCDIOD_JKAU7" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym83#icu82" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym83#icu82#oln261" name="OKLink" automaticCoupling="true" to="mov1#hym83#page95"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym83#pu263" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym83#pu264" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym83#pu265" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym83#apu164" name="Set Parameters" gr:x="560" gr:y="22">
+      <ActivityParameter id="mov1#hym83#apu164#ap3844" name="Predial.OID" bpm:uuid="IJX7RKBP_PCH0YJ"/>
+      <ActivityParameter id="mov1#hym83#apu164#ap3847" name="Control.OID" bpm:uuid="IJX7RKBO_RRJS1O"/>
+      <ActivityParameter id="mov1#hym83#apu164#ap3851" name="Director responsable de obra.OID" bpm:uuid="IJX7RKBP_MAJNLD"/>
+      <ActivityParameter id="mov1#hym83#apu164#ap3862" name="Datos del solicitante.OID" bpm:uuid="IJX7RKBP_JOAN2E"/>
+      <ActivityParameter id="mov1#hym83#apu164#ap3872" name="Datos de propietario.OID" bpm:uuid="IJX7RKBP_IB7OI3"/>
+      <ActivityParameter id="mov1#hym83#apu164#ap3878" name="Domicilio del predio.OID" bpm:uuid="IJX7RKBP_RX3ZOV"/>
+      <ActivityParameter id="mov1#hym83#apu164#ap3881" name="Requisitos.OID" bpm:uuid="IJX7RKBP_OZQN1O"/>
+      <ActivityParameter id="mov1#hym83#apu164#ap3885" name="Expediente electronico.OID" bpm:uuid="IJX7RKBO_D7MJG7"/>
+      <ActivityParameter id="mov1#hym83#apu164#ap3896" name="Proyecto final.OID" bpm:uuid="IJX7RKBP_OAQEE9"/>
+      <ActivityParameter id="mov1#hym83#apu164#ap3903" name="Datos de la construccion.OID" bpm:uuid="IJX7RKBP_QL20U5"/>
+      <ActivityParameter id="mov1#hym83#apu164#ap3911" name="Pago.OID" bpm:uuid="IJX7RKBO_8Q2ZKD"/>
+      <ActivityParameter id="mov1#hym83#apu164#ap3913" name="Pago.Donaci&#243;n de &#225;rboles" bpm:uuid="IJX7RKBO_8Q2ZKD/IH8MNKCD_50Y"/>
+      <ActivityParameter id="mov1#hym83#apu164#ap3915" name="Pago.Monto a pagar" bpm:uuid="IJX7RKBO_8Q2ZKD/IH8MNOOU_N2"/>
+      <OKLink id="mov1#hym83#apu164#oln262" name="OKLink" automaticCoupling="false" to="mov1#hym83#pu263" codeRef="mov1#hym83#page95#enu572#ln1342"/>
+      <OKLink id="mov1#hym83#apu164#oln263" name="OKLink" automaticCoupling="false" to="mov1#hym83#pu264" codeRef="mov1#hym83#page95#enu572#ln1343"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

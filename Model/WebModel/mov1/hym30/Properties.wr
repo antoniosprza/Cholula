@@ -1,0 +1,31 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym30" gr:x="1720" gr:y="105" name="Contrato de conexi&#243;n de agua - Analista administrativo - 2. Revisar documentaci&#243;n" bpm:moduleType="activity" bpm:uuids="IH8XYGM2_W5.IDT36UEJ_VLZ27W" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym30#icu29" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym30#icu29#oln102" name="OKLink" automaticCoupling="true" to="mov1#hym30#page42"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym30#pu104" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym30#pu105" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym30#pu106" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym30#apu58" name="Set Parameters" gr:x="560" gr:y="-2">
+      <ActivityParameter id="mov1#hym30#apu58#ap1427" name="Predial.OID" bpm:uuid="IJWKDB2T_B9LWW2"/>
+      <ActivityParameter id="mov1#hym30#apu58#ap1430" name="Control.OID" bpm:uuid="IJWKDB2S_69Y861"/>
+      <ActivityParameter id="mov1#hym30#apu58#ap1434" name="Caracteristicas del predio.OID" bpm:uuid="IJWKDB2T_S6HXAS"/>
+      <ActivityParameter id="mov1#hym30#apu58#ap1438" name="Datos del propietario.OID" bpm:uuid="IJWKDB2T_5I64CA"/>
+      <ActivityParameter id="mov1#hym30#apu58#ap1444" name="Domicilio del solicitante.OID" bpm:uuid="IJWKDB2T_AT5VCT"/>
+      <ActivityParameter id="mov1#hym30#apu58#ap1456" name="Domicilio del predio.OID" bpm:uuid="IJWKDB2S_AUY0Q9"/>
+      <ActivityParameter id="mov1#hym30#apu58#ap1466" name="Datos generales del servicio.OID" bpm:uuid="IJWKDB2T_V1ZMN7"/>
+      <ActivityParameter id="mov1#hym30#apu58#ap1474" name="Requisitos.OID" bpm:uuid="IJWKDB2T_4996R"/>
+      <ActivityParameter id="mov1#hym30#apu58#ap1482" name="Expediente electronico.OID" bpm:uuid="IJWKDB2S_6PXN3D"/>
+      <ActivityParameter id="mov1#hym30#apu58#ap1487" name="Empresa.OID" bpm:uuid="IJWKDB2S_XXYHB4"/>
+      <ActivityParameter id="mov1#hym30#apu58#ap1513" name="Propietario, representante o encargado de la empresa.OID" bpm:uuid="IJWKDB2S_ASMP2Q"/>
+      <ActivityParameter id="mov1#hym30#apu58#ap1527" name="Actividad empresa.OID" bpm:uuid="IJWKDB2S_33TJII"/>
+      <ActivityParameter id="mov1#hym30#apu58#ap1534" name="Suministro de agua.OID" bpm:uuid="IJWKDB2S_7N8TIP"/>
+      <ActivityParameter id="mov1#hym30#apu58#ap1541" name="Recibo actual de pago de agua y/o drenaje.OID" bpm:uuid="IJWKDB2S_NIGSWI"/>
+      <ActivityParameter id="mov1#hym30#apu58#ap1549" name="Validaciones.OID" bpm:uuid="IJWKDB2T_U1W4F5"/>
+      <ActivityParameter id="mov1#hym30#apu58#ap1551" name="Validaciones.Observaciones" bpm:uuid="IJWKDB2T_U1W4F5/IH8LLT4Q_5TC"/>
+      <ActivityParameter id="mov1#hym30#apu58#ap1553" name="Validaciones.&#191;Esta completa la informacion? " bpm:uuid="IJWKDB2T_U1W4F5/IH8LL99N_341"/>
+      <OKLink id="mov1#hym30#apu58#oln103" name="OKLink" automaticCoupling="false" to="mov1#hym30#pu104" codeRef="mov1#hym30#page42#enu207#ln537"/>
+      <OKLink id="mov1#hym30#apu58#oln104" name="OKLink" automaticCoupling="false" to="mov1#hym30#pu105" codeRef="mov1#hym30#page42#enu207#ln538"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

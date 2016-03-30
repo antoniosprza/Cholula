@@ -1,0 +1,21 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym10" gr:x="10" gr:y="245" name="Alineamiento y N&#250;mero oficial - Jefe de Departamento - 3.1 Programar visita de inspecci&#243;n" bpm:moduleType="activity" bpm:uuids="IH8MUGYN_75W.ICGG27UT_J8YKH" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym10#icu9" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym10#icu9#oln42" name="OKLink" automaticCoupling="true" to="mov1#hym10#page22"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym10#pu44" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym10#pu45" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym10#pu46" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym10#apu18" name="Set Parameters" gr:x="560" gr:y="64">
+      <ActivityParameter id="mov1#hym10#apu18#ap327" name="Predial.OID" bpm:uuid="IJWJGHP3_GLTB4M"/>
+      <ActivityParameter id="mov1#hym10#apu18#ap330" name="Control.OID" bpm:uuid="IJWJGHP3_TJLYLB"/>
+      <ActivityParameter id="mov1#hym10#apu18#ap334" name="Domicilio del predio.OID" bpm:uuid="IJWJGHP2_L1DW3D"/>
+      <ActivityParameter id="mov1#hym10#apu18#ap347" name="Fecha y hora de visita.OID" bpm:uuid="IJWJGHP2_R47MIN"/>
+      <ActivityParameter id="mov1#hym10#apu18#ap349" name="Fecha y hora de visita.Comentarios adicionales" bpm:uuid="IJWJGHP2_R47MIN/IH8QW68P_3AE"/>
+      <ActivityParameter id="mov1#hym10#apu18#ap351" name="Fecha y hora de visita.Fecha y hora" bpm:uuid="IJWJGHP2_R47MIN/IH8QVYUH_1YR"/>
+      <OKLink id="mov1#hym10#apu18#oln43" name="OKLink" automaticCoupling="false" to="mov1#hym10#pu44" codeRef="mov1#hym10#page22#enu57#ln209"/>
+      <OKLink id="mov1#hym10#apu18#oln44" name="OKLink" automaticCoupling="false" to="mov1#hym10#pu45" codeRef="mov1#hym10#page22#enu57#ln210"/>
+      <ActivityParameter id="mov1#hym10#apu18#ap98c" name="Fecha y hora de visita.fechaTimeStamp" bpm:uuid="IH8MUGYN_75W.IJWJGHP2_R47MIN/ILU05BF9_25B"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

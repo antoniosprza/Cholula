@@ -1,0 +1,19 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym15" gr:x="890" gr:y="175" name="Aval&#250;o final - Usuario - 4. Confirmar fecha de inspecci&#243;n" bpm:moduleType="activity" bpm:uuids="IJWGRZ38_5F5.IDQXKGWG_4KYDJ2" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym15#icu14" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym15#icu14#oln57" name="OKLink" automaticCoupling="true" to="mov1#hym15#page27"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym15#pu59" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym15#pu60" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym15#pu61" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym15#apu28" name="Set Parameters" gr:x="560" gr:y="70">
+      <ActivityParameter id="mov1#hym15#apu28#ap650" name="Control.OID" bpm:uuid="IJWJMRH2_6NIAXA"/>
+      <ActivityParameter id="mov1#hym15#apu28#ap654" name="Fecha y hora de visita.OID" bpm:uuid="IJWJMRH1_G5AY0R"/>
+      <ActivityParameter id="mov1#hym15#apu28#ap658" name="Validaciones.OID" bpm:uuid="IJWJZXTU_6HKD1K"/>
+      <ActivityParameter id="mov1#hym15#apu28#ap660" name="Validaciones.&#191;Fecha y hora confirmada? " bpm:uuid="IJWJZXTU_6HKD1K/IH8QWJH6_6X0"/>
+      <OKLink id="mov1#hym15#apu28#oln58" name="OKLink" automaticCoupling="false" to="mov1#hym15#pu59" codeRef="mov1#hym15#page27#enu94#ln294"/>
+      <OKLink id="mov1#hym15#apu28#oln59" name="OKLink" automaticCoupling="false" to="mov1#hym15#pu60" codeRef="mov1#hym15#page27#enu94#ln295"/>
+      <ActivityParameter id="mov1#hym15#apu28#ap106c" name="Parameter106"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

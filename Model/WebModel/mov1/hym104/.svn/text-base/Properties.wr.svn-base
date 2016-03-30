@@ -1,0 +1,18 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym104" gr:x="8270" gr:y="345" name="SARE - Direcci&#243;n de Giros Comerciales - 3.1.B Recibir notificaci&#243;n de no procedencia del giro" bpm:moduleType="activity" bpm:uuids="IJ4UT20G_6WH.IB1D06T8_99AX9" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym104#icu103" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym104#icu103#oln324" name="OKLink" automaticCoupling="true" to="mov1#hym104#page116"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym104#pu326" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym104#pu327" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym104#pu328" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym104#apu206" name="Set Parameters" gr:x="560" gr:y="76">
+      <ActivityParameter id="mov1#hym104#apu206#ap4728" name="Predial.OID" bpm:uuid="IJX8MDNU_Q9KI9L"/>
+      <ActivityParameter id="mov1#hym104#apu206#ap4731" name="Control.OID" bpm:uuid="IJX8MDNU_HIRBIO"/>
+      <ActivityParameter id="mov1#hym104#apu206#ap4735" name="Oficios.OID" bpm:uuid="IJX8MDNU_HW6FUT"/>
+      <ActivityParameter id="mov1#hym104#apu206#ap4737" name="Oficios.Oficio de no procedencia y no compatibilidad" bpm:uuid="IJX8MDNU_HW6FUT/IJ4SJMBQ_362"/>
+      <OKLink id="mov1#hym104#apu206#oln325" name="OKLink" automaticCoupling="false" to="mov1#hym104#pu326" codeRef="mov1#hym104#page116#enu700#ln1635"/>
+      <OKLink id="mov1#hym104#apu206#oln326" name="OKLink" automaticCoupling="false" to="mov1#hym104#pu327" codeRef="mov1#hym104#page116#enu700#ln1636"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

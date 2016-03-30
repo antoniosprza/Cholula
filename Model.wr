@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?webml version="7.2.0.4"?>
+
+<WebProject xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" outputPath="${webapps_loc}/${project_name}" gr:showUnitContent="true" gr:showTooltip="true" httpPort="8080" httpsPort="8443" enableProjectDependencies="true" jobGroupName="WEBRATIO" wrTempNewProject="true" bpm:bpmBased="true" maxUploadFileSize="50M">
+  <ServiceDataProviders>
+    <ServiceDataProvider id="sdp2c" type="PayPal" sandbox="true" currencyCode="USD" apiUsername="angavencestrategia-facilitator_api1.gmail.com" apiSignature="AFcWxV21C7fd0v3bYYYRCpSSRl31AcDwNhyYHKVWIGzDSkD8zEa-Pxu8" apiPassword="W38VGL9EZQFEM9P6"/>
+  </ServiceDataProviders>
+  <ReferencedProject name="GOBMXSTYLE" natureId="com.webratio.ide.styles.wrstylenature"/>
+  <ReferencedProject name="CholulaMunBPMN" natureId="com.webratio.bpm.businessmodelingnature"/>
+  <ReferencedProject name="WebRatio" natureId="com.webratio.ide.styles.wrstylenature"/>
+  <ReferencedProject name="com.webratio.units.bpm" natureId="com.webratio.ide.units.wrunitsnature"/>
+  <BPMResources>
+    <BPMResource id="bpmr1c" name="ALNO-General" uuid="IH8MUGYN_75W" path="/CholulaMunBPMN/Processes/ALNO-General.bpm"/>
+    <BPMResource id="bpmr2c" name="AVF-Avaluo final" uuid="IJWGRZ38_5F5" path="/CholulaMunBPMN/Processes/AVF-Avaluo final.bpm"/>
+    <BPMResource id="bpmr3c" name="CCNX-Contrato conexion" uuid="IH8XYGM2_W5" path="/CholulaMunBPMN/Processes/CCNX-Contrato conexion.bpm"/>
+    <BPMResource id="bpmr4c" name="CNAP-Constancia no adeudo predial" uuid="IJWGUXEF_7NS" path="/CholulaMunBPMN/Processes/CNAP-Constancia no adeudo predial.bpm"/>
+    <BPMResource id="bpmr5c" name="DPC-Proteccion civil" uuid="IH8X4BCI_7AT" path="/CholulaMunBPMN/Processes/DPC-Proteccion civil.bpm"/>
+    <BPMResource id="bpmr6c" name="FAG-Factibilidad agua" uuid="IH8UEEGG_60K" path="/CholulaMunBPMN/Processes/FAG-Factibilidad agua.bpm"/>
+    <BPMResource id="bpmr7c" name="ISAB-Impuesto ISABI" uuid="IJWGSGO9_4JI" path="/CholulaMunBPMN/Processes/ISAB-Impuesto ISABI.bpm"/>
+    <BPMResource id="bpmr8c" name="LCFC-Licencia de construccion (FC)" uuid="IH8MOSKO_307" path="/CholulaMunBPMN/Processes/LCFC-Licencia de construccion (FC).bpm"/>
+    <BPMResource id="bpmr9c" name="LUS-Especifico" uuid="IH8T9YT7_4NM" path="/CholulaMunBPMN/Processes/LUS-Especifico.bpm"/>
+    <BPMResource id="bpmr10c" name="SARE-Apertura empresa" uuid="IJ4UT20G_6WH" path="/CholulaMunBPMN/Processes/SARE-Apertura empresa.bpm"/>
+    <BPMResource id="bpmr11c" name="TO-General" uuid="IH8R3ULM_4ER" path="/CholulaMunBPMN/Processes/TO-General.bpm"/>
+  </BPMResources>
+  <ReferencedProject name="cholula_recuperado"/>
+  <ReferencedProject name="StoreComponents" natureId="com.webratio.ide.units.wrunitsnature"/>
+</WebProject>

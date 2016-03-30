@@ -1,0 +1,20 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym108" gr:x="9320" gr:y="310" name="Terminaci&#243;n de Obra - Usuario - 4. Confimar visita de inspecci&#243;n" bpm:moduleType="activity" bpm:uuids="IH8R3ULM_4ER.ICGQ9R6T_99B6F" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym108#icu107" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym108#icu107#oln336" name="OKLink" automaticCoupling="true" to="mov1#hym108#page120"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym108#pu338" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym108#pu339" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym108#pu340" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym108#apu214" name="Set Parameters" gr:x="560" gr:y="70">
+      <ActivityParameter id="mov1#hym108#apu214#ap4918" name="Predial.OID" bpm:uuid="IJXG7WP6_NSVXYD"/>
+      <ActivityParameter id="mov1#hym108#apu214#ap4921" name="Control.OID" bpm:uuid="IJXG7WP6_57UCWL"/>
+      <ActivityParameter id="mov1#hym108#apu214#ap4925" name="Fecha y hora de visita.OID" bpm:uuid="IJXG7WP6_X16QCP"/>
+      <ActivityParameter id="mov1#hym108#apu214#ap4929" name="Validaciones.OID" bpm:uuid="IJXG7WP6_1AO8MB"/>
+      <ActivityParameter id="mov1#hym108#apu214#ap4931" name="Validaciones.Observaciones" bpm:uuid="IJXG7WP6_1AO8MB/IH8LLT4Q_5TC"/>
+      <OKLink id="mov1#hym108#apu214#oln337" name="OKLink" automaticCoupling="false" to="mov1#hym108#pu338" codeRef="mov1#hym108#page120#enu726#ln1699"/>
+      <OKLink id="mov1#hym108#apu214#oln338" name="OKLink" automaticCoupling="false" to="mov1#hym108#pu339" codeRef="mov1#hym108#page120#enu726#ln1700"/>
+      <ActivityParameter id="mov1#hym108#apu214#ap218k" name="Validaciones.&#191;Fecha y hora confirmada? " bpm:uuid="IJXG7WP6_1AO8MB/IH8QWJH6_6X0"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

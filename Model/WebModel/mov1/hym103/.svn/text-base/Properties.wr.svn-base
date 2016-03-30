@@ -1,0 +1,18 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym103" gr:x="8270" gr:y="670" name="SARE - Protecci&#243;n Civil - 7.B Recibir notificaci&#243;n de liberaci&#243;n de licencia condicionada" bpm:moduleType="activity" bpm:uuids="IJ4UT20G_6WH.IB1DFCDR_FNB22" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym103#icu102" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym103#icu102#oln321" name="OKLink" automaticCoupling="true" to="mov1#hym103#page115"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym103#pu323" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym103#pu324" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym103#pu325" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym103#apu204" name="Set Parameters" gr:x="560" gr:y="76">
+      <ActivityParameter id="mov1#hym103#apu204#ap4717" name="Predial.OID" bpm:uuid="IJX8MDNU_Q9KI9L"/>
+      <ActivityParameter id="mov1#hym103#apu204#ap4720" name="Control.OID" bpm:uuid="IJX8MDNU_HIRBIO"/>
+      <ActivityParameter id="mov1#hym103#apu204#ap4724" name="Expediente electronico.OID" bpm:uuid="IJX8MDNU_I679HV"/>
+      <ActivityParameter id="mov1#hym103#apu204#ap4726" name="Expediente electronico.Licencia de funcionamiento condicionada" bpm:uuid="IJX8MDNU_I679HV/IK09JI29_3W4"/>
+      <OKLink id="mov1#hym103#apu204#oln322" name="OKLink" automaticCoupling="false" to="mov1#hym103#pu323" codeRef="mov1#hym103#page115#enu696#ln1626"/>
+      <OKLink id="mov1#hym103#apu204#oln323" name="OKLink" automaticCoupling="false" to="mov1#hym103#pu324" codeRef="mov1#hym103#page115#enu696#ln1627"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>
