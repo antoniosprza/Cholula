@@ -6,14 +6,14 @@
     <Property name="applicationServer">Tomcat</Property>
     <Property name="cloudDeploy">false</Property>
     <Property name="commonsLibDir">/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/plugins/com.webratio.commons.libs_7.2.11.201512290414/lib</Property>
-    <Property name="dbConfigPath">/var/folders/m8/bt648h110xq341gtpf6plhgr0000gp/T/WRDBConfig3138283431503238976.xml</Property>
+    <Property name="dbConfigPath">/var/folders/m8/bt648h110xq341gtpf6plhgr0000gp/T/WRDBConfig685519348873470595.xml</Property>
     <Property name="defaultEncoding"></Property>
     <Property name="deployCorePluginDir">/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/configuration/org.eclipse.osgi/bundles/327/1/.cp</Property>
     <Property name="derbySystemHome">/Users/Angel/Documents/work-space/.metadata/.plugins/com.webratio.commons.db/derby</Property>
     <Property name="enterpriseProjectDir"></Property>
-    <Property name="eventSocketPort">55316</Property>
+    <Property name="eventSocketPort">56964</Property>
     <Property name="excludedProjects" type="list"></Property>
-    <Property name="generationTime">201603301111</Property>
+    <Property name="generationTime">201603301150</Property>
     <Property name="helpersPluginDir">/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/plugins/com.webratio.generator.helpers_7.2.11.201512290414</Property>
     <Property name="i18nBundleKeysFile" type="file"></Property>
     <Property name="i18nExtraBundleFile" type="file"></Property>
@@ -24,14 +24,14 @@
     <Property name="phases">All</Property>
     <Property name="projectDir">/Users/Angel/Documents/work-space/CholulaMunWEB</Property>
     <Property name="projectName">CholulaMunWEB</Property>
-    <Property name="projectPath">/var/folders/m8/bt648h110xq341gtpf6plhgr0000gp/T/Project8619377155482819503.wr</Property>
+    <Property name="projectPath">/var/folders/m8/bt648h110xq341gtpf6plhgr0000gp/T/Project702299858607390605.wr</Property>
     <Property name="projectType">WEBPROJECT</Property>
     <Property name="rootModuleName"></Property>
     <Property name="uiPluginDir">/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/plugins/com.webratio.ide.ui_7.2.11.201512290414</Property>
     <Property name="webappPluginDir">/Users/Angel/Desktop/Eclipse-WR7.x64bit.MacOSX/WebRatio/plugins/com.webratio.generator.webapp_7.2.11.201512290414</Property>
     <Property name="wrBuildId">201512290414</Property>
     <Property name="wrGenerateOldValidationRules">false</Property>
-    <Property name="wrModelStatistics">pages=132|units=1661</Property>
+    <Property name="wrModelStatistics">pages=132|units=1660</Property>
     <Property name="wrVersion">7.2.11</Property>
   </Properties>
   <Plugins>

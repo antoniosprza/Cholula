@@ -223,14 +223,6 @@ return ["pagado": confirmado]</ScriptUnitText>
     </layout:Row>
   </layout:Grid>
   <layout:LayoutParameter name="auto-refresh" value="true" type="page"/>
-  <Page id="mov1#hym97#page109#page4c" name="Page 3" gr:x="425" gr:y="405">
-    <ContentUnits>
-      <MultiMessageUnit id="mov1#hym97#page109#page4c#mssu11c" name="Order Confirmation" gr:x="0" gr:y="0">
-        <Message xml:space="preserve">You order has been placed and you will receive a confirmation email shortly.&lt;br/&gt;
-Purchased items will be dispatched within 10 days of receipt of payment.</Message>
-      </MultiMessageUnit>
-    </ContentUnits>
-  </Page>
   <Variable id="mov1#hym97#page109#var1c" name="fin"/>
   <Variable id="mov1#hym97#page109#var2c" name="pago"/>
 </Page>
