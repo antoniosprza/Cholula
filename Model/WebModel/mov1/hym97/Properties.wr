@@ -37,21 +37,24 @@
         <LinkParameter id="mov1#hym97#ppu1c#oln6c#par157c" name="Transaction Token_Transaction Token" source="token" target="mov1#hym97#ppu2c.token"/>
       </OKLink>
     </PayPalUnit>
-    <PayPalUnit gr:x="285" gr:y="760" id="mov1#hym97#ppu2c" name="Pagar" action="pay">
+    <PayPalUnit gr:x="285" gr:y="760" id="mov1#hym97#ppu2c" name="Pagar" action="pay" linkOrder="mov1#hym97#ppu2c#ln28c">
       <KOLink id="mov1#hym97#ppu2c#kln2c" name="KOFlow2" to="mov1#hym97#page2c#enu4c">
         <LinkParameter id="mov1#hym97#ppu2c#kln2c#par151c" name="Error Code_Error Code" source="errorCode" target="mov1#hym97#page2c#enu4c#fld93c_slot"/>
         <LinkParameter id="mov1#hym97#ppu2c#kln2c#par152c" name="Error Details_Error Details" source="errorDetails" target="mov1#hym97#page2c#enu4c#fld99c_slot"/>
         <LinkParameter id="mov1#hym97#ppu2c#kln2c#par153c" name="Error Message_Error Message" source="errorMessage" target="mov1#hym97#page2c#enu4c#fld98c_slot"/>
       </KOLink>
       <OKLink id="mov1#hym97#ppu2c#oln12c" name="OKFlow11" to="mov1#hym97#opu1c" automaticCoupling="true"/>
+      <Link id="mov1#hym97#ppu2c#ln28c" name="Flow28" to="mov1#hym97#page109#scu3c" type="transport" validate="true" gr:bendpoints="-5,-211,-55,199">
+        <LinkParameter id="mov1#hym97#ppu2c#ln28c#par182c" name="Transaction ID_PagoRealizado" source="transactionID" target="mov1#hym97#page109#scu3c.PagoRealizado"/>
+      </Link>
     </PayPalUnit>
-    <NoOpOperationUnit id="mov1#hym97#opu1c" name="No hacer nada" gr:x="415" gr:y="765" linkOrder="mov1#hym97#opu1c#ln7c">
+    <NoOpOperationUnit id="mov1#hym97#opu1c" name="No hacer nada" gr:x="415" gr:y="765">
       <Link id="mov1#hym97#opu1c#ln7c" name="Flow7" to="mov1#hym97#page109" type="transport" validate="true">
         <LinkParameter id="mov1#hym97#opu1c#ln7c#par173c" name="1_fin" sourceValue="1" targetVariable="mov1#hym97#page109#var1c"/>
         <LinkParameter id="mov1#hym97#opu1c#ln7c#par174c" name="0_pago" sourceValue="0" targetVariable="mov1#hym97#page109#var2c"/>
       </Link>
-      <OKLink id="mov1#hym97#opu1c#oln13c" name="OKFlow13" to="mov1#hym97#page109#mssu12c" gr:bendpoints="-102,-158,-2,152">
-        <LinkParameter id="mov1#hym97#opu1c#oln13c#par178c" name="El pago realizado con &amp;eacutexito_Shown Messages" sourceValue="Su pago se ha realizado con &#233;xito; presione terminar para finalizar." target="mov1#hym97#page109#mssu12c.shownMessages"/>
+      <OKLink id="mov1#hym97#opu1c#oln13c" name="OKFlow13" to="mov1#hym97#page109#mssu12c">
+        <LinkParameter id="mov1#hym97#opu1c#oln13c#par178c" name="El pago realizado con &amp;eacutexito_Shown Messages" sourceValue="." target="mov1#hym97#page109#mssu12c.shownMessages"/>
       </OKLink>
     </NoOpOperationUnit>
   </OperationUnits>

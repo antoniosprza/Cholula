@@ -1,4 +1,4 @@
-<Page xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym97#page109" name="5. Realizar pago" gr:x="10" gr:y="-5" layout:pageLayout="GOBMXSTYLE/Default">
+<Page xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym97#page109" name="5. Realizar pago" gr:x="10" gr:y="-5" layout:pageLayout="GOBMXSTYLE/PagoSARE" layout:gridVisibilityConditionVariable="mov1#hym97#page109#var1c" layout:linkVisibilityConditionVariable="mov1#hym97#page109#var1c">
   <ContentUnits>
     <ActivityParametersUnit id="mov1#hym97#page109#apu193" name="Get Parameters" gr:x="0" gr:y="0">
       <Link id="mov1#hym97#page109#apu193#ln1554" name="Properties" type="transport" automaticCoupling="false" to="mov1#hym97#page109#enu663">
@@ -59,13 +59,13 @@
       <Link id="mov1#hym97#page109#enu666#ln1561" name="Save and Work Later" type="normal" validate="false" automaticCoupling="false" to="mov1#hym97#apu192" gr:bendpoints="44,-92,8,164"/>
       <Link id="mov1#hym97#page109#enu666#ln1562" name="Cancel" type="normal" validate="false" automaticCoupling="false" to="mov1#hym97#pu307"/>
     </EntryUnit>
-    <MultiMessageUnit id="mov1#hym97#page109#mssu12c" name="ConfExitPago" gr:x="290" gr:y="425"/>
-    <ScriptUnit gr:x="95" gr:y="440" id="mov1#hym97#page109#scu3c" name="confirmarPago">
-      <ScriptUnitText xml:space="preserve">#input String PagoRealizado
+    <MultiMessageUnit id="mov1#hym97#page109#mssu12c" name="ConfExitPago" gr:x="385" gr:y="425"/>
+    <ScriptUnit gr:x="290" gr:y="325" id="mov1#hym97#page109#scu3c" name="confirmarPago">
+      <ScriptUnitText xml:space="preserve">#input String PagoRealizado_ID
 
-int confirmado = PagoRealizado.toInteger();
-
-return ["pagado": confirmado]</ScriptUnitText>
+if( PagoRealizado_ID != null){
+	return ["pagado": confirmado]
+}</ScriptUnitText>
     </ScriptUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
@@ -128,7 +128,7 @@ return ["pagado": confirmado]</ScriptUnitText>
     </layout:Row>
     <layout:Row>
       <layout:Cell label="Buttons" layout:cellLayout="Print Frame" colspan="12">
-        <layout:Unit unitId="mov1#hym97#page109#enu666" layout:frameLayout="None">
+        <layout:Unit unitId="mov1#hym97#page109#enu666" layout:frameLayout="None" layout:unitVisibilityConditionVariable="mov1#hym97#page109#var1c">
           <layout:Link link="mov1#hym97#page109#enu666#ln1560">
             <layout:LayoutParameter name="confirmation" value="true" type="link"/>
             <layout:LayoutParameter name="confirm-message" value="Confirm Finish" type="link"/>
@@ -223,6 +223,6 @@ return ["pagado": confirmado]</ScriptUnitText>
     </layout:Row>
   </layout:Grid>
   <layout:LayoutParameter name="auto-refresh" value="true" type="page"/>
-  <Variable id="mov1#hym97#page109#var1c" name="fin"/>
-  <Variable id="mov1#hym97#page109#var2c" name="pago"/>
+  <Variable id="mov1#hym97#page109#var1c" name="fin" type="boolean" value="true" unitId="mov1#hym97#page109#enu666" parameter="xmlForm"/>
+  <Variable id="mov1#hym97#page109#var2c" name="pago" type="boolean" value="false" unitId="mov1#hym97#page109#enu666"/>
 </Page>
